@@ -125,3 +125,99 @@ legend {
 * {
   font-family: "Montserrat", sans-serif;
 }
+
+.container {
+  width: 1520px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  height: 66px;
+  background-color: #f4f4f4;
+}
+.header__wrapper {
+  width: 100%;
+  height: 66px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header__elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.header__elements:last-child {
+  -webkit-column-gap: 55px;
+     -moz-column-gap: 55px;
+          column-gap: 55px;
+}
+.header__element {
+  color: rgba(51, 57, 79, 0.42);
+}
+.header__element_active {
+  font-weight: 700;
+  color: #33394f;
+}
+.header__element-catalog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__element-catalog::after {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 7px;
+  background: url("./../assets/img/icons/treangle.svg");
+  background-repeat: no-repeat;
+  margin-left: 5px;
+}
+.header__element-geo {
+  font-weight: 400;
+  color: #33394f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header__element-geo::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 21px;
+  background-image: url("./../assets/img/icons/geo.svg");
+  margin-right: 15px;
+}
+.header__element-phone {
+  color: #33394f;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header__element-phone::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url("./../assets/img/icons/phone.svg");
+  margin-right: 15px;
+}
