@@ -1,0 +1,125 @@
+.header {
+  &__wrapper-bottom {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 206px;
+    height: 62px;
+  }
+
+  &__search {
+    position: relative;
+    display: flex;
+    margin-left: 50px;
+    background-color: $main-gray;
+    max-width: 800px;
+    width: 100%;
+    height: 45px;
+    border-radius: 9999px;
+
+    &_focused {
+      background-color: inherit;
+    }
+
+    &__area {
+      position: relative;
+      height: 100%;
+      border: 1px solid #f4f4f4;
+      border-radius: 9999px 0px 0px 9999px;
+      background-color: inherit;
+      width: 100%;
+      max-width: 650px;
+
+      &_focused {
+        border-radius: 22.5px 0px 0px 0px;
+      }
+
+      &__icon {
+        position: absolute;
+        left: 17px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 25px;
+      }
+
+      &__input {
+        display: block;
+        margin-left: 60px;
+        height: 100%;
+        width: calc(100% - 60px);
+        font-weight: 400;
+        font-size: 16px;
+        color: $text-color;
+        background-color: inherit;
+
+        &::placeholder {
+          color: $text-color-light;
+        }
+      }
+
+      &__results {
+        position: absolute;
+        width: 100%;
+        background-color: #fff;
+        transform: translateY(1px);
+
+        &__item {
+          display: block;
+          padding: 5px 17px;
+          color: $text-color;
+          font-size: 16px;
+          font-weight: 400;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $main-gray;
+          }
+        }
+      }
+    }
+
+    &__button {
+      width: 154px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #fff;
+      background-color: $accent-color;
+      border-radius: 0px 9999px 9999px 0px;
+      cursor: pointer;
+    }
+  }
+
+  &__items-bottom {
+    margin-left: auto;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+  }
+
+  &__item-bottom {
+    cursor: pointer;
+
+    &__img {
+      height: 30px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    &__text {
+      margin-top: 5px;
+      font-size: 10px;
+      text-align: center;
+    }
+  }
+}

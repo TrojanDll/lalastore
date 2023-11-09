@@ -1,0 +1,31 @@
+.subheader
+  .container
+    .header__wrapper-bottom
+      img.header__logo(src="./assets/img/logo.png", alt="logo")
+
+      .header__search
+        .header__search__area
+          img.header__search__area__icon(src="./assets/img/icons/search.svg", alt="search")
+          input(type="text", placeholder="Начните писать").header__search__area__input
+
+          .header__search__area__results(style="display: none")
+            a.header__search__area__results__item(href="#")  Детские пеленки
+            a.header__search__area__results__item(href="#") Конверты на выписку для мальчика
+            a.header__search__area__results__item(href="#") Соски
+            a.header__search__area__results__item(href="#") Грызунки
+        .header__search__button Найти
+
+      .header__items-bottom
+        .header__item-bottom
+          img.header__item-bottom__img.header__item-bottom__img-heart.header__item-bottom__img-heart_disabled(src="./assets/img/icons/heart.svg", alt="heart", style="display: none")
+          img.header__item-bottom__img.header__item-bottom__img-heart.header__item-bottom__img-heart_active(src="./assets/img/icons/heart_active.svg", alt="heart")
+          .header__item-bottom__text Избранное
+
+        .header__item-bottom
+          img.header__item-bottom__img.header__item-bottom__img-bag.header__item-bottom__img-bag_disabled(src="./assets/img/icons/bag.svg", alt="bag")
+          img.header__item-bottom__img.header__item-bottom__img-bag.header__item-bottom__img-bag_active(src="./assets/img/icons/bag_active.svg", alt="bag", style="display: none")
+          .header__item-bottom__text Корзина
+
+        .header__item-bottom
+          img.header__item-bottom__img.header__item-bottom__img-profile(src="./assets/img/icons/profile.svg", alt="profile")
+          .header__item-bottom__text Войти
