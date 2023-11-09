@@ -187,9 +187,16 @@ legend {
   display: block;
   width: 7px;
   height: 7px;
-  background: url("./../assets/img/icons/treangle.svg");
+  background: url("./../assets/img/icons/treangle.svg") center center/cover no-repeat;
   background-repeat: no-repeat;
   margin-left: 5px;
+}
+.header__element-catalog_active {
+  color: #33394f;
+  font-weight: 700;
+}
+.header__element-catalog_active::after {
+  background: url("./../assets/img/icons/treangle_dark.svg") center center/cover no-repeat;
 }
 .header__element-geo {
   font-weight: 400;
@@ -451,4 +458,34 @@ legend {
   height: 27px;
   border-radius: 114px;
   background: #fff;
+}
+
+.catalog {
+  background-color: #2d3242;
+  width: 100%;
+  position: fixed;
+  top: 66px;
+  left: 0;
+}
+.catalog__wrapper {
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+  grid-template-columns: repeat(5, 1fr);
+}
+.catalog__chapter__title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+}
+.catalog__chapter__element {
+  display: block;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.63);
 }

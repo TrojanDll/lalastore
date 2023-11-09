@@ -1,0 +1,32 @@
+.catalog {
+  background-color: $dark-color;
+  width: 100%;
+  position: fixed;
+  top: 66px;
+  left: 0;
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  &__chapter {
+    &__title {
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    &__element {
+      display: block;
+      margin-top: 15px;
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.63);
+    }
+  }
+}
