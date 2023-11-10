@@ -545,6 +545,7 @@ legend {
   color: #33394f;
 }
 .catalog__wrapper {
+  margin-top: 55px;
   width: 100%;
   height: 580px;
   display: -ms-grid;
@@ -688,4 +689,26 @@ legend {
   -ms-grid-column: 4;
   -ms-grid-column-span: 1;
   grid-area: 1/4/span 2/span 1;
+}
+.catalog__collection {
+  margin-top: 150px;
+}
+.catalog__collection-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: repeat(5, 1fr);
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+}
+.catalog__collection__item__img {
+  border-radius: 10px;
+}
+.catalog__collection__item__text {
+  margin-top: 14px;
+  text-align: center;
+  color: #33394f;
+  font-size: 20px;
+  font-weight: 700;
 }

@@ -31,6 +31,7 @@
   }
 
   &__wrapper {
+    margin-top: 55px;
     width: 100%;
     height: 580px;
     display: grid;
@@ -153,5 +154,29 @@
   &__item5 {
     background: url("./../assets/img/kid5.png") center center/cover no-repeat;
     grid-area: 1 / 4 / span 2 / span 1;
+  }
+
+  &__collection {
+    margin-top: 150px;
+
+    &-wrapper {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      column-gap: 20px;
+    }
+
+    &__item {
+      &__img {
+        border-radius: 10px;
+      }
+
+      &__text {
+        margin-top: 14px;
+        text-align: center;
+        color: $text-color;
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
   }
 }
