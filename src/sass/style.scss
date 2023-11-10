@@ -6,6 +6,11 @@
 
 // ui
 @import "./ui/button";
+@import "./ui/input";
+@import "./ui/title";
+
+// sections
+@import "./sections/layout";
 
 * {
   font-family: "Montserrat", sans-serif;

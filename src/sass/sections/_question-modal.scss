@@ -1,0 +1,59 @@
+.question-modal {
+  position: relative;
+  width: 798px;
+  background-color: #fff;
+  border-radius: 10px;
+  height: 615px;
+  max-height: 90vh;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  &__container {
+    margin: 0 auto;
+    width: 420px;
+    padding: 40px 0;
+  }
+
+  &__close-btn {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 21px;
+    top: 21px;
+    background: url("./../assets/img/icons/close-btn.svg") center center/cover
+      no-repeat;
+  }
+
+  &__title {
+    color: $text-color;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__form {
+    margin-top: 30px;
+  }
+
+  .input-title {
+    margin-top: 10px;
+  }
+
+  .input-title:first-child {
+    margin-top: 0;
+  }
+
+  &__textarea {
+    height: 130px;
+    resize: none;
+    outline: none;
+  }
+
+  &__button {
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+}
