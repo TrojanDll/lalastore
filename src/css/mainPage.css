@@ -122,6 +122,27 @@ legend {
   font-weight: 400;
   font-style: normal;
 }
+.button {
+  padding: 0 42px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f7d05e;
+  color: #fff;
+  border-radius: 9999px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
 }
@@ -129,6 +150,7 @@ legend {
 .container {
   width: 1520px;
   margin: 0 auto;
+  position: relative;
 }
 
 @media (max-width: 1540px) {
@@ -519,7 +541,6 @@ legend {
 
 .catalog {
   padding-top: 77px;
-  padding-bottom: 700px;
 }
 .catalog__title-wrapper {
   position: relative;
@@ -711,4 +732,72 @@ legend {
   color: #33394f;
   font-size: 20px;
   font-weight: 700;
+}
+
+.address {
+  margin-top: 70px;
+}
+.address__title {
+  color: #33394f;
+  font-size: 36px;
+  font-weight: 700;
+}
+.address__map {
+  position: relative;
+  margin-top: 30px;
+}
+.address__map__bg {
+  width: 100%;
+  height: 628px;
+}
+.address__map__info-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.address__map__info-wrapper__container {
+  height: 100%;
+}
+.address__map__info {
+  width: 513px;
+  height: 100%;
+  background-color: #fff;
+  padding: 10px 60px;
+  padding-bottom: 25px;
+}
+.address__map__info__title {
+  margin-top: 15px;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgba(51, 57, 79, 0.26);
+}
+.address__map__info__descr {
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(51, 57, 79, 0.62);
+}
+.address__map__info__text {
+  position: relative;
+  margin-top: 28px;
+  margin-left: 14px;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(51, 57, 79, 0.62);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.address__map__info__text::before {
+  content: "";
+  position: absolute;
+  left: -14px;
+  display: block;
+  width: 3px;
+  height: 91px;
+  background: #d9d9d9;
+}
+.address__map__info__button {
+  margin-top: 30px;
 }
