@@ -10,11 +10,9 @@
   &__map {
     position: relative;
     margin-top: 30px;
-
-    &__bg {
-      width: 100%;
-      height: 628px;
-    }
+    width: 100%;
+    height: 628px;
+    background: url("./../assets/img/map.png") center center/cover no-repeat;
 
     &__info-wrapper {
       position: absolute;
