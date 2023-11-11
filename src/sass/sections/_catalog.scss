@@ -86,11 +86,17 @@
       bottom: 0;
       left: 50%;
       transform: translate(-50%, 100%);
-      width: 365px;
+      width: 300px;
       border-radius: 0px 0px 5px 5px;
       background: #fff;
       box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.04);
       z-index: 10;
+
+      &_left-side {
+        left: 0;
+        transform: none;
+        transform: translateY(100%);
+      }
 
       &-wrapper {
         position: relative;
@@ -110,8 +116,7 @@
       }
 
       &__item {
-        padding: 0 20px;
-        height: 35px;
+        padding: 5px 20px;
         display: flex;
         align-items: center;
         color: $text-color;
@@ -181,6 +186,75 @@
         font-size: 20px;
         font-weight: 700;
       }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .catalog {
+    &__wrapper {
+      height: auto;
+      grid: repeat(3, 1fr) / repeat(2, 1fr);
+    }
+
+    &__item {
+      height: 280px;
+      grid-area: auto;
+    }
+
+    &__item3 {
+      grid-area: 2 / 1 / span 1 / span 2;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog {
+    &__wrapper {
+      display: block;
+    }
+
+    &__item {
+      border-radius: 0;
+
+      &__label {
+        border-radius: 0;
+      }
+
+      &__menu-wrapper {
+        width: inherit;
+      }
+
+      &__menu-mobile {
+        width: inherit;
+
+        &__item {
+          width: inherit;
+          padding: 5px 20px;
+          background-color: #fdedbe;
+          color: $text-color;
+          font-size: 18px;
+          font-weight: 400;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $accent-color;
+            font-weight: 700;
+          }
+        }
+      }
+
+      &__menu {
+        width: 100%;
+        &__item {
+          display: none;
+        }
+      }
+    }
+
+    &__item5 {
+      background: url("./../assets/img/kid5_v2.png") center center/cover
+        no-repeat;
     }
   }
 }

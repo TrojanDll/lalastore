@@ -1168,12 +1168,19 @@ legend {
   left: 50%;
   -webkit-transform: translate(-50%, 100%);
           transform: translate(-50%, 100%);
-  width: 365px;
+  width: 300px;
   border-radius: 0px 0px 5px 5px;
   background: #fff;
   -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.04);
           box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.04);
   z-index: 10;
+}
+.catalog__item__menu_left-side {
+  left: 0;
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 .catalog__item__menu-wrapper {
   position: relative;
@@ -1191,8 +1198,7 @@ legend {
   right: 100%;
 }
 .catalog__item__menu__item {
-  padding: 0 20px;
-  height: 35px;
+  padding: 5px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1277,6 +1283,62 @@ legend {
   font-weight: 700;
 }
 
+@media (max-width: 992px) {
+  .catalog__wrapper {
+    height: auto;
+    grid: repeat(3, 1fr)/repeat(2, 1fr);
+  }
+  .catalog__item {
+    height: 280px;
+    grid-area: auto;
+  }
+  .catalog__item3 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: 2/1/span 1/span 2;
+  }
+}
+@media (max-width: 768px) {
+  .catalog__wrapper {
+    display: block;
+  }
+  .catalog__item {
+    border-radius: 0;
+  }
+  .catalog__item__label {
+    border-radius: 0;
+  }
+  .catalog__item__menu-wrapper {
+    width: inherit;
+  }
+  .catalog__item__menu-mobile {
+    width: inherit;
+  }
+  .catalog__item__menu-mobile__item {
+    width: inherit;
+    padding: 5px 20px;
+    background-color: #fdedbe;
+    color: #33394f;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  .catalog__item__menu-mobile__item:hover {
+    background-color: #f7d05e;
+    font-weight: 700;
+  }
+  .catalog__item__menu {
+    width: 100%;
+  }
+  .catalog__item__menu__item {
+    display: none;
+  }
+  .catalog__item5 {
+    background: url("./../assets/img/kid5_v2.png") center center/cover no-repeat;
+  }
+}
 .address {
   margin-top: 70px;
 }
