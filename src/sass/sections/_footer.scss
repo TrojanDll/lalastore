@@ -1,0 +1,87 @@
+.footer {
+  padding: 28px 0;
+  border-top: 1px solid #d9d9d9;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__links-wrapper {
+    display: flex;
+  }
+
+  &__links {
+    &:last-child {
+      margin-left: 55px;
+    }
+    &__item {
+      margin-top: 10px;
+      display: block;
+      color: $text-color-light;
+      font-size: 16px;
+      font-weight: 400;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &_active {
+        font-weight: 700;
+        color: $text-color;
+      }
+    }
+  }
+
+  &__logo-wrapper {
+    margin: 0 auto;
+  }
+
+  &__logo {
+    display: block;
+    width: 206px;
+    height: 62px;
+    margin: 0 auto;
+    margin-top: 18px;
+  }
+
+  &__copyright {
+    margin-top: 12px;
+    color: $text-color-light;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  &__payment-wrapper {
+    margin-top: 24px;
+    display: flex;
+    column-gap: 23px;
+  }
+
+  &__policy {
+    display: block;
+    margin-top: 17px;
+    text-align: center;
+    color: $text-color-light;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
+  }
+
+  &__contacts-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+
+  &__contacts-item {
+    margin-top: 10px;
+    display: flex;
+    column-gap: 16px;
+
+    &__text {
+      width: 270px;
+    }
+  }
+}
