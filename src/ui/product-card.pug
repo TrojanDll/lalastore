@@ -1,0 +1,9 @@
+mixin product-card(imgPath, title, price, availability, buttonText)
+  .product-card 
+    include product-card-label
+    .product-card__label 
+      +productCardLabel(availability)
+    img.product-card__img(src=imgPath, alt="someimg") 
+    .product-card__title= title 
+    .product-card__price= price
+    button.button.product-card__button= buttonText

@@ -209,6 +209,69 @@ legend {
   font-weight: 700;
 }
 
+.product-card {
+  width: 230px;
+  position: relative;
+}
+.product-card__label {
+  position: absolute;
+  top: 6px;
+  left: -6px;
+}
+.product-card__img {
+  width: 100%;
+  height: 242px;
+  border-radius: 5px;
+}
+.product-card__title {
+  margin-top: 12px;
+  color: #33394f;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+.product-card__price {
+  margin-top: 15px;
+  color: #33394f;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+.product-card__button {
+  margin-top: 21px;
+  width: 100%;
+  font-size: 12px;
+}
+
+.product-card-label {
+  padding: 0 14px;
+  height: 27px;
+  border-radius: 9999px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #33394f;
+  background-color: #cff75e;
+}
+.product-card-label_aviable {
+  background-color: #cff75e;
+}
+.product-card-label_not-aviable {
+  background-color: #f75e5e;
+}
+.product-card-label_in-stock {
+  background-color: #5eaef7;
+}
+
 .layout {
   position: fixed;
   top: 0;
@@ -442,6 +505,7 @@ legend {
   background-color: #fff;
   -webkit-transform: translateY(1px);
           transform: translateY(1px);
+  z-index: 30;
 }
 .header__search__area__results__item {
   display: block;
@@ -1033,4 +1097,40 @@ legend {
   text-align: center;
   font-size: 18px;
   font-weight: 400;
+}
+
+.recent {
+  padding-top: 35px;
+  padding-bottom: 60px;
+  background-color: #f4f4f4;
+}
+.recent__cards {
+  margin-top: 25px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+  grid-template-columns: repeat(6, 1fr);
+}
+.subscribe {
+  padding: 70px 0;
+}
+.subscribe__title {
+  text-align: center;
+}
+.subscribe__input-wrapper {
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 600px;
+}
+.subscribe__input-area {
+  position: relative;
+}
+.subscribe__input {
+  width: 410px;
+  padding-right: 40px;
+}
+.subscribe__button {
+  position: absolute;
+  right: 0;
+  bottom: -2px;
 }

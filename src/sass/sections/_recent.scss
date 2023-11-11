@@ -1,0 +1,15 @@
+.recent {
+  padding-top: 35px;
+  padding-bottom: 60px;
+  background-color: #f4f4f4;
+
+  &__cards {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  &__card {
+    // background-color: aqua;
+  }
+}

@@ -67,6 +67,7 @@
         width: 100%;
         background-color: #fff;
         transform: translateY(1px);
+        z-index: 30;
 
         &__item {
           display: block;

@@ -1,0 +1,26 @@
+.product-card-label {
+  padding: 0 14px;
+  height: 27px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  color: $text-color;
+
+  background-color: #cff75e;
+
+  &_aviable {
+    background-color: #cff75e;
+  }
+
+  &_not-aviable {
+    background-color: #f75e5e;
+  }
+
+  &_in-stock {
+    background-color: #5eaef7;
+  }
+}
