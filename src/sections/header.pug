@@ -13,13 +13,13 @@ header.header
         a(href="#").header__element Мы в instagram
         a(href="#").header__element Акции
     
-    .header-mobile
-      button.header-mobile__burger.nav-toggle <span class="bar-top"></span> <span class="bar-mid"></span> <span class="bar-bot"></span>
-      img.header-mobile__logo(src="./assets/img/logo.png", alt="logo")
-      button.header-mobile__search-btn
-        img.header-mobile__search-btn__img(src="./assets/img/icons/search_dark.svg", alt="search")
+  .header-mobile
+    button.header-mobile__burger.nav-toggle <span class="bar-top"></span> <span class="bar-mid"></span> <span class="bar-bot"></span>
+    img.header-mobile__logo(src="./assets/img/logo.png", alt="logo")
+    button.header-mobile__search-btn
+      img.header-mobile__search-btn__img(src="./assets/img/icons/search_dark.svg", alt="search")
       
-  .header__sidebar
+  .header__sidebar.header__sidebar-menu
     .container
       ul.header__sidebar__pages 
         li.header__sidebar__pages__item.header__sidebar__pages__item_active
@@ -43,3 +43,16 @@ header.header
         .header__sidebar__contacts__item
           img.header__sidebar__contacts__item__img(src="./assets/img/icons/phone.svg", alt="phone")
           a(href="tel:79163613000").header__sidebar__contacts__item__text +7 916 361-30-00
+  
+  .header__sidebar.header__sidebar-search 
+    .container.header__sidebar-search-container
+      .header__sidebar-search__search 
+        input(type="text" placeholder="Начните писать").input.header__sidebar-search__search__area
+        button.button.header__sidebar-search__search__button
+          img.header__sidebar-search__button__img(src="./assets/img/icons/search_white.svg", alt="search")
+
+      .header__sidebar-search__results(style="display: none")
+          a.header__sidebar-search__results__item(href="#") Детские пеленки
+          a.header__sidebar-search__results__item(href="#") Конверты на выписку для мальчика
+          a.header__sidebar-search__results__item(href="#") Соски
+          a.header__sidebar-search__results__item(href="#") Грызунки

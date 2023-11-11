@@ -26,6 +26,10 @@
   position: relative;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 @media (max-width: 1540px) {
   .container {
     width: 1140px;
