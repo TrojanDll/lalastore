@@ -12,5 +12,34 @@ header.header
         a(href="#").header__element О компании
         a(href="#").header__element Мы в instagram
         a(href="#").header__element Акции
-
     
+    .header-mobile
+      button.header-mobile__burger.nav-toggle <span class="bar-top"></span> <span class="bar-mid"></span> <span class="bar-bot"></span>
+      img.header-mobile__logo(src="./assets/img/logo.png", alt="logo")
+      button.header-mobile__search-btn
+        img.header-mobile__search-btn__img(src="./assets/img/icons/search_dark.svg", alt="search")
+      
+  .header__sidebar
+    .container
+      ul.header__sidebar__pages 
+        li.header__sidebar__pages__item.header__sidebar__pages__item_active
+          a(href="#") Главная
+        li.header__sidebar__pages__item
+          a(href="#") Как купить
+        li.header__sidebar__pages__item
+          a(href="#") Доставка
+        li.header__sidebar__pages__item
+          a(href="#") О компании
+        li.header__sidebar__pages__item
+          a(href="#") Мы в instagram
+        li.header__sidebar__pages__item
+          a(href="#") Акции
+      
+      .header__sidebar__contacts
+        .header__sidebar__contacts__item
+          img.header__sidebar__contacts__item__img(src="./assets/img/icons/geo.svg", alt="geo")
+          .header__sidebar__contacts__item__text.header__sidebar__contacts__item__text-geo г. Москва, Электролитный проезд 3Б стр 6
+
+        .header__sidebar__contacts__item
+          img.header__sidebar__contacts__item__img(src="./assets/img/icons/phone.svg", alt="phone")
+          a(href="tel:79163613000").header__sidebar__contacts__item__text +7 916 361-30-00

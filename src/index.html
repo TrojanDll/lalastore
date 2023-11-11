@@ -17,6 +17,28 @@
             <button class="header__element header__element-catalog">Каталог</button><a class="header__element header__element_active" href="#">Главная</a><a class="header__element" href="#">Как купить</a><a class="header__element" href="#">Доставка</a><a class="header__element" href="#">О компании</a><a class="header__element" href="#">Мы в instagram</a><a class="header__element" href="#">Акции</a>
           </div>
         </div>
+        <div class="header-mobile">
+          <button class="header-mobile__burger nav-toggle"><span class="bar-top"></span> <span class="bar-mid"></span> <span class="bar-bot"></span></button><img class="header-mobile__logo" src="./assets/img/logo.png" alt="logo">
+          <button class="header-mobile__search-btn"><img class="header-mobile__search-btn__img" src="./assets/img/icons/search_dark.svg" alt="search"></button>
+        </div>
+      </div>
+      <div class="header__sidebar">
+        <div class="container">
+          <ul class="header__sidebar__pages"> 
+            <li class="header__sidebar__pages__item header__sidebar__pages__item_active"><a href="#">Главная</a></li>
+            <li class="header__sidebar__pages__item"><a href="#">Как купить</a></li>
+            <li class="header__sidebar__pages__item"><a href="#">Доставка</a></li>
+            <li class="header__sidebar__pages__item"><a href="#">О компании</a></li>
+            <li class="header__sidebar__pages__item"><a href="#">Мы в instagram</a></li>
+            <li class="header__sidebar__pages__item"><a href="#">Акции</a></li>
+          </ul>
+          <div class="header__sidebar__contacts">
+            <div class="header__sidebar__contacts__item"><img class="header__sidebar__contacts__item__img" src="./assets/img/icons/geo.svg" alt="geo">
+              <div class="header__sidebar__contacts__item__text header__sidebar__contacts__item__text-geo">г. Москва, Электролитный проезд 3Б стр 6</div>
+            </div>
+            <div class="header__sidebar__contacts__item"><img class="header__sidebar__contacts__item__img" src="./assets/img/icons/phone.svg" alt="phone"><a class="header__sidebar__contacts__item__text" href="tel:79163613000">+7 916 361-30-00</a></div>
+          </div>
+        </div>
       </div>
     </header>
     <div class="catalog-menu" style="display: none">
@@ -401,25 +423,41 @@
       <div class="container"> 
         <div class="footer__wrapper"> 
           <div class="footer__links-wrapper">
-            <div class="footer__links"><a class="footer__links__item footer__links__item_active" href="#">Главная</a><a class="footer__links__item" href="#">Как купить</a><a class="footer__links__item" href="#">Доставка</a><a class="footer__links__item" href="#">О компании</a><a class="footer__links__item" href="#">Мы в instagram</a><a class="footer__links__item" href="#">Акции</a><a class="footer__links__item" href="#">Как купить</a></div>
-            <div class="footer__links"><a class="footer__links__item" href="#">Как купить</a><a class="footer__links__item" href="#">Новости</a><a class="footer__links__item" href="#">Отзывы</a><a class="footer__links__item" href="#">Контакты</a><a class="footer__links__item" href="#">Лицензии</a><a class="footer__links__item" href="#">Оплата и возврат</a><a class="footer__links__item" href="#">Условия доставки</a></div>
+            <ul class="footer__links">
+              <li> <a class="footer__links__item_active" href="#">Главная</a></li>
+              <li> <a href="#">Как купить</a></li>
+              <li> <a href="#">Доставка</a></li>
+              <li> <a href="#">О компании</a></li>
+              <li> <a href="#">Мы в instagram</a></li>
+              <li> <a href="#">Акции</a></li>
+              <li> <a href="#">Как купить</a></li>
+            </ul>
+            <ul class="footer__links">
+              <li> <a href="#">Как купить</a></li>
+              <li> <a href="#">Новости</a></li>
+              <li> <a href="#">Отзывы</a></li>
+              <li> <a href="#">Контакты</a></li>
+              <li> <a href="#">Лицензии</a></li>
+              <li> <a href="#">Оплата и возврат</a></li>
+              <li> <a href="#">Условия доставки</a></li>
+            </ul>
           </div>
           <div class="footer__logo-wrapper"> <img class="footer__logo" src="./assets/img/logo.png" alt="logo">
             <div class="footer__copyright">2022 © «LalaSTORE»</div>
             <div class="footer__payment-wrapper"> <img class="footer__payment-method" src="./assets/img/mir.svg" alt="mir"><img class="footer__payment-method" src="./assets/img/paykeeper.svg" alt="payKeeper"><img class="footer__payment-method" src="./assets/img/mastercard.svg" alt="mastercard"><img class="footer__payment-method" src="./assets/img/visa.svg" alt="visa"></div><a class="footer__policy" href="#">Политика конфиденциальности</a>
           </div>
           <div class="footer__contacts-wrapper">
-            <div class="footer__contacts">
-              <div class="footer__contacts-item"> <img class="footer__contacts-item__img" src="./assets/img/icons/geo.svg" alt="geo">
+            <ul class="footer__contacts">
+              <li class="footer__contacts-item"> <img class="footer__contacts-item__img" src="./assets/img/icons/geo.svg" alt="geo">
                 <div class="footer__contacts-item__text">Адрес шоурума:, г. Москва, Электролитный проезд 3Б стр 6</div>
-              </div>
-              <div class="footer__contacts-item"> <img class="footer__contacts-item__img" src="./assets/img/icons/email.svg" alt="mail">
+              </li>
+              <li class="footer__contacts-item"> <img class="footer__contacts-item__img" src="./assets/img/icons/email.svg" alt="mail">
                 <div class="footer__contacts-item__text">info@lalastore.ru</div>
-              </div>
-              <div class="footer__contacts-item"> <img class="footer__contacts-item__img" src="./assets/img/icons/phone.svg" alt="phone">
+              </li>
+              <li class="footer__contacts-item"> <img class="footer__contacts-item__img" src="./assets/img/icons/phone.svg" alt="phone">
                 <div class="footer__contacts-item__text">+7 916 361-30-00</div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -449,5 +487,6 @@
     <script src="./js/catalog-logic.js"></script>
     <script src="./js/catalog-item-menu-logic.js"></script>
     <script src="./js/modals-logic.js"></script>
+    <script src="./js/sidebar-logic.js"></script>
   </body>
 </html>
