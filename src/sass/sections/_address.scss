@@ -90,6 +90,7 @@
 @media (max-width: 1200px) {
   .address {
     &__map {
+      height: auto;
       &__info-wrapper {
         position: relative;
 

@@ -1477,6 +1477,9 @@ legend {
   }
 }
 @media (max-width: 1200px) {
+  .address__map {
+    height: auto;
+  }
   .address__map__info-wrapper {
     position: relative;
   }
@@ -1579,6 +1582,17 @@ legend {
   height: 24px;
 }
 
+@media (max-width: 768px) {
+  .newsletter__descr {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .newsletter__button {
+    font-size: 16px;
+    width: 100%;
+  }
+}
 .about {
   padding-top: 35px;
   padding-bottom: 70px;
