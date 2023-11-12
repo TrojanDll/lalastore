@@ -4,6 +4,7 @@
     <title>LalaStore</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/mainPage.css">
   </head>
   <body>
@@ -332,6 +333,7 @@
             </div>
           </div>
         </div>
+        <h2 class="title catalog__collection-title">Готовые подборки</h2>
         <div class="catalog__collection">
           <div class="catalog__collection-wrapper">
             <div class="catalog__collection__item"><img class="catalog__collection__item__img" src="./assets/img/collection1.jpeg" alt="colection">
@@ -351,11 +353,57 @@
             </div>
           </div>
         </div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="catalog__collection__item"><img class="catalog__collection__item__img" src="./assets/img/collection1.jpeg" alt="colection">
+                <div class="catalog__collection__item__text">Подборка №106</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="catalog__collection__item"><img class="catalog__collection__item__img" src="./assets/img/collection2.jpeg" alt="colection">
+                <div class="catalog__collection__item__text">Подборка №106</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="catalog__collection__item"><img class="catalog__collection__item__img" src="./assets/img/collection3.jpeg" alt="colection">
+                <div class="catalog__collection__item__text">Подборка №106</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="catalog__collection__item"><img class="catalog__collection__item__img" src="./assets/img/collection4.jpeg" alt="colection">
+                <div class="catalog__collection__item__text">Подборка №106</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="catalog__collection__item"><img class="catalog__collection__item__img" src="./assets/img/collection4.jpeg" alt="colection">
+                <div class="catalog__collection__item__text">Подборка №106</div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
       </div>
     </section>
     <script src="./js/search-logic.js"></script>
     <script src="./js/catalog-logic.js"></script>
     <script src="./js/catalog-item-menu-logic.js"></script>
     <script src="./js/sidebar-logic.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+      el: ".swiper-pagination",
+      },
+      mousewheel: true,
+      keyboard: true,
+      });
+    </script>
   </body>
 </html>

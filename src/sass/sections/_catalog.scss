@@ -23,9 +23,7 @@
     }
 
     &__text {
-      font-size: 36px;
-      font-weight: 700;
-      color: $text-color;
+      text-align: center;
     }
   }
 
@@ -165,13 +163,19 @@
     grid-area: 1 / 4 / span 2 / span 1;
   }
 
+  &__collection-title {
+    margin-top: 100px;
+    text-align: center;
+  }
+
   &__collection {
-    margin-top: 150px;
+    margin-top: 50px;
 
     &-wrapper {
+      margin-top: 50px;
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      column-gap: 20px;
+      gap: 20px;
     }
 
     &__item {
@@ -187,6 +191,34 @@
         font-weight: 700;
       }
     }
+  }
+
+  .swiper {
+    display: none;
+  }
+
+  .swiper-button-next {
+    width: 45px !important;
+    height: 45px !important;
+    background: url("./../assets/img/icons/button-next.svg") center center/cover
+      no-repeat;
+    &::after {
+      content: "";
+    }
+  }
+
+  .swiper-button-prev {
+    width: 45px !important;
+    height: 45px !important;
+    background: url("./../assets/img/icons/button-prev.svg") center center/cover
+      no-repeat;
+    &::after {
+      content: "";
+    }
+  }
+
+  .swiper-button-disabled {
+    opacity: 0.6 !important;
   }
 }
 
@@ -204,6 +236,14 @@
 
     &__item3 {
       grid-area: 2 / 1 / span 1 / span 2;
+    }
+
+    &__collection {
+      &__item {
+        &__text {
+          font-size: 16px;
+        }
+      }
     }
   }
 }
@@ -255,6 +295,51 @@
     &__item5 {
       background: url("./../assets/img/kid5_v2.png") center center/cover
         no-repeat;
+    }
+
+    &__collection {
+      &-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      &__item {
+        &__text {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .catalog {
+    padding-top: 30px;
+    &__collection__item {
+      margin: 0 auto;
+      width: calc(100% - 88px);
+    }
+
+    &__collection-title {
+      margin-top: 30px;
+    }
+
+    &__collection {
+      display: none;
+    }
+
+    .swiper {
+      margin-top: 20px;
+      display: block;
+    }
+
+    &__title {
+      &__line {
+        display: none;
+      }
+    }
+
+    &__wrapper {
+      margin-top: 20px;
     }
   }
 }
