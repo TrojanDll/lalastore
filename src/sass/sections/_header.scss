@@ -122,14 +122,10 @@
   &-mobile {
     align-items: center;
     justify-content: space-between;
-    // position: fixed;
     width: 100%;
-    // top: 0;
-    // left: 0;
     height: 82px;
     background-color: #fff;
     padding: 0 14px;
-    // z-index: 100;
 
     &__logo {
       width: 138px;
@@ -147,7 +143,11 @@
     background-color: #fff;
     left: -100%;
     transition: 0.2s left;
-    z-index: 100;
+    z-index: 110;
+
+    &_pt20 {
+      padding-top: 20px;
+    }
 
     &_opened {
       left: 0;

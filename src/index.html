@@ -51,27 +51,32 @@
         </div>
       </div>
     </header>
-    <div class="catalog-menu" style="display: none">
-      <div class="container">
+    <div class="catalog-menu">
+      <div class="container catalog-menu__container">
         <div class="catalog-menu__wrapper">
-          <div class="catalog-menu__chapter">
-            <div class="catalog-menu__chapter__title">ОДЕЖДА</div>
-            <div class="catalog-menu__chapter__elements"><a class="catalog-menu__chapter__element catalog-menu__chapter__element_active" href="#"> Изделия из муслина</a><a class="catalog-menu__chapter__element" href="#">Боди</a><a class="catalog-menu__chapter__element" href="#">Песочники</a><a class="catalog-menu__chapter__element" href="#">Нательные комбинезоны (слипы)</a><a class="catalog-menu__chapter__element" href="#">Комбинезоны из футера</a><a class="catalog-menu__chapter__element" href="#">Комбинезоны вязаные</a><a class="catalog-menu__chapter__element" href="#">Демисезонные комбинезоны</a><a class="catalog-menu__chapter__element" href="#">Комбинезоны-трансформеры</a><a class="catalog-menu__chapter__element" href="#">Головные уборы</a><a class="catalog-menu__chapter__element" href="#">Носочки</a><a class="catalog-menu__chapter__element" href="#">Нагрудники</a></div>
+          <div class="catalog-menu__mobile-header"> 
+            <button class="catalog-menu__mobile-header__close-btn"><img class="catalog-menu__mobile-header__close-btn__img" src="./assets/img/icons/close-btn_white.svg" alt="close-btn"></button>
+            <div class="catalog-menu__mobile-header__title">Каталог</div>
+            <button class="catalog-menu__mobile-header__search-btn"><img class="catalog-menu__mobile-header__search-btn__img" src="./assets/img/icons/search_white.svg" alt="search-btn"></button>
           </div>
           <div class="catalog-menu__chapter">
-            <div class="catalog-menu__chapter__title">ПЕЛЕНКИ</div>
+            <div class="catalog-menu__chapter__title catalog-menu__chapter__title_active">Одежда<img class="catalog-menu__chapter__title__icon catalog-menu__chapter__title__icon_active" src="./assets/img/icons/treangle_white.svg" alt="treangle"></div>
+            <div class="catalog-menu__chapter__elements catalog-menu__chapter__elements_visible"><a class="catalog-menu__chapter__element catalog-menu__chapter__element_active" href="#"> Изделия из муслина</a><a class="catalog-menu__chapter__element" href="#">Боди</a><a class="catalog-menu__chapter__element" href="#">Песочники</a><a class="catalog-menu__chapter__element" href="#">Нательные комбинезоны (слипы)</a><a class="catalog-menu__chapter__element" href="#">Комбинезоны из футера</a><a class="catalog-menu__chapter__element" href="#">Комбинезоны вязаные</a><a class="catalog-menu__chapter__element" href="#">Демисезонные комбинезоны</a><a class="catalog-menu__chapter__element" href="#">Комбинезоны-трансформеры</a><a class="catalog-menu__chapter__element" href="#">Головные уборы</a><a class="catalog-menu__chapter__element" href="#">Носочки</a><a class="catalog-menu__chapter__element" href="#">Нагрудники</a></div>
+          </div>
+          <div class="catalog-menu__chapter">
+            <div class="catalog-menu__chapter__title">Пеленки<img class="catalog-menu__chapter__title__icon" src="./assets/img/icons/treangle_white.svg" alt="treangle"></div>
             <div class="catalog-menu__chapter__elements"><a class="catalog-menu__chapter__element" href="#">Пеленальные коконы</a><a class="catalog-menu__chapter__element" href="#">Пеленки из фланели</a><a class="catalog-menu__chapter__element" href="#">Пеленки из муслина</a><a class="catalog-menu__chapter__element" href="#">Пеленки из интерлока</a></div>
           </div>
           <div class="catalog-menu__chapter">
-            <div class="catalog-menu__chapter__title">КОНВЕРТЫ И ПЛЕДЫ</div>
+            <div class="catalog-menu__chapter__title">Конверты и пледы<img class="catalog-menu__chapter__title__icon" src="./assets/img/icons/treangle_white.svg" alt="treangle"></div>
             <div class="catalog-menu__chapter__elements"><a class="catalog-menu__chapter__element" href="#">Конверты в коляску</a><a class="catalog-menu__chapter__element" href="#">Пледы</a><a class="catalog-menu__chapter__element" href="#">Конверты на выписку</a></div>
           </div>
           <div class="catalog-menu__chapter">
-            <div class="catalog-menu__chapter__title">АКСЕССУАРЫ</div>
+            <div class="catalog-menu__chapter__title">Аксессуары<img class="catalog-menu__chapter__title__icon" src="./assets/img/icons/treangle_white.svg" alt="treangle"></div>
             <div class="catalog-menu__chapter__elements"><a class="catalog-menu__chapter__element" href="#">Сумки-органайзеры</a><a class="catalog-menu__chapter__element" href="#">Муфты-варежки</a><a class="catalog-menu__chapter__element" href="#">Грызунки</a><a class="catalog-menu__chapter__element" href="#">Альбомы для фотографий</a><a class="catalog-menu__chapter__element" href="#">Держатели для соски/грузунка</a></div>
           </div>
           <div class="catalog-menu__chapter">
-            <div class="catalog-menu__chapter__title">ГОТОВЫЕ ПОДБОРКИ</div>
+            <div class="catalog-menu__chapter__title">Готовые подборки<img class="catalog-menu__chapter__title__icon" src="./assets/img/icons/treangle_white.svg" alt="treangle"></div>
             <div class="catalog-menu__chapter__elements"></div>
           </div>
         </div>
@@ -582,6 +587,22 @@
         </div>
       </div>
     </footer>
+    <div class="bottom-menu"> 
+      <div class="bottom-menu__wrapper">
+        <div class="bottom-menu__item" id="catalog-btn-mobile"><img class="bottom-menu__item__img bottom-menu__item__img-burger" src="./assets/img/icons/burger-menu.svg" alt="burger-menu">
+          <div class="bottom-menu__item__text">Каталог</div>
+        </div>
+        <div class="bottom-menu__item"> <img class="bottom-menu__item__img bottom-menu__item__img-heart" src="./assets/img/icons/heart_white.svg" alt="burger-menu">
+          <div class="bottom-menu__item__text">Избранное</div>
+        </div>
+        <div class="bottom-menu__item"> <img class="bottom-menu__item__img bottom-menu__item__img-bag" src="./assets/img/icons/bag_white.svg" alt="burger-menu">
+          <div class="bottom-menu__item__text">Корзина</div>
+        </div>
+        <div class="bottom-menu__item"> <img class="bottom-menu__item__img bottom-menu__item__img-profile" src="./assets/img/icons/profile_white.svg" alt="burger-menu">
+          <div class="bottom-menu__item__text">Войти</div>
+        </div>
+      </div>
+    </div>
     <script src="./js/search-logic.js"></script>
     <script src="./js/catalog-logic.js"></script>
     <script src="./js/catalog-item-menu-logic.js"></script>

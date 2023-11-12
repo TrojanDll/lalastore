@@ -1,10 +1,20 @@
-.catalog-menu(style="display: none")
-  .container
+.catalog-menu
+  .container.catalog-menu__container
     .catalog-menu__wrapper
 
+      .catalog-menu__mobile-header 
+        button.catalog-menu__mobile-header__close-btn
+          img.catalog-menu__mobile-header__close-btn__img(src="./assets/img/icons/close-btn_white.svg", alt="close-btn")
+
+        .catalog-menu__mobile-header__title Каталог
+        
+        button.catalog-menu__mobile-header__search-btn
+          img.catalog-menu__mobile-header__search-btn__img(src="./assets/img/icons/search_white.svg", alt="search-btn")
+
       .catalog-menu__chapter
-        .catalog-menu__chapter__title ОДЕЖДА
-        .catalog-menu__chapter__elements
+        .catalog-menu__chapter__title.catalog-menu__chapter__title_active Одежда
+          img.catalog-menu__chapter__title__icon.catalog-menu__chapter__title__icon_active(src="./assets/img/icons/treangle_white.svg", alt="treangle")
+        .catalog-menu__chapter__elements.catalog-menu__chapter__elements_visible
           a.catalog-menu__chapter__element.catalog-menu__chapter__element_active(href="#")  Изделия из муслина
           a.catalog-menu__chapter__element(href="#") Боди
           a.catalog-menu__chapter__element(href="#") Песочники
@@ -18,7 +28,8 @@
           a.catalog-menu__chapter__element(href="#") Нагрудники
       
       .catalog-menu__chapter
-        .catalog-menu__chapter__title ПЕЛЕНКИ
+        .catalog-menu__chapter__title Пеленки
+          img.catalog-menu__chapter__title__icon(src="./assets/img/icons/treangle_white.svg", alt="treangle")
         .catalog-menu__chapter__elements
           a.catalog-menu__chapter__element(href="#") Пеленальные коконы
           a.catalog-menu__chapter__element(href="#") Пеленки из фланели
@@ -26,14 +37,16 @@
           a.catalog-menu__chapter__element(href="#") Пеленки из интерлока
       
       .catalog-menu__chapter
-        .catalog-menu__chapter__title КОНВЕРТЫ И ПЛЕДЫ
+        .catalog-menu__chapter__title Конверты и пледы
+          img.catalog-menu__chapter__title__icon(src="./assets/img/icons/treangle_white.svg", alt="treangle")
         .catalog-menu__chapter__elements
           a.catalog-menu__chapter__element(href="#") Конверты в коляску
           a.catalog-menu__chapter__element(href="#") Пледы
           a.catalog-menu__chapter__element(href="#") Конверты на выписку
       
       .catalog-menu__chapter
-        .catalog-menu__chapter__title АКСЕССУАРЫ
+        .catalog-menu__chapter__title Аксессуары
+          img.catalog-menu__chapter__title__icon(src="./assets/img/icons/treangle_white.svg", alt="treangle")
         .catalog-menu__chapter__elements
           a.catalog-menu__chapter__element(href="#") Сумки-органайзеры
           a.catalog-menu__chapter__element(href="#") Муфты-варежки
@@ -42,5 +55,6 @@
           a.catalog-menu__chapter__element(href="#") Держатели для соски/грузунка
       
       .catalog-menu__chapter
-        .catalog-menu__chapter__title ГОТОВЫЕ ПОДБОРКИ
+        .catalog-menu__chapter__title Готовые подборки
+          img.catalog-menu__chapter__title__icon(src="./assets/img/icons/treangle_white.svg", alt="treangle")
         .catalog-menu__chapter__elements
