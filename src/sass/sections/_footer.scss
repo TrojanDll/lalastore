@@ -89,3 +89,31 @@
     }
   }
 }
+
+@media (max-width: 1200px) {
+  .footer {
+    &__contacts-wrapper {
+      display: none;
+    }
+
+    &__links-wrapper {
+      display: none;
+    }
+
+    &__wrapper {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding-top: 30px;
+    border: none;
+    background-color: #f4f4f4;
+
+    &__payment-method {
+      height: 24px;
+    }
+  }
+}
