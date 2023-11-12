@@ -2,6 +2,10 @@
   width: 230px;
   position: relative;
 
+  &__img-wrapper {
+    position: relative;
+  }
+
   &__label {
     position: absolute;
     top: 6px;
@@ -34,5 +38,34 @@
     margin-top: 21px;
     width: 100%;
     font-size: 12px;
+  }
+}
+
+@media (max-width: 1540px) {
+  .product-card {
+    width: 171px;
+
+    &__img {
+      height: 178px;
+    }
+
+    &__label {
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .product-card {
+    &__button {
+      margin: 0 auto;
+      margin-top: 15px;
+      width: 140px;
+      font-size: 10px;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
   }
 }

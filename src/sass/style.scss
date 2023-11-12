@@ -4,13 +4,6 @@
 @import "./libs/reset";
 @import "./fonts";
 
-// ui
-@import "./ui/button";
-@import "./ui/input";
-@import "./ui/title";
-@import "./ui/product-card";
-@import "./ui/product-card-label";
-
 // sections
 @import "./sections/footer";
 @import "./sections/layout";
@@ -56,7 +49,7 @@
 
 @media (max-width: 576px) {
   .container {
-    padding: 0 20px;
+    padding: 0 14px;
     width: 100%;
   }
 }

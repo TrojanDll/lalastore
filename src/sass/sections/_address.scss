@@ -63,7 +63,7 @@
           left: -14px;
           display: block;
           width: 3px;
-          height: 91px;
+          height: 100%;
           background: #d9d9d9;
         }
       }
@@ -126,11 +126,6 @@
 @media (max-width: 576px) {
   .address {
     &__map {
-      &__info-wrapper {
-        &__container {
-        }
-      }
-
       &__iframe {
         height: 373px;
       }

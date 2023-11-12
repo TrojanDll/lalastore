@@ -8,8 +8,57 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
   }
+}
 
-  &__card {
-    // background-color: aqua;
+@media (max-width: 1200px) {
+  .recent {
+    &__cards {
+      grid-template-columns: repeat(5, 1fr);
+      row-gap: 15px;
+    }
+
+    &__card {
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .recent {
+    &__cards {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__card {
+      &:nth-child(-n + 1) {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .recent {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__card {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .recent {
+    padding-top: 30px;
+    // &__cards {
+    //   margin-top: 15px;
+    // }
+    &__title {
+      text-align: center;
+    }
   }
 }
