@@ -41,6 +41,10 @@
     background-color: $text-color-light;
     border-radius: 10px;
 
+    &__menu-mobile {
+      display: none;
+    }
+
     &__label {
       position: absolute;
       bottom: 0;
@@ -56,6 +60,10 @@
       font-weight: 700;
       font-size: 16px;
       cursor: pointer;
+
+      &:hover {
+        background-color: $hover-color;
+      }
 
       &__text {
         color: #fff;
@@ -139,27 +147,27 @@
   }
 
   &__item1 {
-    background: url("./../assets/img/kid1.png") center center/cover no-repeat;
+    background: url("./../assets/img/kid1.webp") center center/cover no-repeat;
     grid-area: 1 / 1 / span 2 / span 1;
   }
 
   &__item2 {
-    background: url("./../assets/img/kid2.png") center center/cover no-repeat;
+    background: url("./../assets/img/kid2.webp") center center/cover no-repeat;
     grid-area: 1 / 2 / span 1 / span 2;
   }
 
   &__item3 {
-    background: url("./../assets/img/kid3.png") center center/cover no-repeat;
+    background: url("./../assets/img/kid3.webp") center center/cover no-repeat;
     grid-area: 2 / 2 / span 1 / span 1;
   }
 
   &__item4 {
-    background: url("./../assets/img/kid4.png") center center/cover no-repeat;
+    background: url("./../assets/img/kid4.webp") center center/cover no-repeat;
     grid-area: 2 / 3 / span 1 / span 1;
   }
 
   &__item5 {
-    background: url("./../assets/img/kid5.png") center center/cover no-repeat;
+    background: url("./../assets/img/kid5.webp") center center/cover no-repeat;
     grid-area: 1 / 4 / span 2 / span 1;
   }
 
@@ -257,6 +265,10 @@
     &__item {
       border-radius: 0;
 
+      &__menu-mobile {
+        display: block;
+      }
+
       &__label {
         border-radius: 0;
       }
@@ -293,7 +305,7 @@
     }
 
     &__item5 {
-      background: url("./../assets/img/kid5_v2.png") center center/cover
+      background: url("./../assets/img/kid5_v2.webp") center center/cover
         no-repeat;
     }
 

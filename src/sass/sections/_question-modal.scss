@@ -28,9 +28,6 @@
   }
 
   &__title {
-    color: $text-color;
-    font-size: 36px;
-    font-weight: 700;
     text-align: center;
   }
 
@@ -55,5 +52,34 @@
   &__button {
     margin: 0 auto;
     margin-top: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .question-modal {
+    width: calc(100% - 28px);
+  }
+}
+
+@media (max-width: 576px) {
+  .question-modal {
+    max-height: 70vh;
+    &__container {
+      width: 100%;
+      padding: 35px 15px;
+    }
+
+    // &__form {
+    //   width: inherit;
+    //   padding: 0 15px;
+    // }
+
+    // .input-title {
+    //   // width: 100%;
+    // }
+
+    // &__input {
+    //   // width: 100%;
+    // }
   }
 }

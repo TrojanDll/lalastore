@@ -43,6 +43,7 @@
     align-items: center;
     justify-content: space-between;
     background: #33394f;
+    display: none;
 
     &__title {
       color: #fff;
@@ -80,6 +81,10 @@
     height: calc(100% - 60px);
     transition: top 0.2s;
     display: block;
+
+    &__mobile-header {
+      display: flex;
+    }
 
     &__container {
       width: 100%;
