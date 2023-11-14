@@ -1,0 +1,152 @@
+.references {
+  padding-top: 50px;
+  padding-bottom: 70px;
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+  }
+
+  &__list_left-part {
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+    'item1 item2'
+    'item3 item2'
+    'item4Long item4Long'
+    'item5Square item6'
+    'item7 item8'
+    'item9 item8'
+    'item10Long item10Long';
+    grid-template-columns: 493px 365px;
+    grid-template-rows: 180px 239px 299px 439px 180px 239px 299px;
+
+
+  }
+
+  &__list_right-part {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__item {
+    position: relative;
+    border-radius: 10px;
+    background: red;
+    overflow: hidden;
+
+    &_left-part_1 {
+      grid-area: item1;
+    }
+
+    &_left-part_2 {
+      grid-area: item2
+    }
+
+    &_left-part_3 {
+      grid-area: item3
+    }
+
+    &_left-part_4 {
+
+      grid-area: item4Long
+    }
+
+    &_left-part_5 {
+
+      grid-area: item5Square
+    }
+
+    &_left-part_6 {
+
+      grid-area: item6
+    }
+
+    &_left-part_7 {
+
+      grid-area: item7
+    }
+
+    &_left-part_8 {
+
+      grid-area: item8
+    }
+
+    &_left-part_9 {
+
+      grid-area: item9
+    }
+
+    &_left-part_10 {
+      grid-area: item10Long
+    }
+
+    &_right-part_11 {
+      height: 299px;
+    }
+
+    &_right-part_12 {
+      height: 299px;
+    }
+
+    &_right-part_13 {
+      height: 299px;
+    }
+
+    &_right-part_14 {
+      height: 439px;
+    }
+
+    &_right-part_15 {
+      height: 299px;
+    }
+
+    &_right-part_16 {
+      height: 250px;
+    }
+
+    &__number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 140px;
+      height: 38px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: white;
+      background: $accent-color;
+    }
+
+    &__image {
+      position: absolute;
+      top: -100%;
+
+      &:hover {
+        animation: 6s infinite alternate slidein;
+      }
+      &_full {
+        top: 0;
+        width: 100%;
+        height: 100%;
+        animation: slidefull;
+      }
+    }
+    @keyframes slidein {
+      from {
+        top: -100%
+      }
+      50% {
+        top: -50%;
+      }
+      to {
+        top: 0;
+      }
+    }
+  }
+}
