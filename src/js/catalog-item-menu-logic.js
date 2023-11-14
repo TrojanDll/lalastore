@@ -40,6 +40,10 @@
           ".catalog__item__menu"
         );
 
+        e.target
+          .querySelector(".catalog__item__label__img")
+          .classList.toggle("catalog__item__label__img_rotated");
+
         showMenus(catalogItemMenu);
       }
     });

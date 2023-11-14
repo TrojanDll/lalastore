@@ -255,6 +255,11 @@ legend {
   background: rgba(44, 44, 44, 0.81);
 }
 
+@media (max-width: 576px) {
+  .layout {
+    height: calc(100% - 60px);
+  }
+}
 * {
   font-family: "Montserrat", sans-serif;
   outline: none;
@@ -297,6 +302,8 @@ legend {
   }
 }
 .button {
+  position: relative;
+  overflow: hidden;
   padding: 0 42px;
   height: 45px;
   display: -webkit-box;
@@ -316,10 +323,55 @@ legend {
   text-transform: uppercase;
   cursor: pointer;
 }
+.button::after, .button::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  top: 0;
+  left: -100%;
+  opacity: 0.5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: -1;
+}
+.button::after {
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
 .button:hover {
-  background-color: #ecc44b;
+  background-color: #f1c94f;
 }
 
+.pulse {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  -webkit-animation: pulse 0.5s ease-out;
+          animation: pulse 0.5s ease-out;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  position: absolute;
+}
+
+@-webkit-keyframes pulse {
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    background-color: #fff;
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    background-color: #fff;
+    opacity: 0;
+  }
+}
 @media (max-width: 576px) {
   .button {
     padding: 0 24px;
@@ -923,7 +975,7 @@ legend {
   cursor: pointer;
 }
 .header__search__button:hover {
-  background-color: #ecc44b;
+  background-color: #f1c94f;
 }
 .header__items-bottom {
   margin-left: auto;
@@ -1192,6 +1244,9 @@ legend {
   font-weight: 400;
   color: rgba(255, 255, 255, 0.63);
 }
+.catalog-menu__chapter__element:hover {
+  color: #fff;
+}
 .catalog-menu__mobile-header {
   padding: 40px 20px;
   display: -webkit-box;
@@ -1372,7 +1427,7 @@ legend {
   cursor: pointer;
 }
 .catalog__item__label:hover {
-  background-color: #ecc44b;
+  background-color: #f1c94f;
 }
 .catalog__item__label__text {
   color: #fff;
@@ -1387,13 +1442,12 @@ legend {
           align-items: center;
   pointer-events: none;
 }
-.catalog__item__label__text::after {
-  content: "";
-  display: block;
-  width: 12px;
-  height: 11px;
-  background: url("./../assets/img/icons/treangle_white.svg") center center/cover no-repeat;
+.catalog__item__label__img {
   margin-left: 10px;
+}
+.catalog__item__label__img_rotated {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .catalog__item__menu {
   display: none;
@@ -1659,7 +1713,6 @@ legend {
 }
 .address__map__info-wrapper__container {
   height: 100%;
-  margin-left: 200px;
 }
 .address__map__info {
   width: 513px;
@@ -1668,6 +1721,7 @@ legend {
   padding: 10px 60px;
   padding-bottom: 25px;
   pointer-events: all;
+  position: relative;
 }
 .address__map__info__title {
   margin-top: 15px;
@@ -1702,14 +1756,10 @@ legend {
   background: #d9d9d9;
 }
 .address__map__info__button {
-  margin-top: 30px;
+  position: absolute;
+  bottom: 25px;
 }
 
-@media (max-width: 1540px) {
-  .address__map__info-wrapper__container {
-    margin-left: 100px;
-  }
-}
 @media (max-width: 1200px) {
   .address__map {
     height: auto;
@@ -1719,6 +1769,10 @@ legend {
   }
   .address__map__info-wrapper__container {
     margin-left: 100px;
+  }
+  .address__map__info__button {
+    position: static;
+    margin-top: 30px;
   }
 }
 @media (max-width: 768px) {
@@ -1792,7 +1846,7 @@ legend {
 }
 @media (max-width: 576px) {
   .question-modal {
-    max-height: 70vh;
+    max-height: 80vh;
   }
   .question-modal__container {
     width: 100%;

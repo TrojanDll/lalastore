@@ -9,3 +9,9 @@
   justify-content: center;
   background: rgba(44, 44, 44, 0.81);
 }
+
+@media (max-width: 576px) {
+  .layout {
+    height: calc(100% - 60px);
+  }
+}
