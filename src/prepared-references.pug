@@ -4,13 +4,17 @@ html(lang="en")
         title="LalaStore"
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
         link(rel="stylesheet" href="./css/preparedReferences.css")
     body
         include sections/header
         include sections/catalog-menu
         include sections/subheader
+        .container
+            .catalog__title-wrapper
+                .title.catalog__title Готовые подборки
+                .title.catalog__count 92
         include sections/breadcrumbs
+        +breadcrumbs("Главная - Готовые подборки")
         include sections/references
         include sections/footer
         include sections/bottom-menu
@@ -21,18 +25,6 @@ html(lang="en")
         script(src="./js/catalog-item-menu-logic.js")
         script(src="./js/modals-logic.js")
         script(src="./js/sidebar-logic.js")
-        script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
-        script.
-            var swiper = new Swiper(".mySwiper", {
-                spaceBetween: 30,
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                },
-                mousewheel: true,
-                keyboard: true,
-            });
+
+       
 

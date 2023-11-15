@@ -255,6 +255,11 @@ legend {
   background: rgba(44, 44, 44, 0.81);
 }
 
+@media (max-width: 576px) {
+  .layout {
+    height: calc(100% - 60px);
+  }
+}
 * {
   font-family: "Montserrat", sans-serif;
   outline: none;
@@ -297,6 +302,8 @@ legend {
   }
 }
 .button {
+  position: relative;
+  overflow: hidden;
   padding: 0 42px;
   height: 45px;
   display: -webkit-box;
@@ -316,10 +323,55 @@ legend {
   text-transform: uppercase;
   cursor: pointer;
 }
+.button::after, .button::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  top: 0;
+  left: -100%;
+  opacity: 0.5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: -1;
+}
+.button::after {
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
 .button:hover {
-  background-color: #ecc44b;
+  background-color: #f1c94f;
 }
 
+.pulse {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  -webkit-animation: pulse 0.5s ease-out;
+          animation: pulse 0.5s ease-out;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  position: absolute;
+}
+
+@-webkit-keyframes pulse {
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    background-color: #fff;
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    background-color: #fff;
+    opacity: 0;
+  }
+}
 @media (max-width: 576px) {
   .button {
     padding: 0 24px;
@@ -923,7 +975,7 @@ legend {
   cursor: pointer;
 }
 .header__search__button:hover {
-  background-color: #ecc44b;
+  background-color: #f1c94f;
 }
 .header__items-bottom {
   margin-left: auto;
@@ -1192,6 +1244,9 @@ legend {
   font-weight: 400;
   color: rgba(255, 255, 255, 0.63);
 }
+.catalog-menu__chapter__element:hover {
+  color: #fff;
+}
 .catalog-menu__mobile-header {
   padding: 40px 20px;
   display: -webkit-box;
@@ -1428,7 +1483,6 @@ legend {
 .references__item {
   position: relative;
   border-radius: 10px;
-  background: red;
   overflow: hidden;
 }
 .references__item_left-part_1 {
@@ -1606,4 +1660,20 @@ legend {
     width: auto;
     height: auto;
   }
+}
+.catalog__title-wrapper {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.catalog__count {
+  margin-top: 6px;
+  margin-left: 20px;
+  color: rgba(51, 57, 79, 0.62);
+  font-size: 16px;
+  font-weight: 400;
 }
