@@ -1,0 +1,26 @@
+@import "./style.scss";
+
+// ui
+@import "./ui/button";
+@import "./ui/input";
+@import "./ui/title";
+@import "./ui/product-card";
+@import "./ui/product-card-label";
+
+// sections
+@import "./sections/header";
+@import "./sections/subheader";
+@import "./sections/breadcrumbs";
+@import "./sections/catalog-filter";
+@import "./sections/catalog-menu";
+@import "./sections/bottom-menu";
+@import "./sections/catalog-goods";
+@import "./sections/catalog-view-filter";
+
+.catalog-page-main-wrapper {
+  padding-top: 50px;
+  padding-bottom: 70px;
+  display: grid;
+  grid-template-columns: 257px auto;
+  column-gap: 30px;
+}

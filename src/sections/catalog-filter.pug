@@ -1,0 +1,96 @@
+.catalog-filter 
+  .catalog-filter__header Фильтры
+  .catalog-filter__category.catalog-filter__category-price
+    .catalog-filter__category__title.catalog-filter__category__title-price
+      .catalog-filter__category__title__text Цена
+      img.catalog-filter__category__title__img(src="./assets/img/icons/chevron.svg", alt="chevron")
+    
+    .catalog-filter__category__range.catalog-filter__category__category-wrapper
+      .catalog-filter__category__range__text
+        .catalog-filter__category__range__min-text От
+        .catalog-filter__category__range__max-text До
+
+      .price-input
+        .field.field-min
+          input.input-min(type='number' value='349')
+        .field
+          input.input-max(type='number' value='1600')
+      .slider
+        .progress
+      .range-input
+        input.range-min(type='range' min='0' max='1600' value='349' step='10')
+        input.range-max(type='range' min='0' max='1600' value='1600' step='10')
+
+  .catalog-filter__category.catalog-filter__category-color
+    .catalog-filter__category__title
+      .catalog-filter__category__title__text Цвета
+      img.catalog-filter__category__title__img(src="./assets/img/icons/chevron.svg", alt="chevron")
+    
+    .catalog-filter__category__category-color__colors.catalog-filter__category__category-wrapper
+      .catalog-filter__category__category-color__color
+        input.catalog-filter__category__category-color__color__chekbox(type="checkbox" id="color-chekbox1" name="white-color" value="white")
+        label.catalog-filter__category__category-color__color__chekbox-label(for="color-chekbox1") Оттенки белого
+      
+      .catalog-filter__category__category-color__color
+        input.catalog-filter__category__category-color__color__chekbox(type="checkbox" id="color-chekbox2" name="white-color" value="white")
+        label.catalog-filter__category__category-color__color__chekbox-label(for="color-chekbox2") Оттенки голубого
+      
+      .catalog-filter__category__category-color__color
+        input.catalog-filter__category__category-color__color__chekbox(type="checkbox" id="color-chekbox3" name="white-color" value="white")
+        label.catalog-filter__category__category-color__color__chekbox-label(for="color-chekbox3") Оттенки желтого
+      
+      .catalog-filter__category__category-color__color
+        input.catalog-filter__category__category-color__color__chekbox(type="checkbox" id="color-chekbox4" name="white-color" value="white")
+        label.catalog-filter__category__category-color__color__chekbox-label(for="color-chekbox4") Оттенки зеленого
+      
+      .catalog-filter__category__category-color__color
+        input.catalog-filter__category__category-color__color__chekbox(type="checkbox" id="color-chekbox5" name="white-color" value="white")
+        label.catalog-filter__category__category-color__color__chekbox-label(for="color-chekbox5") Оттенки розового
+      
+      .catalog-filter__category__category-color__color
+        input.catalog-filter__category__category-color__color__chekbox(type="checkbox" id="color-chekbox6" name="white-color" value="white")
+        label.catalog-filter__category__category-color__color__chekbox-label(for="color-chekbox6") Оттенки серого
+  
+  .catalog-filter__category.catalog-filter__category-size
+    .catalog-filter__category__title
+      .catalog-filter__category__title__text Размер
+      img.catalog-filter__category__title__img(src="./assets/img/icons/chevron.svg", alt="chevron")
+    
+    .catalog-filter__category-size__sizes.catalog-filter__category__category-wrapper
+      .catalog-filter__category-size__size
+        input.catalog-filter__category__category-color__color__chekbox(type="checkbox" id="size-chekbox1" name="white-color" value="white")
+        label.catalog-filter__category__category-color__color__chekbox-label(for="size-chekbox1") 56
+      
+      .catalog-filter__category-size__size
+        input.catalog-filter__category__category-color__color__chekbox(type="checkbox" id="size-chekbox2" name="white-color" value="white")
+        label.catalog-filter__category__category-color__color__chekbox-label(for="size-chekbox2") 56-62
+      
+      .catalog-filter__category-size__size
+        input.catalog-filter__category__category-color__color__chekbox(type="checkbox" id="size-chekbox3" name="white-color" value="white")
+        label.catalog-filter__category__category-color__color__chekbox-label(for="size-chekbox3") 62
+      
+      .catalog-filter__category-size__size
+        input.catalog-filter__category__category-color__color__chekbox(type="checkbox" id="size-chekbox4" name="white-color" value="white")
+        label.catalog-filter__category__category-color__color__chekbox-label(for="size-chekbox4") 62-68
+      
+      .catalog-filter__category-size__size
+        input.catalog-filter__category__category-color__color__chekbox(type="checkbox" id="size-chekbox5" name="white-color" value="white")
+        label.catalog-filter__category__category-color__color__chekbox-label(for="size-chekbox5") 68
+      
+      .catalog-filter__category-size__size
+        input.catalog-filter__category__category-color__color__chekbox(type="checkbox" id="size-chekbox6" name="white-color" value="white")
+        label.catalog-filter__category__category-color__color__chekbox-label(for="size-chekbox6") 68-74
+      
+      .catalog-filter__category-size__size
+        input.catalog-filter__category__category-color__color__chekbox(type="checkbox" id="size-chekbox7" name="white-color" value="white")
+        label.catalog-filter__category__category-color__color__chekbox-label(for="size-chekbox7") 74
+      
+      .catalog-filter__category-size__size
+        input.catalog-filter__category__category-color__color__chekbox(type="checkbox" id="size-chekbox8" name="white-color" value="white")
+        label.catalog-filter__category__category-color__color__chekbox-label(for="size-chekbox8") 74-80
+      
+      .catalog-filter__category-size__size
+        input.catalog-filter__category__category-color__color__chekbox(type="checkbox" id="size-chekbox9" name="white-color" value="white")
+        label.catalog-filter__category__category-color__color__chekbox-label(for="size-chekbox9") 80
+    
+  button.catalog-filter__reset-btn.button сбросить
