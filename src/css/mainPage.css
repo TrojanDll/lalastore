@@ -1549,6 +1549,7 @@ legend {
   grid-area: 1/4/span 2/span 1;
 }
 .catalog__collection-title {
+  display: block;
   margin-top: 100px;
   text-align: center;
 }
