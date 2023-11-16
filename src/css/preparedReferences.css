@@ -262,6 +262,7 @@ legend {
 }
 * {
   font-family: "Montserrat", sans-serif;
+  color: #33394f;
   outline: none;
 }
 
@@ -1632,6 +1633,10 @@ legend {
   }
 }
 @media (max-width: 992px) {
+  .references {
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
   .references__wrapper {
     width: 100%;
     margin: 0 auto;
@@ -1642,9 +1647,19 @@ legend {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 15px;
+  }
+  .references__list_left-part {
+    gap: 15px;
+  }
+  .references__list_right-part {
+    gap: 15px;
   }
   .references__item {
     height: 180px;
+  }
+  .references__item_right-part_13 {
+    margin-top: 0;
   }
   .references__list_left-part {
     width: 100%;
