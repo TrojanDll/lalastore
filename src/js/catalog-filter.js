@@ -69,6 +69,11 @@
       catalogTitle.nextElementSibling.classList.toggle(
         "catalog-filter__category__category-wrapper_closed"
       );
+      if (catalogTitle.style.margin != "0px") {
+        catalogTitle.style.margin = "0px";
+      } else {
+        catalogTitle.style.margin = "0px 0px 10px 0px";
+      }
     });
   });
 
@@ -86,24 +91,41 @@
   });
 
   const catalogSort = document.querySelector(".catalog-view-filter__sort");
+  const catalogFilter = document.querySelector(".catalog-filter");
+  const catalogFilterCloseBtn = document.querySelector(
+    ".catalog-filter__header__close-btn"
+  );
+  const body = document.querySelector("body");
 
-  catalogSort.addEventListener("click", function (e) {
-    const catalogSortText = this.querySelector(
-      ".catalog-view-filter__sort__text"
-    );
+  if (window.innerWidth > 768) {
+    catalogSort.addEventListener("click", function (e) {
+      const catalogSortText = this.querySelector(
+        ".catalog-view-filter__sort__text"
+      );
 
-    catalogSortText.classList.toggle(
-      ".catalog-view-filter__sort__text_decreasing"
-    );
-
-    if (
-      catalogSortText.classList.contains(
+      catalogSortText.classList.toggle(
         ".catalog-view-filter__sort__text_decreasing"
-      )
-    ) {
-      catalogSortText.innerText = "Убывание";
-    } else {
-      catalogSortText.innerText = "По умолчанию (возрастание)";
-    }
-  });
+      );
+
+      if (
+        catalogSortText.classList.contains(
+          ".catalog-view-filter__sort__text_decreasing"
+        )
+      ) {
+        catalogSortText.innerText = "Убывание";
+      } else {
+        catalogSortText.innerText = "По умолчанию (возрастание)";
+      }
+    });
+  } else {
+    catalogSort.addEventListener("click", function (e) {
+      catalogFilter.classList.toggle("catalog-filter_opened");
+      body.classList.toggle("overflow-hidden");
+    });
+
+    catalogFilterCloseBtn.addEventListener("click", function () {
+      catalogFilter.classList.toggle("catalog-filter_opened");
+      body.classList.toggle("overflow-hidden");
+    });
+  }
 })();

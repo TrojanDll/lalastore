@@ -10,6 +10,14 @@
     color: #fff;
     font-size: 20px;
     font-weight: 700;
+
+    &__close-btn {
+      display: none;
+      position: absolute;
+      left: 14px;
+      width: 30px;
+      height: 30px;
+    }
   }
 
   &__category {
@@ -257,10 +265,6 @@
     &_closed {
       max-height: 0px;
       padding: 0px;
-
-      .catalog-filter__category__title__text {
-        margin: 0;
-      }
     }
   }
 }
@@ -271,10 +275,26 @@
     position: fixed;
     background-color: #fff;
     top: 0;
-    left: 0;
+    left: -100%;
     width: 100%;
     height: calc(100% - 60px);
-    z-index: 100;
+    z-index: 80;
+    transition: left 0.2s;
+
+    &_opened {
+      left: 0;
+    }
+
+    &__header {
+      background-color: #fff;
+      position: relative;
+      color: $text-color;
+      height: 72px;
+      font-size: 24px;
+      &__close-btn {
+        display: block;
+      }
+    }
 
     &__category {
       padding: 0;

@@ -500,6 +500,11 @@ legend {
             transform: translate(-50%, -50%);
   }
 }
+@media (max-width: 768px) {
+  .product-card__title {
+    margin-top: 21px;
+  }
+}
 @media (max-width: 576px) {
   .product-card__button {
     margin: 0 auto;

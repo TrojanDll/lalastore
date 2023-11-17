@@ -57,6 +57,14 @@
   }
 }
 
+@media (max-width: 768px) {
+  .product-card {
+    &__title {
+      margin-top: 21px;
+    }
+  }
+}
+
 @media (max-width: 576px) {
   .product-card {
     &__button {
