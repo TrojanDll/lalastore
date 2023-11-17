@@ -24,3 +24,15 @@
   grid-template-columns: 257px auto;
   column-gap: 30px;
 }
+
+@media (max-width: 992px) {
+  .catalog-page-main-wrapper {
+    grid-template-columns: 220px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog-page-main-wrapper {
+    grid-template-columns: auto;
+  }
+}

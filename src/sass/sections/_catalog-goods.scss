@@ -5,12 +5,25 @@
     grid-template-columns: repeat(5, 1fr);
     row-gap: 30px;
   }
+
+  &__card {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1540px) {
+  .catalog-goods {
+    &__cards {
+      grid-template-columns: repeat(4, 1fr);
+      row-gap: 15px;
+    }
+  }
 }
 
 @media (max-width: 1200px) {
   .catalog-goods {
     &__cards {
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       row-gap: 15px;
     }
   }
@@ -19,7 +32,7 @@
 @media (max-width: 992px) {
   .catalog-goods {
     &__cards {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }
@@ -27,7 +40,32 @@
 @media (max-width: 768px) {
   .catalog-goods {
     &__cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .catalog-goods {
+    &__cards {
       grid-template-columns: repeat(2, 1fr);
+    }
+    .product-card {
+      width: 153px;
+    }
+
+    .product-card-label {
+      display: none;
+    }
+    .product-card__img {
+      width: 152px;
+      height: 160px;
+    }
+    .product-card__title {
+      font-size: 13px;
+    }
+    .product-card__button {
+      font-size: 12px;
     }
   }
 }

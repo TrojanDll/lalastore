@@ -84,4 +84,26 @@
       priceInputChange(input);
     });
   });
+
+  const catalogSort = document.querySelector(".catalog-view-filter__sort");
+
+  catalogSort.addEventListener("click", function (e) {
+    const catalogSortText = this.querySelector(
+      ".catalog-view-filter__sort__text"
+    );
+
+    catalogSortText.classList.toggle(
+      ".catalog-view-filter__sort__text_decreasing"
+    );
+
+    if (
+      catalogSortText.classList.contains(
+        ".catalog-view-filter__sort__text_decreasing"
+      )
+    ) {
+      catalogSortText.innerText = "Убывание";
+    } else {
+      catalogSortText.innerText = "По умолчанию (возрастание)";
+    }
+  });
 })();
