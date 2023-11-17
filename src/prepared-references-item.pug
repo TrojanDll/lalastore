@@ -10,6 +10,10 @@ html(lang="en")
         include sections/header
         include sections/catalog-menu
         include sections/subheader
+        .container
+            .catalog__title-wrapper
+                .title.catalog__title Боди
+                .title.catalog__count 92
         include sections/breadcrumbs
         include sections/references-item-page
         include sections/recent
@@ -20,20 +24,33 @@ html(lang="en")
         script(src="./js/search-logic.js")
         script(src="./js/catalog-logic.js")
         script(src="./js/catalog-item-menu-logic.js")
-        script(src="./js/modals-logic.js")
         script(src="./js/sidebar-logic.js")
         script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
         script.
-            var swiper = new Swiper(".mySwiper", {
-                spaceBetween: 30,
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                },
-                mousewheel: true,
-                keyboard: true,
-            });
+            let init = false;
+
+            let mobile = window.matchMedia('(min-width: 0px) and (max-width: 576px)');
+            let desktop = window.matchMedia('(min-width: 577px)');
+
+            if (desktop.matches) {
+                if (!init) {
+                    init = true
+                    let swiper = new Swiper(".mySwiper-goods", {
+                        slidesPerView: 'auto',
+                        navigation: {
+                            nextEl: ".swiper-goods-button-next",
+                            prevEl: ".swiper-goods-button-prev",
+                        },
+                        pagination: {
+                            el: ".swiper-pagination",
+                        },
+                        mousewheel: true,
+                        keyboard: true,
+                    });
+                }
+            }
+
+            else if (mobile.matches) {
+                swiper.destroy()
+            }
 

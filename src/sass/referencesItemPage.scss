@@ -16,3 +16,20 @@
 @import "./sections/bottom-menu";
 @import "./sections/references-item-page";
 @import "./sections/recent";
+
+.catalog {
+  &__title-wrapper {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__count {
+    margin-top: 6px;
+    margin-left: 20px;
+    color: rgba(51, 57, 79, 0.62);
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
