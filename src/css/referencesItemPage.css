@@ -255,8 +255,14 @@ legend {
   background: rgba(44, 44, 44, 0.81);
 }
 
+@media (max-width: 576px) {
+  .layout {
+    height: calc(100% - 60px);
+  }
+}
 * {
   font-family: "Montserrat", sans-serif;
+  color: #33394f;
   outline: none;
 }
 
@@ -297,6 +303,8 @@ legend {
   }
 }
 .button {
+  position: relative;
+  overflow: hidden;
   padding: 0 42px;
   height: 45px;
   display: -webkit-box;
@@ -316,10 +324,55 @@ legend {
   text-transform: uppercase;
   cursor: pointer;
 }
+.button::after, .button::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  top: 0;
+  left: -100%;
+  opacity: 0.5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: -1;
+}
+.button::after {
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
 .button:hover {
-  background-color: #ecc44b;
+  background-color: #f1c94f;
 }
 
+.pulse {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  -webkit-animation: pulse 0.5s ease-out;
+          animation: pulse 0.5s ease-out;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  position: absolute;
+}
+
+@-webkit-keyframes pulse {
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    background-color: #fff;
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    background-color: #fff;
+    opacity: 0;
+  }
+}
 @media (max-width: 576px) {
   .button {
     padding: 0 24px;
@@ -923,7 +976,7 @@ legend {
   cursor: pointer;
 }
 .header__search__button:hover {
-  background-color: #ecc44b;
+  background-color: #f1c94f;
 }
 .header__items-bottom {
   margin-left: auto;
@@ -1192,6 +1245,9 @@ legend {
   font-weight: 400;
   color: rgba(255, 255, 255, 0.63);
 }
+.catalog-menu__chapter__element:hover {
+  color: #fff;
+}
 .catalog-menu__mobile-header {
   padding: 40px 20px;
   display: -webkit-box;
@@ -1398,14 +1454,10 @@ legend {
   margin-bottom: 70px;
 }
 .references-item__wrapper {
-  overflow: hidden;
   height: 478px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   gap: 20px;
 }
 .references-item__image {
@@ -1431,6 +1483,16 @@ legend {
   font-weight: 700;
 }
 
+.swiper-goods-button-prev {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.goods {
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
+}
 .goods__title {
   font-size: 36px;
   font-weight: 700;
@@ -1477,10 +1539,37 @@ legend {
   height: 37px;
   margin-top: 16px;
 }
+.goods__next_button {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.goods__next_button .disable {
+  display: none;
+}
+.goods__prev_button {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.goods__item:last-child {
+  margin-right: 90px;
+}
+
+.goods__item:nth-child(5) {
+  margin-right: 0;
+}
 
 @media (max-width: 1540px) {
   .references-item__wrapper {
-    overflow: hidden;
     height: 430px;
     -ms-flex-pack: distribute;
         justify-content: space-around;
@@ -1504,6 +1593,12 @@ legend {
         -ms-flex-align: center;
             align-items: center;
     height: auto;
+  }
+  .goods__next_button {
+    display: none;
+  }
+  .goods__prev_button {
+    display: none;
   }
   .references-item__image {
     width: 100%;
@@ -1534,10 +1629,11 @@ legend {
     height: auto;
     display: -ms-grid;
     display: grid;
+    gap: 15px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -ms-grid-columns: 153px 153px 153px;
+    -ms-grid-columns: 153px 15px 153px 15px 153px;
     grid-template-columns: 153px 153px 153px;
   }
 }
@@ -1609,4 +1705,20 @@ legend {
   .recent__title {
     text-align: center;
   }
+}
+.catalog__title-wrapper {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.catalog__count {
+  margin-top: 6px;
+  margin-left: 20px;
+  color: rgba(51, 57, 79, 0.62);
+  font-size: 16px;
+  font-weight: 400;
 }
