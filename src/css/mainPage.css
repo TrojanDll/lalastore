@@ -1410,6 +1410,9 @@ legend {
 .catalog__item__menu-mobile {
   display: none;
 }
+.catalog__item__menu-mobile__item {
+  display: block;
+}
 .catalog__item__label {
   position: absolute;
   bottom: 0;

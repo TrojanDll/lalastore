@@ -118,6 +118,7 @@
 
 @media (max-width: 576px) {
   .catalog-view-filter {
+    border-radius: 0;
     &__view {
       &__text {
         display: none;
