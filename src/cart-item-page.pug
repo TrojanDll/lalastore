@@ -1,0 +1,56 @@
+doctype html
+html(lang="en")
+    head
+        title="LalaStore"
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+        link(rel="stylesheet" href="./css/cartItemPage.css")
+    body
+        include sections/header
+        include sections/catalog-menu
+        include sections/subheader
+        .container
+            .catalog__title-wrapper
+                .title.catalog__title Боди
+                .title.catalog__count 92
+        include sections/breadcrumbs
+        include sections/cart-item-content
+        include sections/recent
+        include sections/footer
+        include sections/bottom-menu
+        include sections/layout
+
+        script(src="./js/search-logic.js")
+        script(src="./js/catalog-logic.js")
+        script(src="./js/catalog-item-menu-logic.js")
+        script(src="./js/sidebar-logic.js")
+        script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+        script.
+            let init = false;
+
+            let mobile = window.matchMedia('(min-width: 0px) and (max-width: 576px)');
+            let desktop = window.matchMedia('(min-width: 577px)');
+
+            if (desktop.matches) {
+                if (!init) {
+                    init = true
+                    let swiper = new Swiper(".cart__item__swiper", {
+                        slidesPerView: '2',
+                        navigation: {
+                            nextEl: ".cart__item__swiper__next",
+                            prevEl: ".cart__item__swiper__prev",
+                        },
+                        direction: "vertical",
+                        pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                        },
+                    });
+                }
+            }
+
+            else if (mobile.matches) {
+                swiper.destroy()
+            }
+
