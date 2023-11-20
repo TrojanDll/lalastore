@@ -32,11 +32,36 @@
                         input(type='radio', name='register_webinar_', value='76')#wnr3.main-info__size-input
                         label(for='wnr3').main-info__size-label 76
                 .main-info__line
-                .main-info__delivery fdsfs
+                .main-info__delivery-option.delivery-option
+                    .delivery-option__item
+                        .delivery-option__image.delivery-option__image_car
+                        .delivery-option__content
+                            .delivery-option__title Доставка в Краснодар
+                            .delivery-option__text Самовывоз — бесплатно
+                            .delivery-option__option Рассчитать доставку
+
+                    .delivery-option__item
+                        .delivery-option__image.delivery-option__image_box
+                        .delivery-option__content
+                            .delivery-option__title Самовывоз сегодня - бесплатно
+                            .delivery-option__text Доставка завтра - 370 ₽
+
+                    .delivery-option__note Цена действительна только для интернет-магазина и может отличаться от цен в розничных магазинах
             .cart__item__description
                 .cart__item__title Описание
-                .cart__item__text
+                p.cart__item__text
+                    | Боди-майка из мягчайшего интерлока. Прекрасный вариант для жаркого лета.
+                    br
+                    br
+                    |Кнопки расположены на плечиках и между ножками, что позволяет быстро переодеть малыша или сменить подгузник.
+                    br
+                    br
+                    |Состав: 100% хлопок
             .cart__item__reviews.reviews
                 .cart__item__title Отзывы
                 .reviews__list
-                    .reviews__item
+                    .reviews__empty
+                        .reviews__text У данного товара нет отзывов. Станьте первым, кто оставил отзыв об этом товаре!
+                        button.reviews__create-review-button оставить отзыв
+
+                    //.reviews__item

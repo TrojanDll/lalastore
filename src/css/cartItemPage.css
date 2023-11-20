@@ -1525,6 +1525,9 @@ legend {
   font-size: 36px;
   font-weight: 700;
 }
+.cart__item__text {
+  margin-top: 25px;
+}
 .cart__item__reviews {
   width: 748px;
   height: 384px;
@@ -1538,8 +1541,13 @@ legend {
 .main-info__head {
   margin-bottom: 25px;
 }
+.main-info__name {
+  font-size: 24px;
+  font-weight: 700;
+}
 .main-info__code {
   font-size: 14px;
+  color: #7B7F8D;
 }
 .main-info__stash {
   margin-bottom: 30px;
@@ -1547,6 +1555,9 @@ legend {
 .main-info__price {
   font-size: 32px;
   font-weight: 700;
+}
+.main-info__buy-button {
+  margin-bottom: 20px;
 }
 .main-info__size {
   display: -webkit-box;
@@ -1585,8 +1596,72 @@ legend {
 .main-info__line {
   width: 100%;
   height: 1px;
+  margin-bottom: 15px;
   background: #D5D7DB;
 }
+.reviews__list {
+  margin-top: 22px;
+}
+
+.delivery-option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.delivery-option__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 9px;
+  width: 50%;
+}
+.delivery-option__image {
+  background: #33394f;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+}
+.delivery-option__image_car {
+  background-image: url("../assets/img/icons/shipment_car.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.delivery-option__image_box {
+  background-image: url("../assets/img/icons/shipment_box.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.delivery-option__content {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+.delivery-option__title {
+  font-weight: 700;
+}
+.delivery-option__text {
+  color: rgba(51, 57, 79, 0.62);
+  font-size: 18px;
+}
+.delivery-option__option {
+  text-decoration-line: underline;
+}
+.delivery-option__note {
+  margin-top: 39px;
+  color: #7B7F8D;
+}
+
 .recent {
   padding-top: 35px;
   padding-bottom: 60px;

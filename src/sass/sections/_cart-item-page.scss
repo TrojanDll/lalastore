@@ -63,7 +63,7 @@
     font-weight: 700;
   }
   &__text {
-
+    margin-top: 25px;
   }
   &__reviews {
     width: 748px;
@@ -79,13 +79,15 @@
     margin-bottom: 25px;
   }
   &__name {
-
+    font-size: 24px;
+    font-weight: 700;
   }
   &__status {
 
   }
   &__code {
     font-size: 14px;
+    color: $gray-dark;
   }
   &__stash {
     margin-bottom: 30px;
@@ -95,7 +97,7 @@
     font-weight: 700;
   }
   &__buy-button {
-
+    margin-bottom: 20px;
   }
   &__size {
     display: flex;
@@ -137,6 +139,7 @@
   &__line {
     width: 100%;
     height: 1px;
+    margin-bottom: 15px;
     background: #D5D7DB;
   }
   &__delivery {
@@ -148,8 +151,58 @@
 
 }
 .reviews__list {
-
+  margin-top: 22px;
 }
 .reviews__item {
 
+}
+
+.delivery-option {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    width: 50%;
+  }
+  &__image {
+    background: $text-color;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+
+    &_car {
+      background-image: url("../assets/img/icons/shipment_car.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &_box {
+      background-image: url("../assets/img/icons/shipment_box.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  &__title {
+    font-weight: 700;
+  }
+  &__text {
+    color: rgba(51, 57, 79, 0.62);
+    font-size: 18px;
+  }
+  &__option {
+    text-decoration-line: underline;
+  }
+  &__note {
+    margin-top: 39px;
+    color: $gray-dark;
+  }
 }
