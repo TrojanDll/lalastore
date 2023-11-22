@@ -1,27 +1,27 @@
 .catalog-menu {
-  background-color: $dark-color;
-  width: 100%;
   position: absolute;
   top: 66px;
   left: 0;
   z-index: 100;
   display: none;
+  width: 100%;
+  background-color: $dark-color;
 
   &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     width: 100%;
     height: 100%;
     padding-top: 20px;
     padding-bottom: 30px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
   }
 
   &__chapter {
     &__title {
-      text-transform: uppercase;
       color: #fff;
       font-weight: 700;
       font-size: 16px;
+      text-transform: uppercase;
 
       &__icon {
         display: none;
@@ -31,9 +31,9 @@
     &__element {
       display: block;
       margin-top: 15px;
-      font-size: 16px;
+      color: rgb(255 255 255 / 63%);
       font-weight: 400;
-      color: rgba(255, 255, 255, 0.63);
+      font-size: 16px;
 
       &:hover {
         color: #fff;
@@ -42,22 +42,22 @@
   }
 
   &__mobile-header {
-    padding: 40px 20px;
     display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
+    padding: 40px 20px;
     background: #33394f;
-    display: none;
 
     &__title {
       color: #fff;
-      font-size: 22px;
       font-weight: 700;
+      font-size: 22px;
     }
   }
 }
 
-@media (max-width: 1540px) {
+@media (width <= 1540px) {
   .catalog-menu {
     top: 91px;
 
@@ -68,7 +68,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (width <= 992px) {
   .catalog-menu {
     &__wrapper {
       grid-template-columns: repeat(3, 1fr);
@@ -76,15 +76,15 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .catalog-menu {
-    top: 100%;
-    overflow-y: scroll;
     position: fixed;
+    top: 100%;
+    display: block;
     width: 100%;
     height: calc(100% - 60px);
+    overflow-y: scroll;
     transition: top 0.2s;
-    display: block;
 
     &__mobile-header {
       display: flex;
@@ -95,8 +95,8 @@
     }
 
     &__wrapper {
-      padding-top: 0;
       display: block;
+      padding-top: 0;
     }
 
     &__chapter {
@@ -104,24 +104,26 @@
 
       &__elements {
         display: none;
+
         &_visible {
           display: block;
         }
       }
+
       &__title {
-        text-transform: none;
         display: flex;
         align-items: center;
-        height: 50px;
         width: 100%;
-        font-size: 22px;
-        font-weight: 400;
-        background: #33394f;
+        height: 50px;
         padding: 0 14px;
+        font-weight: 400;
+        font-size: 22px;
+        text-transform: none;
+        background: #33394f;
 
         &_active {
-          background: #515976;
           font-weight: 700;
+          background: #515976;
         }
 
         &__icon {
@@ -135,20 +137,21 @@
       }
 
       &__element {
-        padding: 0 14px;
-        height: 50px;
-        margin-top: 0;
-        font-size: 18px;
         display: flex;
         align-items: center;
+        height: 50px;
+        margin-top: 0;
+        padding: 0 14px;
+        font-size: 18px;
       }
     }
   }
 }
 
-@media (max-width: 576px) {
+@media (width <= 576px) {
   .catalog-menu {
     height: 100%;
+
     &__container {
       padding: 0;
     }

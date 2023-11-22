@@ -1,6 +1,6 @@
 .product-card {
-  width: 230px;
   position: relative;
+  width: 230px;
 
   &__img-wrapper {
     position: relative;
@@ -21,27 +21,27 @@
   &__title {
     margin-top: 12px;
     color: $text-color;
-    text-align: center;
-    font-size: 16px;
     font-weight: 700;
+    font-size: 16px;
+    text-align: center;
   }
 
   &__price {
     margin-top: 15px;
     color: $text-color;
-    text-align: center;
-    font-size: 16px;
     font-weight: 700;
+    font-size: 16px;
+    text-align: center;
   }
 
   &__button {
-    margin-top: 21px;
     width: 100%;
+    margin-top: 21px;
     font-size: 12px;
   }
 }
 
-@media (max-width: 1540px) {
+@media (width <= 1540px) {
   .product-card {
     width: 171px;
 
@@ -57,7 +57,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .product-card {
     &__title {
       margin-top: 21px;
@@ -65,15 +65,15 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (width <= 576px) {
   .product-card {
     &__button {
+      width: 150px;
       margin: 0 auto;
       margin-top: 15px;
-      width: 150px;
-      font-size: 10px;
-      padding-left: 24px;
       padding-right: 24px;
+      padding-left: 24px;
+      font-size: 10px;
     }
   }
 }

@@ -4,19 +4,19 @@
   background: #f4f4f4;
 
   &-container {
-    height: 100%;
     display: flex;
     align-items: center;
+    height: 100%;
   }
 
   &__text {
-    color: rgba(51, 57, 79, 0.62);
-    font-size: 15px;
+    color: rgb(51 57 79 / 62%);
     font-weight: 400;
+    font-size: 15px;
   }
 }
 
-@media (max-width: 576px) {
+@media (width <= 576px) {
   .breadcrumbs {
     display: none;
   }

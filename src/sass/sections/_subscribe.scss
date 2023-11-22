@@ -6,9 +6,9 @@
   }
 
   &__input-wrapper {
+    width: 600px;
     margin: 0 auto;
     margin-top: 30px;
-    width: 600px;
   }
 
   &__input-area {
@@ -27,7 +27,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .subscribe {
     &__input-wrapper {
       width: 100%;
@@ -39,17 +39,19 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (width <= 576px) {
   .subscribe {
     padding-top: 30px;
     padding-bottom: 25px;
+
     &__input {
       width: 100%;
     }
+
     &__button {
-      margin-top: 15px;
       position: relative;
       width: 100%;
+      margin-top: 15px;
     }
   }
 }

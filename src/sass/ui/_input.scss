@@ -1,13 +1,13 @@
 .input {
-  padding: 11px;
-  margin-top: 10px;
-  height: 40px;
   width: 100%;
-  border-radius: 5px;
-  background: #f4f4f4;
+  height: 40px;
+  margin-top: 10px;
+  padding: 11px;
   color: $text-color;
-  font-size: 14px;
   font-weight: 400;
+  font-size: 14px;
+  background: #f4f4f4;
+  border-radius: 5px;
 
   &::placeholder {
     color: #818492;
@@ -16,20 +16,20 @@
 
 .input-title {
   color: #818492;
-  font-size: 14px;
   font-weight: 400;
+  font-size: 14px;
 }
 
 .textarea {
-  padding: 11px;
-  margin-top: 10px;
-  height: 400px;
   width: 100%;
-  border-radius: 5px;
-  background: #f4f4f4;
+  height: 400px;
+  margin-top: 10px;
+  padding: 11px;
   color: $text-color;
-  font-size: 14px;
   font-weight: 400;
+  font-size: 14px;
+  background: #f4f4f4;
+  border-radius: 5px;
 
   &::placeholder {
     color: #818492;

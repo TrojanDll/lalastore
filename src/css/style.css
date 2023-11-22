@@ -1,15 +1,15 @@
 /* Reset and base styles  */
 * {
-  padding: 0px;
-  margin: 0px;
+  margin: 0;
+  padding: 0;
   border: none;
 }
 
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Links */
@@ -40,8 +40,8 @@ h4,
 h5,
 h6,
 p {
-  font-size: inherit;
   font-weight: inherit;
+  font-size: inherit;
 }
 
 ul,
@@ -68,9 +68,9 @@ input,
 textarea,
 button,
 select {
-  font-family: inherit;
-  font-size: inherit;
   color: inherit;
+  font-size: inherit;
+  font-family: inherit;
   background-color: transparent;
 }
 
@@ -79,12 +79,12 @@ input::-ms-clear {
 }
 
 button,
-input[type=submit] {
+input[type="submit"] {
   display: inline-block;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background-color: transparent;
   background: none;
+  background-color: transparent;
+  box-shadow: none;
+  box-shadow: none;
   cursor: pointer;
 }
 
@@ -109,19 +109,29 @@ legend {
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("../../assets/fonts/Montserrat-ExtraBold.eot");
-  src: url("../../assets/fonts/Montserrat-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Montserrat-ExtraBold.woff") format("woff"), url("../../assets/fonts/Montserrat-ExtraBold.ttf") format("truetype");
   font-weight: 700;
+  font-family: Montserrat;
   font-style: normal;
+  src: url("../../assets/fonts/Montserrat-ExtraBold.eot");
+  src:
+    url("../../assets/fonts/Montserrat-ExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../assets/fonts/Montserrat-ExtraBold.woff") format("woff"),
+    url("../../assets/fonts/Montserrat-ExtraBold.ttf") format("truetype");
 }
+
 @font-face {
-  font-family: "Montserrat";
-  src: url("../../assets/fonts/Montserrat-Regular.eot");
-  src: url("../../assets/fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Montserrat-Regular.woff") format("woff"), url("../../assets/fonts/Montserrat-Regular.ttf") format("truetype");
   font-weight: 400;
+  font-family: Montserrat;
   font-style: normal;
+  src: url("../../assets/fonts/Montserrat-Regular.eot");
+  src:
+    url("../../assets/fonts/Montserrat-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../assets/fonts/Montserrat-Regular.woff") format("woff"),
+    url("../../assets/fonts/Montserrat-Regular.ttf") format("truetype");
 }
+
 * {
-  font-family: "Montserrat", sans-serif;
+  font-family: Montserrat, sans-serif;
 }

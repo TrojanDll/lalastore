@@ -23,8 +23,8 @@
     a {
       display: block;
       color: $text-color-light;
-      font-size: 16px;
       font-weight: 400;
+      font-size: 16px;
 
       &:first-child {
         margin-top: 0;
@@ -32,8 +32,8 @@
     }
 
     .footer__links__item_active {
-      font-weight: 700;
       color: $text-color;
+      font-weight: 700;
     }
   }
 
@@ -52,24 +52,24 @@
   &__copyright {
     margin-top: 12px;
     color: $text-color-light;
-    font-size: 16px;
     font-weight: 400;
+    font-size: 16px;
     text-align: center;
   }
 
   &__payment-wrapper {
-    margin-top: 24px;
     display: flex;
+    margin-top: 24px;
     column-gap: 23px;
   }
 
   &__policy {
     display: block;
     margin-top: 17px;
-    text-align: center;
     color: $text-color-light;
-    font-size: 14px;
     font-weight: 400;
+    font-size: 14px;
+    text-align: center;
     text-decoration: underline;
   }
 
@@ -80,8 +80,8 @@
   }
 
   &__contacts-item {
-    margin-top: 10px;
     display: flex;
+    margin-top: 10px;
     column-gap: 16px;
 
     &__text {
@@ -90,7 +90,7 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (width <= 1200px) {
   .footer {
     &__contacts-wrapper {
       display: none;
@@ -106,11 +106,11 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (width <= 576px) {
   .footer {
     padding-top: 30px;
-    border: none;
     background-color: #f4f4f4;
+    border: none;
 
     &__payment-method {
       height: 24px;

@@ -1,0 +1,29 @@
+@import "./style.scss";
+
+// ui
+@import "./ui/button";
+@import "./ui/input";
+@import "./ui/title";
+@import "./ui/product-card";
+@import "./ui/product-card-label";
+
+// sections
+@import "./sections/header";
+@import "./sections/subheader";
+@import "./sections/catalog-menu";
+@import "./sections/breadcrumbs";
+@import "./sections/delivery-methods";
+@import "./sections/recent";
+@import "./sections/bottom-menu";
+
+.delivery__title {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .delivery__title {
+    display: none;
+  }
+}

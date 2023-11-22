@@ -8,30 +8,30 @@
 
   &__descr {
     margin-top: 25px;
-    color: rgba(51, 57, 79, 0.62);
-    text-align: center;
-    font-size: 20px;
+    color: rgb(51 57 79 / 62%);
     font-weight: 400;
+    font-size: 20px;
+    text-align: center;
   }
 
   &__benefits {
-    margin-top: 63px;
     display: flex;
-    justify-content: space-around;
     align-items: start;
+    justify-content: space-around;
+    margin-top: 63px;
 
     &__item {
       width: 100%;
       max-width: 300px;
 
       &__circle {
-        margin: 0 auto;
-        width: 84px;
-        height: 84px;
-        background-color: $accent-color;
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 84px;
+        height: 84px;
+        margin: 0 auto;
+        background-color: $accent-color;
         border-radius: 100%;
       }
 
@@ -53,27 +53,27 @@
       &__title {
         margin-top: 15px;
         color: $text-color;
-        font-size: 20px;
         font-weight: 700;
+        font-size: 20px;
         text-align: center;
       }
 
       &__descr {
         margin-top: 15px;
-        color: rgba(51, 57, 79, 0.62);
-        text-align: center;
-        font-size: 18px;
+        color: rgb(51 57 79 / 62%);
         font-weight: 400;
+        font-size: 18px;
+        text-align: center;
       }
     }
   }
 }
 
-@media (max-width: 992px) {
+@media (width <= 992px) {
   .about {
     &__benefits {
-      margin: 0;
       display: block;
+      margin: 0;
 
       &__item {
         margin: 0 auto;
@@ -83,10 +83,11 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (width <= 576px) {
   .about {
     padding-top: 30px;
     padding-bottom: 30px;
+
     &__descr {
       font-size: 16px;
     }
