@@ -83,8 +83,8 @@ html(lang="en")
             })
 
             if (mobile.matches) {
-                const swiperBigPicturePrev = document.querySelector('.cart__big-picture__swiper__prev')
-                const swiperBigPictureNext = document.querySelector('.cart__big-picture__swiper__next')
+                const swiperBigPicturePrev = document.querySelector('.cart__item__big-picture__swiper__prev')
+                const swiperBigPictureNext = document.querySelector('.cart__item__big-picture__swiper__next')
                 swiperBigPictureNext.addEventListener('click', () => {
                     if (pointerForBigPicture < pointerBarrier-1) {
                         pointerForBigPicture++;
