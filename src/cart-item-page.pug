@@ -29,8 +29,8 @@ html(lang="en")
         script.
             let init = false;
 
-            let mobile = window.matchMedia('(min-width: 0px) and (max-width: 576px)');
-            let desktop = window.matchMedia('(min-width: 577px)');
+            let mobile = window.matchMedia('(min-width: 0px) and (max-width: 768px)');
+            let desktop = window.matchMedia('(min-width: 768px)');
 
             if (desktop.matches) {
                 if (!init) {
@@ -49,8 +49,79 @@ html(lang="en")
                     });
                 }
             }
-
             else if (mobile.matches) {
-                swiper.destroy()
+                if (!init) {
+                    init = true
+                    let swiper = new Swiper(".cart__item__swiper", {
+                        slidesPerView: '4',
+                        navigation: {
+                            nextEl: ".cart__item__swiper__next",
+                            prevEl: ".cart__item__swiper__prev",
+                        },
+                        pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                        },
+                    });
+                }
             }
+
+
+            // Функционал переключения фото свайпами и обработка клика по фото
+            const bigPicture = document.querySelector('#bigPicture')
+            const picturesList = document.querySelectorAll('.cart__item-of-list')
+            let pointerForBigPicture = 0
+            let pointerBarrier = picturesList.length
+            bigPicture.src = picturesList[pointerForBigPicture].src
+            const switchBigPicture = (srcProp) => {
+                bigPicture.src = srcProp
+            }
+            picturesList.forEach((item) => {
+                item.addEventListener('click', (evt) => {
+                    switchBigPicture(evt.target.src)
+                })
+            })
+
+            if (mobile.matches) {
+                const swiperBigPicturePrev = document.querySelector('.cart__big-picture__swiper__prev')
+                const swiperBigPictureNext = document.querySelector('.cart__big-picture__swiper__next')
+                swiperBigPictureNext.addEventListener('click', () => {
+                    if (pointerForBigPicture < pointerBarrier-1) {
+                        pointerForBigPicture++;
+                        switchBigPicture(picturesList[pointerForBigPicture].src)
+                    }
+                })
+                swiperBigPicturePrev.addEventListener('click', () => {
+                    if (pointerForBigPicture > 0) {
+                        pointerForBigPicture--;
+                        switchBigPicture(picturesList[pointerForBigPicture].src)
+                    }
+                })
+            }
+
+            // Функционал раскрытия комментариев
+            const description = document.querySelector('#description')
+            const reviewsList = document.querySelector('.reviews__list')
+            const reviews = document.querySelector('#reviews')
+            const returnCollapsedReviewsButton = document.querySelector('#reviewsReturnCollapsedButton')
+            const showMoreButton = document.querySelector('#showMoreButton')
+            const createReviewButton = document.querySelector('#createReviewButton')
+
+            showMoreButton.addEventListener('click', () => {
+                description.classList.add('cart__item__description_collapsed')
+                reviews.classList.add('reviews_full')
+                returnCollapsedReviewsButton.classList.add('reviews__return-collapsed-button_active')
+            })
+            returnCollapsedReviewsButton.addEventListener('click', () => {
+                description.classList.remove('cart__item__description_collapsed')
+                reviews.classList.remove('reviews_full')
+                returnCollapsedReviewsButton.classList.remove('reviews__return-collapsed-button_active')
+            })
+            createReviewButton.addEventListener('click', () => {
+                const input = document.createElement("textarea");
+                input.className = "reviews__input-text";
+                reviewsList.insertBefore(input, createReviewButton);
+                createReviewButton.textContent = 'Отправить'
+                createReviewButton.classList.remove('reviews__create-review-button_large');
+            })
 

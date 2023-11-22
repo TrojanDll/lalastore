@@ -117,8 +117,8 @@
         <div class="cart__item__wrapper">
           <div class="cart__item__photos">
             <div class="cart__item__swiper swiper">
-              <div class="swiper-wrapper"><img class="swiper-slide" src="./assets/img/recent3.webp"><img class="swiper-slide" src="./assets/img/recent3.webp"><img class="swiper-slide" src="./assets/img/recent3.webp"><img class="swiper-slide" src="./assets/img/recent3.webp"><img class="swiper-slide" src="./assets/img/recent3.webp"></div><img class="cart__item__swiper__prev" src="./assets/img/icons/arrow_circle.svg"><img class="cart__item__swiper__next" src="./assets/img/icons/arrow_circle.svg">
-            </div><img class="cart__item__big-picture" src="./assets/img/recent3.webp">
+              <div class="swiper-wrapper"><img class="cart__item-of-list swiper-slide" src="./assets/img/recent1.webp"><img class="cart__item-of-list swiper-slide" src="./assets/img/recent2.webp"><img class="cart__item-of-list swiper-slide" src="./assets/img/recent3.webp"><img class="cart__item-of-list swiper-slide" src="./assets/img/recent1.webp"><img class="cart__item-of-list swiper-slide" src="./assets/img/recent2.webp"></div><img class="cart__item__swiper__prev" src="./assets/img/icons/arrow_circle.svg"><img class="cart__item__swiper__next" src="./assets/img/icons/arrow_circle.svg">
+            </div><img class="cart__item__big-picture" id="bigPicture" src=""><img class="cart__big-picture__swiper__prev" src="./assets/img/icons/arrow_circle.svg"><img class="cart__big-picture__swiper__next" src="./assets/img/icons/arrow_circle.svg">
           </div>
           <div class="cart__item__main-info main-info">
             <div class="main-info__head">
@@ -128,17 +128,17 @@
             </div>
             <div class="main-info__stash">
               <div class="main-info__price">349 ₽/шт</div>
-              <div class="main-info__buy-button"></div>
-              <form class="main-info__size">
-                <legend class="main-info__size-legend">Размер:</legend>
-                <input class="main-info__size-input" type="radio" name="register_webinar_" value="74" id="wnr1">
-                <label class="main-info__size-label" for="wnr1">74</label>
-                <input class="main-info__size-input" type="radio" name="register_webinar_" value="75" id="wnr2">
-                <label class="main-info__size-label" for="wnr2">75</label>
-                <input class="main-info__size-input" type="radio" name="register_webinar_" value="76" id="wnr3">
-                <label class="main-info__size-label" for="wnr3">76</label>
-              </form>
+              <button class="button main-info__buy-button">в корзину</button>
             </div>
+            <form class="main-info__size">
+              <legend class="main-info__size-legend">Размер:</legend>
+              <input class="main-info__size-input" type="radio" name="register_webinar_" value="74" id="wnr1">
+              <label class="main-info__size-label" for="wnr1">74</label>
+              <input class="main-info__size-input" type="radio" name="register_webinar_" value="75" id="wnr2">
+              <label class="main-info__size-label" for="wnr2">75</label>
+              <input class="main-info__size-input" type="radio" name="register_webinar_" value="76" id="wnr3">
+              <label class="main-info__size-label" for="wnr3">76</label>
+            </form>
             <div class="main-info__line"></div>
             <div class="main-info__delivery-option delivery-option">
               <div class="delivery-option__item">
@@ -156,21 +156,50 @@
                   <div class="delivery-option__text">Доставка завтра - 370 ₽</div>
                 </div>
               </div>
-              <div class="delivery-option__note">Цена действительна только для интернет-магазина и может отличаться от цен в розничных магазинах</div>
+              <p class="delivery-option__note">Цена действительна только для интернет-магазина и может отличаться от цен в розничных магазинах</p>
             </div>
           </div>
-          <div class="cart__item__description">
+          <div class="cart__item__description" id="description">
             <div class="cart__item__title">Описание</div>
             <p class="cart__item__text">Боди-майка из мягчайшего интерлока. Прекрасный вариант для жаркого лета.<br><br>Кнопки расположены на плечиках и между ножками, что позволяет быстро переодеть малыша или сменить подгузник.<br><br>Состав: 100% хлопок</p>
           </div>
-          <div class="cart__item__reviews reviews">
+          <div class="cart__item__reviews reviews" id="reviews">
+            <div class="reviews__return-collapsed-button" id="reviewsReturnCollapsedButton"></div>
             <div class="cart__item__title">Отзывы</div>
             <div class="reviews__list">
-              <div class="reviews__empty">
-                <div class="reviews__text">У данного товара нет отзывов. Станьте первым, кто оставил отзыв об этом товаре!</div>
-                <button class="reviews__create-review-button">оставить отзыв</button>
+              <!--.reviews__empty-->
+              <!--    p.reviews__text.reviews__text_empty У данного товара нет отзывов. Станьте первым, кто оставил отзыв об этом товаре!-->
+              <!--    button.button.reviews__create-review-button оставить отзыв-->
+              <div class="reviews__item">
+                <div class="reviews__profile">
+                  <p class="reviews__name">Иван Иванов</p>
+                  <div class="reviews__date">12.02.2022</div>
+                </div>
+                <p class="reviews__text">Товар хороший, все понравилось, рекомендую!</p>
               </div>
-              <!--.reviews__item-->
+              <div class="reviews__item">
+                <div class="reviews__profile">
+                  <p class="reviews__name">Сергей Петров</p>
+                  <div class="reviews__date">11.12.2022</div>
+                </div>
+                <p class="reviews__text">Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества направлений прогрессивного развития. Также как граница обучения кадров в значительной степени обусловливает важность модели развития.</p>
+              </div>
+              <div class="reviews__item">
+                <div class="reviews__profile">
+                  <p class="reviews__name">Иван Иванов</p>
+                  <div class="reviews__date">12.02.2022</div>
+                </div>
+                <p class="reviews__text">Товар хороший, все понравилось, рекомендую!</p>
+              </div>
+              <div class="reviews__item">
+                <div class="reviews__profile">
+                  <p class="reviews__name">Сергей Петров</p>
+                  <div class="reviews__date">11.12.2022</div>
+                </div>
+                <p class="reviews__text">Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества направлений прогрессивного развития. Также как граница обучения кадров в значительной степени обусловливает важность модели развития.</p>
+              </div>
+              <button class="button reviews__create-review-button reviews__create-review-button_large" id="createReviewButton">оставить отзыв</button>
+              <div class="reviews__show-more" id="showMoreButton">Показать ещё</div>
             </div>
           </div>
         </div>
@@ -343,8 +372,8 @@
     <script>
       let init = false;
       
-      let mobile = window.matchMedia('(min-width: 0px) and (max-width: 576px)');
-      let desktop = window.matchMedia('(min-width: 577px)');
+      let mobile = window.matchMedia('(min-width: 0px) and (max-width: 768px)');
+      let desktop = window.matchMedia('(min-width: 768px)');
       
       if (desktop.matches) {
           if (!init) {
@@ -363,10 +392,81 @@
               });
           }
       }
-      
       else if (mobile.matches) {
-          swiper.destroy()
+          if (!init) {
+              init = true
+              let swiper = new Swiper(".cart__item__swiper", {
+                  slidesPerView: '4',
+                  navigation: {
+                      nextEl: ".cart__item__swiper__next",
+                      prevEl: ".cart__item__swiper__prev",
+                  },
+                  pagination: {
+                      el: ".swiper-pagination",
+                      clickable: true,
+                  },
+              });
+          }
       }
+      
+      
+      // Функционал переключения фото свайпами и обработка клика по фото
+      const bigPicture = document.querySelector('#bigPicture')
+      const picturesList = document.querySelectorAll('.cart__item-of-list')
+      let pointerForBigPicture = 0
+      let pointerBarrier = picturesList.length
+      bigPicture.src = picturesList[pointerForBigPicture].src
+      const switchBigPicture = (srcProp) => {
+          bigPicture.src = srcProp
+      }
+      picturesList.forEach((item) => {
+          item.addEventListener('click', (evt) => {
+              switchBigPicture(evt.target.src)
+          })
+      })
+      
+      if (mobile.matches) {
+          const swiperBigPicturePrev = document.querySelector('.cart__big-picture__swiper__prev')
+          const swiperBigPictureNext = document.querySelector('.cart__big-picture__swiper__next')
+          swiperBigPictureNext.addEventListener('click', () => {
+              if (pointerForBigPicture < pointerBarrier-1) {
+                  pointerForBigPicture++;
+                  switchBigPicture(picturesList[pointerForBigPicture].src)
+              }
+          })
+          swiperBigPicturePrev.addEventListener('click', () => {
+              if (pointerForBigPicture > 0) {
+                  pointerForBigPicture--;
+                  switchBigPicture(picturesList[pointerForBigPicture].src)
+              }
+          })
+      }
+      
+      // Функционал раскрытия комментариев
+      const description = document.querySelector('#description')
+      const reviewsList = document.querySelector('.reviews__list')
+      const reviews = document.querySelector('#reviews')
+      const returnCollapsedReviewsButton = document.querySelector('#reviewsReturnCollapsedButton')
+      const showMoreButton = document.querySelector('#showMoreButton')
+      const createReviewButton = document.querySelector('#createReviewButton')
+      
+      showMoreButton.addEventListener('click', () => {
+          description.classList.add('cart__item__description_collapsed')
+          reviews.classList.add('reviews_full')
+          returnCollapsedReviewsButton.classList.add('reviews__return-collapsed-button_active')
+      })
+      returnCollapsedReviewsButton.addEventListener('click', () => {
+          description.classList.remove('cart__item__description_collapsed')
+          reviews.classList.remove('reviews_full')
+          returnCollapsedReviewsButton.classList.remove('reviews__return-collapsed-button_active')
+      })
+      createReviewButton.addEventListener('click', () => {
+          const input = document.createElement("textarea");
+          input.className = "reviews__input-text";
+          reviewsList.insertBefore(input, createReviewButton);
+          createReviewButton.textContent = 'Отправить'
+          createReviewButton.classList.remove('reviews__create-review-button_large');
+      })
     </script>
   </body>
 </html>
