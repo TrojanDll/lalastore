@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LalaStore</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/cartItemPage.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper-top">
+          <div class="header__elements">
+            <div class="header__element header__element-geo">г. Москва, Электролитный проезд 3Б стр 6</div><a class="header__element header__element-phone" href="tel:+79163613000">+7 916 361-30-00</a>
+          </div>
+          <nav class="header__elements">
+            <button class="header__element header__element-catalog">Каталог</button><a class="header__element header__element_active" href="./index.html">Главная</a><a class="header__element" href="#">Как купить</a><a class="header__element" href="#">Доставка</a><a class="header__element" href="#">О компании</a><a class="header__element" href="#">Мы в instagram</a><a class="header__element" href="#">Акции</a>
+          </nav>
+        </div>
+      </div>
+      <div class="header-mobile">
+        <button class="header-mobile__burger nav-toggle"><span class="bar-top"></span> <span class="bar-mid"></span> <span class="bar-bot"></span></button><a class="header-mobile__logo" href="./index.html"> <img class="header-mobile__logo" src="./assets/img/logo.webp" alt="logo"></a>
+        <button class="header-mobile__search-btn"><img class="header-mobile__search-btn__img" src="./assets/img/icons/search_dark.svg" alt="search"></button>
+      </div>
+      <div class="header__sidebar header__sidebar-menu">
+        <div class="container">
+          <ul class="header__sidebar__pages"> 
+            <li class="header__sidebar__pages__item header__sidebar__pages__item_active"><a href="#">Главная</a></li>
+            <li class="header__sidebar__pages__item"><a href="#">Как купить</a></li>
+            <li class="header__sidebar__pages__item"><a href="#">Доставка</a></li>
+            <li class="header__sidebar__pages__item"><a href="#">О компании</a></li>
+            <li class="header__sidebar__pages__item"><a href="#">Мы в instagram</a></li>
+            <li class="header__sidebar__pages__item"><a href="#">Акции</a></li>
+          </ul>
+          <div class="header__sidebar__contacts">
+            <div class="header__sidebar__contacts__item"><img class="header__sidebar__contacts__item__img" src="./assets/img/icons/geo.svg" alt="geo">
+              <div class="header__sidebar__contacts__item__text header__sidebar__contacts__item__text-geo">г. Москва, Электролитный проезд 3Б стр 6</div>
+            </div>
+            <div class="header__sidebar__contacts__item"><img class="header__sidebar__contacts__item__img" src="./assets/img/icons/phone.svg" alt="phone"><a class="header__sidebar__contacts__item__text" href="tel:79163613000">+7 916 361-30-00</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="header__sidebar header__sidebar-search"> 
+        <div class="container header__sidebar-search-container">
+          <div class="header__sidebar-search__search"> 
+            <input class="input header__sidebar-search__search__area" type="text" placeholder="Начните писать">
+            <button class="button header__sidebar-search__search__button"><img class="header__sidebar-search__button__img" src="./assets/img/icons/search_white.svg" alt="search"></button>
+          </div>
+          <div class="header__sidebar-search__results" style="display: none"><a class="header__sidebar-search__results__item" href="#">Детские пеленки</a><a class="header__sidebar-search__results__item" href="#">Конверты на выписку для мальчика</a><a class="header__sidebar-search__results__item" href="#">Соски</a><a class="header__sidebar-search__results__item" href="#">Грызунки</a></div>
+        </div>
+      </div>
+    </header>
+    <div class="catalog-menu">
+      <div class="container catalog-menu__container">
+        <div class="catalog-menu__wrapper">
+          <div class="catalog-menu__mobile-header"> 
+            <button class="catalog-menu__mobile-header__close-btn"><img class="catalog-menu__mobile-header__close-btn__img" src="./assets/img/icons/close-btn_white.svg" alt="close-btn"></button>
+            <div class="catalog-menu__mobile-header__title">Каталог</div>
+            <button class="catalog-menu__mobile-header__search-btn"><img class="catalog-menu__mobile-header__search-btn__img" src="./assets/img/icons/search_white.svg" alt="search-btn"></button>
+          </div>
+          <div class="catalog-menu__chapter">
+            <div class="catalog-menu__chapter__title catalog-menu__chapter__title_active">Одежда<img class="catalog-menu__chapter__title__icon catalog-menu__chapter__title__icon_active" src="./assets/img/icons/treangle_white.svg" alt="treangle"></div>
+            <div class="catalog-menu__chapter__elements catalog-menu__chapter__elements_visible"><a class="catalog-menu__chapter__element catalog-menu__chapter__element_active" href="#"> Изделия из муслина</a><a class="catalog-menu__chapter__element" href="#">Боди</a><a class="catalog-menu__chapter__element" href="#">Песочники</a><a class="catalog-menu__chapter__element" href="#">Нательные комбинезоны (слипы)</a><a class="catalog-menu__chapter__element" href="#">Комбинезоны из футера</a><a class="catalog-menu__chapter__element" href="#">Комбинезоны вязаные</a><a class="catalog-menu__chapter__element" href="#">Демисезонные комбинезоны</a><a class="catalog-menu__chapter__element" href="#">Комбинезоны-трансформеры</a><a class="catalog-menu__chapter__element" href="#">Головные уборы</a><a class="catalog-menu__chapter__element" href="#">Носочки</a><a class="catalog-menu__chapter__element" href="#">Нагрудники</a></div>
+          </div>
+          <div class="catalog-menu__chapter">
+            <div class="catalog-menu__chapter__title">Пеленки<img class="catalog-menu__chapter__title__icon" src="./assets/img/icons/treangle_white.svg" alt="treangle"></div>
+            <div class="catalog-menu__chapter__elements"><a class="catalog-menu__chapter__element" href="#">Пеленальные коконы</a><a class="catalog-menu__chapter__element" href="#">Пеленки из фланели</a><a class="catalog-menu__chapter__element" href="#">Пеленки из муслина</a><a class="catalog-menu__chapter__element" href="#">Пеленки из интерлока</a></div>
+          </div>
+          <div class="catalog-menu__chapter">
+            <div class="catalog-menu__chapter__title">Конверты и пледы<img class="catalog-menu__chapter__title__icon" src="./assets/img/icons/treangle_white.svg" alt="treangle"></div>
+            <div class="catalog-menu__chapter__elements"><a class="catalog-menu__chapter__element" href="#">Конверты в коляску</a><a class="catalog-menu__chapter__element" href="#">Пледы</a><a class="catalog-menu__chapter__element" href="#">Конверты на выписку</a></div>
+          </div>
+          <div class="catalog-menu__chapter">
+            <div class="catalog-menu__chapter__title">Аксессуары<img class="catalog-menu__chapter__title__icon" src="./assets/img/icons/treangle_white.svg" alt="treangle"></div>
+            <div class="catalog-menu__chapter__elements"><a class="catalog-menu__chapter__element" href="#">Сумки-органайзеры</a><a class="catalog-menu__chapter__element" href="#">Муфты-варежки</a><a class="catalog-menu__chapter__element" href="#">Грызунки</a><a class="catalog-menu__chapter__element" href="#">Альбомы для фотографий</a><a class="catalog-menu__chapter__element" href="#">Держатели для соски/грузунка</a></div>
+          </div>
+          <div class="catalog-menu__chapter">
+            <div class="catalog-menu__chapter__title">Готовые подборки<img class="catalog-menu__chapter__title__icon" src="./assets/img/icons/treangle_white.svg" alt="treangle"></div>
+            <div class="catalog-menu__chapter__elements"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="subheader">
+      <div class="container">
+        <div class="header__wrapper-bottom"><a class="header__logo" href="./index.html"> <img class="header__logo" src="./assets/img/logo.webp" alt="logo"></a>
+          <div class="header__search">
+            <div class="header__search__area"><img class="header__search__area__icon" src="./assets/img/icons/search.svg" alt="search">
+              <input class="header__search__area__input" type="text" placeholder="Начните писать">
+              <div class="header__search__area__results" style="display: none"><a class="header__search__area__results__item" href="#">Детские пеленки</a><a class="header__search__area__results__item" href="#">Конверты на выписку для мальчика</a><a class="header__search__area__results__item" href="#">Соски</a><a class="header__search__area__results__item" href="#">Грызунки</a></div>
+            </div>
+            <button class="button header__search__button">Найти</button>
+          </div>
+          <div class="header__items-bottom">
+            <div class="header__item-bottom"><img class="header__item-bottom__img header__item-bottom__img-heart header__item-bottom__img-heart_disabled" src="./assets/img/icons/heart.svg" alt="heart" style="display: none"><img class="header__item-bottom__img header__item-bottom__img-heart header__item-bottom__img-heart_active" src="./assets/img/icons/heart_active.svg" alt="heart">
+              <div class="header__item-bottom__text">Избранное</div>
+            </div>
+            <div class="header__item-bottom"><img class="header__item-bottom__img header__item-bottom__img-bag header__item-bottom__img-bag_disabled" src="./assets/img/icons/bag.svg" alt="bag"><img class="header__item-bottom__img header__item-bottom__img-bag header__item-bottom__img-bag_active" src="./assets/img/icons/bag_active.svg" alt="bag" style="display: none">
+              <div class="header__item-bottom__text">Корзина</div>
+            </div>
+            <div class="header__item-bottom"><img class="header__item-bottom__img header__item-bottom__img-profile" src="./assets/img/icons/profile.svg" alt="profile">
+              <div class="header__item-bottom__text">Войти</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="catalog__title-wrapper">
+        <div class="title catalog__title">Боди</div>
+        <div class="title catalog__count">92</div>
+      </div>
+    </div>
+    <div class="cart__item">
+      <div class="container">
+        <div class="cart__item__wrapper">
+          <div class="cart__item__photos">
+            <div class="cart__item__swiper swiper">
+              <div class="swiper-wrapper"><img class="cart__item-of-list swiper-slide" src="./assets/img/cart-item-page1.webp"><img class="cart__item-of-list swiper-slide" src="./assets/img/cart-item-page2.webp"><img class="cart__item-of-list swiper-slide" src="./assets/img/cart-item-page3.webp"><img class="cart__item-of-list swiper-slide" src="./assets/img/cart-item-page2.webp"><img class="cart__item-of-list swiper-slide" src="./assets/img/cart-item-page3.webp"></div><img class="cart__item__swiper__prev" src="./assets/img/icons/arrow_circle.svg"><img class="cart__item__swiper__next" src="./assets/img/icons/arrow_circle.svg">
+            </div><img class="cart__item__big-picture" id="bigPicture" src=""><img class="cart__item__big-picture__swiper__prev" src="./assets/img/icons/arrow_circle.svg"><img class="cart__item__big-picture__swiper__next" src="./assets/img/icons/arrow_circle.svg">
+          </div>
+          <div class="cart__item__main-info main-info">
+            <div class="main-info__head">
+              <div class="main-info__name" id="cartItemName">Боди без рукавов "ФРУК-ТИК", розовый</div>
+              <div class="main-info__status">
+                    <div class="product-card-label product-card-label_in-stock">На складе</div>
+              </div>
+              <div class="main-info__code">Код товара: 32978459390</div>
+            </div>
+            <div class="main-info__stash">
+              <div class="main-info__price">349 ₽/шт</div>
+              <button class="button main-info__buy-button">в корзину</button>
+            </div>
+            <form class="main-info__size">
+              <legend class="main-info__size-legend">Размер:</legend>
+              <input class="main-info__size-input" type="radio" name="register_webinar_" value="74" id="wnr1">
+              <label class="main-info__size-label" for="wnr1">74</label>
+              <input class="main-info__size-input" type="radio" name="register_webinar_" value="75" id="wnr2">
+              <label class="main-info__size-label" for="wnr2">75</label>
+              <input class="main-info__size-input" type="radio" name="register_webinar_" value="76" id="wnr3">
+              <label class="main-info__size-label" for="wnr3">76</label>
+            </form>
+            <div class="main-info__line"></div>
+            <div class="main-info__delivery-option delivery-option">
+              <div class="delivery-option__item">
+                <div class="delivery-option__image delivery-option__image_car"></div>
+                <div class="delivery-option__content">
+                  <div class="delivery-option__title">Доставка в Краснодар</div>
+                  <div class="delivery-option__text">Самовывоз — бесплатно</div>
+                  <div class="delivery-option__option">Рассчитать доставку</div>
+                </div>
+              </div>
+              <div class="delivery-option__item">
+                <div class="delivery-option__image delivery-option__image_box"></div>
+                <div class="delivery-option__content">
+                  <div class="delivery-option__title">Самовывоз сегодня - бесплатно</div>
+                  <div class="delivery-option__text">Доставка завтра - 370 ₽</div>
+                </div>
+              </div>
+              <p class="delivery-option__note">Цена действительна только для интернет-магазина и может отличаться от цен в розничных магазинах</p>
+            </div>
+          </div>
+          <div class="cart__item__description" id="description">
+            <div class="cart__item__title">Описание</div>
+            <p class="cart__item__text">Боди-майка из мягчайшего интерлока. Прекрасный вариант для жаркого лета.<br><br>Кнопки расположены на плечиках и между ножками, что позволяет быстро переодеть малыша или сменить подгузник.<br><br>Состав: 100% хлопок</p>
+          </div>
+          <div class="cart__item__reviews reviews" id="reviews">
+            <div class="reviews__return-collapsed-button" id="reviewsReturnCollapsedButton"></div>
+            <div class="cart__item__title">Отзывы</div>
+            <div class="reviews__list">
+              <!--.reviews__empty-->
+              <!--    p.reviews__text.reviews__text_empty У данного товара нет отзывов. Станьте первым, кто оставил отзыв об этом товаре!-->
+              <div class="reviews__item">
+                <div class="reviews__profile">
+                  <p class="reviews__name">Иван Иванов</p>
+                  <div class="reviews__date">12.02.2022</div>
+                </div>
+                <p class="reviews__text">Товар хороший, все понравилось, рекомендую!</p>
+              </div>
+              <div class="reviews__item">
+                <div class="reviews__profile">
+                  <p class="reviews__name">Сергей Петров</p>
+                  <div class="reviews__date">11.12.2022</div>
+                </div>
+                <p class="reviews__text">Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества направлений прогрессивного развития. Также как граница обучения кадров в значительной степени обусловливает важность модели развития.</p>
+              </div>
+              <div class="reviews__item">
+                <div class="reviews__profile">
+                  <p class="reviews__name">Иван Иванов</p>
+                  <div class="reviews__date">12.02.2022</div>
+                </div>
+                <p class="reviews__text">Товар хороший, все понравилось, рекомендую!</p>
+              </div>
+              <div class="reviews__item">
+                <div class="reviews__profile">
+                  <p class="reviews__name">Сергей Петров</p>
+                  <div class="reviews__date">11.12.2022</div>
+                </div>
+                <p class="reviews__text">Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества направлений прогрессивного развития. Также как граница обучения кадров в значительной степени обусловливает важность модели развития.</p>
+              </div>
+              <button class="button reviews__create-review-button reviews__create-review-button_large" id="createReviewButton">оставить отзыв</button>
+              <div class="reviews__show-more" id="showMoreButton">Показать ещё</div>
+              <template id="modalReview">
+                <div class="reviews__modal reviews__modal_active">
+                  <div class="container"><img class="reviews__exit-button" id="closeModalReviewButton" src="./assets/img/icons/close-btn.svg">
+                    <div class="reviews__title">Оставить отзыв</div><img class="reviews__photo cart__item__big-picture">
+                    <div class="reviews__name">Ошибка</div>
+                    <textarea class="reviews__input-text"></textarea>
+                    <button class="button reviews__create-review-button" id="createReviewButtonModal">Отправить</button>
+                  </div>
+                </div>
+              </template>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="recent"> 
+      <div class="container"> 
+        <h2 class="recent__title title">Ранее вы смотрели</h2>
+        <div class="recent__cards">
+          <div class="recent__card">
+                    <div class="product-card"> 
+                      <div class="product-card__img-wrapper">
+                        <div class="product-card__label"> 
+                                    <div class="product-card-label product-card-label_aviable">В наличии</div>
+                        </div><img class="product-card__img" src="./assets/img/recent1.webp" alt="someimg">
+                      </div>
+                      <div class="product-card__title">Боди без рукавов &quot;ФРУК-ТИК&quot;, розовый</div>
+                      <div class="product-card__price">349 ₽/шт</div>
+                      <button class="button product-card__button">купить в 1 клик</button>
+                    </div>
+          </div>
+          <div class="recent__card"> 
+                    <div class="product-card"> 
+                      <div class="product-card__img-wrapper">
+                        <div class="product-card__label"> 
+                                    <div class="product-card-label product-card-label_aviable">В наличии</div>
+                        </div><img class="product-card__img" src="./assets/img/recent2.webp" alt="someimg">
+                      </div>
+                      <div class="product-card__title">Боди без рукавов &quot;ФРУК-ТИК&quot;, розовый</div>
+                      <div class="product-card__price">349 ₽/шт</div>
+                      <button class="button product-card__button">купить в 1 клик</button>
+                    </div>
+          </div>
+          <div class="recent__card"> 
+                    <div class="product-card"> 
+                      <div class="product-card__img-wrapper">
+                        <div class="product-card__label"> 
+                                    <div class="product-card-label product-card-label_aviable">В наличии</div>
+                        </div><img class="product-card__img" src="./assets/img/recent3.webp" alt="someimg">
+                      </div>
+                      <div class="product-card__title">Боди без рукавов &quot;ФРУК-ТИК&quot;, розовый</div>
+                      <div class="product-card__price">349 ₽/шт</div>
+                      <button class="button product-card__button">купить в 1 клик</button>
+                    </div>
+          </div>
+          <div class="recent__card"> 
+                    <div class="product-card"> 
+                      <div class="product-card__img-wrapper">
+                        <div class="product-card__label"> 
+                                    <div class="product-card-label product-card-label_not-aviable">Нет в наличии </div>
+                        </div><img class="product-card__img" src="./assets/img/recent4.webp" alt="someimg">
+                      </div>
+                      <div class="product-card__title">Боди без рукавов &quot;ФРУК-ТИК&quot;, розовый</div>
+                      <div class="product-card__price">349 ₽/шт</div>
+                      <button class="button product-card__button">купить в 1 клик</button>
+                    </div>
+          </div>
+          <div class="recent__card"> 
+                    <div class="product-card"> 
+                      <div class="product-card__img-wrapper">
+                        <div class="product-card__label"> 
+                                    <div class="product-card-label product-card-label_in-stock">На складе</div>
+                        </div><img class="product-card__img" src="./assets/img/recent5.webp" alt="someimg">
+                      </div>
+                      <div class="product-card__title">Боди без рукавов &quot;ФРУК-ТИК&quot;, розовый</div>
+                      <div class="product-card__price">349 ₽/шт</div>
+                      <button class="button product-card__button">купить в 1 клик</button>
+                    </div>
+          </div>
+          <div class="recent__card"> 
+                    <div class="product-card"> 
+                      <div class="product-card__img-wrapper">
+                        <div class="product-card__label"> 
+                                    <div class="product-card-label product-card-label_aviable">В наличии</div>
+                        </div><img class="product-card__img" src="./assets/img/recent3.webp" alt="someimg">
+                      </div>
+                      <div class="product-card__title">Боди без рукавов &quot;ФРУК-ТИК&quot;, розовый</div>
+                      <div class="product-card__price">349 ₽/шт</div>
+                      <button class="button product-card__button">купить в 1 клик</button>
+                    </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer"> 
+      <div class="container"> 
+        <div class="footer__wrapper"> 
+          <div class="footer__links-wrapper">
+            <ul class="footer__links">
+              <li> <a class="footer__links__item_active" href="#">Главная</a></li>
+              <li> <a href="#">Как купить</a></li>
+              <li> <a href="#">Доставка</a></li>
+              <li> <a href="#">О компании</a></li>
+              <li> <a href="#">Мы в instagram</a></li>
+              <li> <a href="#">Акции</a></li>
+              <li> <a href="#">Как купить</a></li>
+            </ul>
+            <ul class="footer__links">
+              <li> <a href="#">Как купить</a></li>
+              <li> <a href="#">Новости</a></li>
+              <li> <a href="#">Отзывы</a></li>
+              <li> <a href="#">Контакты</a></li>
+              <li> <a href="#">Лицензии</a></li>
+              <li> <a href="#">Оплата и возврат</a></li>
+              <li> <a href="#">Условия доставки</a></li>
+            </ul>
+          </div>
+          <div class="footer__logo-wrapper"> <img class="footer__logo" src="./assets/img/logo.webp" alt="logo">
+            <div class="footer__copyright">2022 © «LalaSTORE»</div>
+            <div class="footer__payment-wrapper"> <img class="footer__payment-method" src="./assets/img/mir.svg" alt="mir"><img class="footer__payment-method" src="./assets/img/paykeeper.svg" alt="payKeeper"><img class="footer__payment-method" src="./assets/img/mastercard.svg" alt="mastercard"><img class="footer__payment-method" src="./assets/img/visa.svg" alt="visa"></div><a class="footer__policy" href="#">Политика конфиденциальности</a>
+          </div>
+          <div class="footer__contacts-wrapper">
+            <ul class="footer__contacts">
+              <li class="footer__contacts-item"> <img class="footer__contacts-item__img" src="./assets/img/icons/geo.svg" alt="geo">
+                <div class="footer__contacts-item__text">Адрес шоурума:, г. Москва, Электролитный проезд 3Б стр 6</div>
+              </li>
+              <li class="footer__contacts-item"> <img class="footer__contacts-item__img" src="./assets/img/icons/email.svg" alt="mail">
+                <div class="footer__contacts-item__text">info@lalastore.ru</div>
+              </li>
+              <li class="footer__contacts-item"> <img class="footer__contacts-item__img" src="./assets/img/icons/phone.svg" alt="phone">
+                <div class="footer__contacts-item__text">+7 916 361-30-00</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="bottom-menu"> 
+      <div class="bottom-menu__wrapper">
+        <div class="bottom-menu__item" id="catalog-btn-mobile"><img class="bottom-menu__item__img bottom-menu__item__img-burger" src="./assets/img/icons/burger-menu.svg" alt="burger-menu">
+          <div class="bottom-menu__item__text">Каталог</div>
+        </div>
+        <div class="bottom-menu__item"> <img class="bottom-menu__item__img bottom-menu__item__img-heart" src="./assets/img/icons/heart_white.svg" alt="burger-menu">
+          <div class="bottom-menu__item__text">Избранное</div>
+        </div>
+        <div class="bottom-menu__item"> <img class="bottom-menu__item__img bottom-menu__item__img-bag" src="./assets/img/icons/bag_white.svg" alt="burger-menu">
+          <div class="bottom-menu__item__text">Корзина</div>
+        </div>
+        <div class="bottom-menu__item"> <img class="bottom-menu__item__img bottom-menu__item__img-profile" src="./assets/img/icons/profile_white.svg" alt="burger-menu">
+          <div class="bottom-menu__item__text">Войти</div>
+        </div>
+      </div>
+    </div>
+    <div class="layout" style="display: none">
+      <div class="question-modal modal"> 
+        <button class="question-modal__close-btn close-btn"></button>
+        <div class="question-modal__wrapper"> 
+          <div class="question-modal__container modal__container">
+            <div class="question-modal__title title">Задать вопрос</div>
+            <form class="question-modal__form" action=""> 
+              <div class="input-title">Ваше имя</div>
+              <input class="input question-modal__input" id="input-name" type="text" placeholder="Иванов Иван Иванович">
+              <div class="input-title">Телефон</div>
+              <input class="input question-modal__input" id="input-phone" type="text" placeholder="Иванов Иван Иванович">
+              <div class="input-title">E-mail</div>
+              <input class="input question-modal__input" id="input-email" type="text" placeholder="Иванов Иван Иванович">
+              <div class="input-title">Вопрос</div>
+              <textarea class="textarea question-modal__textarea" id="input-question" name="question" cols="3" rows="3"> </textarea>
+              <button class="button question-modal__button">сохранить изменения</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/search-logic.js"></script>
+    <script src="./js/catalog-logic.js"></script>
+    <script src="./js/catalog-item-menu-logic.js"></script>
+    <script src="./js/sidebar-logic.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      let init = false;
+      
+      let mobile = window.matchMedia('(min-width: 0px) and (max-width: 768px)');
+      let desktop = window.matchMedia('(min-width: 768px)');
+      
+      if (desktop.matches) {
+          if (!init) {
+              init = true
+              let swiper = new Swiper(".cart__item__swiper", {
+                  slidesPerView: '2',
+                  navigation: {
+                      nextEl: ".cart__item__swiper__next",
+                      prevEl: ".cart__item__swiper__prev",
+                  },
+                  direction: "vertical",
+                  pagination: {
+                      el: ".swiper-pagination",
+                      clickable: true,
+                  },
+              });
+          }
+      }
+      else if (mobile.matches) {
+          if (!init) {
+              init = true
+              let swiper = new Swiper(".cart__item__swiper", {
+                  slidesPerView: '4',
+                  navigation: {
+                      nextEl: ".cart__item__swiper__next",
+                      prevEl: ".cart__item__swiper__prev",
+                  },
+                  pagination: {
+                      el: ".swiper-pagination",
+                      clickable: true,
+                  },
+              });
+          }
+      }
+      
+      
+      // Функционал переключения фото свайпами и обработка клика по фото
+      const bigPicture = document.querySelector('#bigPicture')
+      const picturesList = document.querySelectorAll('.cart__item-of-list')
+      let pointerForBigPicture = 0
+      let pointerBarrier = picturesList.length
+      bigPicture.src = picturesList[pointerForBigPicture].src
+      const switchBigPicture = (srcProp) => {
+          bigPicture.src = srcProp
+      }
+      picturesList.forEach((item) => {
+          item.addEventListener('click', (evt) => {
+              switchBigPicture(evt.target.src)
+          })
+      })
+      
+      if (mobile.matches) {
+          const swiperBigPicturePrev = document.querySelector('.cart__item__big-picture__swiper__prev')
+          const swiperBigPictureNext = document.querySelector('.cart__item__big-picture__swiper__next')
+          swiperBigPictureNext.addEventListener('click', () => {
+              if (pointerForBigPicture < pointerBarrier-1) {
+                  pointerForBigPicture++;
+                  switchBigPicture(picturesList[pointerForBigPicture].src)
+              }
+          })
+          swiperBigPicturePrev.addEventListener('click', () => {
+              if (pointerForBigPicture > 0) {
+                  pointerForBigPicture--;
+                  switchBigPicture(picturesList[pointerForBigPicture].src)
+              }
+          })
+      }
+      
+      // Функционал раскрытия комментариев
+      const description = document.querySelector('#description')
+      const reviewsList = document.querySelector('.reviews__list')
+      const reviews = document.querySelector('#reviews')
+      const returnCollapsedReviewsButton = document.querySelector('#reviewsReturnCollapsedButton')
+      const showMoreButton = document.querySelector('#showMoreButton')
+      const createReviewButton = document.querySelector('#createReviewButton')
+      const emptyMessage = document.querySelector('.reviews__text_empty')
+      
+      if (showMoreButton) {
+          showMoreButton.addEventListener('click', () => {
+              description.classList.add('cart__item__description_collapsed')
+              reviews.classList.add('reviews_full')
+              returnCollapsedReviewsButton.classList.add('reviews__return-collapsed-button_active')
+          })
+          returnCollapsedReviewsButton.addEventListener('click', () => {
+              description.classList.remove('cart__item__description_collapsed')
+              reviews.classList.remove('reviews_full')
+              returnCollapsedReviewsButton.classList.remove('reviews__return-collapsed-button_active')
+          })
+      }
+      if (desktop.matches) {
+          createReviewButton.addEventListener('click', () => {
+              const input = document.createElement("textarea");
+              input.className = "reviews__input-text";
+              reviewsList.insertBefore(input, createReviewButton);
+              createReviewButton.textContent = 'Отправить'
+              createReviewButton.classList.remove('reviews__create-review-button_large');
+              if (emptyMessage) {
+                  emptyMessage.remove()
+              }
+          })
+      } else if (mobile.matches) {
+          createReviewButton.addEventListener('click', () => {
+              const templateModalReview = document.querySelector('#modalReview')
+              const clonedModalReview = templateModalReview.content.cloneNode(true)
+              const modalReview = clonedModalReview.querySelector('.reviews__modal')
+      
+              const modalPhoto = modalReview.querySelector('.reviews__photo')
+              modalPhoto.src = bigPicture.src
+      
+              const itemName = document.querySelector('#cartItemName')
+              const modalName = modalReview.querySelector('.reviews__name')
+              modalName.textContent = itemName.textContent
+      
+              reviews.appendChild(modalReview)
+      
+              const closeModalReviewButton = reviews.querySelector('#closeModalReviewButton')
+              closeModalReviewButton.addEventListener('click', () => {
+                  reviews.removeChild(modalReview)
+              })
+          })
+      }
+    </script>
+  </body>
+</html>

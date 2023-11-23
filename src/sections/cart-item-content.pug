@@ -1,0 +1,109 @@
+include ../ui/product-card-label
+
+.cart__item
+    .container
+        .cart__item__wrapper
+            .cart__item__photos
+                .cart__item__swiper.swiper
+                    .swiper-wrapper
+                        img.cart__item-of-list.swiper-slide(src='./assets/img/cart-item-page1.webp')
+                        img.cart__item-of-list.swiper-slide(src='./assets/img/cart-item-page2.webp')
+                        img.cart__item-of-list.swiper-slide(src='./assets/img/cart-item-page3.webp')
+                        img.cart__item-of-list.swiper-slide(src='./assets/img/cart-item-page2.webp')
+                        img.cart__item-of-list.swiper-slide(src='./assets/img/cart-item-page3.webp')
+                    img.cart__item__swiper__prev(src='./assets/img/icons/arrow_circle.svg')
+                    img.cart__item__swiper__next(src='./assets/img/icons/arrow_circle.svg')
+                img#bigPicture.cart__item__big-picture(src='')
+                img.cart__item__big-picture__swiper__prev(src='./assets/img/icons/arrow_circle.svg')
+                img.cart__item__big-picture__swiper__next(src='./assets/img/icons/arrow_circle.svg')
+            .cart__item__main-info.main-info
+                .main-info__head
+                    #cartItemName.main-info__name Боди без рукавов "ФРУК-ТИК", розовый
+                    .main-info__status
+                        +productCardLabel('На складе')
+                    .main-info__code Код товара: 32978459390
+                .main-info__stash
+                    .main-info__price 349 ₽/шт
+                    button.button.main-info__buy-button в корзину
+                form.main-info__size
+                    legend.main-info__size-legend Размер:
+
+                    input(type='radio', name='register_webinar_', value='74')#wnr1.main-info__size-input
+                    label(for='wnr1').main-info__size-label 74
+
+                    input(type='radio', name='register_webinar_', value='75')#wnr2.main-info__size-input
+                    label(for='wnr2').main-info__size-label 75
+
+                    input(type='radio', name='register_webinar_', value='76')#wnr3.main-info__size-input
+                    label(for='wnr3').main-info__size-label 76
+                .main-info__line
+                .main-info__delivery-option.delivery-option
+                    .delivery-option__item
+                        .delivery-option__image.delivery-option__image_car
+                        .delivery-option__content
+                            .delivery-option__title Доставка в Краснодар
+                            .delivery-option__text Самовывоз — бесплатно
+                            .delivery-option__option Рассчитать доставку
+
+                    .delivery-option__item
+                        .delivery-option__image.delivery-option__image_box
+                        .delivery-option__content
+                            .delivery-option__title Самовывоз сегодня - бесплатно
+                            .delivery-option__text Доставка завтра - 370 ₽
+
+                    p.delivery-option__note Цена действительна только для интернет-магазина и может отличаться от цен в розничных магазинах
+            #description.cart__item__description
+                .cart__item__title Описание
+                p.cart__item__text
+                    | Боди-майка из мягчайшего интерлока. Прекрасный вариант для жаркого лета.
+                    br
+                    br
+                    |Кнопки расположены на плечиках и между ножками, что позволяет быстро переодеть малыша или сменить подгузник.
+                    br
+                    br
+                    |Состав: 100% хлопок
+            #reviews.cart__item__reviews.reviews
+                #reviewsReturnCollapsedButton.reviews__return-collapsed-button
+                .cart__item__title Отзывы
+                .reviews__list
+
+                    //.reviews__empty
+                    //    p.reviews__text.reviews__text_empty У данного товара нет отзывов. Станьте первым, кто оставил отзыв об этом товаре!
+
+                    .reviews__item
+                        .reviews__profile
+                            p.reviews__name Иван Иванов
+                            .reviews__date 12.02.2022
+                        p.reviews__text Товар хороший, все понравилось, рекомендую!
+
+                    .reviews__item
+                        .reviews__profile
+                            p.reviews__name Сергей Петров
+                            .reviews__date 11.12.2022
+                        p.reviews__text Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества направлений прогрессивного развития. Также как граница обучения кадров в значительной степени обусловливает важность модели развития.
+
+                    .reviews__item
+                        .reviews__profile
+                            p.reviews__name Иван Иванов
+                            .reviews__date 12.02.2022
+                        p.reviews__text Товар хороший, все понравилось, рекомендую!
+
+                    .reviews__item
+                        .reviews__profile
+                            p.reviews__name Сергей Петров
+                            .reviews__date 11.12.2022
+                        p.reviews__text Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества направлений прогрессивного развития. Также как граница обучения кадров в значительной степени обусловливает важность модели развития.
+
+                    button#createReviewButton.button.reviews__create-review-button.reviews__create-review-button_large оставить отзыв
+                    #showMoreButton.reviews__show-more Показать ещё
+
+                    template#modalReview
+                        .reviews__modal.reviews__modal_active
+                            .container
+                                img#closeModalReviewButton.reviews__exit-button(src='./assets/img/icons/close-btn.svg')
+                                .reviews__title Оставить отзыв
+                                img.reviews__photo.cart__item__big-picture
+                                .reviews__name Ошибка
+                                textarea.reviews__input-text
+                                button#createReviewButtonModal.button.reviews__create-review-button Отправить
+

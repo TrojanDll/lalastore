@@ -88,6 +88,10 @@ input[type=submit] {
   cursor: pointer;
 }
 
+input[type=radio] {
+  display: none;
+}
+
 input:focus,
 input:active,
 button:focus,

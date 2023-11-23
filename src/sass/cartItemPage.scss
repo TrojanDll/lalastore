@@ -1,0 +1,35 @@
+@import "./style.scss";
+
+// ui
+@import "./ui/button";
+@import "./ui/input";
+@import "./ui/title";
+@import "./ui/product-card";
+@import "./ui/product-card-label";
+
+// sections
+@import "./sections/header";
+@import "./sections/subheader";
+@import "./sections/breadcrumbs";
+@import "./sections/advertising";
+@import "./sections/catalog-menu";
+@import "./sections/bottom-menu";
+@import "./sections/cart-item-page";
+@import "./sections/recent";
+
+.catalog {
+  &__title-wrapper {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__count {
+    margin-top: 6px;
+    margin-left: 20px;
+    color: rgba(51, 57, 79, 0.62);
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+

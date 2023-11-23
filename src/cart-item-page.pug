@@ -1,0 +1,154 @@
+doctype html
+html(lang="en")
+    head
+        title="LalaStore"
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+        link(rel="stylesheet" href="./css/cartItemPage.css")
+    body
+        include sections/header
+        include sections/catalog-menu
+        include sections/subheader
+        .container
+            .catalog__title-wrapper
+                .title.catalog__title Боди
+                .title.catalog__count 92
+        include sections/breadcrumbs
+        include sections/cart-item-content
+        include sections/recent
+        include sections/footer
+        include sections/bottom-menu
+        include sections/layout
+
+        script(src="./js/search-logic.js")
+        script(src="./js/catalog-logic.js")
+        script(src="./js/catalog-item-menu-logic.js")
+        script(src="./js/sidebar-logic.js")
+        script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+        script.
+            let init = false;
+
+            let mobile = window.matchMedia('(min-width: 0px) and (max-width: 768px)');
+            let desktop = window.matchMedia('(min-width: 768px)');
+
+            if (desktop.matches) {
+                if (!init) {
+                    init = true
+                    let swiper = new Swiper(".cart__item__swiper", {
+                        slidesPerView: '2',
+                        navigation: {
+                            nextEl: ".cart__item__swiper__next",
+                            prevEl: ".cart__item__swiper__prev",
+                        },
+                        direction: "vertical",
+                        pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                        },
+                    });
+                }
+            }
+            else if (mobile.matches) {
+                if (!init) {
+                    init = true
+                    let swiper = new Swiper(".cart__item__swiper", {
+                        slidesPerView: '4',
+                        navigation: {
+                            nextEl: ".cart__item__swiper__next",
+                            prevEl: ".cart__item__swiper__prev",
+                        },
+                        pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                        },
+                    });
+                }
+            }
+
+
+            // Функционал переключения фото свайпами и обработка клика по фото
+            const bigPicture = document.querySelector('#bigPicture')
+            const picturesList = document.querySelectorAll('.cart__item-of-list')
+            let pointerForBigPicture = 0
+            let pointerBarrier = picturesList.length
+            bigPicture.src = picturesList[pointerForBigPicture].src
+            const switchBigPicture = (srcProp) => {
+                bigPicture.src = srcProp
+            }
+            picturesList.forEach((item) => {
+                item.addEventListener('click', (evt) => {
+                    switchBigPicture(evt.target.src)
+                })
+            })
+
+            if (mobile.matches) {
+                const swiperBigPicturePrev = document.querySelector('.cart__item__big-picture__swiper__prev')
+                const swiperBigPictureNext = document.querySelector('.cart__item__big-picture__swiper__next')
+                swiperBigPictureNext.addEventListener('click', () => {
+                    if (pointerForBigPicture < pointerBarrier-1) {
+                        pointerForBigPicture++;
+                        switchBigPicture(picturesList[pointerForBigPicture].src)
+                    }
+                })
+                swiperBigPicturePrev.addEventListener('click', () => {
+                    if (pointerForBigPicture > 0) {
+                        pointerForBigPicture--;
+                        switchBigPicture(picturesList[pointerForBigPicture].src)
+                    }
+                })
+            }
+
+            // Функционал раскрытия комментариев
+            const description = document.querySelector('#description')
+            const reviewsList = document.querySelector('.reviews__list')
+            const reviews = document.querySelector('#reviews')
+            const returnCollapsedReviewsButton = document.querySelector('#reviewsReturnCollapsedButton')
+            const showMoreButton = document.querySelector('#showMoreButton')
+            const createReviewButton = document.querySelector('#createReviewButton')
+            const emptyMessage = document.querySelector('.reviews__text_empty')
+
+            if (showMoreButton) {
+                showMoreButton.addEventListener('click', () => {
+                    description.classList.add('cart__item__description_collapsed')
+                    reviews.classList.add('reviews_full')
+                    returnCollapsedReviewsButton.classList.add('reviews__return-collapsed-button_active')
+                })
+                returnCollapsedReviewsButton.addEventListener('click', () => {
+                    description.classList.remove('cart__item__description_collapsed')
+                    reviews.classList.remove('reviews_full')
+                    returnCollapsedReviewsButton.classList.remove('reviews__return-collapsed-button_active')
+                })
+            }
+            if (desktop.matches) {
+                createReviewButton.addEventListener('click', () => {
+                    const input = document.createElement("textarea");
+                    input.className = "reviews__input-text";
+                    reviewsList.insertBefore(input, createReviewButton);
+                    createReviewButton.textContent = 'Отправить'
+                    createReviewButton.classList.remove('reviews__create-review-button_large');
+                    if (emptyMessage) {
+                        emptyMessage.remove()
+                    }
+                })
+            } else if (mobile.matches) {
+                createReviewButton.addEventListener('click', () => {
+                    const templateModalReview = document.querySelector('#modalReview')
+                    const clonedModalReview = templateModalReview.content.cloneNode(true)
+                    const modalReview = clonedModalReview.querySelector('.reviews__modal')
+
+                    const modalPhoto = modalReview.querySelector('.reviews__photo')
+                    modalPhoto.src = bigPicture.src
+
+                    const itemName = document.querySelector('#cartItemName')
+                    const modalName = modalReview.querySelector('.reviews__name')
+                    modalName.textContent = itemName.textContent
+
+                    reviews.appendChild(modalReview)
+
+                    const closeModalReviewButton = reviews.querySelector('#closeModalReviewButton')
+                    closeModalReviewButton.addEventListener('click', () => {
+                        reviews.removeChild(modalReview)
+                    })
+                })
+            }
