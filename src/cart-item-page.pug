@@ -106,22 +106,49 @@ html(lang="en")
             const returnCollapsedReviewsButton = document.querySelector('#reviewsReturnCollapsedButton')
             const showMoreButton = document.querySelector('#showMoreButton')
             const createReviewButton = document.querySelector('#createReviewButton')
+            const emptyMessage = document.querySelector('.reviews__text_empty')
 
-            showMoreButton.addEventListener('click', () => {
-                description.classList.add('cart__item__description_collapsed')
-                reviews.classList.add('reviews_full')
-                returnCollapsedReviewsButton.classList.add('reviews__return-collapsed-button_active')
-            })
-            returnCollapsedReviewsButton.addEventListener('click', () => {
-                description.classList.remove('cart__item__description_collapsed')
-                reviews.classList.remove('reviews_full')
-                returnCollapsedReviewsButton.classList.remove('reviews__return-collapsed-button_active')
-            })
-            createReviewButton.addEventListener('click', () => {
-                const input = document.createElement("textarea");
-                input.className = "reviews__input-text";
-                reviewsList.insertBefore(input, createReviewButton);
-                createReviewButton.textContent = 'Отправить'
-                createReviewButton.classList.remove('reviews__create-review-button_large');
-            })
+            if (showMoreButton) {
+                showMoreButton.addEventListener('click', () => {
+                    description.classList.add('cart__item__description_collapsed')
+                    reviews.classList.add('reviews_full')
+                    returnCollapsedReviewsButton.classList.add('reviews__return-collapsed-button_active')
+                })
+                returnCollapsedReviewsButton.addEventListener('click', () => {
+                    description.classList.remove('cart__item__description_collapsed')
+                    reviews.classList.remove('reviews_full')
+                    returnCollapsedReviewsButton.classList.remove('reviews__return-collapsed-button_active')
+                })
+            }
+            if (desktop.matches) {
+                createReviewButton.addEventListener('click', () => {
+                    const input = document.createElement("textarea");
+                    input.className = "reviews__input-text";
+                    reviewsList.insertBefore(input, createReviewButton);
+                    createReviewButton.textContent = 'Отправить'
+                    createReviewButton.classList.remove('reviews__create-review-button_large');
+                    if (emptyMessage) {
+                        emptyMessage.remove()
+                    }
+                })
+            } else if (mobile.matches) {
+                createReviewButton.addEventListener('click', () => {
+                    const templateModalReview = document.querySelector('#modalReview')
+                    const clonedModalReview = templateModalReview.content.cloneNode(true)
+                    const modalReview = clonedModalReview.querySelector('.reviews__modal')
 
+                    const modalPhoto = modalReview.querySelector('.reviews__photo')
+                    modalPhoto.src = bigPicture.src
+
+                    const itemName = document.querySelector('#cartItemName')
+                    const modalName = modalReview.querySelector('.reviews__name')
+                    modalName.textContent = itemName.textContent
+
+                    reviews.appendChild(modalReview)
+
+                    const closeModalReviewButton = reviews.querySelector('#closeModalReviewButton')
+                    closeModalReviewButton.addEventListener('click', () => {
+                        reviews.removeChild(modalReview)
+                    })
+                })
+            }

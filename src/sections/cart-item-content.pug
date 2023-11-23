@@ -1,14 +1,16 @@
+include ../ui/product-card-label
+
 .cart__item
     .container
         .cart__item__wrapper
             .cart__item__photos
                 .cart__item__swiper.swiper
                     .swiper-wrapper
-                        img.cart__item-of-list.swiper-slide(src='./assets/img/recent1.webp')
-                        img.cart__item-of-list.swiper-slide(src='./assets/img/recent2.webp')
-                        img.cart__item-of-list.swiper-slide(src='./assets/img/recent3.webp')
-                        img.cart__item-of-list.swiper-slide(src='./assets/img/recent1.webp')
-                        img.cart__item-of-list.swiper-slide(src='./assets/img/recent2.webp')
+                        img.cart__item-of-list.swiper-slide(src='./assets/img/cart-item-page1.jpg')
+                        img.cart__item-of-list.swiper-slide(src='./assets/img/cart-item-page2.jpg')
+                        img.cart__item-of-list.swiper-slide(src='./assets/img/cart-item-page3.jpg')
+                        img.cart__item-of-list.swiper-slide(src='./assets/img/cart-item-page2.jpg')
+                        img.cart__item-of-list.swiper-slide(src='./assets/img/cart-item-page3.jpg')
                     img.cart__item__swiper__prev(src='./assets/img/icons/arrow_circle.svg')
                     img.cart__item__swiper__next(src='./assets/img/icons/arrow_circle.svg')
                 img#bigPicture.cart__item__big-picture(src='')
@@ -16,8 +18,9 @@
                 img.cart__item__big-picture__swiper__next(src='./assets/img/icons/arrow_circle.svg')
             .cart__item__main-info.main-info
                 .main-info__head
-                    .main-info__name Боди без рукавов "ФРУК-ТИК", розовый
-                    .main-info__status На складе
+                    #cartItemName.main-info__name Боди без рукавов "ФРУК-ТИК", розовый
+                    .main-info__status
+                        +productCardLabel('На складе')
                     .main-info__code Код товара: 32978459390
                 .main-info__stash
                     .main-info__price 349 ₽/шт
@@ -64,33 +67,43 @@
                 .cart__item__title Отзывы
                 .reviews__list
 
-                    //.reviews__empty
-                    //    p.reviews__text.reviews__text_empty У данного товара нет отзывов. Станьте первым, кто оставил отзыв об этом товаре!
-                    //    button.button.reviews__create-review-button оставить отзыв
+                    .reviews__empty
+                        p.reviews__text.reviews__text_empty У данного товара нет отзывов. Станьте первым, кто оставил отзыв об этом товаре!
 
-                    .reviews__item
-                        .reviews__profile
-                            p.reviews__name Иван Иванов
-                            .reviews__date 12.02.2022
-                        p.reviews__text Товар хороший, все понравилось, рекомендую!
-
-                    .reviews__item
-                        .reviews__profile
-                            p.reviews__name Сергей Петров
-                            .reviews__date 11.12.2022
-                        p.reviews__text Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества направлений прогрессивного развития. Также как граница обучения кадров в значительной степени обусловливает важность модели развития.
-
-                    .reviews__item
-                        .reviews__profile
-                            p.reviews__name Иван Иванов
-                            .reviews__date 12.02.2022
-                        p.reviews__text Товар хороший, все понравилось, рекомендую!
-
-                    .reviews__item
-                        .reviews__profile
-                            p.reviews__name Сергей Петров
-                            .reviews__date 11.12.2022
-                        p.reviews__text Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества направлений прогрессивного развития. Также как граница обучения кадров в значительной степени обусловливает важность модели развития.
-
+                    //.reviews__item
+                    //    .reviews__profile
+                    //        p.reviews__name Иван Иванов
+                    //        .reviews__date 12.02.2022
+                    //    p.reviews__text Товар хороший, все понравилось, рекомендую!
+                    //
+                    //.reviews__item
+                    //    .reviews__profile
+                    //        p.reviews__name Сергей Петров
+                    //        .reviews__date 11.12.2022
+                    //    p.reviews__text Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества направлений прогрессивного развития. Также как граница обучения кадров в значительной степени обусловливает важность модели развития.
+                    //
+                    //.reviews__item
+                    //    .reviews__profile
+                    //        p.reviews__name Иван Иванов
+                    //        .reviews__date 12.02.2022
+                    //    p.reviews__text Товар хороший, все понравилось, рекомендую!
+                    //
+                    //.reviews__item
+                    //    .reviews__profile
+                    //        p.reviews__name Сергей Петров
+                    //        .reviews__date 11.12.2022
+                    //    p.reviews__text Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества направлений прогрессивного развития. Также как граница обучения кадров в значительной степени обусловливает важность модели развития.
+                    //
                     button#createReviewButton.button.reviews__create-review-button.reviews__create-review-button_large оставить отзыв
-                    #showMoreButton.reviews__show-more Показать ещё
+                    //#showMoreButton.reviews__show-more Показать ещё
+
+                    template#modalReview
+                        .reviews__modal.reviews__modal_active
+                            .container
+                                img#closeModalReviewButton.reviews__exit-button(src='./assets/img/icons/close-btn.svg')
+                                .reviews__title Оставить отзыв
+                                img.reviews__photo.cart__item__big-picture
+                                .reviews__name Ошибка
+                                textarea.reviews__input-text
+                                button#createReviewButtonModal.button.reviews__create-review-button Отправить
+

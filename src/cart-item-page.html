@@ -117,13 +117,15 @@
         <div class="cart__item__wrapper">
           <div class="cart__item__photos">
             <div class="cart__item__swiper swiper">
-              <div class="swiper-wrapper"><img class="cart__item-of-list swiper-slide" src="./assets/img/recent1.webp"><img class="cart__item-of-list swiper-slide" src="./assets/img/recent2.webp"><img class="cart__item-of-list swiper-slide" src="./assets/img/recent3.webp"><img class="cart__item-of-list swiper-slide" src="./assets/img/recent1.webp"><img class="cart__item-of-list swiper-slide" src="./assets/img/recent2.webp"></div><img class="cart__item__swiper__prev" src="./assets/img/icons/arrow_circle.svg"><img class="cart__item__swiper__next" src="./assets/img/icons/arrow_circle.svg">
+              <div class="swiper-wrapper"><img class="cart__item-of-list swiper-slide" src="./assets/img/cart-item-page1.jpg"><img class="cart__item-of-list swiper-slide" src="./assets/img/cart-item-page2.jpg"><img class="cart__item-of-list swiper-slide" src="./assets/img/cart-item-page3.jpg"><img class="cart__item-of-list swiper-slide" src="./assets/img/cart-item-page2.jpg"><img class="cart__item-of-list swiper-slide" src="./assets/img/cart-item-page3.jpg"></div><img class="cart__item__swiper__prev" src="./assets/img/icons/arrow_circle.svg"><img class="cart__item__swiper__next" src="./assets/img/icons/arrow_circle.svg">
             </div><img class="cart__item__big-picture" id="bigPicture" src=""><img class="cart__item__big-picture__swiper__prev" src="./assets/img/icons/arrow_circle.svg"><img class="cart__item__big-picture__swiper__next" src="./assets/img/icons/arrow_circle.svg">
           </div>
           <div class="cart__item__main-info main-info">
             <div class="main-info__head">
-              <div class="main-info__name">Боди без рукавов "ФРУК-ТИК", розовый</div>
-              <div class="main-info__status">На складе</div>
+              <div class="main-info__name" id="cartItemName">Боди без рукавов "ФРУК-ТИК", розовый</div>
+              <div class="main-info__status">
+                    <div class="product-card-label product-card-label_in-stock">На складе</div>
+              </div>
               <div class="main-info__code">Код товара: 32978459390</div>
             </div>
             <div class="main-info__stash">
@@ -167,39 +169,45 @@
             <div class="reviews__return-collapsed-button" id="reviewsReturnCollapsedButton"></div>
             <div class="cart__item__title">Отзывы</div>
             <div class="reviews__list">
-              <!--.reviews__empty-->
-              <!--    p.reviews__text.reviews__text_empty У данного товара нет отзывов. Станьте первым, кто оставил отзыв об этом товаре!-->
-              <!--    button.button.reviews__create-review-button оставить отзыв-->
-              <div class="reviews__item">
-                <div class="reviews__profile">
-                  <p class="reviews__name">Иван Иванов</p>
-                  <div class="reviews__date">12.02.2022</div>
-                </div>
-                <p class="reviews__text">Товар хороший, все понравилось, рекомендую!</p>
+              <div class="reviews__empty">
+                <p class="reviews__text reviews__text_empty">У данного товара нет отзывов. Станьте первым, кто оставил отзыв об этом товаре!</p>
               </div>
-              <div class="reviews__item">
-                <div class="reviews__profile">
-                  <p class="reviews__name">Сергей Петров</p>
-                  <div class="reviews__date">11.12.2022</div>
-                </div>
-                <p class="reviews__text">Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества направлений прогрессивного развития. Также как граница обучения кадров в значительной степени обусловливает важность модели развития.</p>
-              </div>
-              <div class="reviews__item">
-                <div class="reviews__profile">
-                  <p class="reviews__name">Иван Иванов</p>
-                  <div class="reviews__date">12.02.2022</div>
-                </div>
-                <p class="reviews__text">Товар хороший, все понравилось, рекомендую!</p>
-              </div>
-              <div class="reviews__item">
-                <div class="reviews__profile">
-                  <p class="reviews__name">Сергей Петров</p>
-                  <div class="reviews__date">11.12.2022</div>
-                </div>
-                <p class="reviews__text">Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества направлений прогрессивного развития. Также как граница обучения кадров в значительной степени обусловливает важность модели развития.</p>
-              </div>
+              <!--.reviews__item-->
+              <!--    .reviews__profile-->
+              <!--        p.reviews__name Иван Иванов-->
+              <!--        .reviews__date 12.02.2022-->
+              <!--    p.reviews__text Товар хороший, все понравилось, рекомендую!-->
+              <!---->
+              <!--.reviews__item-->
+              <!--    .reviews__profile-->
+              <!--        p.reviews__name Сергей Петров-->
+              <!--        .reviews__date 11.12.2022-->
+              <!--    p.reviews__text Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества направлений прогрессивного развития. Также как граница обучения кадров в значительной степени обусловливает важность модели развития.-->
+              <!---->
+              <!--.reviews__item-->
+              <!--    .reviews__profile-->
+              <!--        p.reviews__name Иван Иванов-->
+              <!--        .reviews__date 12.02.2022-->
+              <!--    p.reviews__text Товар хороший, все понравилось, рекомендую!-->
+              <!---->
+              <!--.reviews__item-->
+              <!--    .reviews__profile-->
+              <!--        p.reviews__name Сергей Петров-->
+              <!--        .reviews__date 11.12.2022-->
+              <!--    p.reviews__text Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества направлений прогрессивного развития. Также как граница обучения кадров в значительной степени обусловливает важность модели развития.-->
+              <!---->
               <button class="button reviews__create-review-button reviews__create-review-button_large" id="createReviewButton">оставить отзыв</button>
-              <div class="reviews__show-more" id="showMoreButton">Показать ещё</div>
+              <!--#showMoreButton.reviews__show-more Показать ещё-->
+              <template id="modalReview">
+                <div class="reviews__modal reviews__modal_active">
+                  <div class="container"><img class="reviews__exit-button" id="closeModalReviewButton" src="./assets/img/icons/close-btn.svg">
+                    <div class="reviews__title">Оставить отзыв</div><img class="reviews__photo cart__item__big-picture">
+                    <div class="reviews__name">Ошибка</div>
+                    <textarea class="reviews__input-text"></textarea>
+                    <button class="button reviews__create-review-button" id="createReviewButtonModal">Отправить</button>
+                  </div>
+                </div>
+              </template>
             </div>
           </div>
         </div>
@@ -449,24 +457,52 @@
       const returnCollapsedReviewsButton = document.querySelector('#reviewsReturnCollapsedButton')
       const showMoreButton = document.querySelector('#showMoreButton')
       const createReviewButton = document.querySelector('#createReviewButton')
+      const emptyMessage = document.querySelector('.reviews__text_empty')
       
-      showMoreButton.addEventListener('click', () => {
-          description.classList.add('cart__item__description_collapsed')
-          reviews.classList.add('reviews_full')
-          returnCollapsedReviewsButton.classList.add('reviews__return-collapsed-button_active')
-      })
-      returnCollapsedReviewsButton.addEventListener('click', () => {
-          description.classList.remove('cart__item__description_collapsed')
-          reviews.classList.remove('reviews_full')
-          returnCollapsedReviewsButton.classList.remove('reviews__return-collapsed-button_active')
-      })
-      createReviewButton.addEventListener('click', () => {
-          const input = document.createElement("textarea");
-          input.className = "reviews__input-text";
-          reviewsList.insertBefore(input, createReviewButton);
-          createReviewButton.textContent = 'Отправить'
-          createReviewButton.classList.remove('reviews__create-review-button_large');
-      })
+      if (showMoreButton) {
+          showMoreButton.addEventListener('click', () => {
+              description.classList.add('cart__item__description_collapsed')
+              reviews.classList.add('reviews_full')
+              returnCollapsedReviewsButton.classList.add('reviews__return-collapsed-button_active')
+          })
+          returnCollapsedReviewsButton.addEventListener('click', () => {
+              description.classList.remove('cart__item__description_collapsed')
+              reviews.classList.remove('reviews_full')
+              returnCollapsedReviewsButton.classList.remove('reviews__return-collapsed-button_active')
+          })
+      }
+      if (desktop.matches) {
+          createReviewButton.addEventListener('click', () => {
+              const input = document.createElement("textarea");
+              input.className = "reviews__input-text";
+              reviewsList.insertBefore(input, createReviewButton);
+              createReviewButton.textContent = 'Отправить'
+              createReviewButton.classList.remove('reviews__create-review-button_large');
+              if (emptyMessage) {
+                  emptyMessage.remove()
+              }
+          })
+      } else if (mobile.matches) {
+          createReviewButton.addEventListener('click', () => {
+              const templateModalReview = document.querySelector('#modalReview')
+              const clonedModalReview = templateModalReview.content.cloneNode(true)
+              const modalReview = clonedModalReview.querySelector('.reviews__modal')
+      
+              const modalPhoto = modalReview.querySelector('.reviews__photo')
+              modalPhoto.src = bigPicture.src
+      
+              const itemName = document.querySelector('#cartItemName')
+              const modalName = modalReview.querySelector('.reviews__name')
+              modalName.textContent = itemName.textContent
+      
+              reviews.appendChild(modalReview)
+      
+              const closeModalReviewButton = reviews.querySelector('#closeModalReviewButton')
+              closeModalReviewButton.addEventListener('click', () => {
+                  reviews.removeChild(modalReview)
+              })
+          })
+      }
     </script>
   </body>
 </html>
