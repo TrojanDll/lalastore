@@ -456,6 +456,7 @@ legend {
 .product-card {
   position: relative;
   width: 230px;
+  display: block;
 }
 .product-card__img-wrapper {
   position: relative;
@@ -490,7 +491,7 @@ legend {
   font-size: 12px;
 }
 
-@media (width <= 1540px) {
+@media (max-width: 1540px) {
   .product-card {
     width: 171px;
   }
@@ -504,12 +505,12 @@ legend {
             transform: translate(-50%, -50%);
   }
 }
-@media (width <= 768px) {
+@media (max-width: 768px) {
   .product-card__title {
     margin-top: 21px;
   }
 }
-@media (width <= 576px) {
+@media (max-width: 576px) {
   .product-card__button {
     width: 150px;
     margin: 0 auto;
