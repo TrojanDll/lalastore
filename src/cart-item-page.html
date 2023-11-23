@@ -117,7 +117,7 @@
         <div class="cart__item__wrapper">
           <div class="cart__item__photos">
             <div class="cart__item__swiper swiper">
-              <div class="swiper-wrapper"><img class="cart__item-of-list swiper-slide" src="./assets/img/cart-item-page1.jpg"><img class="cart__item-of-list swiper-slide" src="./assets/img/cart-item-page2.jpg"><img class="cart__item-of-list swiper-slide" src="./assets/img/cart-item-page3.jpg"><img class="cart__item-of-list swiper-slide" src="./assets/img/cart-item-page2.jpg"><img class="cart__item-of-list swiper-slide" src="./assets/img/cart-item-page3.jpg"></div><img class="cart__item__swiper__prev" src="./assets/img/icons/arrow_circle.svg"><img class="cart__item__swiper__next" src="./assets/img/icons/arrow_circle.svg">
+              <div class="swiper-wrapper"><img class="cart__item-of-list swiper-slide" src="./assets/img/cart-item-page1.webp"><img class="cart__item-of-list swiper-slide" src="./assets/img/cart-item-page2.webp"><img class="cart__item-of-list swiper-slide" src="./assets/img/cart-item-page3.webp"><img class="cart__item-of-list swiper-slide" src="./assets/img/cart-item-page2.webp"><img class="cart__item-of-list swiper-slide" src="./assets/img/cart-item-page3.webp"></div><img class="cart__item__swiper__prev" src="./assets/img/icons/arrow_circle.svg"><img class="cart__item__swiper__next" src="./assets/img/icons/arrow_circle.svg">
             </div><img class="cart__item__big-picture" id="bigPicture" src=""><img class="cart__item__big-picture__swiper__prev" src="./assets/img/icons/arrow_circle.svg"><img class="cart__item__big-picture__swiper__next" src="./assets/img/icons/arrow_circle.svg">
           </div>
           <div class="cart__item__main-info main-info">
@@ -169,35 +169,38 @@
             <div class="reviews__return-collapsed-button" id="reviewsReturnCollapsedButton"></div>
             <div class="cart__item__title">Отзывы</div>
             <div class="reviews__list">
-              <div class="reviews__empty">
-                <p class="reviews__text reviews__text_empty">У данного товара нет отзывов. Станьте первым, кто оставил отзыв об этом товаре!</p>
+              <!--.reviews__empty-->
+              <!--    p.reviews__text.reviews__text_empty У данного товара нет отзывов. Станьте первым, кто оставил отзыв об этом товаре!-->
+              <div class="reviews__item">
+                <div class="reviews__profile">
+                  <p class="reviews__name">Иван Иванов</p>
+                  <div class="reviews__date">12.02.2022</div>
+                </div>
+                <p class="reviews__text">Товар хороший, все понравилось, рекомендую!</p>
               </div>
-              <!--.reviews__item-->
-              <!--    .reviews__profile-->
-              <!--        p.reviews__name Иван Иванов-->
-              <!--        .reviews__date 12.02.2022-->
-              <!--    p.reviews__text Товар хороший, все понравилось, рекомендую!-->
-              <!---->
-              <!--.reviews__item-->
-              <!--    .reviews__profile-->
-              <!--        p.reviews__name Сергей Петров-->
-              <!--        .reviews__date 11.12.2022-->
-              <!--    p.reviews__text Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества направлений прогрессивного развития. Также как граница обучения кадров в значительной степени обусловливает важность модели развития.-->
-              <!---->
-              <!--.reviews__item-->
-              <!--    .reviews__profile-->
-              <!--        p.reviews__name Иван Иванов-->
-              <!--        .reviews__date 12.02.2022-->
-              <!--    p.reviews__text Товар хороший, все понравилось, рекомендую!-->
-              <!---->
-              <!--.reviews__item-->
-              <!--    .reviews__profile-->
-              <!--        p.reviews__name Сергей Петров-->
-              <!--        .reviews__date 11.12.2022-->
-              <!--    p.reviews__text Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества направлений прогрессивного развития. Также как граница обучения кадров в значительной степени обусловливает важность модели развития.-->
-              <!---->
+              <div class="reviews__item">
+                <div class="reviews__profile">
+                  <p class="reviews__name">Сергей Петров</p>
+                  <div class="reviews__date">11.12.2022</div>
+                </div>
+                <p class="reviews__text">Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества направлений прогрессивного развития. Также как граница обучения кадров в значительной степени обусловливает важность модели развития.</p>
+              </div>
+              <div class="reviews__item">
+                <div class="reviews__profile">
+                  <p class="reviews__name">Иван Иванов</p>
+                  <div class="reviews__date">12.02.2022</div>
+                </div>
+                <p class="reviews__text">Товар хороший, все понравилось, рекомендую!</p>
+              </div>
+              <div class="reviews__item">
+                <div class="reviews__profile">
+                  <p class="reviews__name">Сергей Петров</p>
+                  <div class="reviews__date">11.12.2022</div>
+                </div>
+                <p class="reviews__text">Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества направлений прогрессивного развития. Также как граница обучения кадров в значительной степени обусловливает важность модели развития.</p>
+              </div>
               <button class="button reviews__create-review-button reviews__create-review-button_large" id="createReviewButton">оставить отзыв</button>
-              <!--#showMoreButton.reviews__show-more Показать ещё-->
+              <div class="reviews__show-more" id="showMoreButton">Показать ещё</div>
               <template id="modalReview">
                 <div class="reviews__modal reviews__modal_active">
                   <div class="container"><img class="reviews__exit-button" id="closeModalReviewButton" src="./assets/img/icons/close-btn.svg">

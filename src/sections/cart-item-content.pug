@@ -6,11 +6,11 @@ include ../ui/product-card-label
             .cart__item__photos
                 .cart__item__swiper.swiper
                     .swiper-wrapper
-                        img.cart__item-of-list.swiper-slide(src='./assets/img/cart-item-page1.jpg')
-                        img.cart__item-of-list.swiper-slide(src='./assets/img/cart-item-page2.jpg')
-                        img.cart__item-of-list.swiper-slide(src='./assets/img/cart-item-page3.jpg')
-                        img.cart__item-of-list.swiper-slide(src='./assets/img/cart-item-page2.jpg')
-                        img.cart__item-of-list.swiper-slide(src='./assets/img/cart-item-page3.jpg')
+                        img.cart__item-of-list.swiper-slide(src='./assets/img/cart-item-page1.webp')
+                        img.cart__item-of-list.swiper-slide(src='./assets/img/cart-item-page2.webp')
+                        img.cart__item-of-list.swiper-slide(src='./assets/img/cart-item-page3.webp')
+                        img.cart__item-of-list.swiper-slide(src='./assets/img/cart-item-page2.webp')
+                        img.cart__item-of-list.swiper-slide(src='./assets/img/cart-item-page3.webp')
                     img.cart__item__swiper__prev(src='./assets/img/icons/arrow_circle.svg')
                     img.cart__item__swiper__next(src='./assets/img/icons/arrow_circle.svg')
                 img#bigPicture.cart__item__big-picture(src='')
@@ -67,35 +67,35 @@ include ../ui/product-card-label
                 .cart__item__title Отзывы
                 .reviews__list
 
-                    .reviews__empty
-                        p.reviews__text.reviews__text_empty У данного товара нет отзывов. Станьте первым, кто оставил отзыв об этом товаре!
+                    //.reviews__empty
+                    //    p.reviews__text.reviews__text_empty У данного товара нет отзывов. Станьте первым, кто оставил отзыв об этом товаре!
 
-                    //.reviews__item
-                    //    .reviews__profile
-                    //        p.reviews__name Иван Иванов
-                    //        .reviews__date 12.02.2022
-                    //    p.reviews__text Товар хороший, все понравилось, рекомендую!
-                    //
-                    //.reviews__item
-                    //    .reviews__profile
-                    //        p.reviews__name Сергей Петров
-                    //        .reviews__date 11.12.2022
-                    //    p.reviews__text Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества направлений прогрессивного развития. Также как граница обучения кадров в значительной степени обусловливает важность модели развития.
-                    //
-                    //.reviews__item
-                    //    .reviews__profile
-                    //        p.reviews__name Иван Иванов
-                    //        .reviews__date 12.02.2022
-                    //    p.reviews__text Товар хороший, все понравилось, рекомендую!
-                    //
-                    //.reviews__item
-                    //    .reviews__profile
-                    //        p.reviews__name Сергей Петров
-                    //        .reviews__date 11.12.2022
-                    //    p.reviews__text Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества направлений прогрессивного развития. Также как граница обучения кадров в значительной степени обусловливает важность модели развития.
-                    //
+                    .reviews__item
+                        .reviews__profile
+                            p.reviews__name Иван Иванов
+                            .reviews__date 12.02.2022
+                        p.reviews__text Товар хороший, все понравилось, рекомендую!
+
+                    .reviews__item
+                        .reviews__profile
+                            p.reviews__name Сергей Петров
+                            .reviews__date 11.12.2022
+                        p.reviews__text Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества направлений прогрессивного развития. Также как граница обучения кадров в значительной степени обусловливает важность модели развития.
+
+                    .reviews__item
+                        .reviews__profile
+                            p.reviews__name Иван Иванов
+                            .reviews__date 12.02.2022
+                        p.reviews__text Товар хороший, все понравилось, рекомендую!
+
+                    .reviews__item
+                        .reviews__profile
+                            p.reviews__name Сергей Петров
+                            .reviews__date 11.12.2022
+                        p.reviews__text Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества направлений прогрессивного развития. Также как граница обучения кадров в значительной степени обусловливает важность модели развития.
+
                     button#createReviewButton.button.reviews__create-review-button.reviews__create-review-button_large оставить отзыв
-                    //#showMoreButton.reviews__show-more Показать ещё
+                    #showMoreButton.reviews__show-more Показать ещё
 
                     template#modalReview
                         .reviews__modal.reviews__modal_active
