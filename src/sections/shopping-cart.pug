@@ -1,0 +1,98 @@
+include ../ui/product-card-label
+
+.shopping-cart
+    .container
+        .shopping-cart__wrapper
+            .shopping-cart__status
+                +productCardLabel("В наличии")
+            .shopping-cart__list-of-items
+                .shopping-cart__item
+                    input.shopping-cart__checkbox(type="checkbox")
+                    img.shopping-cart__image(src='./assets/img/shopping-cart.jpg')
+                    .shopping-cart__info
+                        .shopping-cart__pretitle Товар:
+                        .shopping-cart__name Боди без рукавов "ФРУК-ТИК", розовый
+                        .shopping-cart__selections
+                            .shopping-cart__discount скидка: 20%
+                            .shopping-cart__size Размер: 74
+                    .shopping-cart__price
+                        .shopping-cart__pretitle Цена:
+                        .shopping-cart__final 349₽
+                        .shopping-cart__before-sale 500₽
+                    .shopping-cart__quantity
+                        .shopping-cart__pretitle Колл-во:
+                        .shopping-cart__change-quantity
+                            .shopping-cart__decrement.shopping-cart__change-quantity-button -
+                            .shopping-cart__count 1
+                            .shopping-cart__increment.shopping-cart__change-quantity-button +
+                    .shopping-cart__result-price
+                        .shopping-cart__pretitle В сумме:
+                            .shopping-cart__final 2 332₽
+                            .shopping-cart__before-sale 3 312₽
+                            .shopping-cart__economy-quantity Экономия 1 370 ₽
+                    .shopping-cart__delete
+                        img.shopping-cart__cross(src='./assets/img/icons/close-btn.svg')
+
+                .shopping-cart__item
+                    input.shopping-cart__checkbox(type="checkbox")
+                    img.shopping-cart__image(src='./assets/img/shopping-cart.jpg')
+                    .shopping-cart__info
+                        .shopping-cart__pretitle Товар:
+                        .shopping-cart__name Боди без рукавов "ФРУК-ТИК", розовый
+                        .shopping-cart__selections
+                            .shopping-cart__discount скидка: 20%
+                            .shopping-cart__size Размер: 74
+                    .shopping-cart__price
+                        .shopping-cart__pretitle Цена:
+                        .shopping-cart__final 349₽
+                        .shopping-cart__before-sale 500₽
+                    .shopping-cart__quantity
+                        .shopping-cart__pretitle Колл-во:
+                        .shopping-cart__change-quantity
+                            .shopping-cart__decrement.shopping-cart__change-quantity-button -
+                            .shopping-cart__count 1
+                            .shopping-cart__increment.shopping-cart__change-quantity-button +
+                    .shopping-cart__result-price
+                        .shopping-cart__pretitle В сумме:
+                            .shopping-cart__final 2 332₽
+                            .shopping-cart__before-sale 3 312₽
+                            .shopping-cart__economy-quantity Экономия 1 370 ₽
+                    .shopping-cart__delete
+                        img.shopping-cart__cross(src='./assets/img/icons/close-btn.svg')
+
+                .shopping-cart__item
+                    input.shopping-cart__checkbox(type="checkbox")
+                    img.shopping-cart__image(src='./assets/img/shopping-cart.jpg')
+                    .shopping-cart__info
+                        .shopping-cart__pretitle Товар:
+                        .shopping-cart__name Боди без рукавов "ФРУК-ТИК", розовый
+                        .shopping-cart__selections
+                            .shopping-cart__discount скидка: 20%
+                            .shopping-cart__size Размер: 74
+                    .shopping-cart__price
+                        .shopping-cart__pretitle Цена:
+                        .shopping-cart__final 349₽
+                        .shopping-cart__before-sale 500₽
+                    .shopping-cart__quantity
+                        .shopping-cart__pretitle Колл-во:
+                        .shopping-cart__change-quantity
+                            .shopping-cart__decrement.shopping-cart__change-quantity-button -
+                            .shopping-cart__count 1
+                            .shopping-cart__increment.shopping-cart__change-quantity-button +
+                    .shopping-cart__result-price
+                        .shopping-cart__pretitle В сумме:
+                            .shopping-cart__final 2 332₽
+                            .shopping-cart__before-sale 3 312₽
+                            .shopping-cart__economy-quantity Экономия 1 370 ₽
+                    .shopping-cart__delete
+                        img.shopping-cart__cross(src='./assets/img/icons/close-btn.svg')
+            .shopping-cart__purchase.purchase
+                img.purchase__share(src='./assets/img/icons/share.svg')
+                .purchase__title Итого:
+                .purchase__total-weight Общий вес корзины: 5кг
+                .purchase__discount Экономия 2 370 ₽
+                .purchase__total-price К оплате: 4 664₽
+                .purchase__promo Ввести промокод
+                button.button.purchase__buy-button оформить заказ
+                button.button.purchase__buy-button_quick быстрый заказ
+
