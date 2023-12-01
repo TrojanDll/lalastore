@@ -1714,6 +1714,7 @@ legend {
   padding: 5px 20px;
   background: #F4F4F4;
   margin: 15px 0;
+  resize: none;
 }
 .reviews .reviews__item {
   display: -webkit-box;
