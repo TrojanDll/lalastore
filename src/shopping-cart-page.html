@@ -140,9 +140,9 @@
               <div class="shopping-cart__quantity">
                 <div class="shopping-cart__pretitle">Колл-во:</div>
                 <div class="shopping-cart__change-quantity">
-                  <div class="shopping-cart__decrement shopping-cart__change-quantity-button">-</div>
-                  <div class="shopping-cart__count">1</div>
-                  <div class="shopping-cart__increment shopping-cart__change-quantity-button">+</div>
+                  <div class="decQuantity shopping-cart__decrement shopping-cart__change-quantity-button">-</div>
+                  <div class="quantity shopping-cart__count">1</div>
+                  <div class="incQuantity shopping-cart__increment shopping-cart__change-quantity-button">+</div>
                 </div>
               </div>
               <div class="shopping-cart__result-price">
@@ -174,9 +174,9 @@
               <div class="shopping-cart__quantity">
                 <div class="shopping-cart__pretitle">Колл-во:</div>
                 <div class="shopping-cart__change-quantity">
-                  <div class="shopping-cart__decrement shopping-cart__change-quantity-button">-</div>
-                  <div class="shopping-cart__count">1</div>
-                  <div class="shopping-cart__increment shopping-cart__change-quantity-button">+</div>
+                  <div class="decQuantity shopping-cart__decrement shopping-cart__change-quantity-button">-</div>
+                  <div class="quantity shopping-cart__count">1</div>
+                  <div class="incQuantity shopping-cart__increment shopping-cart__change-quantity-button">+</div>
                 </div>
               </div>
               <div class="shopping-cart__result-price">
@@ -208,9 +208,9 @@
               <div class="shopping-cart__quantity">
                 <div class="shopping-cart__pretitle">Колл-во:</div>
                 <div class="shopping-cart__change-quantity">
-                  <div class="shopping-cart__decrement shopping-cart__change-quantity-button">-</div>
-                  <div class="shopping-cart__count">1</div>
-                  <div class="shopping-cart__increment shopping-cart__change-quantity-button">+</div>
+                  <div class="decQuantity shopping-cart__decrement shopping-cart__change-quantity-button">-</div>
+                  <div class="quantity shopping-cart__count">1</div>
+                  <div class="incQuantity shopping-cart__increment shopping-cart__change-quantity-button">+</div>
                 </div>
               </div>
               <div class="shopping-cart__result-price">
@@ -228,8 +228,10 @@
           <div class="shopping-cart__purchase purchase"><img class="purchase__share" src="./assets/img/icons/share.svg">
             <div class="purchase__title">Итого:</div>
             <div class="purchase__total-weight">Общий вес корзины: 5кг</div>
-            <div class="purchase__discount">Экономия 2 370 ₽</div>
-            <div class="purchase__total-price">К оплате: 4 664₽</div>
+            <div class="purchase__discount">Экономия 200 370 ₽</div>
+            <div class="purchase__total-price">К оплате:
+              <div class="purchase__total-price-amount">4 664₽</div>
+            </div>
             <div class="purchase__promo-wrapper">
               <div class="purchase__promo">Ввести промокод</div>
               <input class="purchase__promo-input">
@@ -404,5 +406,25 @@
     <script src="./js/catalog-item-menu-logic.js"></script>
     <script src="./js/modals-logic.js"></script>
     <script src="./js/sidebar-logic.js"></script>
+    <script>
+      let shoppingCartItems = document.querySelectorAll('.shopping-cart__item')
+      shoppingCartItems.forEach((item) => {
+          const counter = item.querySelector('.quantity')
+          const dec = item.querySelector('.decQuantity')
+          const inc = item.querySelector('.incQuantity')
+      
+          let quantity = parseInt(counter.textContent);
+          dec.addEventListener('click', () => {
+              if (quantity > 1) {
+                  quantity--;
+                  counter.textContent = quantity.toString();
+              }
+          })
+          inc.addEventListener('click', () => {
+              quantity++;
+              counter.textContent = quantity.toString();
+          })
+      })
+    </script>
   </body>
 </html>

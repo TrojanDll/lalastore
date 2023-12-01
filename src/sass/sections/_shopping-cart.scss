@@ -175,6 +175,9 @@
     color: #C0C2C9;
   }
   &__total-price {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
     margin-top: 5px;
     font-size: 24px;
     font-weight: 700;

@@ -1679,6 +1679,12 @@ legend {
   color: #C0C2C9;
 }
 .purchase__total-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px;
   margin-top: 5px;
   font-size: 24px;
   font-weight: 700;

@@ -25,6 +25,24 @@ html(lang="en")
         script(src="./js/catalog-item-menu-logic.js")
         script(src="./js/modals-logic.js")
         script(src="./js/sidebar-logic.js")
+        script.
+            let shoppingCartItems = document.querySelectorAll('.shopping-cart__item')
+            shoppingCartItems.forEach((item) => {
+                const counter = item.querySelector('.quantity')
+                const dec = item.querySelector('.decQuantity')
+                const inc = item.querySelector('.incQuantity')
 
+                let quantity = parseInt(counter.textContent);
+                dec.addEventListener('click', () => {
+                    if (quantity > 1) {
+                        quantity--;
+                        counter.textContent = quantity.toString();
+                    }
+                })
+                inc.addEventListener('click', () => {
+                    quantity++;
+                    counter.textContent = quantity.toString();
+                })
+            })
 
 
