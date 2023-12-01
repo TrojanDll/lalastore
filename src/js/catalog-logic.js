@@ -30,6 +30,7 @@
   function toggleCatalogOnBtn(e) {
     catalog.style.display = "none";
     catalogBtn.classList.toggle("header__element-catalog_active");
+    body.classList.remove("overflow-hidden");
   }
 
   catalogItems.forEach((catalogItem) => {
