@@ -1000,6 +1000,7 @@ legend {
   margin-left: auto;
 }
 .header__item-bottom {
+  display: block;
   cursor: pointer;
 }
 .header__item-bottom__img {

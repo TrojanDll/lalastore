@@ -1,5 +1,4 @@
 .shopping-cart {
-
   &__wrapper {
     display: flex;
     position: relative;
@@ -66,7 +65,6 @@
   &__discount {
   }
   &__size {
-
   }
   &__price {
     display: flex;
@@ -104,6 +102,7 @@
     width: 25px;
     height: 25px;
     border-radius: 2px;
+    cursor: pointer;
   }
   &__decrement {
     outline: 1px solid $text-color;
@@ -121,7 +120,6 @@
     gap: 5px;
   }
   &__pretitle {
-
   }
   &__final {
     font-weight: 700;
@@ -132,7 +130,7 @@
   }
   &__economy-quantity {
     font-size: 12px;
-    color: #C0C2C9;
+    color: #c0c2c9;
   }
   &__delete {
     flex: 1;
@@ -144,6 +142,7 @@
     background-image: url("./../assets/img/icons/close-btn.svg");
     background-repeat: no-repeat;
     background-position: center;
+    cursor: pointer;
   }
   &__purchase {
     width: 335px;
@@ -155,7 +154,6 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
-
 
   &__share {
     position: absolute;
@@ -172,12 +170,18 @@
     color: $gray-dark;
   }
   &__discount {
-    color: #C0C2C9;
+    color: #c0c2c9;
   }
   &__total-price {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 8px;
     margin-top: 5px;
     font-size: 24px;
     font-weight: 700;
+  }
+  &__amount {
+    display: inline;
   }
   &__promo-wrapper {
     display: flex;
@@ -190,7 +194,7 @@
     display: flex;
     align-items: center;
     &::after {
-      content: ' ';
+      content: " ";
       display: block;
       background-image: url("./../assets/img/icons/arrow.svg");
       background-repeat: no-repeat;
@@ -219,7 +223,6 @@
     }
   }
 }
-
 
 @media (max-width: 1200px) {
   .shopping-cart__wrapper {
@@ -295,6 +298,7 @@
     width: 21px;
     height: 21px;
     font-size: 12px;
+    cursor: pointer;
   }
   .shopping-cart__delete {
     display: flex;
@@ -310,13 +314,15 @@
     width: 13px;
     height: 15px;
     background-image: url("./../assets/img/icons/trash.svg");
+    cursor: pointer;
   }
   .shopping-cart__cross::after {
-    content: 'Удалить';
+    content: "Удалить";
     display: block;
     padding-left: 31px;
     font-size: 12px;
     color: rgba(51, 57, 79, 0.62);
+    cursor: pointer;
   }
 }
 
@@ -326,8 +332,9 @@
   }
   .shopping-cart__item {
     display: grid;
-    grid-template-areas: 'checkbox photo price'
-                         'checkbox photo info';
+    grid-template-areas:
+      "checkbox photo price"
+      "checkbox photo info";
   }
   .shopping-cart__checkbox {
     grid-area: checkbox;
@@ -396,7 +403,6 @@
 }
 
 @media (max-width: 500px) {
-
 }
 @media (max-width: 400px) {
 }
