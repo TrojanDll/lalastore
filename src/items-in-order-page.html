@@ -4,8 +4,7 @@
     <title>LalaStore</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./css/referencesItemPage.css">
+    <link rel="stylesheet" href="./css/itemsInOrderPage.css">
   </head>
   <body>
     <header class="header">
@@ -108,93 +107,164 @@
     </div>
     <div class="container">
       <div class="catalog__title-wrapper">
-        <div class="title catalog__title">Боди</div>
-        <div class="title catalog__count">92</div>
+        <div class="title catalog__title">Товары в заказе</div>
       </div>
     </div>
-    <div class="references-item">
+        <div class="breadcrumbs"> 
+          <div class="container breadcrumbs-container">
+            <div class="breadcrumbs__text">Главная - Корзина</div>
+          </div>
+        </div>
+    <div class="shopping-cart">
       <div class="container">
-        <div class="references-item__wrapper"><img class="references-item__image" src="./assets/img/collection1.webp">
-          <div class="references-item__content">
-            <div class="references-item__title">Готовая подборка №124</div>
-            <div class="references-item__goods goods swiper mySwiper-goods">
-              <div class="goods__title">Товары look'а</div>
-              <ul class="goods__list swiper-wrapper" id="goodsList">
-                <li class="goods__item swiper-slide">
-                          <div class="product-card"> 
-                            <div class="product-card__img-wrapper">
-                              <div class="product-card__label"> 
-                                          <div class="product-card-label product-card-label_aviable">В наличии</div>
-                              </div><img class="product-card__img" src="./assets/img/recent3.webp" alt="someimg">
-                            </div>
-                            <div class="product-card__title">Боди без рукавов &quot;ФРУК-ТИК&quot;, розовый</div>
-                            <div class="product-card__price">349 ₽/шт</div>
-                            <button class="button product-card__button">В КОРЗИНУ</button>
-                          </div>
-                </li>
-                <li class="goods__item swiper-slide">
-                          <div class="product-card"> 
-                            <div class="product-card__img-wrapper">
-                              <div class="product-card__label"> 
-                                          <div class="product-card-label product-card-label_aviable">В наличии</div>
-                              </div><img class="product-card__img" src="./assets/img/recent5.webp" alt="someimg">
-                            </div>
-                            <div class="product-card__title">Боди без рукавов &quot;ФРУК-ТИК&quot;, розовый</div>
-                            <div class="product-card__price">349 ₽/шт</div>
-                            <button class="button product-card__button">В КОРЗИНУ</button>
-                          </div>
-                </li>
-                <li class="goods__item swiper-slide">
-                          <div class="product-card"> 
-                            <div class="product-card__img-wrapper">
-                              <div class="product-card__label"> 
-                                          <div class="product-card-label product-card-label_aviable">В наличии</div>
-                              </div><img class="product-card__img" src="./assets/img/recent2.webp" alt="someimg">
-                            </div>
-                            <div class="product-card__title">Боди без рукавов &quot;ФРУК-ТИК&quot;, розовый</div>
-                            <div class="product-card__price">349 ₽/шт</div>
-                            <button class="button product-card__button">В КОРЗИНУ</button>
-                          </div>
-                </li>
-                <li class="goods__item swiper-slide">
-                          <div class="product-card"> 
-                            <div class="product-card__img-wrapper">
-                              <div class="product-card__label"> 
-                                          <div class="product-card-label product-card-label_aviable">В наличии</div>
-                              </div><img class="product-card__img" src="./assets/img/recent1.webp" alt="someimg">
-                            </div>
-                            <div class="product-card__title">Боди без рукавов &quot;ФРУК-ТИК&quot;, розовый</div>
-                            <div class="product-card__price">349 ₽/шт</div>
-                            <button class="button product-card__button">В КОРЗИНУ</button>
-                          </div>
-                </li>
-                <li class="goods__item swiper-slide">
-                          <div class="product-card"> 
-                            <div class="product-card__img-wrapper">
-                              <div class="product-card__label"> 
-                                          <div class="product-card-label product-card-label_aviable">В наличии</div>
-                              </div><img class="product-card__img" src="./assets/img/recent5.webp" alt="someimg">
-                            </div>
-                            <div class="product-card__title">Боди без рукавов &quot;ФРУК-ТИК&quot;, розовый</div>
-                            <div class="product-card__price">349 ₽/шт</div>
-                            <button class="button product-card__button">В КОРЗИНУ</button>
-                          </div>
-                </li>
-                <li class="goods__item swiper-slide">
-                          <div class="product-card"> 
-                            <div class="product-card__img-wrapper">
-                              <div class="product-card__label"> 
-                                          <div class="product-card-label product-card-label_aviable">В наличии</div>
-                              </div><img class="product-card__img" src="./assets/img/recent1.webp" alt="someimg">
-                            </div>
-                            <div class="product-card__title">Боди без рукавов &quot;ФРУК-ТИК&quot;, розовый</div>
-                            <div class="product-card__price">349 ₽/шт</div>
-                            <button class="button product-card__button">В КОРЗИНУ</button>
-                          </div>
-                </li>
-              </ul>
-            </div><img class="goods__next_button swiper-goods-button-next" id="goodsRightArr" src="./assets/img/icons/arrow_circle.svg">
-            <!--img.goods__prev_button.swiper-goods-button-prev(src='./assets/img/icons/arrow_circle.svg')-->
+        <div class="shopping-cart__wrapper">
+          <div class="shopping-cart__list-of-items">
+            <div class="shopping-cart__item"><img class="shopping-cart__image" src="./assets/img/shopping-cart.jpg">
+              <div class="shopping-cart__info">
+                <div class="shopping-cart__pretitle">Наименование:</div>
+                <div class="shopping-cart__name">Боди без рукавов "ФРУК-ТИК", розовый</div>
+                <div class="shopping-cart__selections">
+                  <div class="shopping-cart__discount">скидка: 20%</div>
+                  <div class="shopping-cart__size">Размер: 74</div>
+                  <div class="shopping-cart__weight">Вес: 2.5 кг</div>
+                </div>
+              </div>
+              <div class="shopping-cart__size_small">
+                <div class="shopping-cart__pretitle">Размер:</div>
+                <div class="shopping-cart__name">84</div>
+              </div>
+              <div class="shopping-cart__size_small">
+                <div class="shopping-cart__pretitle">Скидка:</div>
+                <div class="shopping-cart__name">20%</div>
+              </div>
+              <div class="shopping-cart__price">
+                <div class="shopping-cart__pretitle">Цена:</div>
+                <div class="shopping-cart__final">349₽</div>
+                <div class="shopping-cart__before-sale">6 850 ₽</div>
+              </div>
+              <div class="shopping-cart__size_small">
+                <div class="shopping-cart__pretitle">Вес:</div>
+                <div class="shopping-cart__name">2.5 кг</div>
+              </div>
+              <div class="shopping-cart__quantity">
+                <div class="shopping-cart__pretitle">Колл-во:</div>
+                <div class="shopping-cart__change-quantity">
+                  <div class="quantity shopping-cart__count">1 шт</div>
+                </div>
+              </div>
+              <div class="shopping-cart__result-price">
+                <div class="shopping-cart__pretitle">Сумма:
+                  <div class="shopping-cart__final">2 332₽</div>
+                  <div class="shopping-cart__before-sale">3 312₽</div>
+                </div>
+              </div>
+            </div>
+            <div class="shopping-cart__item"><img class="shopping-cart__image" src="./assets/img/shopping-cart.jpg">
+              <div class="shopping-cart__info">
+                <div class="shopping-cart__pretitle">Наименование:</div>
+                <div class="shopping-cart__name">Боди без рукавов "ФРУК-ТИК", розовый</div>
+                <div class="shopping-cart__selections">
+                  <div class="shopping-cart__discount">скидка: 20%</div>
+                  <div class="shopping-cart__size">Размер: 74</div>
+                </div>
+              </div>
+              <div class="shopping-cart__size_small">
+                <div class="shopping-cart__pretitle">Размер:</div>
+                <div class="shopping-cart__name">84</div>
+              </div>
+              <div class="shopping-cart__size_small">
+                <div class="shopping-cart__pretitle">Скидка:</div>
+                <div class="shopping-cart__name">20%</div>
+              </div>
+              <div class="shopping-cart__price">
+                <div class="shopping-cart__pretitle">Цена:</div>
+                <div class="shopping-cart__final">349₽</div>
+                <div class="shopping-cart__before-sale">6 850 ₽</div>
+              </div>
+              <div class="shopping-cart__size_small">
+                <div class="shopping-cart__pretitle">Вес:</div>
+                <div class="shopping-cart__name">2.5 кг</div>
+              </div>
+              <div class="shopping-cart__quantity">
+                <div class="shopping-cart__pretitle">Колл-во:</div>
+                <div class="shopping-cart__change-quantity">
+                  <div class="quantity shopping-cart__count">1 шт</div>
+                </div>
+              </div>
+              <div class="shopping-cart__result-price">
+                <div class="shopping-cart__pretitle">Сумма:
+                  <div class="shopping-cart__final">2 332₽</div>
+                  <div class="shopping-cart__before-sale">3 312₽</div>
+                </div>
+              </div>
+            </div>
+            <div class="shopping-cart__item"><img class="shopping-cart__image" src="./assets/img/shopping-cart.jpg">
+              <div class="shopping-cart__info">
+                <div class="shopping-cart__pretitle">Наименование:</div>
+                <div class="shopping-cart__name">Боди без рукавов "ФРУК-ТИК", розовый</div>
+                <div class="shopping-cart__selections">
+                  <div class="shopping-cart__discount">скидка: 20%</div>
+                  <div class="shopping-cart__size">Размер: 74</div>
+                </div>
+              </div>
+              <div class="shopping-cart__size_small">
+                <div class="shopping-cart__pretitle">Размер:</div>
+                <div class="shopping-cart__name">84</div>
+              </div>
+              <div class="shopping-cart__size_small">
+                <div class="shopping-cart__pretitle">Скидка:</div>
+                <div class="shopping-cart__name">20%</div>
+              </div>
+              <div class="shopping-cart__price">
+                <div class="shopping-cart__pretitle">Цена:</div>
+                <div class="shopping-cart__final">349₽</div>
+                <div class="shopping-cart__before-sale">6 850 ₽</div>
+              </div>
+              <div class="shopping-cart__size_small">
+                <div class="shopping-cart__pretitle">Вес:</div>
+                <div class="shopping-cart__name">2.5 кг</div>
+              </div>
+              <div class="shopping-cart__quantity">
+                <div class="shopping-cart__pretitle">Колл-во:</div>
+                <div class="shopping-cart__change-quantity">
+                  <div class="quantity shopping-cart__count">1 шт</div>
+                </div>
+              </div>
+              <div class="shopping-cart__result-price">
+                <div class="shopping-cart__pretitle">Сумма:
+                  <div class="shopping-cart__final">2 332₽</div>
+                  <div class="shopping-cart__before-sale">3 312₽</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shopping-cart__purchase purchase"><img class="purchase__share" src="./assets/img/icons/pencil.svg">
+            <div class="purchase__title">Ваш заказ:</div>
+            <div class="purchase__charachteristic">
+              Товаров на:
+              <span class="purchase__span_bold">10 800р</span>
+            </div>
+            <div class="purchase__discount">Без скидки: 13 500</div>
+            <div class="purchase__charachteristic">
+              Общий вес:
+              <span class="purchase__span_bold">5кг</span>
+            </div>
+            <div class="purchase__charachteristic">
+              Доставка:
+              <span class="purchase__span_bold">Бесплатно</span>
+            </div>
+            <div class="purchase__charachteristic">
+              Экономия:
+              <span class="purchase__span_bold">2 700р</span>
+            </div>
+            <div class="purchase__total-price">К оплате:
+              <div class="purchase__total-price-amount">4 664₽</div>
+            </div>
+            <div class="purchase__promo-wrapper">
+              <div class="purchase__promo">Ввести промокод</div>
+              <input class="purchase__promo-input">
+            </div>
+            <button class="button purchase__buy-button">оформить заказ</button>
           </div>
         </div>
       </div>
@@ -358,38 +428,161 @@
         </div>
       </div>
     </div>
+    <div class="make-order-modal__overflow">
+      <div class="make-order-modal modal">
+        <button class="make-order-modal__close-btn close-btn"></button>
+        <div class="make-order-modal__wrapper">
+          <p class="make-order-modal__title">Заполните поля для оформления заказа</p>
+          <form class="make-order-modal__form form">
+            <div class="form__wrapper">
+              <div class="form__header">Тип покупателя и регион доставки:</div><img class="form__button-popup form__button-popup_open" src="./assets/img/icons/arrow.svg">
+              <div class="form__popup">
+                <div class="form__comment">Выберите свой город в списке. Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город"</div>
+                <div class="form__item">
+                  <label class="form__input-label" for="location">Местоположение *</label>
+                  <input class="form__input-text" name="location" id="location" value="">
+                </div>
+                <div class="form__item">
+                  <label class="form__input-label" for="index">Индекс *</label>
+                  <input class="form__input-text" name="index" id="index" value="">
+                </div>
+              </div>
+            </div>
+            <div class="form__wrapper">
+              <div class="form__header">Способ оплаты:</div><img class="form__button-popup" src="./assets/img/icons/arrow.svg">
+              <div class="form__popup form__popup_close">
+                <div class="form__comment">Наш менеджер свяжется с Вами и и сообщит данные для перевода</div>
+                <div class="form__item form__item_radio">
+                  <input class="form__input-radio" type="radio" name="payment" id="masterCard" value="1">
+                  <label class="form__input-label" for="masterCard">Оплата картами Visa/MasterCard на сайте</label>
+                </div>
+                <div class="form__item form__item_radio">
+                  <input class="form__input-radio" type="radio" name="payment" id="cash" value="1">
+                  <label class="form__input-label" for="cash">Наличные курьеру (при курьерской доставке по Москве)</label>
+                </div>
+                <div class="form__item form__item_radio">
+                  <input class="form__input-radio" type="radio" name="payment" id="transfer" value="1">
+                  <label class="form__input-label" for="transfer">Переводом на банковскую карту</label>
+                </div>
+                <div class="form__item form__item_radio">
+                  <input class="form__input-radio" type="radio" name="payment" id="cashShowRoom" value="1">
+                  <label class="form__input-label" for="cashShowRoom">Наличный расчет при самовывозе из шоу-рума</label>
+                </div>
+              </div>
+            </div>
+            <div class="form__wrapper">
+              <div class="form__header">Доставка</div><img class="form__button-popup" src="./assets/img/icons/arrow.svg">
+              <div class="form__popup form__popup_close">
+                <div class="form__comment">Наш менеджер свяжется с Вами и и сообщит данные для перевода</div>
+                <div class="form__item form__item_radio">
+                  <input class="form__input-radio" type="radio" name="shipment" id="officialPochtaRus" value="1">
+                  <label class="form__input-label" for="officialPochtaRus">Официальный модуль Почты России (Доставка в отделение)</label>
+                  <div class="form__price">Бесплатно</div>
+                  <div class="form__description">
+                    <div class="form__description__text">Самовывоз из отделения Почты России</div>
+                  </div>
+                </div>
+                <div class="form__item form__item_radio">
+                  <input class="form__input-radio" type="radio" name="shipment" id="courier" value="1">
+                  <label class="form__input-label" for="courier">Доставка курьером</label>
+                  <div class="form__price">370р</div>
+                  <div class="form__description">
+                    <div class="form__description__text">Курьером до двери (по Москве в пределах МКАД) – стоимость 370 рублей.</div>
+                  </div>
+                </div>
+                <div class="form__item form__item_radio">
+                  <input class="form__input-radio" type="radio" name="shipment" id="cdekSkladDver" value="1">
+                  <label class="form__input-label" for="cdekSkladDver">Служба доставки СДЭК (Посылка склад-дверь)</label>
+                  <div class="form__price">451р</div>
+                  <div class="form__description">
+                    <div class="form__description__text">1-1 дн. Наименование тарифа: Посылка склад-склад. Услуга экономичной доставки товаров по России для компаний, осуществляющих дистанционную торговлю</div>
+                  </div>
+                </div>
+                <div class="form__item form__item_radio">
+                  <input class="form__input-radio" type="radio" name="shipment" id="cdekSkladSklad" value="1">
+                  <label class="form__input-label" for="cdekSkladSklad">Служба доставки СДЭК (Посылка склад-склад)</label>
+                  <div class="form__price">0р</div>
+                  <div class="form__description">
+                    <div class="form__description__text">Самовывоз из отделения Почты России</div>
+                  </div>
+                </div>
+                <div class="form__item form__item_radio">
+                  <input class="form__input-radio" type="radio" name="shipment" id="cdekEconSkladDver" value="1">
+                  <label class="form__input-label" for="cdekEconSkladDver">Служба доставки СДЭК (Экономичная посылка склад-дверь)</label>
+                  <div class="form__price">0р</div>
+                </div>
+                <div class="form__item form__item_radio form__item__addon">
+                  <input class="form__input-radio" type="radio" name="shipment" id="cdekEconSkladDverAddon" value="1">
+                  <label class="form__input-label" for="cdekEconSkladDverAddon">Служба доставки СДЭК (Экономичная посылка склад-дверь)</label>
+                  <div class="form__price">81р</div>
+                  <div class="form__description__text">Компания СДЭК может обеспечить страховую защиту всех видов грузов на время доставки. Услуга экономичной наземной доставки товаров по России для компаний, осуществляющих дистанционную торговлю. Услуга действует по направлениям из Москвы в подразделения СДЭК, находящиеся за Уралом и в Крым</div>
+                </div>
+                <div class="form__item form__item_radio">
+                  <input class="form__input-radio" type="radio" name="shipment" id="selfPickup" value="1">
+                  <label class="form__input-label" for="selfPickup">Самовывоз</label>
+                  <div class="form__price">Бесплатно</div>
+                  <div class="form__description">
+                    <div class="form__description__text">Вы можете самостоятельно забрать заказ из нашего шоурума</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form__wrapper">
+              <div class="form__header">Покупатель:</div><img class="form__button-popup" src="./assets/img/icons/arrow.svg">
+              <div class="form__popup form__popup_close">
+                <div class="form__comment">Выберите свой город в списке. Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город"</div>
+                <div class="form__item">
+                  <label class="form__input-label" for="fullName">Ф.И.О. *</label>
+                  <input class="form__input-text" name="fullName" id="fullName" value="">
+                </div>
+                <div class="form__item">
+                  <label class="form__input-label" for="email">E-Mail *</label>
+                  <input class="form__input-text" name="email" id="email" value="">
+                </div>
+                <div class="form__item">
+                  <label class="form__input-label" for="phone">Телефон *</label>
+                  <input class="form__input-text" name="phone" id="phone" value="">
+                </div>
+                <div class="form__item">
+                  <label class="form__input-label" for="address">Адрес доставки *</label>
+                  <input class="form__input-text" name="address" id="address" value="">
+                </div>
+                <div class="form__item">
+                  <label class="form__input-label" for="comment">Комментарии к заказу:</label>
+                  <input class="form__input-text" name="comment" id="comment" value="">
+                </div>
+                <div class="form__item form__item_radio">
+                  <input class="form__check-personal" type="checkbox" name="personalData" id="personalData">
+                  <label class="form__input-label form__input-label_small" for="personalData">Я согласен на обработку персональных данных</label>
+                </div>
+                <button class="button form__buy-button">оформить заказ</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      const modalItems = document.querySelectorAll('.form__wrapper')
+      modalItems.forEach(item => {
+          const popupHandler = item.querySelector('.form__button-popup')
+          const formPopupContainer = item.querySelector('.form__popup')
+          popupHandler.addEventListener('click', () => {
+              if (popupHandler.classList.contains('form__button-popup_open')) {
+                  popupHandler.classList.remove('form__button-popup_open')
+                  formPopupContainer.classList.add('form__popup_close')
+              } else {
+                  popupHandler.classList.add('form__button-popup_open')
+                  formPopupContainer.classList.remove('form__popup_close')
+              }
+          })
+      })
+    </script>
     <script src="./js/search-logic.js"></script>
     <script src="./js/catalog-logic.js"></script>
     <script src="./js/catalog-item-menu-logic.js"></script>
+    <script src="./js/modals-logic.js"></script>
     <script src="./js/sidebar-logic.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      let init = false;
-      
-      let mobile = window.matchMedia('(min-width: 0px) and (max-width: 576px)');
-      let desktop = window.matchMedia('(min-width: 577px)');
-      
-      if (desktop.matches) {
-          if (!init) {
-              init = true
-              let swiper = new Swiper(".mySwiper-goods", {
-                  slidesPerView: 'auto',
-                  navigation: {
-                      nextEl: ".swiper-goods-button-next",
-                      prevEl: ".swiper-goods-button-prev",
-                  },
-                  pagination: {
-                      el: ".swiper-pagination",
-                  },
-                  mousewheel: true,
-                  keyboard: true,
-              });
-          }
-      }
-      
-      else if (mobile.matches) {
-          swiper.destroy()
-      }
-    </script>
+    <script></script>
   </body>
 </html>

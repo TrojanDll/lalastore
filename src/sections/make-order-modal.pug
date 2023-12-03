@@ -1,0 +1,122 @@
+.make-order-modal__overflow
+    .make-order-modal.modal
+        button.make-order-modal__close-btn.close-btn
+        .make-order-modal__wrapper
+            p.make-order-modal__title Заполните поля для оформления заказа
+            form.make-order-modal__form.form
+                .form__wrapper
+                    .form__header Тип покупателя и регион доставки:
+                    img.form__button-popup.form__button-popup_open(src='./assets/img/icons/arrow.svg')
+                    .form__popup
+                        .form__comment Выберите свой город в списке. Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город"
+                        .form__item
+                            label.form__input-label(for='location') Местоположение *
+                            input.form__input-text(name='location', id='location', value='')
+                        .form__item
+                            label.form__input-label(for='index') Индекс *
+                            input.form__input-text(name='index', id='index', value='')
+
+                .form__wrapper
+                    .form__header Способ оплаты:
+                    img.form__button-popup(src='./assets/img/icons/arrow.svg')
+                    .form__popup.form__popup_close
+                        .form__comment Наш менеджер свяжется с Вами и и сообщит данные для перевода
+                        .form__item.form__item_radio
+                            input.form__input-radio(type='radio', name='payment', id='masterCard', value='1')
+                            label.form__input-label(for='masterCard') Оплата картами Visa/MasterCard на сайте
+                        .form__item.form__item_radio
+                            input.form__input-radio(type='radio', name='payment', id='cash', value='1')
+                            label.form__input-label(for='cash') Наличные курьеру (при курьерской доставке по Москве)
+                        .form__item.form__item_radio
+                            input.form__input-radio(type='radio', name='payment', id='transfer', value='1')
+                            label.form__input-label(for='transfer') Переводом на банковскую карту
+                        .form__item.form__item_radio
+                            input.form__input-radio(type='radio', name='payment', id='cashShowRoom', value='1')
+                            label.form__input-label(for='cashShowRoom') Наличный расчет при самовывозе из шоу-рума
+
+                .form__wrapper
+                    .form__header Доставка
+                    img.form__button-popup(src='./assets/img/icons/arrow.svg')
+                    .form__popup.form__popup_close
+                        .form__comment Наш менеджер свяжется с Вами и и сообщит данные для перевода
+                        .form__item.form__item_radio
+                            input.form__input-radio(type='radio', name='shipment', id='officialPochtaRus', value='1')
+                            label.form__input-label(for='officialPochtaRus') Официальный модуль Почты России (Доставка в отделение)
+                            .form__price Бесплатно
+                            .form__description
+                                .form__description__text Самовывоз из отделения Почты России
+                        .form__item.form__item_radio
+                            input.form__input-radio(type='radio', name='shipment', id='courier', value='1')
+                            label.form__input-label(for='courier') Доставка курьером
+                            .form__price 370р
+                            .form__description
+                                .form__description__text Курьером до двери (по Москве в пределах МКАД) – стоимость 370 рублей.
+                        .form__item.form__item_radio
+                            input.form__input-radio(type='radio', name='shipment', id='cdekSkladDver', value='1')
+                            label.form__input-label(for='cdekSkladDver') Служба доставки СДЭК (Посылка склад-дверь)
+                            .form__price 451р
+                            .form__description
+                                .form__description__text 1-1 дн. Наименование тарифа: Посылка склад-склад. Услуга экономичной доставки товаров по России для компаний, осуществляющих дистанционную торговлю
+                        .form__item.form__item_radio
+                            input.form__input-radio(type='radio', name='shipment', id='cdekSkladSklad', value='1')
+                            label.form__input-label(for='cdekSkladSklad') Служба доставки СДЭК (Посылка склад-склад)
+                            .form__price 0р
+                            .form__description
+                                .form__description__text Самовывоз из отделения Почты России
+                        .form__item.form__item_radio
+                            input.form__input-radio(type='radio', name='shipment', id='cdekEconSkladDver', value='1')
+                            label.form__input-label(for='cdekEconSkladDver') Служба доставки СДЭК (Экономичная посылка склад-дверь)
+                            .form__price 0р
+                        .form__item.form__item_radio.form__item__addon
+                            input.form__input-radio(type='radio', name='shipment', id='cdekEconSkladDverAddon', value='1')
+                            label.form__input-label(for='cdekEconSkladDverAddon') Служба доставки СДЭК (Экономичная посылка склад-дверь)
+                            .form__price 81р
+                            .form__description__text Компания СДЭК может обеспечить страховую защиту всех видов грузов на время доставки. Услуга экономичной наземной доставки товаров по России для компаний, осуществляющих дистанционную торговлю. Услуга действует по направлениям из Москвы в подразделения СДЭК, находящиеся за Уралом и в Крым
+                        .form__item.form__item_radio
+                            input.form__input-radio(type='radio', name='shipment', id='selfPickup', value='1')
+                            label.form__input-label(for='selfPickup') Самовывоз
+                            .form__price Бесплатно
+                            .form__description
+                                .form__description__text Вы можете самостоятельно забрать заказ из нашего шоурума
+
+                .form__wrapper
+                    .form__header Покупатель:
+                    img.form__button-popup(src='./assets/img/icons/arrow.svg')
+                    .form__popup.form__popup_close
+                        .form__comment Выберите свой город в списке. Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город"
+                        .form__item
+                            label.form__input-label(for='fullName') Ф.И.О. *
+                            input.form__input-text(name='fullName', id='fullName', value='')
+                        .form__item
+                            label.form__input-label(for='email') E-Mail *
+                            input.form__input-text(name='email', id='email', value='')
+                        .form__item
+                            label.form__input-label(for='phone') Телефон *
+                            input.form__input-text(name='phone', id='phone', value='')
+                        .form__item
+                            label.form__input-label(for='address') Адрес доставки *
+                            input.form__input-text(name='address', id='address', value='')
+                        .form__item
+                            label.form__input-label(for='comment') Комментарии к заказу:
+                            input.form__input-text(name='comment', id='comment', value='')
+                        .form__item.form__item_radio
+                            input.form__check-personal(type="checkbox", name='personalData', id='personalData')
+                            label.form__input-label.form__input-label_small(for='personalData') Я согласен на обработку персональных данных
+                        button.button.form__buy-button оформить заказ
+
+
+script.
+    const modalItems = document.querySelectorAll('.form__wrapper')
+    modalItems.forEach(item => {
+        const popupHandler = item.querySelector('.form__button-popup')
+        const formPopupContainer = item.querySelector('.form__popup')
+        popupHandler.addEventListener('click', () => {
+            if (popupHandler.classList.contains('form__button-popup_open')) {
+                popupHandler.classList.remove('form__button-popup_open')
+                formPopupContainer.classList.add('form__popup_close')
+            } else {
+                popupHandler.classList.add('form__button-popup_open')
+                formPopupContainer.classList.remove('form__popup_close')
+            }
+        })
+    })
