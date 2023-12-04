@@ -1,9 +1,9 @@
-.question-modal.modal 
+.question-modal.question-modal_active.modal
   button.question-modal__close-btn.close-btn
-  .question-modal__wrapper 
+  .question-modal__wrapper
     .question-modal__container.modal__container
       .question-modal__title.title Задать вопрос
-      form.question-modal__form(action="") 
+      form.question-modal__form(action="")
         .input-title Ваше имя
         input#input-name.input.question-modal__input(type="text" placeholder="Иванов Иван Иванович")
 
@@ -14,6 +14,6 @@
         input#input-email.input.question-modal__input(type="text" placeholder="Иванов Иван Иванович")
 
         .input-title Вопрос
-        textarea#input-question.textarea.question-modal__textarea(name="question", cols="3", rows="3") 
+        textarea#input-question.textarea.question-modal__textarea(name="question", cols="3", rows="3")
 
         button.button.question-modal__button сохранить изменения

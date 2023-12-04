@@ -4,7 +4,7 @@
     <title>LalaStore</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/shoppingCartPage.css">
+    <link rel="stylesheet" href="./css/itemsInOrderPage.css">
   </head>
   <body>
     <header class="header">
@@ -25,7 +25,7 @@
       <div class="header__sidebar header__sidebar-menu">
         <div class="container">
           <ul class="header__sidebar__pages"> 
-            <li class="header__sidebar__pages__item header__sidebar__pages__item_active"><a href="./index.html">Главная</a></li>
+            <li class="header__sidebar__pages__item header__sidebar__pages__item_active"><a href="#">Главная</a></li>
             <li class="header__sidebar__pages__item"><a href="#">Как купить</a></li>
             <li class="header__sidebar__pages__item"><a href="#">Доставка</a></li>
             <li class="header__sidebar__pages__item"><a href="#">О компании</a></li>
@@ -94,8 +94,10 @@
           <div class="header__items-bottom">
             <div class="header__item-bottom"><img class="header__item-bottom__img header__item-bottom__img-heart header__item-bottom__img-heart_disabled" src="./assets/img/icons/heart.svg" alt="heart" style="display: none"><img class="header__item-bottom__img header__item-bottom__img-heart header__item-bottom__img-heart_active" src="./assets/img/icons/heart_active.svg" alt="heart">
               <div class="header__item-bottom__text">Избранное</div>
-            </div><a class="header__item-bottom" href="./shopping-cart-page.html"><img class="header__item-bottom__img header__item-bottom__img-bag header__item-bottom__img-bag_disabled" src="./assets/img/icons/bag.svg" alt="bag"><img class="header__item-bottom__img header__item-bottom__img-bag header__item-bottom__img-bag_active" src="./assets/img/icons/bag_active.svg" alt="bag" style="display: none">
-              <div class="header__item-bottom__text">Корзина</div></a>
+            </div>
+            <div class="header__item-bottom"><img class="header__item-bottom__img header__item-bottom__img-bag header__item-bottom__img-bag_disabled" src="./assets/img/icons/bag.svg" alt="bag"><img class="header__item-bottom__img header__item-bottom__img-bag header__item-bottom__img-bag_active" src="./assets/img/icons/bag_active.svg" alt="bag" style="display: none">
+              <div class="header__item-bottom__text">Корзина</div>
+            </div>
             <div class="header__item-bottom"><img class="header__item-bottom__img header__item-bottom__img-profile" src="./assets/img/icons/profile.svg" alt="profile">
               <div class="header__item-bottom__text">Войти</div>
             </div>
@@ -105,7 +107,7 @@
     </div>
     <div class="container">
       <div class="catalog__title-wrapper">
-        <div class="title catalog__title">Корзина</div>
+        <div class="title catalog__title">Товары в заказе</div>
       </div>
     </div>
         <div class="breadcrumbs"> 
@@ -116,117 +118,145 @@
     <div class="shopping-cart">
       <div class="container">
         <div class="shopping-cart__wrapper">
-          <div class="shopping-cart__status">
-                <div class="product-card-label product-card-label_aviable">В наличии</div>
-          </div>
           <div class="shopping-cart__list-of-items">
-            <div class="shopping-cart__item">
-              <input class="shopping-cart__checkbox" type="checkbox"><img class="shopping-cart__image" src="./assets/img/shopping-cart.jpg">
+            <div class="shopping-cart__item"><img class="shopping-cart__image" src="./assets/img/shopping-cart.jpg">
               <div class="shopping-cart__info">
-                <div class="shopping-cart__pretitle">Товар:</div>
+                <div class="shopping-cart__pretitle">Наименование:</div>
                 <div class="shopping-cart__name">Боди без рукавов "ФРУК-ТИК", розовый</div>
                 <div class="shopping-cart__selections">
                   <div class="shopping-cart__discount">скидка: 20%</div>
                   <div class="shopping-cart__size">Размер: 74</div>
+                  <div class="shopping-cart__weight">Вес: 2.5 кг</div>
                 </div>
+              </div>
+              <div class="shopping-cart__size_small">
+                <div class="shopping-cart__pretitle">Размер:</div>
+                <div class="shopping-cart__name">84</div>
+              </div>
+              <div class="shopping-cart__size_small">
+                <div class="shopping-cart__pretitle">Скидка:</div>
+                <div class="shopping-cart__name">20%</div>
               </div>
               <div class="shopping-cart__price">
                 <div class="shopping-cart__pretitle">Цена:</div>
                 <div class="shopping-cart__final">349₽</div>
-                <div class="shopping-cart__before-sale">500₽</div>
+                <div class="shopping-cart__before-sale">6 850 ₽</div>
+              </div>
+              <div class="shopping-cart__size_small">
+                <div class="shopping-cart__pretitle">Вес:</div>
+                <div class="shopping-cart__name">2.5 кг</div>
               </div>
               <div class="shopping-cart__quantity">
                 <div class="shopping-cart__pretitle">Колл-во:</div>
                 <div class="shopping-cart__change-quantity">
-                  <div class="decQuantity shopping-cart__decrement shopping-cart__change-quantity-button">-</div>
-                  <div class="quantity shopping-cart__count">1</div>
-                  <div class="incQuantity shopping-cart__increment shopping-cart__change-quantity-button">+</div>
+                  <div class="quantity shopping-cart__count">1 шт</div>
                 </div>
               </div>
               <div class="shopping-cart__result-price">
-                <div class="shopping-cart__pretitle">В сумме:
+                <div class="shopping-cart__pretitle">Сумма:
                   <div class="shopping-cart__final">2 332₽</div>
                   <div class="shopping-cart__before-sale">3 312₽</div>
-                  <div class="shopping-cart__economy-quantity">Экономия 1 370 ₽</div>
                 </div>
-              </div>
-              <div class="shopping-cart__delete">
-                <div class="shopping-cart__cross"></div>
               </div>
             </div>
-            <div class="shopping-cart__item">
-              <input class="shopping-cart__checkbox" type="checkbox"><img class="shopping-cart__image" src="./assets/img/shopping-cart.jpg">
+            <div class="shopping-cart__item"><img class="shopping-cart__image" src="./assets/img/shopping-cart.jpg">
               <div class="shopping-cart__info">
-                <div class="shopping-cart__pretitle">Товар:</div>
+                <div class="shopping-cart__pretitle">Наименование:</div>
                 <div class="shopping-cart__name">Боди без рукавов "ФРУК-ТИК", розовый</div>
                 <div class="shopping-cart__selections">
                   <div class="shopping-cart__discount">скидка: 20%</div>
                   <div class="shopping-cart__size">Размер: 74</div>
                 </div>
               </div>
+              <div class="shopping-cart__size_small">
+                <div class="shopping-cart__pretitle">Размер:</div>
+                <div class="shopping-cart__name">84</div>
+              </div>
+              <div class="shopping-cart__size_small">
+                <div class="shopping-cart__pretitle">Скидка:</div>
+                <div class="shopping-cart__name">20%</div>
+              </div>
               <div class="shopping-cart__price">
                 <div class="shopping-cart__pretitle">Цена:</div>
                 <div class="shopping-cart__final">349₽</div>
-                <div class="shopping-cart__before-sale">500₽</div>
+                <div class="shopping-cart__before-sale">6 850 ₽</div>
+              </div>
+              <div class="shopping-cart__size_small">
+                <div class="shopping-cart__pretitle">Вес:</div>
+                <div class="shopping-cart__name">2.5 кг</div>
               </div>
               <div class="shopping-cart__quantity">
                 <div class="shopping-cart__pretitle">Колл-во:</div>
                 <div class="shopping-cart__change-quantity">
-                  <div class="decQuantity shopping-cart__decrement shopping-cart__change-quantity-button">-</div>
-                  <div class="quantity shopping-cart__count">1</div>
-                  <div class="incQuantity shopping-cart__increment shopping-cart__change-quantity-button">+</div>
+                  <div class="quantity shopping-cart__count">1 шт</div>
                 </div>
               </div>
               <div class="shopping-cart__result-price">
-                <div class="shopping-cart__pretitle">В сумме:
+                <div class="shopping-cart__pretitle">Сумма:
                   <div class="shopping-cart__final">2 332₽</div>
                   <div class="shopping-cart__before-sale">3 312₽</div>
-                  <div class="shopping-cart__economy-quantity">Экономия 1 370 ₽</div>
                 </div>
-              </div>
-              <div class="shopping-cart__delete">
-                <div class="shopping-cart__cross"></div>
               </div>
             </div>
-            <div class="shopping-cart__item">
-              <input class="shopping-cart__checkbox" type="checkbox"><img class="shopping-cart__image" src="./assets/img/shopping-cart.jpg">
+            <div class="shopping-cart__item"><img class="shopping-cart__image" src="./assets/img/shopping-cart.jpg">
               <div class="shopping-cart__info">
-                <div class="shopping-cart__pretitle">Товар:</div>
+                <div class="shopping-cart__pretitle">Наименование:</div>
                 <div class="shopping-cart__name">Боди без рукавов "ФРУК-ТИК", розовый</div>
                 <div class="shopping-cart__selections">
                   <div class="shopping-cart__discount">скидка: 20%</div>
                   <div class="shopping-cart__size">Размер: 74</div>
                 </div>
               </div>
+              <div class="shopping-cart__size_small">
+                <div class="shopping-cart__pretitle">Размер:</div>
+                <div class="shopping-cart__name">84</div>
+              </div>
+              <div class="shopping-cart__size_small">
+                <div class="shopping-cart__pretitle">Скидка:</div>
+                <div class="shopping-cart__name">20%</div>
+              </div>
               <div class="shopping-cart__price">
                 <div class="shopping-cart__pretitle">Цена:</div>
                 <div class="shopping-cart__final">349₽</div>
-                <div class="shopping-cart__before-sale">500₽</div>
+                <div class="shopping-cart__before-sale">6 850 ₽</div>
+              </div>
+              <div class="shopping-cart__size_small">
+                <div class="shopping-cart__pretitle">Вес:</div>
+                <div class="shopping-cart__name">2.5 кг</div>
               </div>
               <div class="shopping-cart__quantity">
                 <div class="shopping-cart__pretitle">Колл-во:</div>
                 <div class="shopping-cart__change-quantity">
-                  <div class="decQuantity shopping-cart__decrement shopping-cart__change-quantity-button">-</div>
-                  <div class="quantity shopping-cart__count">1</div>
-                  <div class="incQuantity shopping-cart__increment shopping-cart__change-quantity-button">+</div>
+                  <div class="quantity shopping-cart__count">1 шт</div>
                 </div>
               </div>
               <div class="shopping-cart__result-price">
-                <div class="shopping-cart__pretitle">В сумме:
+                <div class="shopping-cart__pretitle">Сумма:
                   <div class="shopping-cart__final">2 332₽</div>
                   <div class="shopping-cart__before-sale">3 312₽</div>
-                  <div class="shopping-cart__economy-quantity">Экономия 1 370 ₽</div>
                 </div>
-              </div>
-              <div class="shopping-cart__delete">
-                <div class="shopping-cart__cross"></div>
               </div>
             </div>
           </div>
-          <div class="shopping-cart__purchase purchase"><img class="purchase__share" src="./assets/img/icons/share.svg">
-            <div class="purchase__title">Итого:</div>
-            <div class="purchase__total-weight">Общий вес корзины: 5кг</div>
-            <div class="purchase__discount">Экономия 2 370 ₽</div>
+          <div class="shopping-cart__purchase purchase"><img class="purchase__share" src="./assets/img/icons/pencil.svg">
+            <div class="purchase__title">Ваш заказ:</div>
+            <div class="purchase__charachteristic">
+              Товаров на:
+              <span class="purchase__span_bold">10 800р</span>
+            </div>
+            <div class="purchase__discount">Без скидки: 13 500</div>
+            <div class="purchase__charachteristic">
+              Общий вес:
+              <span class="purchase__span_bold">5кг</span>
+            </div>
+            <div class="purchase__charachteristic">
+              Доставка:
+              <span class="purchase__span_bold">Бесплатно</span>
+            </div>
+            <div class="purchase__charachteristic">
+              Экономия:
+              <span class="purchase__span_bold">2 700р</span>
+            </div>
             <div class="purchase__total-price">К оплате:
               <div class="purchase__total-price-amount">4 664₽</div>
             </div>
@@ -234,8 +264,7 @@
               <div class="purchase__promo">Ввести промокод</div>
               <input class="purchase__promo-input">
             </div>
-            <button class="button purchase__buy-button" id="makeOrderButton">оформить заказ</button>
-            <button class="button purchase__buy-button_quick">быстрый заказ</button>
+            <button class="button purchase__buy-button">оформить заказ</button>
           </div>
         </div>
       </div>
@@ -244,7 +273,8 @@
       <div class="container"> 
         <h2 class="recent__title title">Ранее вы смотрели</h2>
         <div class="recent__cards">
-          <div class="recent__card"><a class="product-card" href="./cart-item-page.html"> 
+          <div class="recent__card">
+                    <div class="product-card"> 
                       <div class="product-card__img-wrapper">
                         <div class="product-card__label"> 
                                     <div class="product-card-label product-card-label_aviable">В наличии</div>
@@ -252,9 +282,11 @@
                       </div>
                       <div class="product-card__title">Боди без рукавов &quot;ФРУК-ТИК&quot;, розовый</div>
                       <div class="product-card__price">349 ₽/шт</div>
-                      <button class="button product-card__button">купить в 1 клик</button></a>
+                      <button class="button product-card__button">купить в 1 клик</button>
+                    </div>
           </div>
-          <div class="recent__card"> <a class="product-card" href="./cart-item-page.html"> 
+          <div class="recent__card"> 
+                    <div class="product-card"> 
                       <div class="product-card__img-wrapper">
                         <div class="product-card__label"> 
                                     <div class="product-card-label product-card-label_aviable">В наличии</div>
@@ -262,9 +294,11 @@
                       </div>
                       <div class="product-card__title">Боди без рукавов &quot;ФРУК-ТИК&quot;, розовый</div>
                       <div class="product-card__price">349 ₽/шт</div>
-                      <button class="button product-card__button">купить в 1 клик</button></a>
+                      <button class="button product-card__button">купить в 1 клик</button>
+                    </div>
           </div>
-          <div class="recent__card"> <a class="product-card" href="./cart-item-page.html"> 
+          <div class="recent__card"> 
+                    <div class="product-card"> 
                       <div class="product-card__img-wrapper">
                         <div class="product-card__label"> 
                                     <div class="product-card-label product-card-label_aviable">В наличии</div>
@@ -272,9 +306,11 @@
                       </div>
                       <div class="product-card__title">Боди без рукавов &quot;ФРУК-ТИК&quot;, розовый</div>
                       <div class="product-card__price">349 ₽/шт</div>
-                      <button class="button product-card__button">купить в 1 клик</button></a>
+                      <button class="button product-card__button">купить в 1 клик</button>
+                    </div>
           </div>
-          <div class="recent__card"> <a class="product-card" href="./cart-item-page.html"> 
+          <div class="recent__card"> 
+                    <div class="product-card"> 
                       <div class="product-card__img-wrapper">
                         <div class="product-card__label"> 
                                     <div class="product-card-label product-card-label_not-aviable">Нет в наличии </div>
@@ -282,9 +318,11 @@
                       </div>
                       <div class="product-card__title">Боди без рукавов &quot;ФРУК-ТИК&quot;, розовый</div>
                       <div class="product-card__price">349 ₽/шт</div>
-                      <button class="button product-card__button">купить в 1 клик</button></a>
+                      <button class="button product-card__button">купить в 1 клик</button>
+                    </div>
           </div>
-          <div class="recent__card"> <a class="product-card" href="./cart-item-page.html"> 
+          <div class="recent__card"> 
+                    <div class="product-card"> 
                       <div class="product-card__img-wrapper">
                         <div class="product-card__label"> 
                                     <div class="product-card-label product-card-label_in-stock">На складе</div>
@@ -292,9 +330,11 @@
                       </div>
                       <div class="product-card__title">Боди без рукавов &quot;ФРУК-ТИК&quot;, розовый</div>
                       <div class="product-card__price">349 ₽/шт</div>
-                      <button class="button product-card__button">купить в 1 клик</button></a>
+                      <button class="button product-card__button">купить в 1 клик</button>
+                    </div>
           </div>
-          <div class="recent__card"> <a class="product-card" href="./cart-item-page.html"> 
+          <div class="recent__card"> 
+                    <div class="product-card"> 
                       <div class="product-card__img-wrapper">
                         <div class="product-card__label"> 
                                     <div class="product-card-label product-card-label_aviable">В наличии</div>
@@ -302,7 +342,8 @@
                       </div>
                       <div class="product-card__title">Боди без рукавов &quot;ФРУК-ТИК&quot;, розовый</div>
                       <div class="product-card__price">349 ₽/шт</div>
-                      <button class="button product-card__button">купить в 1 клик</button></a>
+                      <button class="button product-card__button">купить в 1 клик</button>
+                    </div>
           </div>
         </div>
       </div>
@@ -357,8 +398,10 @@
         </div>
         <div class="bottom-menu__item"> <img class="bottom-menu__item__img bottom-menu__item__img-heart" src="./assets/img/icons/heart_white.svg" alt="burger-menu">
           <div class="bottom-menu__item__text">Избранное</div>
-        </div><a class="bottom-menu__item" href="./shopping-cart-page.html"> <img class="bottom-menu__item__img bottom-menu__item__img-bag" src="./assets/img/icons/bag_white.svg" alt="burger-menu">
-          <div class="bottom-menu__item__text">Корзина</div></a>
+        </div>
+        <div class="bottom-menu__item"> <img class="bottom-menu__item__img bottom-menu__item__img-bag" src="./assets/img/icons/bag_white.svg" alt="burger-menu">
+          <div class="bottom-menu__item__text">Корзина</div>
+        </div>
         <div class="bottom-menu__item"> <img class="bottom-menu__item__img bottom-menu__item__img-profile" src="./assets/img/icons/profile_white.svg" alt="burger-menu">
           <div class="bottom-menu__item__text">Войти</div>
         </div>
@@ -574,25 +617,6 @@
     <script src="./js/catalog-item-menu-logic.js"></script>
     <script src="./js/modals-logic.js"></script>
     <script src="./js/sidebar-logic.js"></script>
-    <script>
-      let shoppingCartItems = document.querySelectorAll('.shopping-cart__item')
-      shoppingCartItems.forEach((item) => {
-          const counter = item.querySelector('.quantity')
-          const dec = item.querySelector('.decQuantity')
-          const inc = item.querySelector('.incQuantity')
-      
-          let quantity = parseInt(counter.textContent);
-          dec.addEventListener('click', () => {
-              if (quantity > 1) {
-                  quantity--;
-                  counter.textContent = quantity.toString();
-              }
-          })
-          inc.addEventListener('click', () => {
-              quantity++;
-              counter.textContent = quantity.toString();
-          })
-      })
-    </script>
+    <script></script>
   </body>
 </html>

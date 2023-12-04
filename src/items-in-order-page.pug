@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+    head
+        title="LalaStore"
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="./css/itemsInOrderPage.css")
+    body
+        include sections/header
+        include sections/catalog-menu
+        include sections/subheader
+        .container
+            .catalog__title-wrapper
+                .title.catalog__title Товары в заказе
+        include sections/breadcrumbs
+        +breadcrumbs("Главная - Корзина")
+        include sections/items-in-order
+        include sections/recent
+        include sections/footer
+        include sections/bottom-menu
+        include sections/layout
+        include sections/make-order-modal
+
+        script(src="./js/search-logic.js")
+        script(src="./js/catalog-logic.js")
+        script(src="./js/catalog-item-menu-logic.js")
+        script(src="./js/modals-logic.js")
+        script(src="./js/sidebar-logic.js")
+        script.
+
+
