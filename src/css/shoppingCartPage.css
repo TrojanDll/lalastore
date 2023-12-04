@@ -2160,21 +2160,34 @@ legend {
 @media (max-width: 1200px) {
   .make-order-modal {
     width: 95vw;
+    height: 90vh;
+    margin: 60px auto 0;
   }
   .make-order-modal__wrapper {
     width: 95%;
+    height: 100%;
+  }
+  .form {
+    height: 80%;
   }
   .form__description__text {
     width: 90%;
   }
+  .make-order-modal__title {
+    font-size: 24px;
+  }
 }
 @media (max-width: 768px) {
   .make-order-modal {
-    margin-top: 131px;
-    height: 75vh;
+    margin-top: 20px;
+    height: 90vh;
   }
   .make-order-modal__wrapper {
     height: 90%;
+  }
+  .make-order-modal__close-btn {
+    top: 15px;
+    right: 15px;
   }
   .form {
     gap: 20px;
