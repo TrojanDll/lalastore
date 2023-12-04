@@ -121,7 +121,12 @@
 
     &__addon {
       margin-left: 34px;
+
+      .form__input-plus-mobile {
+        display: none
+      }
     }
+
   }
   input[type=radio] {
     display: block;
@@ -184,4 +189,125 @@
     margin-top: 21px;
     width: 335px;
   }
+}
+
+@media (max-width: 1540px) {
+  .make-order-modal {
+    width: 1180px;
+  }
+  .make-order-modal__wrapper {
+    width: 1135px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .make-order-modal {
+    width: 95vw;
+  }
+  .make-order-modal__wrapper {
+    width: 95%;
+  }
+  .form__description__text {
+    width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 768px) {
+  .make-order-modal {
+    margin-top: 131px;
+    height: 75vh;
+  }
+  .make-order-modal__wrapper {
+    height: 90%;
+  }
+  .form {
+    gap: 20px;
+    height: 85%;
+  }
+  .form__wrapper {
+    padding: 0;
+    background: transparent;
+  }
+  .form__header {
+    width: 100%;
+  }
+  .form__comment {
+    width: 100%;
+  }
+  .form__button-popup {
+    display: none;
+  }
+  .form__input-text {
+    width: 100%;
+  }
+  .form__buy-button {
+    width: 256px;
+    margin: 31px auto 0;
+  }
+  .form__input-label {
+    width: 90%;
+  }
+  .form__item_radio {
+    flex-wrap: nowrap;
+  }
+  .form__input-radio {
+    width: 21px;
+    height: 21px;
+  }
+  .form__price {
+    position: absolute;
+    background: #BCBCBC;
+    top: -25px;
+    left: 65%;
+  }
+  .form__price_accent {
+    background: $accent-color;
+  }
+  .form__item__addon {
+    margin-left: 0;
+  }
+  .form__description {
+    margin-left: 31px;
+  }
+  .form__item__addon {
+
+    .form__input-radio {
+      visibility: hidden;
+    }
+    .form__input-plus-mobile {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 21px;
+      height: 21px;
+      rotate: 0;
+    }
+    .form__input-plus-mobile_checked {
+      rotate: 45deg;
+    }
+  }
+  .shipment {
+    .form__item_radio {
+      flex-wrap: wrap;
+      margin-top: 30px;
+      position: relative;
+      width: 100%;
+    }
+    .form__input-label {
+      width: 60%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+}
+
+@media (max-width: 500px) {
+
+}
+@media (max-width: 400px) {
 }

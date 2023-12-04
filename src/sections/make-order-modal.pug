@@ -1,6 +1,6 @@
-.make-order-modal__overflow
+#makeOrder.make-order-modal__overflow
     .make-order-modal.modal
-        button.make-order-modal__close-btn.close-btn
+        button#makeOrderCloseButton.make-order-modal__close-btn.close-btn
         .make-order-modal__wrapper
             p.make-order-modal__title Заполните поля для оформления заказа
             form.make-order-modal__form.form
@@ -18,8 +18,10 @@
 
                 .form__wrapper
                     .form__header Способ оплаты:
-                    img.form__button-popup(src='./assets/img/icons/arrow.svg')
-                    .form__popup.form__popup_close
+                    // .form__button-popup_open
+                    img.form__button-popup.form__button-popup_open(src='./assets/img/icons/arrow.svg')
+                    // .form__popup_close для скрытия
+                    .form__popup
                         .form__comment Наш менеджер свяжется с Вами и и сообщит данные для перевода
                         .form__item.form__item_radio
                             input.form__input-radio(type='radio', name='payment', id='masterCard', value='1')
@@ -34,15 +36,15 @@
                             input.form__input-radio(type='radio', name='payment', id='cashShowRoom', value='1')
                             label.form__input-label(for='cashShowRoom') Наличный расчет при самовывозе из шоу-рума
 
-                .form__wrapper
+                .form__wrapper.shipment
                     .form__header Доставка
-                    img.form__button-popup(src='./assets/img/icons/arrow.svg')
-                    .form__popup.form__popup_close
+                    img.form__button-popup.form__button-popup_open(src='./assets/img/icons/arrow.svg')
+                    .form__popup
                         .form__comment Наш менеджер свяжется с Вами и и сообщит данные для перевода
                         .form__item.form__item_radio
                             input.form__input-radio(type='radio', name='shipment', id='officialPochtaRus', value='1')
                             label.form__input-label(for='officialPochtaRus') Официальный модуль Почты России (Доставка в отделение)
-                            .form__price Бесплатно
+                            .form__price.form__price_accent Бесплатно
                             .form__description
                                 .form__description__text Самовывоз из отделения Почты России
                         .form__item.form__item_radio
@@ -57,6 +59,14 @@
                             .form__price 451р
                             .form__description
                                 .form__description__text 1-1 дн. Наименование тарифа: Посылка склад-склад. Услуга экономичной доставки товаров по России для компаний, осуществляющих дистанционную торговлю
+                        .form__item.form__item_radio.form__item__addon
+                            input.form__input-radio(type='checkbox', name='shipment', id='cdekSkladDverSave', value='1', checked)
+                            img.form__input-plus-mobile(src='./assets/img/icons/plus.svg')
+                            label.form__input-label(for='cdekSkladDverSave') Страхование груза
+                            .form__price 81р
+                            .form__description
+                                .form__description__text Компания СДЭК может обеспечить страховую защиту всех видов грузов на время доставки
+
                         .form__item.form__item_radio
                             input.form__input-radio(type='radio', name='shipment', id='cdekSkladSklad', value='1')
                             label.form__input-label(for='cdekSkladSklad') Служба доставки СДЭК (Посылка склад-склад)
@@ -68,10 +78,12 @@
                             label.form__input-label(for='cdekEconSkladDver') Служба доставки СДЭК (Экономичная посылка склад-дверь)
                             .form__price 0р
                         .form__item.form__item_radio.form__item__addon
-                            input.form__input-radio(type='radio', name='shipment', id='cdekEconSkladDverAddon', value='1')
+                            input.form__input-radio(type='checkbox', name='shipment', id='cdekEconSkladDverAddon', value='1')
+                            img.form__input-plus-mobile.form__input-plus-mobile_checked(src='./assets/img/icons/plus.svg')
                             label.form__input-label(for='cdekEconSkladDverAddon') Служба доставки СДЭК (Экономичная посылка склад-дверь)
                             .form__price 81р
-                            .form__description__text Компания СДЭК может обеспечить страховую защиту всех видов грузов на время доставки. Услуга экономичной наземной доставки товаров по России для компаний, осуществляющих дистанционную торговлю. Услуга действует по направлениям из Москвы в подразделения СДЭК, находящиеся за Уралом и в Крым
+                            .form__description
+                                .form__description__text Компания СДЭК может обеспечить страховую защиту всех видов грузов на время доставки. Услуга экономичной наземной доставки товаров по России для компаний, осуществляющих дистанционную торговлю. Услуга действует по направлениям из Москвы в подразделения СДЭК, находящиеся за Уралом и в Крым
                         .form__item.form__item_radio
                             input.form__input-radio(type='radio', name='shipment', id='selfPickup', value='1')
                             label.form__input-label(for='selfPickup') Самовывоз
@@ -81,8 +93,8 @@
 
                 .form__wrapper
                     .form__header Покупатель:
-                    img.form__button-popup(src='./assets/img/icons/arrow.svg')
-                    .form__popup.form__popup_close
+                    img.form__button-popup.form__button-popup_open(src='./assets/img/icons/arrow.svg')
+                    .form__popup
                         .form__comment Выберите свой город в списке. Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город"
                         .form__item
                             label.form__input-label(for='fullName') Ф.И.О. *
@@ -106,6 +118,28 @@
 
 
 script.
+    const buttonMakeOrder = document.querySelector('#makeOrderButton')
+    const modalMakeOrder = document.querySelector('#makeOrder')
+    const modalMakeOrderCloseButton = document.querySelector('#makeOrderCloseButton')
+
+    buttonMakeOrder.addEventListener('click', () => {
+        modalMakeOrder.classList.add('make-order-modal__overflow_active')
+    })
+    modalMakeOrderCloseButton.addEventListener('click', () => {
+        modalMakeOrder.classList.remove('make-order-modal__overflow_active')
+    })
+
+
+    const addons = document.querySelectorAll('.form__item__addon')
+    addons.forEach((item) => {
+        const plusElement = item.querySelector('.form__input-plus-mobile')
+        plusElement.addEventListener('click', () => {
+            plusElement.classList.toggle('form__input-plus-mobile_checked')
+        })
+
+    })
+
+
     const modalItems = document.querySelectorAll('.form__wrapper')
     modalItems.forEach(item => {
         const popupHandler = item.querySelector('.form__button-popup')
