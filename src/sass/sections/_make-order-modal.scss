@@ -6,7 +6,7 @@
   bottom: 0;
   right: 0;
   z-index: 1000;
-  background: rgba( 0, 0, 0, 0.05);
+  background: rgba(44, 44, 44, 0.81);
 
   &_active {
     display: block;
@@ -44,7 +44,19 @@
     height: 100%;
     margin: 0 auto;
     padding: 40px 0 10px;
-    overflow: scroll;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 14px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #33394F;
+      border-radius: 13px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #7D808E;
+      border-radius: 13px;
+    }
   }
 
   &__title {
