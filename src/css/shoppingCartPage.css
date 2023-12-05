@@ -1960,7 +1960,8 @@ legend {
   position: relative;
   width: 82vw;
   height: 68vh;
-  margin: 167px auto 0;
+  margin: 10vh auto 0;
+  padding: 45px 0;
   z-index: 99999;
   background: #ffffff;
   border-radius: 5px;
@@ -1983,8 +1984,10 @@ legend {
 }
 .make-order-modal__wrapper {
   width: 1184px;
+  height: 100%;
   margin: 0 auto;
   padding: 40px 0 10px;
+  overflow: scroll;
 }
 .make-order-modal__title {
   text-align: center;
@@ -1997,8 +2000,6 @@ legend {
 
 .form {
   width: 100%;
-  height: 400px;
-  overflow-y: scroll;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2152,6 +2153,7 @@ legend {
     width: 1180px;
   }
   .make-order-modal__wrapper {
+    padding: 0;
     width: 1135px;
   }
 }
@@ -2160,6 +2162,7 @@ legend {
     width: 95vw;
     height: 90vh;
     margin: 60px auto 0;
+    padding: 45px 0;
   }
   .make-order-modal__wrapper {
     width: 95%;
@@ -2178,10 +2181,11 @@ legend {
 @media (max-width: 768px) {
   .make-order-modal {
     margin-top: 20px;
+    padding: 35px 0 30px;
     height: 90vh;
   }
   .make-order-modal__wrapper {
-    height: 90%;
+    height: 100%;
   }
   .make-order-modal__close-btn {
     top: 15px;
