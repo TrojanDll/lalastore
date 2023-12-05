@@ -1990,16 +1990,17 @@ legend {
   margin: 0 auto;
   padding: 40px 0 10px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 .make-order-modal__wrapper::-webkit-scrollbar {
   width: 14px;
 }
 .make-order-modal__wrapper::-webkit-scrollbar-thumb {
-  background: #33394F;
+  background: #33394f;
   border-radius: 13px;
 }
 .make-order-modal__wrapper::-webkit-scrollbar-track {
-  background: #7D808E;
+  background: #7d808e;
   border-radius: 13px;
 }
 .make-order-modal__title {
@@ -2035,7 +2036,7 @@ legend {
   gap: 10px;
   width: 100%;
   border-radius: 10px;
-  background: #F4F4F4;
+  background: #f4f4f4;
 }
 .form__popup {
   display: -webkit-box;
@@ -2072,7 +2073,7 @@ legend {
 .form__comment {
   width: 493px;
   font-size: 14px;
-  color: #B3B7CB;
+  color: #b3b7cb;
   margin-bottom: 5px;
 }
 .form__item {
@@ -2112,14 +2113,14 @@ legend {
   font-size: 14px;
 }
 .form__input-label_small {
-  color: #B3B7CB;
+  color: #b3b7cb;
   font-size: 14px;
 }
 .form__input-radio {
   width: 24px;
   height: 24px;
   border-radius: 2px;
-  border: 1px solid #33394F;
+  border: 1px solid #33394f;
   accent-color: #33394f;
 }
 .form__input-text {
@@ -2127,17 +2128,17 @@ legend {
   height: 40px;
   border-radius: 5px;
   padding-left: 5px;
-  background: #DEDFE1;
+  background: #dedfe1;
 }
 .form__input-text:invalid {
-  border: 1px solid #F88;
-  background: #E1DEDE;
+  border: 1px solid #f88;
+  background: #e1dede;
 }
 .form__price {
   margin-left: 10px;
   padding: 3px 14px 5px;
   border-radius: 13.5px;
-  background: #F7D05E;
+  background: #f7d05e;
   font-size: 14px;
 }
 .form__description {
@@ -2146,7 +2147,7 @@ legend {
 }
 .form__description__text {
   width: 784px;
-  color: #B3B7CB;
+  color: #b3b7cb;
   font-size: 14px;
 }
 .form__check-personal {
@@ -2241,7 +2242,7 @@ legend {
   }
   .form__price {
     position: absolute;
-    background: #BCBCBC;
+    background: #bcbcbc;
     top: -25px;
     left: 65%;
   }
@@ -2278,6 +2279,11 @@ legend {
   }
   .shipment .form__input-label {
     width: 60%;
+  }
+}
+@media (max-width: 576px) {
+  .make-order-modal__wrapper::-webkit-scrollbar {
+    width: 0;
   }
 }
 .recent {
