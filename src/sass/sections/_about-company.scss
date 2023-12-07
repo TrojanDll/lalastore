@@ -15,4 +15,30 @@
     flex-direction: column;
     gap: 15px;
   }
+  .about-company__block_not-full {
+    max-width: 1057px;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .about-company__block_not-full {
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog__title {
+    display: none;
+  }
+  .about-company__wrapper {
+    padding: 30px 0;
+  }
+  .about-company__block {
+    gap: 10px;
+  }
+  .about-company__title {
+    font-weight: 700;
+    margin-bottom: -15px;
+  }
 }

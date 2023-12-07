@@ -34,17 +34,62 @@
   font-size: 36px;
 }
 .text-info__table {
-
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .text-info__item {
+  display: flex;
+  position: relative;
 
+  .text-info__text {
+    position: absolute;
+    left: 0;
+    z-index: 5;
+    padding-right: 3px;
+    background: white;
+  }
 }
 .text-info__name {
-
+  width: 317px;
 }
 .text-info__dots {
-
+  border-bottom: dotted 1px #7D808E;
+  width: 100%;
+  position: relative;
+  display: block;
+  height: calc(100% - 3px);
 }
 .text-info__stat {
 
+}
+
+
+@media (max-width: 1000px) {
+  .text-info__item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .text-info__text {
+      position: static;
+      color: #7D808E;
+    }
+
+    .text-info__dots {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .text-info__head2 {
+    font-size: 24px;
+  }
+  .text-info__text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
 }
