@@ -1,12 +1,11 @@
 .about-company-tabs {
   margin-top: 10px;
-  background: #F4F4F4;
+  background: #f4f4f4;
 }
 .about-company-tabs__nav {
   display: flex;
   align-items: center;
   height: 66px;
-
 }
 .about-company-tabs__wrapper {
   width: 100%;
@@ -14,7 +13,6 @@
   align-items: center;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-
 }
 .about-company-tabs__tab {
   height: 100%;
@@ -22,8 +20,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-
 
   &:hover > .about-company-tabs__sub-list {
     visibility: visible;
@@ -36,19 +32,21 @@
   font-size: 20px;
   font-weight: 500;
   box-shadow: 1px 0 0 0 rgba(94, 99, 116, 0.34);
-
+  cursor: pointer;
 
   &:hover > .about-company-tabs__p {
     color: $text-color;
   }
   &_first {
-    box-shadow: -1px 0 0 0 rgba(94, 99, 116, 0.34), 1px 0 0 0 rgba(94, 99, 116, 0.34);
+    box-shadow:
+      -1px 0 0 0 rgba(94, 99, 116, 0.34),
+      1px 0 0 0 rgba(94, 99, 116, 0.34);
   }
 }
 .about-company-tabs__p {
   width: fit-content;
   position: relative;
-  color: #C1C3C8;
+  color: #c1c3c8;
 }
 .about-company-tabs__triangle {
   position: absolute;
@@ -68,16 +66,15 @@
   gap: 10px;
   width: 100%;
   padding: 10px 0 15px 15px;
-  background: #EFEFEF;
+  background: #efefef;
 }
 .about-company-tabs__sub-item {
-
+  cursor: pointer;
 }
 .about-company-tabs__sub-text {
-
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .about-company-tabs {
     display: none;
   }
