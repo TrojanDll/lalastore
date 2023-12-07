@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LalaStore</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/aboutCompanyPage.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper-top">
+          <div class="header__elements">
+            <div class="header__element header__element-geo">г. Москва, Электролитный проезд 3Б стр 6</div><a class="header__element header__element-phone" href="tel:+79163613000">+7 916 361-30-00</a>
+          </div>
+          <nav class="header__elements">
+            <button class="header__element header__element-catalog">Каталог</button><a class="header__element header__element_active" href="./index.html">Главная</a><a class="header__element" href="#">Как купить</a><a class="header__element" href="#">Доставка</a><a class="header__element" href="#">О компании</a><a class="header__element" href="#">Мы в instagram</a><a class="header__element" href="#">Акции</a>
+          </nav>
+        </div>
+      </div>
+      <div class="header-mobile">
+        <button class="header-mobile__burger nav-toggle"><span class="bar-top"></span> <span class="bar-mid"></span> <span class="bar-bot"></span></button><a class="header-mobile__logo" href="./index.html"> <img class="header-mobile__logo" src="./assets/img/logo.webp" alt="logo"></a>
+        <button class="header-mobile__search-btn"><img class="header-mobile__search-btn__img" src="./assets/img/icons/search_dark.svg" alt="search"></button>
+      </div>
+      <div class="header__sidebar header__sidebar-menu">
+        <div class="container">
+          <ul class="header__sidebar__pages"> 
+            <li class="header__sidebar__pages__item header__sidebar__pages__item_active"><a href="./index.html">Главная</a></li>
+            <li class="header__sidebar__pages__item"><a href="#">Как купить</a></li>
+            <li class="header__sidebar__pages__item"><a href="#">Доставка</a></li>
+            <li class="header__sidebar__pages__item"><a href="#">О компании</a></li>
+            <li class="header__sidebar__pages__item"><a href="#">Мы в instagram</a></li>
+            <li class="header__sidebar__pages__item"><a href="#">Акции</a></li>
+          </ul>
+          <div class="header__sidebar__contacts">
+            <div class="header__sidebar__contacts__item"><img class="header__sidebar__contacts__item__img" src="./assets/img/icons/geo.svg" alt="geo">
+              <div class="header__sidebar__contacts__item__text header__sidebar__contacts__item__text-geo">г. Москва, Электролитный проезд 3Б стр 6</div>
+            </div>
+            <div class="header__sidebar__contacts__item"><img class="header__sidebar__contacts__item__img" src="./assets/img/icons/phone.svg" alt="phone"><a class="header__sidebar__contacts__item__text" href="tel:79163613000">+7 916 361-30-00</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="header__sidebar header__sidebar-search"> 
+        <div class="container header__sidebar-search-container">
+          <div class="header__sidebar-search__search"> 
+            <input class="input header__sidebar-search__search__area" type="text" placeholder="Начните писать">
+            <button class="button header__sidebar-search__search__button"><img class="header__sidebar-search__button__img" src="./assets/img/icons/search_white.svg" alt="search"></button>
+          </div>
+          <div class="header__sidebar-search__results" style="display: none"><a class="header__sidebar-search__results__item" href="#">Детские пеленки</a><a class="header__sidebar-search__results__item" href="#">Конверты на выписку для мальчика</a><a class="header__sidebar-search__results__item" href="#">Соски</a><a class="header__sidebar-search__results__item" href="#">Грызунки</a></div>
+        </div>
+      </div>
+    </header>
+    <div class="catalog-menu">
+      <div class="container catalog-menu__container">
+        <div class="catalog-menu__wrapper">
+          <div class="catalog-menu__mobile-header"> 
+            <button class="catalog-menu__mobile-header__close-btn"><img class="catalog-menu__mobile-header__close-btn__img" src="./assets/img/icons/close-btn_white.svg" alt="close-btn"></button>
+            <div class="catalog-menu__mobile-header__title">Каталог</div>
+            <button class="catalog-menu__mobile-header__search-btn"><img class="catalog-menu__mobile-header__search-btn__img" src="./assets/img/icons/search_white.svg" alt="search-btn"></button>
+          </div>
+          <div class="catalog-menu__chapter">
+            <div class="catalog-menu__chapter__title catalog-menu__chapter__title_active">Одежда<img class="catalog-menu__chapter__title__icon catalog-menu__chapter__title__icon_active" src="./assets/img/icons/treangle_white.svg" alt="treangle"></div>
+            <div class="catalog-menu__chapter__elements catalog-menu__chapter__elements_visible"><a class="catalog-menu__chapter__element catalog-menu__chapter__element_active" href="#"> Изделия из муслина</a><a class="catalog-menu__chapter__element" href="#">Боди</a><a class="catalog-menu__chapter__element" href="#">Песочники</a><a class="catalog-menu__chapter__element" href="#">Нательные комбинезоны (слипы)</a><a class="catalog-menu__chapter__element" href="#">Комбинезоны из футера</a><a class="catalog-menu__chapter__element" href="#">Комбинезоны вязаные</a><a class="catalog-menu__chapter__element" href="#">Демисезонные комбинезоны</a><a class="catalog-menu__chapter__element" href="#">Комбинезоны-трансформеры</a><a class="catalog-menu__chapter__element" href="#">Головные уборы</a><a class="catalog-menu__chapter__element" href="#">Носочки</a><a class="catalog-menu__chapter__element" href="#">Нагрудники</a></div>
+          </div>
+          <div class="catalog-menu__chapter">
+            <div class="catalog-menu__chapter__title">Пеленки<img class="catalog-menu__chapter__title__icon" src="./assets/img/icons/treangle_white.svg" alt="treangle"></div>
+            <div class="catalog-menu__chapter__elements"><a class="catalog-menu__chapter__element" href="#">Пеленальные коконы</a><a class="catalog-menu__chapter__element" href="#">Пеленки из фланели</a><a class="catalog-menu__chapter__element" href="#">Пеленки из муслина</a><a class="catalog-menu__chapter__element" href="#">Пеленки из интерлока</a></div>
+          </div>
+          <div class="catalog-menu__chapter">
+            <div class="catalog-menu__chapter__title">Конверты и пледы<img class="catalog-menu__chapter__title__icon" src="./assets/img/icons/treangle_white.svg" alt="treangle"></div>
+            <div class="catalog-menu__chapter__elements"><a class="catalog-menu__chapter__element" href="#">Конверты в коляску</a><a class="catalog-menu__chapter__element" href="#">Пледы</a><a class="catalog-menu__chapter__element" href="#">Конверты на выписку</a></div>
+          </div>
+          <div class="catalog-menu__chapter">
+            <div class="catalog-menu__chapter__title">Аксессуары<img class="catalog-menu__chapter__title__icon" src="./assets/img/icons/treangle_white.svg" alt="treangle"></div>
+            <div class="catalog-menu__chapter__elements"><a class="catalog-menu__chapter__element" href="#">Сумки-органайзеры</a><a class="catalog-menu__chapter__element" href="#">Муфты-варежки</a><a class="catalog-menu__chapter__element" href="#">Грызунки</a><a class="catalog-menu__chapter__element" href="#">Альбомы для фотографий</a><a class="catalog-menu__chapter__element" href="#">Держатели для соски/грузунка</a></div>
+          </div>
+          <div class="catalog-menu__chapter">
+            <div class="catalog-menu__chapter__title">Готовые подборки<img class="catalog-menu__chapter__title__icon" src="./assets/img/icons/treangle_white.svg" alt="treangle"></div>
+            <div class="catalog-menu__chapter__elements"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="subheader">
+      <div class="container">
+        <div class="header__wrapper-bottom"><a class="header__logo" href="./index.html"> <img class="header__logo" src="./assets/img/logo.webp" alt="logo"></a>
+          <div class="header__search">
+            <div class="header__search__area"><img class="header__search__area__icon" src="./assets/img/icons/search.svg" alt="search">
+              <input class="header__search__area__input" type="text" placeholder="Начните писать">
+              <div class="header__search__area__results" style="display: none"><a class="header__search__area__results__item" href="#">Детские пеленки</a><a class="header__search__area__results__item" href="#">Конверты на выписку для мальчика</a><a class="header__search__area__results__item" href="#">Соски</a><a class="header__search__area__results__item" href="#">Грызунки</a></div>
+            </div>
+            <button class="button header__search__button">Найти</button>
+          </div>
+          <div class="header__items-bottom">
+            <div class="header__item-bottom"><img class="header__item-bottom__img header__item-bottom__img-heart header__item-bottom__img-heart_disabled" src="./assets/img/icons/heart.svg" alt="heart" style="display: none"><img class="header__item-bottom__img header__item-bottom__img-heart header__item-bottom__img-heart_active" src="./assets/img/icons/heart_active.svg" alt="heart">
+              <div class="header__item-bottom__text">Избранное</div>
+            </div><a class="header__item-bottom" href="./shopping-cart-page.html"><img class="header__item-bottom__img header__item-bottom__img-bag header__item-bottom__img-bag_disabled" src="./assets/img/icons/bag.svg" alt="bag"><img class="header__item-bottom__img header__item-bottom__img-bag header__item-bottom__img-bag_active" src="./assets/img/icons/bag_active.svg" alt="bag" style="display: none">
+              <div class="header__item-bottom__text">Корзина</div></a>
+            <div class="header__item-bottom"><img class="header__item-bottom__img header__item-bottom__img-profile" src="./assets/img/icons/profile.svg" alt="profile">
+              <div class="header__item-bottom__text">Войти</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="catalog__title-wrapper">
+        <div class="title catalog__title">О компании</div>
+      </div>
+    </div>
+        <div class="breadcrumbs"> 
+          <div class="container breadcrumbs-container">
+            <div class="breadcrumbs__text">Главная - О компании</div>
+          </div>
+        </div>
+    <div class="about-company-tabs">
+      <div class="container">
+        <nav class="about-company-tabs__nav">
+          <ul class="about-company-tabs__wrapper">
+            <li class="about-company-tabs__tab">
+              <div class="about-company-tabs__text">О компании</div>
+              <ul class="about-company-tabs__sub-list">
+                <li class="about-company-tabs__sub-item">
+                  <div class="about-company-tabs__sub-text">Оплата и вовзрат</div>
+                </li>
+                <li class="about-company-tabs__sub-item">
+                  <div class="about-company-tabs__sub-text">Условия доставки</div>
+                </li>
+                <li class="about-company-tabs__sub-item">
+                  <div class="about-company-tabs__sub-text">Как купить</div>
+                </li>
+              </ul>
+            </li>
+            <li class="about-company-tabs__item">
+              <div class="about-company-tabs__text">Новости</div>
+            </li>
+            <li class="about-company-tabs__item">
+              <div class="about-company-tabs__text">Отзывы</div>
+            </li>
+            <li class="about-company-tabs__item">
+              <div class="about-company-tabs__text">Контакты</div>
+            </li>
+            <li class="about-company-tabs__item">
+              <div class="about-company-tabs__text">Лицензии</div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="about-company">
+      <div class="container">
+        <div class="about-company__wrapper">
+          <div class="about-company__title">О компании</div>
+          <div class="about-company__block">
+            <div class="text-info__text">Наш магазин Lalastore.ru существует с 2019 года и всегда рад приветствовать Мам и Пап, своей теплой атмосферой. В нашем магазине, Вы всегда найдете качественную продукцию для Ваших малышей, на любое время года. У нас работают настоящие профессионалы, любящие и знающие свое дело, которые всегда помогут Вам. Покупка товара проста не только на первый взгляд, но так же легка в нашем магазине. Мы ценим каждого покупателя и знаем как осуществить Ваши покупки по самым приятным ценам.</div>
+            <div class="text-info__table">
+              <div class="text-info__item">
+                <div class="text-info__name">Название компании:</div>
+                <div class="text-info__dots"></div>
+                <div class="text-info__stat">ООО "СБВ ГРУПП"</div>
+              </div>
+              <div class="text-info__item">
+                <div class="text-info__name">ИНН / КПП:</div>
+                <div class="text-info__dots"></div>
+                <div class="text-info__stat">7713795458 / 771701001</div>
+              </div>
+              <div class="text-info__item">
+                <div class="text-info__name">ОГРН:</div>
+                <div class="text-info__dots"></div>
+                <div class="text-info__stat">5147746119220</div>
+              </div>
+              <div class="text-info__item">
+                <div class="text-info__name">Фактический адрес:</div>
+                <div class="text-info__dots"></div>
+                <div class="text-info__stat">г. Москва, Электролитный проезд, д. 3Б, строение 6</div>
+              </div>
+              <div class="text-info__item">
+                <div class="text-info__name">Телефон:</div>
+                <div class="text-info__dots"></div>
+                <div class="text-info__stat">+7 916 361-30-00</div>
+              </div>
+              <div class="text-info__item">
+                <div class="text-info__name">e-mail:</div>
+                <div class="text-info__dots"></div>
+                <div class="text-info__stat">lalastore.ru@yandex.ru</div>
+              </div>
+            </div>
+          </div>
+          <div class="about-company__block">
+            <div class="text-info__text text-info__bold">Lalastore.ru — интернет-магазин товаров для самых маленьких. В нашем магазине вы сможете приобрести различные товары для новорожденных, такие как:</div>
+            <div class="about-company__list">
+              <ol class="text-info__ordered-list text-info__gray">
+                <li>Нательные комбинезоны</li>
+                <li>Песочница</li>
+                <li>Боди</li>
+                <li>Комбинезоны из футера</li>
+                <li>Комбинезоны вязаные</li>
+                <li>Демисезонные комбинезоны</li>
+                <li>Комбинезоны-трансформеры</li>
+                <li>Головные уборы</li>
+                <li>Носочки</li>
+                <li>Нагрудники</li>
+              </ol>
+            </div>
+          </div>
+          <div class="about-company__block">
+            <div class="text-info__head2 text-info__bold">Клиентский сервис на высоте!</div>
+            <div class="text-info__text">Наши менеджеры — помощники и консультанты, Всегда помогут подобрать необходимые товары для Ваших деток. А также подскажут, как оформить заказ и совершить оплату. Менеджеры отвечают на вопросы в онлайн-чате и через формы обратной связи.</div>
+            <div class="text-info__text text-info__bold">Учитываем историю покупок и общения, чтобы персонализировать ответы и предложения. Нам важно решить вопрос быстро и качественно. Формирование долгосрочных отношений — одна из главных целей. Понимаем, что проще покупать товары в магазине, где предпочтения уже знают и помогают с выбором.</div>
+          </div>
+          <div class="about-company__block">
+            <div class="text-info__head2 text-info__bold">Почему стоит выбрать магазин для детей Lalastore.ru?</div>
+            <div class="text-info__text">Для этого предлагаем комплексный подход — наша команда выполнит все задачи!</div>
+            <ul class="text-info__unordered-list text-info__gray">
+              <li>Индивидуальный подход к каждому покупателю.</li>
+              <li>Менеджер, который знает детали заказов.</li>
+              <li>Комплексный подход к товарам и услугам.</li>
+              <li>Доставка товаров до квартиры в течение 24 часов.</li>
+              <li>Широкий ассортимент вещей. Мы работаем с большим количеством поставщиков для удовлетворения самых разнообразных потребностей клиента.</li>
+              <li>Мы работаем со всеми регионами России, организовывая оплату и доставку заказов до любого населенного пункта России удобным Вам способом.</li>
+              <li>Качественная продукция от крупнейших поставщиков.</li>
+            </ul>
+            <div class="text-info__text">Сделаем жизнь ярче, уютнее и комфортнее. В интернет-магазине Lalastore.ru найдется товар, который нужен именно Вам и Вашим малышам.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="recent"> 
+      <div class="container"> 
+        <h2 class="recent__title title">Ранее вы смотрели</h2>
+        <div class="recent__cards">
+          <div class="recent__card"><a class="product-card" href="./cart-item-page.html"> 
+                      <div class="product-card__img-wrapper">
+                        <div class="product-card__label"> 
+                                    <div class="product-card-label product-card-label_aviable">В наличии</div>
+                        </div><img class="product-card__img" src="./assets/img/recent1.webp" alt="someimg">
+                      </div>
+                      <div class="product-card__title">Боди без рукавов &quot;ФРУК-ТИК&quot;, розовый</div>
+                      <div class="product-card__price">349 ₽/шт</div>
+                      <button class="button product-card__button">купить в 1 клик</button></a>
+          </div>
+          <div class="recent__card"> <a class="product-card" href="./cart-item-page.html"> 
+                      <div class="product-card__img-wrapper">
+                        <div class="product-card__label"> 
+                                    <div class="product-card-label product-card-label_aviable">В наличии</div>
+                        </div><img class="product-card__img" src="./assets/img/recent2.webp" alt="someimg">
+                      </div>
+                      <div class="product-card__title">Боди без рукавов &quot;ФРУК-ТИК&quot;, розовый</div>
+                      <div class="product-card__price">349 ₽/шт</div>
+                      <button class="button product-card__button">купить в 1 клик</button></a>
+          </div>
+          <div class="recent__card"> <a class="product-card" href="./cart-item-page.html"> 
+                      <div class="product-card__img-wrapper">
+                        <div class="product-card__label"> 
+                                    <div class="product-card-label product-card-label_aviable">В наличии</div>
+                        </div><img class="product-card__img" src="./assets/img/recent3.webp" alt="someimg">
+                      </div>
+                      <div class="product-card__title">Боди без рукавов &quot;ФРУК-ТИК&quot;, розовый</div>
+                      <div class="product-card__price">349 ₽/шт</div>
+                      <button class="button product-card__button">купить в 1 клик</button></a>
+          </div>
+          <div class="recent__card"> <a class="product-card" href="./cart-item-page.html"> 
+                      <div class="product-card__img-wrapper">
+                        <div class="product-card__label"> 
+                                    <div class="product-card-label product-card-label_not-aviable">Нет в наличии </div>
+                        </div><img class="product-card__img" src="./assets/img/recent4.webp" alt="someimg">
+                      </div>
+                      <div class="product-card__title">Боди без рукавов &quot;ФРУК-ТИК&quot;, розовый</div>
+                      <div class="product-card__price">349 ₽/шт</div>
+                      <button class="button product-card__button">купить в 1 клик</button></a>
+          </div>
+          <div class="recent__card"> <a class="product-card" href="./cart-item-page.html"> 
+                      <div class="product-card__img-wrapper">
+                        <div class="product-card__label"> 
+                                    <div class="product-card-label product-card-label_in-stock">На складе</div>
+                        </div><img class="product-card__img" src="./assets/img/recent5.webp" alt="someimg">
+                      </div>
+                      <div class="product-card__title">Боди без рукавов &quot;ФРУК-ТИК&quot;, розовый</div>
+                      <div class="product-card__price">349 ₽/шт</div>
+                      <button class="button product-card__button">купить в 1 клик</button></a>
+          </div>
+          <div class="recent__card"> <a class="product-card" href="./cart-item-page.html"> 
+                      <div class="product-card__img-wrapper">
+                        <div class="product-card__label"> 
+                                    <div class="product-card-label product-card-label_aviable">В наличии</div>
+                        </div><img class="product-card__img" src="./assets/img/recent3.webp" alt="someimg">
+                      </div>
+                      <div class="product-card__title">Боди без рукавов &quot;ФРУК-ТИК&quot;, розовый</div>
+                      <div class="product-card__price">349 ₽/шт</div>
+                      <button class="button product-card__button">купить в 1 клик</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer"> 
+      <div class="container"> 
+        <div class="footer__wrapper"> 
+          <div class="footer__links-wrapper">
+            <ul class="footer__links">
+              <li> <a class="footer__links__item_active" href="#">Главная</a></li>
+              <li> <a href="#">Как купить</a></li>
+              <li> <a href="#">Доставка</a></li>
+              <li> <a href="#">О компании</a></li>
+              <li> <a href="#">Мы в instagram</a></li>
+              <li> <a href="#">Акции</a></li>
+              <li> <a href="#">Как купить</a></li>
+            </ul>
+            <ul class="footer__links">
+              <li> <a href="#">Как купить</a></li>
+              <li> <a href="#">Новости</a></li>
+              <li> <a href="#">Отзывы</a></li>
+              <li> <a href="#">Контакты</a></li>
+              <li> <a href="#">Лицензии</a></li>
+              <li> <a href="#">Оплата и возврат</a></li>
+              <li> <a href="#">Условия доставки</a></li>
+            </ul>
+          </div>
+          <div class="footer__logo-wrapper"> <img class="footer__logo" src="./assets/img/logo.webp" alt="logo">
+            <div class="footer__copyright">2022 © «LalaSTORE»</div>
+            <div class="footer__payment-wrapper"> <img class="footer__payment-method" src="./assets/img/mir.svg" alt="mir"><img class="footer__payment-method" src="./assets/img/paykeeper.svg" alt="payKeeper"><img class="footer__payment-method" src="./assets/img/mastercard.svg" alt="mastercard"><img class="footer__payment-method" src="./assets/img/visa.svg" alt="visa"></div><a class="footer__policy" href="#">Политика конфиденциальности</a>
+          </div>
+          <div class="footer__contacts-wrapper">
+            <ul class="footer__contacts">
+              <li class="footer__contacts-item"> <img class="footer__contacts-item__img" src="./assets/img/icons/geo.svg" alt="geo">
+                <div class="footer__contacts-item__text">Адрес шоурума:, г. Москва, Электролитный проезд 3Б стр 6</div>
+              </li>
+              <li class="footer__contacts-item"> <img class="footer__contacts-item__img" src="./assets/img/icons/email.svg" alt="mail">
+                <div class="footer__contacts-item__text">info@lalastore.ru</div>
+              </li>
+              <li class="footer__contacts-item"> <img class="footer__contacts-item__img" src="./assets/img/icons/phone.svg" alt="phone">
+                <div class="footer__contacts-item__text">+7 916 361-30-00</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="bottom-menu"> 
+      <div class="bottom-menu__wrapper">
+        <div class="bottom-menu__item" id="catalog-btn-mobile"><img class="bottom-menu__item__img bottom-menu__item__img-burger" src="./assets/img/icons/burger-menu.svg" alt="burger-menu">
+          <div class="bottom-menu__item__text">Каталог</div>
+        </div>
+        <div class="bottom-menu__item"> <img class="bottom-menu__item__img bottom-menu__item__img-heart" src="./assets/img/icons/heart_white.svg" alt="burger-menu">
+          <div class="bottom-menu__item__text">Избранное</div>
+        </div><a class="bottom-menu__item" href="./shopping-cart-page.html"> <img class="bottom-menu__item__img bottom-menu__item__img-bag" src="./assets/img/icons/bag_white.svg" alt="burger-menu">
+          <div class="bottom-menu__item__text">Корзина</div></a>
+        <div class="bottom-menu__item"> <img class="bottom-menu__item__img bottom-menu__item__img-profile" src="./assets/img/icons/profile_white.svg" alt="burger-menu">
+          <div class="bottom-menu__item__text">Войти</div>
+        </div>
+      </div>
+    </div>
+    <div class="layout" style="display: none">
+      <div class="question-modal question-modal_active modal">
+        <button class="question-modal__close-btn close-btn"></button>
+        <div class="question-modal__wrapper">
+          <div class="question-modal__container modal__container">
+            <div class="question-modal__title title">Задать вопрос</div>
+            <form class="question-modal__form" action="">
+              <div class="input-title">Ваше имя</div>
+              <input class="input question-modal__input" id="input-name" type="text" placeholder="Иванов Иван Иванович">
+              <div class="input-title">Телефон</div>
+              <input class="input question-modal__input" id="input-phone" type="text" placeholder="Иванов Иван Иванович">
+              <div class="input-title">E-mail</div>
+              <input class="input question-modal__input" id="input-email" type="text" placeholder="Иванов Иван Иванович">
+              <div class="input-title">Вопрос</div>
+              <textarea class="textarea question-modal__textarea" id="input-question" name="question" cols="3" rows="3"></textarea>
+              <button class="button question-modal__button">сохранить изменения</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="make-order-modal__overflow" id="makeOrder">
+      <div class="make-order-modal modal">
+        <button class="make-order-modal__close-btn close-btn" id="makeOrderCloseButton"></button>
+        <div class="make-order-modal__wrapper">
+          <p class="make-order-modal__title">Заполните поля для оформления заказа</p>
+          <form class="make-order-modal__form form">
+            <div class="form__wrapper">
+              <div class="form__header">Тип покупателя и регион доставки:</div><img class="form__button-popup form__button-popup_open" src="./assets/img/icons/arrow.svg">
+              <div class="form__popup">
+                <div class="form__comment">Выберите свой город в списке. Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город"</div>
+                <div class="form__item">
+                  <label class="form__input-label" for="location">Местоположение *</label>
+                  <input class="form__input-text" name="location" id="location" value="">
+                </div>
+                <div class="form__item">
+                  <label class="form__input-label" for="index">Индекс *</label>
+                  <input class="form__input-text" name="index" id="index" value="">
+                </div>
+              </div>
+            </div>
+            <div class="form__wrapper">
+              <div class="form__header">Способ оплаты:</div>
+              <!-- .form__button-popup_open--><img class="form__button-popup form__button-popup_open" src="./assets/img/icons/arrow.svg">
+              <!-- .form__popup_close для скрытия-->
+              <div class="form__popup">
+                <div class="form__comment">Наш менеджер свяжется с Вами и и сообщит данные для перевода</div>
+                <div class="form__item form__item_radio">
+                  <input class="form__input-radio" type="radio" name="payment" id="masterCard" value="1">
+                  <label class="form__input-label" for="masterCard">Оплата картами Visa/MasterCard на сайте</label>
+                </div>
+                <div class="form__item form__item_radio">
+                  <input class="form__input-radio" type="radio" name="payment" id="cash" value="1">
+                  <label class="form__input-label" for="cash">Наличные курьеру (при курьерской доставке по Москве)</label>
+                </div>
+                <div class="form__item form__item_radio">
+                  <input class="form__input-radio" type="radio" name="payment" id="transfer" value="1">
+                  <label class="form__input-label" for="transfer">Переводом на банковскую карту</label>
+                </div>
+                <div class="form__item form__item_radio">
+                  <input class="form__input-radio" type="radio" name="payment" id="cashShowRoom" value="1">
+                  <label class="form__input-label" for="cashShowRoom">Наличный расчет при самовывозе из шоу-рума</label>
+                </div>
+              </div>
+            </div>
+            <div class="form__wrapper shipment">
+              <div class="form__header">Доставка</div><img class="form__button-popup form__button-popup_open" src="./assets/img/icons/arrow.svg">
+              <div class="form__popup">
+                <div class="form__comment">Наш менеджер свяжется с Вами и и сообщит данные для перевода</div>
+                <div class="form__item form__item_radio">
+                  <input class="form__input-radio" type="radio" name="shipment" id="officialPochtaRus" value="1">
+                  <label class="form__input-label" for="officialPochtaRus">Официальный модуль Почты России (Доставка в отделение)</label>
+                  <div class="form__price form__price_accent">Бесплатно</div>
+                  <div class="form__description">
+                    <div class="form__description__text">Самовывоз из отделения Почты России</div>
+                  </div>
+                </div>
+                <div class="form__item form__item_radio">
+                  <input class="form__input-radio" type="radio" name="shipment" id="courier" value="1">
+                  <label class="form__input-label" for="courier">Доставка курьером</label>
+                  <div class="form__price">370р</div>
+                  <div class="form__description">
+                    <div class="form__description__text">Курьером до двери (по Москве в пределах МКАД) – стоимость 370 рублей.</div>
+                  </div>
+                </div>
+                <div class="form__item form__item_radio">
+                  <input class="form__input-radio" type="radio" name="shipment" id="cdekSkladDver" value="1">
+                  <label class="form__input-label" for="cdekSkladDver">Служба доставки СДЭК (Посылка склад-дверь)</label>
+                  <div class="form__price">451р</div>
+                  <div class="form__description">
+                    <div class="form__description__text">1-1 дн. Наименование тарифа: Посылка склад-склад. Услуга экономичной доставки товаров по России для компаний, осуществляющих дистанционную торговлю</div>
+                  </div>
+                </div>
+                <div class="form__item form__item_radio form__item__addon">
+                  <input class="form__input-radio" type="checkbox" name="shipment" id="cdekSkladDverSave" value="1" checked><img class="form__input-plus-mobile" src="./assets/img/icons/plus.svg">
+                  <label class="form__input-label" for="cdekSkladDverSave">Страхование груза</label>
+                  <div class="form__price">81р</div>
+                  <div class="form__description">
+                    <div class="form__description__text">Компания СДЭК может обеспечить страховую защиту всех видов грузов на время доставки</div>
+                  </div>
+                </div>
+                <div class="form__item form__item_radio">
+                  <input class="form__input-radio" type="radio" name="shipment" id="cdekSkladSklad" value="1">
+                  <label class="form__input-label" for="cdekSkladSklad">Служба доставки СДЭК (Посылка склад-склад)</label>
+                  <div class="form__price">0р</div>
+                  <div class="form__description">
+                    <div class="form__description__text">Самовывоз из отделения Почты России</div>
+                  </div>
+                </div>
+                <div class="form__item form__item_radio">
+                  <input class="form__input-radio" type="radio" name="shipment" id="cdekEconSkladDver" value="1">
+                  <label class="form__input-label" for="cdekEconSkladDver">Служба доставки СДЭК (Экономичная посылка склад-дверь)</label>
+                  <div class="form__price">0р</div>
+                </div>
+                <div class="form__item form__item_radio form__item__addon">
+                  <input class="form__input-radio" type="checkbox" name="shipment" id="cdekEconSkladDverAddon" value="1"><img class="form__input-plus-mobile form__input-plus-mobile_checked" src="./assets/img/icons/plus.svg">
+                  <label class="form__input-label" for="cdekEconSkladDverAddon">Служба доставки СДЭК (Экономичная посылка склад-дверь)</label>
+                  <div class="form__price">81р</div>
+                  <div class="form__description">
+                    <div class="form__description__text">Компания СДЭК может обеспечить страховую защиту всех видов грузов на время доставки. Услуга экономичной наземной доставки товаров по России для компаний, осуществляющих дистанционную торговлю. Услуга действует по направлениям из Москвы в подразделения СДЭК, находящиеся за Уралом и в Крым</div>
+                  </div>
+                </div>
+                <div class="form__item form__item_radio">
+                  <input class="form__input-radio" type="radio" name="shipment" id="selfPickup" value="1">
+                  <label class="form__input-label" for="selfPickup">Самовывоз</label>
+                  <div class="form__price">Бесплатно</div>
+                  <div class="form__description">
+                    <div class="form__description__text">Вы можете самостоятельно забрать заказ из нашего шоурума</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form__wrapper">
+              <div class="form__header">Покупатель:</div><img class="form__button-popup form__button-popup_open" src="./assets/img/icons/arrow.svg">
+              <div class="form__popup">
+                <div class="form__comment">Выберите свой город в списке. Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город"</div>
+                <div class="form__item">
+                  <label class="form__input-label" for="fullName">Ф.И.О. *</label>
+                  <input class="form__input-text" name="fullName" id="fullName" value="">
+                </div>
+                <div class="form__item">
+                  <label class="form__input-label" for="email">E-Mail *</label>
+                  <input class="form__input-text" name="email" id="email" value="">
+                </div>
+                <div class="form__item">
+                  <label class="form__input-label" for="phone">Телефон *</label>
+                  <input class="form__input-text" name="phone" id="phone" value="">
+                </div>
+                <div class="form__item">
+                  <label class="form__input-label" for="address">Адрес доставки *</label>
+                  <input class="form__input-text" name="address" id="address" value="">
+                </div>
+                <div class="form__item">
+                  <label class="form__input-label" for="comment">Комментарии к заказу:</label>
+                  <input class="form__input-text" name="comment" id="comment" value="">
+                </div>
+                <div class="form__item form__item_radio">
+                  <input class="form__check-personal" type="checkbox" name="personalData" id="personalData">
+                  <label class="form__input-label form__input-label_small" for="personalData">Я согласен на обработку персональных данных</label>
+                </div>
+                <button class="button form__buy-button">оформить заказ</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      const buttonMakeOrder = document.querySelector('#makeOrderButton')
+      const modalMakeOrder = document.querySelector('#makeOrder')
+      const modalMakeOrderCloseButton = document.querySelector('#makeOrderCloseButton')
+      
+      buttonMakeOrder.addEventListener('click', () => {
+          modalMakeOrder.classList.add('make-order-modal__overflow_active')
+      })
+      modalMakeOrderCloseButton.addEventListener('click', () => {
+          modalMakeOrder.classList.remove('make-order-modal__overflow_active')
+      })
+      
+      
+      const addons = document.querySelectorAll('.form__item__addon')
+      addons.forEach((item) => {
+          const plusElement = item.querySelector('.form__input-plus-mobile')
+          plusElement.addEventListener('click', () => {
+              plusElement.classList.toggle('form__input-plus-mobile_checked')
+          })
+      
+      })
+      
+      
+      const modalItems = document.querySelectorAll('.form__wrapper')
+      modalItems.forEach(item => {
+          const popupHandler = item.querySelector('.form__button-popup')
+          const formPopupContainer = item.querySelector('.form__popup')
+          popupHandler.addEventListener('click', () => {
+              if (popupHandler.classList.contains('form__button-popup_open')) {
+                  popupHandler.classList.remove('form__button-popup_open')
+                  formPopupContainer.classList.add('form__popup_close')
+              } else {
+                  popupHandler.classList.add('form__button-popup_open')
+                  formPopupContainer.classList.remove('form__popup_close')
+              }
+          })
+      })
+    </script>
+    <script src="./js/search-logic.js"></script>
+    <script src="./js/catalog-logic.js"></script>
+    <script src="./js/catalog-item-menu-logic.js"></script>
+    <script src="./js/modals-logic.js"></script>
+    <script src="./js/sidebar-logic.js"></script>
+  </body>
+</html>

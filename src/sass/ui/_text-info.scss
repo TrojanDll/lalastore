@@ -1,0 +1,50 @@
+.text-info__text {
+  font-size: 18px;
+}
+.text-info__bold {
+  font-weight: 700;
+}
+.text-info__ordered-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 30px;
+
+  li {
+    color: inherit;
+  }
+}
+.text-info__unordered-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  li {
+    color: inherit;
+
+    &:before {
+      content: '━ ';
+    }
+  }
+}
+.text-info__gray {
+  color: #7D808E;
+}
+.text-info__head2 {
+  font-size: 36px;
+}
+.text-info__table {
+
+}
+.text-info__item {
+
+}
+.text-info__name {
+
+}
+.text-info__dots {
+
+}
+.text-info__stat {
+
+}
