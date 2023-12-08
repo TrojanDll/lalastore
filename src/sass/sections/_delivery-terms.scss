@@ -1,4 +1,4 @@
-.return-conditions {
+.delivery-terms {
 
 
   &__wrapper {
@@ -17,27 +17,18 @@
   }
 }
 
-.return-conditions_max-width-1334 {
-  max-width: 1334px;
-}
-.return-conditions_max-width-1283 {
-  max-width: 1283px;
-}
-.return-conditions_max-width-941 {
-  max-width: 941px;
-}
-
 @media (max-width: 768px) {
   .catalog__title {
     display: none;
   }
-  .return-conditions__wrapper {
+  .delivery-terms__wrapper {
     padding: 30px 0;
   }
-  .return-conditions__block {
+  .delivery-terms__block {
     gap: 10px;
   }
-  .return-conditions__title {
+  .delivery-terms__title {
+    font-size: 32px;
     font-weight: 700;
     margin-bottom: -15px;
   }

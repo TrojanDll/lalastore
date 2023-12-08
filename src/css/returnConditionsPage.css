@@ -599,6 +599,7 @@ legend {
   gap: 5px;
 }
 .text-info__unordered-list li {
+  list-style: none;
   color: inherit;
 }
 .text-info__unordered-list li:before {
@@ -1595,6 +1596,33 @@ legend {
   gap: 15px;
 }
 
+.return-conditions_max-width-1334 {
+  max-width: 1334px;
+}
+
+.return-conditions_max-width-1283 {
+  max-width: 1283px;
+}
+
+.return-conditions_max-width-941 {
+  max-width: 941px;
+}
+
+@media (max-width: 768px) {
+  .catalog__title {
+    display: none;
+  }
+  .return-conditions__wrapper {
+    padding: 30px 0;
+  }
+  .return-conditions__block {
+    gap: 10px;
+  }
+  .return-conditions__title {
+    font-weight: 700;
+    margin-bottom: -15px;
+  }
+}
 .about-company-tabs {
   margin-top: 10px;
   background: #F4F4F4;
