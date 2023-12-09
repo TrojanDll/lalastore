@@ -219,7 +219,7 @@ legend {
   width: 270px;
 }
 
-@media (width <= 1200px) {
+@media (max-width: 1200px) {
   .footer__contacts-wrapper {
     display: none;
   }
@@ -231,7 +231,7 @@ legend {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-@media (width <= 576px) {
+@media (max-width: 576px) {
   .footer {
     padding-top: 30px;
     background-color: #f4f4f4;
@@ -259,7 +259,7 @@ legend {
   background: rgba(44, 44, 44, 0.81);
 }
 
-@media (width <= 576px) {
+@media (max-width: 576px) {
   .layout {
     height: calc(100% - 60px);
   }
@@ -448,7 +448,7 @@ legend {
   font-size: 36px;
 }
 
-@media (width <= 576px) {
+@media (max-width: 576px) {
   .title {
     font-size: 24px;
   }
@@ -549,7 +549,7 @@ legend {
   background-color: #5eaef7;
 }
 
-@media (width <= 1540px) {
+@media (max-width: 1540px) {
   .product-card-label {
     font-size: 12px;
     line-height: 12px;
@@ -1014,7 +1014,7 @@ legend {
   text-align: center;
 }
 
-@media (width <= 1540px) {
+@media (max-width: 1540px) {
   .header__search {
     max-width: 580px;
   }
@@ -1022,7 +1022,7 @@ legend {
     width: 250px;
   }
 }
-@media (width <= 1200px) {
+@media (max-width: 1200px) {
   .header__logo {
     width: 164px;
     height: 49px;
@@ -1034,7 +1034,7 @@ legend {
     width: 210px;
   }
 }
-@media (width <= 992px) {
+@media (max-width: 992px) {
   .header__logo {
     width: 147px;
     height: 44px;
@@ -1067,7 +1067,7 @@ legend {
     height: 22px;
   }
 }
-@media (width <= 768px) {
+@media (max-width: 768px) {
   .subheader {
     display: none;
   }
@@ -1092,7 +1092,7 @@ legend {
   font-size: 15px;
 }
 
-@media (width <= 576px) {
+@media (max-width: 576px) {
   .breadcrumbs {
     display: none;
   }
@@ -1471,7 +1471,7 @@ legend {
   font-size: 22px;
 }
 
-@media (width <= 1540px) {
+@media (max-width: 1540px) {
   .catalog-menu {
     top: 91px;
   }
@@ -1481,13 +1481,13 @@ legend {
     row-gap: 30px;
   }
 }
-@media (width <= 992px) {
+@media (max-width: 992px) {
   .catalog-menu__wrapper {
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (width <= 768px) {
+@media (max-width: 768px) {
   .catalog-menu {
     position: fixed;
     top: 100%;
@@ -1559,7 +1559,7 @@ legend {
     font-size: 18px;
   }
 }
-@media (width <= 576px) {
+@media (max-width: 576px) {
   .catalog-menu {
     height: 100%;
   }
@@ -1645,7 +1645,7 @@ legend {
   height: 23px;
 }
 
-@media (width <= 768px) {
+@media (max-width: 768px) {
   .bottom-menu {
     display: block;
   }

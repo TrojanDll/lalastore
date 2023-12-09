@@ -10,8 +10,7 @@
 
   &__list_left-part {
     display: grid;
-    grid-template:
-      "item1 item2" 180px "item3 item2" 239px "item4Long item4Long" 299px "item5Square item6" 439px "item7 item8" 180px "item9 item8" 239px "item10Long item10Long" 299px / 493px 365px;
+    grid-template: 'item1 item2' 180px 'item3 item2' 239px 'item4Long item4Long' 299px 'item5Square item6' 439px 'item7 item8' 180px 'item9 item8' 239px 'item10Long item10Long' 299px / 493px 365px;
     gap: 20px;
   }
 
@@ -142,7 +141,7 @@
   }
 }
 
-@media (width <= 1540px) {
+@media (max-width: 1540px) {
   .references__wrapper {
     flex-direction: column;
     align-items: center;
@@ -151,10 +150,10 @@
   }
 }
 
-@media (width <= 1200px) {
+@media (max-width: 1200px) {
 }
 
-@media (width <= 992px) {
+@media (max-width: 992px) {
   .references {
     padding-top: 20px;
     padding-bottom: 25px;
@@ -196,8 +195,8 @@
   }
 }
 
-@media (width <= 768px) {
+@media (max-width: 768px) {
 }
 
-@media (width <= 576px) {
+@media (max-width: 576px) {
 }

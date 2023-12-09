@@ -10,7 +10,7 @@
   background: rgb(44 44 44 / 81%);
 }
 
-@media (width <= 576px) {
+@media (max-width: 576px) {
   .layout {
     height: calc(100% - 60px);
   }

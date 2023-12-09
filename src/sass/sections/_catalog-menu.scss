@@ -57,7 +57,7 @@
   }
 }
 
-@media (width <= 1540px) {
+@media (max-width: 1540px) {
   .catalog-menu {
     top: 91px;
 
@@ -68,7 +68,7 @@
   }
 }
 
-@media (width <= 992px) {
+@media (max-width: 992px) {
   .catalog-menu {
     &__wrapper {
       grid-template-columns: repeat(3, 1fr);
@@ -76,7 +76,7 @@
   }
 }
 
-@media (width <= 768px) {
+@media (max-width: 768px) {
   .catalog-menu {
     position: fixed;
     top: 100%;
@@ -148,7 +148,7 @@
   }
 }
 
-@media (width <= 576px) {
+@media (max-width: 576px) {
   .catalog-menu {
     height: 100%;
 

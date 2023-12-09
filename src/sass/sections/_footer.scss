@@ -90,7 +90,7 @@
   }
 }
 
-@media (width <= 1200px) {
+@media (max-width: 1200px) {
   .footer {
     &__contacts-wrapper {
       display: none;
@@ -106,7 +106,7 @@
   }
 }
 
-@media (width <= 576px) {
+@media (max-width: 576px) {
   .footer {
     padding-top: 30px;
     background-color: #f4f4f4;

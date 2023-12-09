@@ -130,7 +130,7 @@
   }
 }
 
-@media (width <= 1540px) {
+@media (max-width: 1540px) {
   .header {
     &__search {
       max-width: 580px;
@@ -142,7 +142,7 @@
   }
 }
 
-@media (width <= 1200px) {
+@media (max-width: 1200px) {
   .header {
     &__logo {
       width: 164px;
@@ -159,7 +159,7 @@
   }
 }
 
-@media (width <= 992px) {
+@media (max-width: 992px) {
   .header {
     &__logo {
       width: 147px;
@@ -193,7 +193,7 @@
   }
 }
 
-@media (width <= 768px) {
+@media (max-width: 768px) {
   .subheader {
     display: none;
   }

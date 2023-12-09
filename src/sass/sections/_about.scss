@@ -69,7 +69,7 @@
   }
 }
 
-@media (width <= 992px) {
+@media (max-width: 992px) {
   .about {
     &__benefits {
       display: block;
@@ -83,7 +83,7 @@
   }
 }
 
-@media (width <= 576px) {
+@media (max-width: 576px) {
   .about {
     padding-top: 30px;
     padding-bottom: 30px;
