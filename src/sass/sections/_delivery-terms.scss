@@ -43,8 +43,13 @@
   }
 }
 
+@media (max-width: 1540px) {
+  .delivery-terms__table {
+    width: 100%;
+  }
+}
 
-@media (max-width: 1440px) {
+@media (max-width: 992px) {
   .delivery-terms__table {
     display: none;
   }
