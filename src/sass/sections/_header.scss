@@ -44,10 +44,9 @@
         width: 7px;
         height: 7px;
         margin-left: 5px;
-        background: url("./../assets/img/icons/treangle.svg") center
-          center/cover no-repeat;
+        background: url('./../assets/img/icons/treangle.svg') center center/cover no-repeat;
         background-repeat: no-repeat;
-        content: "";
+        content: '';
       }
 
       &_active {
@@ -55,8 +54,7 @@
         font-weight: 700;
 
         &::after {
-          background: url("./../assets/img/icons/treangle_dark.svg") center
-            center/cover no-repeat;
+          background: url('./../assets/img/icons/treangle_dark.svg') center center/cover no-repeat;
         }
       }
     }
@@ -73,8 +71,8 @@
     width: 16px;
     height: 21px;
     margin-right: 15px;
-    background-image: url("./../assets/img/icons/geo.svg");
-    content: "";
+    background-image: url('./../assets/img/icons/geo.svg');
+    content: '';
   }
 
   &__element-phone {
@@ -88,11 +86,11 @@
     width: 16px;
     height: 16px;
     margin-right: 15px;
-    background-image: url("./../assets/img/icons/phone.svg");
-    content: "";
+    background-image: url('./../assets/img/icons/phone.svg');
+    content: '';
   }
 
-  .nav-toggle [class*="bar-"] {
+  .nav-toggle [class*='bar-'] {
     display: block;
     width: 30px;
     height: 3px;
@@ -243,7 +241,7 @@
   }
 }
 
-@media (width <= 1540px) {
+@media (max-width: 1540px) {
   .header {
     height: auto;
     padding-top: 10px;
@@ -264,7 +262,7 @@
   }
 }
 
-@media (width <= 992px) {
+@media (max-width: 992px) {
   .header {
     &__elements:last-child {
       column-gap: 30px;
@@ -272,7 +270,7 @@
   }
 }
 
-@media (width <= 768px) {
+@media (max-width: 768px) {
   .header {
     height: 82px;
     padding: 0;
@@ -290,7 +288,7 @@
   }
 }
 
-@media (width <= 576px) {
+@media (max-width: 576px) {
   .header {
     &__sidebar {
       &__contacts {
