@@ -1571,7 +1571,7 @@ legend {
     display: block;
   }
 }
-.return-conditions__wrapper {
+.how-to-buy__wrapper {
   padding: 70px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1582,10 +1582,10 @@ legend {
           flex-direction: column;
   gap: 30px;
 }
-.return-conditions__title {
+.how-to-buy__title {
   font-size: 36px;
 }
-.return-conditions__block {
+.how-to-buy__block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1596,36 +1596,37 @@ legend {
   gap: 15px;
 }
 
-.return-conditions_max-width-1334 {
-  max-width: 1334px;
+.how-to-buy__max-width-1155 {
+  max-width: 1155px;
 }
 
-.return-conditions_max-width-1283 {
-  max-width: 1283px;
-}
-
-.return-conditions_max-width-941 {
-  max-width: 941px;
+.how-to-buy__max-width-1253 {
+  max-width: 1253px;
 }
 
 @media (max-width: 768px) {
   .catalog__title {
     display: none;
   }
-  .return-conditions__wrapper {
+  .how-to-buy__wrapper {
     padding: 30px 0;
   }
-  .return-conditions__block {
+  .how-to-buy__block {
     gap: 10px;
   }
-  .return-conditions__title {
+  .how-to-buy__title {
     font-weight: 700;
     margin-bottom: -15px;
   }
 }
+@media (max-width: 500px) {
+  .how-to-buy__title {
+    font-size: 24px;
+  }
+}
 .about-company-tabs {
   margin-top: 10px;
-  background: #f4f4f4;
+  background: #F4F4F4;
 }
 
 .about-company-tabs__nav {
@@ -1679,7 +1680,6 @@ legend {
   font-weight: 500;
   -webkit-box-shadow: 1px 0 0 0 rgba(94, 99, 116, 0.34);
           box-shadow: 1px 0 0 0 rgba(94, 99, 116, 0.34);
-  cursor: pointer;
 }
 .about-company-tabs__text:hover > .about-company-tabs__p {
   color: #33394f;
@@ -1694,7 +1694,7 @@ legend {
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
-  color: #c1c3c8;
+  color: #C1C3C8;
 }
 
 .about-company-tabs__triangle {
@@ -1721,14 +1721,10 @@ legend {
   gap: 10px;
   width: 100%;
   padding: 10px 0 15px 15px;
-  background: #efefef;
+  background: #EFEFEF;
 }
 
-.about-company-tabs__sub-item {
-  cursor: pointer;
-}
-
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .about-company-tabs {
     display: none;
   }

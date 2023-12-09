@@ -1571,7 +1571,7 @@ legend {
     display: block;
   }
 }
-.return-conditions__wrapper {
+.delivery-terms__wrapper {
   padding: 70px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1582,10 +1582,10 @@ legend {
           flex-direction: column;
   gap: 30px;
 }
-.return-conditions__title {
+.delivery-terms__title {
   font-size: 36px;
 }
-.return-conditions__block {
+.delivery-terms__block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1595,37 +1595,87 @@ legend {
           flex-direction: column;
   gap: 15px;
 }
-
-.return-conditions_max-width-1334 {
-  max-width: 1334px;
+.delivery-terms table, .delivery-terms th, .delivery-terms td {
+  border: 1px solid #D9D9D9;
+}
+.delivery-terms th, .delivery-terms td {
+  padding: 17px 10px;
+}
+.delivery-terms__table {
+  width: 1260px;
+  border-collapse: collapse;
+}
+.delivery-terms__table-head {
+  font-size: 18px;
+}
+.delivery-terms__table-stat {
+  color: #7D808E;
+  text-align: center;
+}
+.delivery-terms__header_region {
+  text-align: left;
+}
+.delivery-terms__header_region {
+  width: 232px;
+}
+.delivery-terms__deadlines {
+  display: none;
 }
 
-.return-conditions_max-width-1283 {
-  max-width: 1283px;
+@media (max-width: 1440px) {
+  .delivery-terms__table {
+    display: none;
+  }
+  .delivery-terms__deadlines {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .delivery-terms__deadlines_first {
+    margin-top: 0;
+  }
+  .delivery-terms__deadlines__title {
+    font-size: 18px;
+  }
+  .delivery-terms__deadlines__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 5px;
+  }
+  .delivery-terms__deadlines__name {
+    font-size: 18px;
+  }
 }
-
-.return-conditions_max-width-941 {
-  max-width: 941px;
-}
-
 @media (max-width: 768px) {
   .catalog__title {
     display: none;
   }
-  .return-conditions__wrapper {
+  .delivery-terms__wrapper {
     padding: 30px 0;
   }
-  .return-conditions__block {
+  .delivery-terms__block {
     gap: 10px;
   }
-  .return-conditions__title {
+  .delivery-terms__title {
+    font-size: 32px;
     font-weight: 700;
     margin-bottom: -15px;
   }
 }
 .about-company-tabs {
   margin-top: 10px;
-  background: #f4f4f4;
+  background: #F4F4F4;
 }
 
 .about-company-tabs__nav {
@@ -1679,7 +1729,6 @@ legend {
   font-weight: 500;
   -webkit-box-shadow: 1px 0 0 0 rgba(94, 99, 116, 0.34);
           box-shadow: 1px 0 0 0 rgba(94, 99, 116, 0.34);
-  cursor: pointer;
 }
 .about-company-tabs__text:hover > .about-company-tabs__p {
   color: #33394f;
@@ -1694,7 +1743,7 @@ legend {
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
-  color: #c1c3c8;
+  color: #C1C3C8;
 }
 
 .about-company-tabs__triangle {
@@ -1721,14 +1770,10 @@ legend {
   gap: 10px;
   width: 100%;
   padding: 10px 0 15px 15px;
-  background: #efefef;
+  background: #EFEFEF;
 }
 
-.about-company-tabs__sub-item {
-  cursor: pointer;
-}
-
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .about-company-tabs {
     display: none;
   }
