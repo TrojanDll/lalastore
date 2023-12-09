@@ -1680,7 +1680,7 @@ legend {
 }
 .about-company-tabs {
   margin-top: 10px;
-  background: #F4F4F4;
+  background: #f4f4f4;
 }
 
 .about-company-tabs__nav {
@@ -1734,6 +1734,7 @@ legend {
   font-weight: 500;
   -webkit-box-shadow: 1px 0 0 0 rgba(94, 99, 116, 0.34);
           box-shadow: 1px 0 0 0 rgba(94, 99, 116, 0.34);
+  cursor: pointer;
 }
 .about-company-tabs__text:hover > .about-company-tabs__p {
   color: #33394f;
@@ -1748,7 +1749,7 @@ legend {
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
-  color: #C1C3C8;
+  color: #c1c3c8;
 }
 
 .about-company-tabs__triangle {
@@ -1775,10 +1776,14 @@ legend {
   gap: 10px;
   width: 100%;
   padding: 10px 0 15px 15px;
-  background: #EFEFEF;
+  background: #efefef;
 }
 
-@media (max-width: 768px) {
+.about-company-tabs__sub-item {
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
   .about-company-tabs {
     display: none;
   }
@@ -1842,4 +1847,8 @@ legend {
   .recent__title {
     text-align: center;
   }
+}
+.catalog__title {
+  text-align: center;
+  margin-bottom: 20px;
 }

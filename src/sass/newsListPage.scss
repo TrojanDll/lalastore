@@ -1,19 +1,24 @@
-@import "./style.scss";
+@import './style.scss';
 // ui
-@import "./ui/button";
-@import "./ui/input";
-@import "./ui/title";
-@import "./ui/product-card";
-@import "./ui/product-card-label";
-@import "./ui/text-info";
+@import './ui/button';
+@import './ui/input';
+@import './ui/title';
+@import './ui/product-card';
+@import './ui/product-card-label';
+@import './ui/text-info';
 // sections
-@import "./sections/header";
-@import "./sections/subheader";
-@import "./sections/breadcrumbs";
-@import "./sections/advertising";
-@import "./sections/catalog-menu";
-@import "./sections/bottom-menu";
-@import "./sections/news-list";
-@import "./sections/about-company-tabs";
+@import './sections/header';
+@import './sections/subheader';
+@import './sections/breadcrumbs';
+@import './sections/advertising';
+@import './sections/catalog-menu';
+@import './sections/bottom-menu';
+@import './sections/news-list';
+@import './sections/about-company-tabs';
 
-@import "./sections/recent";
+@import './sections/recent';
+
+.catalog__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
