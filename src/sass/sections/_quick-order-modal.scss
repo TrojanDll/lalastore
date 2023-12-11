@@ -1,0 +1,139 @@
+.quick-order-modal__overflow {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(44, 44, 44, 0.81);
+
+  &_active {
+    display: block;
+  }
+}
+.quick-order-modal {
+  position: relative;
+  width: 82vw;
+  height: 78vh;
+  margin: 10vh auto 0;
+  padding: 45px 0;
+  z-index: 99999;
+  background: #ffffff;
+  border-radius: 5px;
+  font-family: sans-serif;
+  top: 0;
+
+  &__close-btn {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 21px;
+    top: 21px;
+    background: url('./../assets/img/icons/close-btn.svg') center center/cover
+    no-repeat;
+  }
+  &_active {
+    display: block;
+
+    .make-order-modal__overflow {
+      display: block;
+    }
+  }
+  &__wrapper {
+    width: 1184px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 40px 0 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      width: 14px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #33394f;
+      border-radius: 13px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #7d808e;
+      border-radius: 13px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+  }
+
+  &__form {
+    margin-top: 35px;
+  }
+  &__notion {
+    display: flex;
+    gap: 15px;
+  }
+  &__bold-underline {
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+  }
+}
+
+@media (max-width: 1540px) {
+  .quick-order-modal {
+    width: 1180px;
+  }
+  .quick-order-modal__wrapper {
+    padding: 0;
+    width: 1135px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .quick-order-modal {
+    width: 95vw;
+    height: 90vh;
+    margin: 60px auto 0;
+    padding: 45px 0;
+  }
+  .quick-order-modal__wrapper {
+    width: 95%;
+    height: 100%;
+  }
+  .quick-order-modal__title {
+    font-size: 24px;
+  }
+  .quick-order-modal__bold-underline {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .quick-order-modal {
+    margin-top: 20px;
+    padding: 35px 0 30px;
+    height: 90vh;
+  }
+  .quick-order-modal__wrapper {
+    height: 100%;
+  }
+  .quick-order-modal__close-btn {
+    top: 15px;
+    right: 15px;
+  }
+  .quick-order-modal__notion {
+    max-width: 265px;
+  }
+}
+@media (max-width: 576px) {
+  .quick-order-modal {
+    &__wrapper {
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+  }
+}

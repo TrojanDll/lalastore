@@ -356,7 +356,6 @@ legend {
   -webkit-animation: pulse 0.5s ease-out;
           animation: pulse 0.5s ease-out;
   -webkit-transform: scale(0);
-      -ms-transform: scale(0);
           transform: scale(0);
   position: absolute;
 }
@@ -503,7 +502,6 @@ legend {
     top: 100%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
 }
@@ -674,7 +672,6 @@ legend {
   background: #33394f;
   border-radius: 9999px;
   -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transition: 0.2s ease all;
   transition: 0.2s ease all;
@@ -684,10 +681,8 @@ legend {
 }
 .header .opened .bar-top {
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
           transform: rotate(45deg);
   -webkit-transform-origin: 15% 15%;
-      -ms-transform-origin: 15% 15%;
           transform-origin: 15% 15%;
 }
 .header .opened .bar-mid {
@@ -695,10 +690,8 @@ legend {
 }
 .header .opened .bar-bot {
   -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
   -webkit-transform-origin: 15% 95%;
-      -ms-transform-origin: 15% 95%;
           transform-origin: 15% 95%;
 }
 .header-mobile {
@@ -926,7 +919,6 @@ legend {
   width: 24px;
   height: 25px;
   -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 .header__search__area__input {
@@ -960,7 +952,6 @@ legend {
   width: 100%;
   background-color: #fff;
   -webkit-transform: translateY(1px);
-      -ms-transform: translateY(1px);
           transform: translateY(1px);
 }
 .header__search__area__results__item {
@@ -1360,7 +1351,6 @@ legend {
   }
   .catalog-menu__chapter__title__icon_active {
     -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
             transform: rotate(180deg);
   }
   .catalog-menu__chapter__element {
@@ -1471,7 +1461,6 @@ legend {
 }
 .catalog__item__label__img_rotated {
   -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 .catalog__item__menu {
@@ -1480,7 +1469,6 @@ legend {
   bottom: 0;
   left: 50%;
   -webkit-transform: translate(-50%, 100%);
-      -ms-transform: translate(-50%, 100%);
           transform: translate(-50%, 100%);
   width: 300px;
   border-radius: 0px 0px 5px 5px;
@@ -1492,10 +1480,8 @@ legend {
 .catalog__item__menu_left-side {
   left: 0;
   -webkit-transform: none;
-      -ms-transform: none;
           transform: none;
   -webkit-transform: translateY(100%);
-      -ms-transform: translateY(100%);
           transform: translateY(100%);
 }
 .catalog__item__menu-wrapper {
@@ -1507,7 +1493,6 @@ legend {
   left: 100%;
   bottom: 100%;
   -webkit-transform: translate(0, 100%);
-      -ms-transform: translate(0, 100%);
           transform: translate(0, 100%);
 }
 .catalog__item__menu__sub-menu_left-side {
