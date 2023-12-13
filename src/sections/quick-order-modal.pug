@@ -1,0 +1,45 @@
+#makeQuickOrder.quick-order-modal__overflow
+    .quick-order-modal.modal
+        button#makeQuickOrderCloseButton.quick-order-modal__close-btn.close-btn
+        .quick-order-modal__wrapper
+            p.quick-order-modal__title Купить в 1 клик
+            form.quick-order-modal__form.form
+                .form__wrapper
+                    .form__header Введите данные для заказа:
+                    .form__popup
+                        .form__item
+                            label.form__input-label(for='fullName') Ф.И.О. *
+                            input.form__input-text(name='fullName', id='fullName', value='')
+                        .form__item
+                            label.form__input-label(for='phone') Телефон *
+                            input.form__input-text(name='phone', id='phone', value='')
+                        .form__item
+                            label.form__input-label(for='email') E-Mail *
+                            input.form__input-text(name='email', id='email', value='')
+                        .form__item
+                            label.form__input-label(for='comment') Комментарии к заказу:
+                            input.form__input-text(name='comment', id='comment', value='')
+                        .form__item.form__item_radio
+                            input.form__check-personal(type="checkbox", name='personalData', id='personalData')
+                            label.form__input-label.form__input-label_small(for='personalData') Я согласен на обработку персональных данных
+                        .quick-order-modal__notion
+                            img.quick-order-modal__notion-img(src='./assets/img/icons/car.svg')
+                            .form__input-label_small В стоимость заказа может быть включена
+                                | &nbsp;
+                                span.quick-order-modal__bold-underline цена доставки
+                        button.button.form__buy-button оформить заказ
+
+
+script.
+    const buttonMakeQuickOrder = document.querySelector('#makeQuickOrderButton')
+    const modalMakeQuickOrder = document.querySelector('#makeQuickOrder')
+    const modalMakeQuickOrderCloseButton = document.querySelector('#makeQuickOrderCloseButton')
+
+    buttonMakeQuickOrder.addEventListener('click', () => {
+        modalMakeQuickOrder.classList.add('quick-order-modal__overflow_active')
+    })
+    modalMakeQuickOrderCloseButton.addEventListener('click', () => {
+        modalMakeQuickOrder.classList.remove('quick-order-modal__overflow_active')
+    })
+
+

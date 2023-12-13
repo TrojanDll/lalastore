@@ -1,4 +1,4 @@
-.make-order-modal__overflow {
+.quick-order-modal__overflow {
   display: none;
   position: fixed;
   left: 0;
@@ -12,10 +12,10 @@
     display: block;
   }
 }
-.make-order-modal {
+.quick-order-modal {
   position: relative;
   width: 82vw;
-  height: 68vh;
+  height: 78vh;
   margin: 10vh auto 0;
   padding: 45px 0;
   z-index: 99999;
@@ -31,7 +31,7 @@
     right: 21px;
     top: 21px;
     background: url('./../assets/img/icons/close-btn.svg') center center/cover
-      no-repeat;
+    no-repeat;
   }
   &_active {
     display: block;
@@ -70,74 +70,70 @@
   &__form {
     margin-top: 35px;
   }
+  &__notion {
+    display: flex;
+    gap: 15px;
+  }
+  &__bold-underline {
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+  }
 }
 
 @media (max-width: 1540px) {
-  .make-order-modal {
+  .quick-order-modal {
     width: 1180px;
   }
-  .make-order-modal__wrapper {
+  .quick-order-modal__wrapper {
     padding: 0;
     width: 1135px;
   }
 }
 
 @media (max-width: 1200px) {
-  .make-order-modal {
+  .quick-order-modal {
     width: 95vw;
     height: 90vh;
     margin: 60px auto 0;
     padding: 45px 0;
   }
-  .make-order-modal__wrapper {
+  .quick-order-modal__wrapper {
     width: 95%;
     height: 100%;
   }
-  .make-order-modal__title {
+  .quick-order-modal__title {
     font-size: 24px;
+  }
+  .quick-order-modal__bold-underline {
+    font-size: 14px;
   }
 }
 
-@media (max-width: 992px) {
-}
-
 @media (max-width: 768px) {
-  .make-order-modal {
+  .quick-order-modal {
     margin-top: 20px;
     padding: 35px 0 30px;
     height: 90vh;
   }
-  .make-order-modal__wrapper {
+  .quick-order-modal__wrapper {
     height: 100%;
   }
-  .make-order-modal__close-btn {
+  .quick-order-modal__close-btn {
     top: 15px;
     right: 15px;
   }
-  .shipment {
-    .form__item_radio {
-      flex-wrap: wrap;
-      margin-top: 30px;
-      position: relative;
-      width: 100%;
-    }
-    .form__input-label {
-      width: 60%;
-    }
+  .quick-order-modal__notion {
+    max-width: 265px;
   }
 }
-
 @media (max-width: 576px) {
-  .make-order-modal {
+  .quick-order-modal {
     &__wrapper {
       &::-webkit-scrollbar {
         width: 0;
       }
     }
   }
-}
-
-@media (max-width: 500px) {
-}
-@media (max-width: 400px) {
 }

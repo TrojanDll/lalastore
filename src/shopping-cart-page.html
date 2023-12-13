@@ -96,7 +96,7 @@
               <div class="header__item-bottom__text">Избранное</div>
             </div><a class="header__item-bottom" href="./shopping-cart-page.html"><img class="header__item-bottom__img header__item-bottom__img-bag header__item-bottom__img-bag_disabled" src="./assets/img/icons/bag.svg" alt="bag"><img class="header__item-bottom__img header__item-bottom__img-bag header__item-bottom__img-bag_active" src="./assets/img/icons/bag_active.svg" alt="bag" style="display: none">
               <div class="header__item-bottom__text">Корзина</div></a>
-            <div class="header__item-bottom"><img class="header__item-bottom__img header__item-bottom__img-profile" src="./assets/img/icons/profile.svg" alt="profile">
+            <div class="header__item-bottom" id="haveAnAccountButton"><img class="header__item-bottom__img header__item-bottom__img-profile" src="./assets/img/icons/profile.svg" alt="profile">
               <div class="header__item-bottom__text">Войти</div>
             </div>
           </div>
@@ -234,7 +234,8 @@
               <div class="purchase__promo">Ввести промокод</div>
               <input class="purchase__promo-input">
             </div>
-            <button class="button purchase__buy-button" id="makeOrderButton">оформить заказ</button><a class="button purchase__buy-button_quick" href="./items-in-order-page.html">быстрый заказ</a>
+            <button class="button purchase__buy-button" id="makeOrderButton">оформить заказ</button>
+            <button class="button purchase__buy-button_quick" id="makeQuickOrderButton">быстрый заказ</button>
           </div>
         </div>
       </div>
@@ -384,6 +385,58 @@
         </div>
       </div>
     </div>
+    <div class="quick-order-modal__overflow" id="makeQuickOrder">
+      <div class="quick-order-modal modal">
+        <button class="quick-order-modal__close-btn close-btn" id="makeQuickOrderCloseButton"></button>
+        <div class="quick-order-modal__wrapper">
+          <p class="quick-order-modal__title">Купить в 1 клик</p>
+          <form class="quick-order-modal__form form">
+            <div class="form__wrapper">
+              <div class="form__header">Введите данные для заказа:</div>
+              <div class="form__popup">
+                <div class="form__item">
+                  <label class="form__input-label" for="fullName">Ф.И.О. *</label>
+                  <input class="form__input-text" name="fullName" id="fullName" value="">
+                </div>
+                <div class="form__item">
+                  <label class="form__input-label" for="phone">Телефон *</label>
+                  <input class="form__input-text" name="phone" id="phone" value="">
+                </div>
+                <div class="form__item">
+                  <label class="form__input-label" for="email">E-Mail *</label>
+                  <input class="form__input-text" name="email" id="email" value="">
+                </div>
+                <div class="form__item">
+                  <label class="form__input-label" for="comment">Комментарии к заказу:</label>
+                  <input class="form__input-text" name="comment" id="comment" value="">
+                </div>
+                <div class="form__item form__item_radio">
+                  <input class="form__check-personal" type="checkbox" name="personalData" id="personalData">
+                  <label class="form__input-label form__input-label_small" for="personalData">Я согласен на обработку персональных данных</label>
+                </div>
+                <div class="quick-order-modal__notion"><img class="quick-order-modal__notion-img" src="./assets/img/icons/car.svg">
+                  <div class="form__input-label_small">
+                    В стоимость заказа может быть включена&nbsp;<span class="quick-order-modal__bold-underline">цена доставки</span></div>
+                </div>
+                <button class="button form__buy-button">оформить заказ</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      const buttonMakeQuickOrder = document.querySelector('#makeQuickOrderButton')
+      const modalMakeQuickOrder = document.querySelector('#makeQuickOrder')
+      const modalMakeQuickOrderCloseButton = document.querySelector('#makeQuickOrderCloseButton')
+      
+      buttonMakeQuickOrder.addEventListener('click', () => {
+          modalMakeQuickOrder.classList.add('quick-order-modal__overflow_active')
+      })
+      modalMakeQuickOrderCloseButton.addEventListener('click', () => {
+          modalMakeQuickOrder.classList.remove('quick-order-modal__overflow_active')
+      })
+    </script>
     <div class="make-order-modal__overflow" id="makeOrder">
       <div class="make-order-modal modal">
         <button class="make-order-modal__close-btn close-btn" id="makeOrderCloseButton"></button>

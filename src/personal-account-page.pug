@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+    head
+        title="LalaStore"
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="./css/personalAccountPage.css")
+    body
+        include sections/header
+        include sections/catalog-menu
+        include sections/subheader
+        .container
+            .catalog__title-wrapper
+                .title.catalog__title Личный кабинет
+        include sections/breadcrumbs
+        +breadcrumbs("Главная - Личный кабинет")
+        include sections/personal-account
+        include sections/footer
+        include sections/bottom-menu
+        include sections/layout
+        include sections/change-password-modal
+        include sections/your-subscriptions-modal
+
+
+        script(src="./js/search-logic.js")
+        script(src="./js/catalog-logic.js")
+        script(src="./js/catalog-item-menu-logic.js")
+        script(src="./js/modals-logic.js")
+        script(src="./js/sidebar-logic.js")

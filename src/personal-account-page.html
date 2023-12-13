@@ -4,7 +4,7 @@
     <title>LalaStore</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/preparedReferences.css">
+    <link rel="stylesheet" href="./css/personalAccountPage.css">
   </head>
   <body>
     <header class="header">
@@ -105,36 +105,48 @@
     </div>
     <div class="container">
       <div class="catalog__title-wrapper">
-        <div class="title catalog__title">Готовые подборки</div>
-        <div class="title catalog__count">92</div>
+        <div class="title catalog__title">Личный кабинет</div>
       </div>
     </div>
         <div class="breadcrumbs"> 
           <div class="container breadcrumbs-container">
-            <div class="breadcrumbs__text">Главная - Готовые подборки</div>
+            <div class="breadcrumbs__text">Главная - Личный кабинет</div>
           </div>
         </div>
-    <div class="references">
+    <div class="personal-account">
       <div class="container">
-        <div class="references__wrapper">
-          <div class="references__list_left-part"><a class="references__item references__item_left-part_1" href="./prepared-references-item.html"><img class="references__item__image references__item__image_animation" src="./assets/img/references1.webp">
-              <div class="references__item__number">№124</div></a><a class="references__item references__item_left-part_2" href="./prepared-references-item.html"><img class="references__item__image references__item__image_full" src="./assets/img/references2.webp">
-              <div class="references__item__number">№124</div></a><a class="references__item references__item_left-part_3" href="./prepared-references-item.html"><img class="references__item__image references__item__image_animation" src="./assets/img/references3.webp">
-              <div class="references__item__number">№124</div></a><a class="references__item references__item_left-part_4" href="./prepared-references-item.html"><img class="references__item__image references__item__image_animation" src="./assets/img/references4.webp">
-              <div class="references__item__number">№124</div></a><a class="references__item references__item_left-part_5" href="./prepared-references-item.html"><img class="references__item__image references__item__image_full" src="./assets/img/references5.webp">
-              <div class="references__item__number">№124</div></a><a class="references__item references__item_left-part_6" href="./prepared-references-item.html"><img class="references__item__image references__item__image_full" src="./assets/img/references6.webp">
-              <div class="references__item__number">№124</div></a><a class="references__item references__item_left-part_7" href="./prepared-references-item.html"><img class="references__item__image references__item__image_animation" src="./assets/img/references1.webp">
-              <div class="references__item__number">№124</div></a><a class="references__item references__item_left-part_8" href="./prepared-references-item.html"><img class="references__item__image references__item__image_full" src="./assets/img/references2.webp">
-              <div class="references__item__number">№124</div></a><a class="references__item references__item_left-part_9" href="./prepared-references-item.html"><img class="references__item__image references__item__image_animation" src="./assets/img/references3.webp">
-              <div class="references__item__number">№124</div></a><a class="references__item references__item_left-part_10" href="./prepared-references-item.html"><img class="references__item__image references__item__image_animation" src="./assets/img/references4.webp">
-              <div class="references__item__number">№124</div></a></div>
-          <div class="references__list_right-part"><a class="references__item references__item_right-part_11" href="./prepared-references-item.html"><img class="references__item__image references__item__image_animation" src="./assets/img/references11.webp">
-              <div class="references__item__number">№124</div></a><a class="references__item references__item_right-part_12" href="./prepared-references-item.html"><img class="references__item__image references__item__image_animation" src="./assets/img/references12.webp">
-              <div class="references__item__number">№124</div></a><a class="references__item references__item_right-part_13" href="./prepared-references-item.html"><img class="references__item__image references__item__image_animation" src="./assets/img/references13.webp">
-              <div class="references__item__number">№124</div></a><a class="references__item references__item_right-part_14" href="./prepared-references-item.html"><img class="references__item__image references__item__image_full" src="./assets/img/references14.webp">
-              <div class="references__item__number">№124</div></a><a class="references__item references__item_right-part_15" href="./prepared-references-item.html"><img class="references__item__image references__item__image_animation" src="./assets/img/references11.webp">
-              <div class="references__item__number">№124</div></a><a class="references__item references__item_right-part_16" href="./prepared-references-item.html"><img class="references__item__image references__item__image_animation" src="./assets/img/references12.webp">
-              <div class="references__item__number">№124</div></a></div>
+        <div class="personal-account__wrapper"><a class="personal-account__item personal-account__item_current-orders"><img class="personal-account__img" src="./assets/img/personal-account1.webp">
+            <p class="personal-account__name">
+              Текущие
+              заказы
+            </p>
+            <div class="personal-account__gradient"></div></a><a class="personal-account__item personal-account__item_history-orders"><img class="personal-account__img" src="./assets/img/personal-account2.webp">
+            <p class="personal-account__name">
+              История
+              заказов
+            </p>
+            <div class="personal-account__gradient"></div></a><a class="personal-account__item"><img class="personal-account__img" src="./assets/img/personal-account3.webp">
+            <p class="personal-account__name">
+              Личные
+              данные
+            </p>
+            <div class="personal-account__gradient"></div></a>
+          <div class="personal-account__item" id="openChangePasswordModal"><img class="personal-account__img" src="./assets/img/personal-account4.webp">
+            <div class="personal-account__name">
+              Сменить
+              пароль
+            </div>
+            <div class="personal-account__gradient"></div>
+          </div><a class="personal-account__item"><img class="personal-account__img" src="./assets/img/personal-account5.webp">
+            <div class="personal-account__name">
+              Профиль
+              заказов
+            </div>
+            <div class="personal-account__gradient"></div></a>
+          <div class="personal-account__item" id="openYourSubscriptionsModal"><img class="personal-account__img" src="./assets/img/personal-account6.webp">
+            <div class="personal-account__name">Подписки</div>
+            <div class="personal-account__gradient"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -216,6 +228,108 @@
         </div>
       </div>
     </div>
+    <div class="change-password-modal__overflow" id="changePasswordModal">
+      <div class="change-password-modal modal">
+        <button class="change-password-modal__close-btn close-btn" id="changePasswordModalCloseButton"></button>
+        <div class="change-password-modal__wrapper">
+          <p class="change-password-modal__title">Профиль пользователя</p>
+          <p class="change-password-modal__comment">Длина пароля не менее 6 символов</p>
+          <form class="change-password-modal__form form">
+            <div class="form__wrapper change-password-modal__form-wrapper">
+              <div class="form__popup change-password-modal__form-popup-container">
+                <div class="form__item change-password-modal__form-item change-password-modal__form-item_FIO">
+                  <label class="form__input-label" for="fullNameChangePassword">Ф.И.О. *</label>
+                  <input class="form__input-text change-password-modal__input-text" name="fullNameChangePassword" id="fullNameChangePassword" value="" placeholder="Иванов Иван Иванович">
+                </div>
+                <div class="form__item change-password-modal__form-item change-password-modal__form-item_email">
+                  <label class="form__input-label" for="emailChangePassword">E-Mail *</label>
+                  <input class="form__input-text change-password-modal__input-text" name="emailChangePassword" id="emailChangePassword" value="" placeholder="ivanov@gmail.com">
+                </div>
+                <div class="form__item change-password-modal__form-item change-password-modal__form-item_phoneNumber">
+                  <label class="form__input-label" for="phoneChangePassword">Телефон *</label>
+                  <input class="form__input-text change-password-modal__input-text" name="phoneChangePassword" id="phoneChangePassword" value="" placeholder="+7 (xxx) xxx-xx-xx">
+                </div>
+                <button class="button form__buy-button change-password-modal__form-item_registrationButton">сохранить изменения</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      const buttonChangePasswordModalOpen = document.querySelector('#openChangePasswordModal')
+      const changePasswordModal = document.querySelector('#changePasswordModal')
+      const changePasswordModalCloseButton = document.querySelector('#changePasswordModalCloseButton')
+      
+      buttonChangePasswordModalOpen.addEventListener('click', () => {
+          changePasswordModal.classList.add('change-password-modal__overflow_active')
+      })
+      changePasswordModalCloseButton.addEventListener('click', () => {
+          changePasswordModal.classList.remove('change-password-modal__overflow_active')
+      })
+    </script>
+    <div class="your-subscriptions-modal__overflow" id="yourSubscriptionsModal">
+      <div class="your-subscriptions-modal modal">
+        <button class="your-subscriptions-modal__close-btn close-btn" id="yourSubscriptionsModalCloseButton"></button>
+        <div class="your-subscriptions-modal__wrapper">
+          <p class="your-subscriptions-modal__title">Ваши подписки</p>
+          <p class="your-subscriptions-modal__comment">Адрес подписки будет принадлежать пользователю:</p>
+          <form class="your-subscriptions-modal__form form">
+            <div class="form__wrapper your-subscriptions-modal__form-wrapper">
+              <div class="form__popup your-subscriptions-modal__form-popup-container">
+                <div class="form__item your-subscriptions-modal__form-item your-subscriptions-modal__form-item_FIO">
+                  <label class="form__input-label" for="fullName">Ваше имя</label>
+                  <input class="form__input-text your-subscriptions-modal__input-text" name="fullName" id="fullName" value="" placeholder="Иванов Иван Иванович">
+                </div>
+                <div class="form__item your-subscriptions-modal__form-item_email">
+                  <label class="form__input-label" for="email">Почта</label>
+                  <input class="form__input-text your-subscriptions-modal__input-text" name="email" id="email" value="" placeholder="ivanov@gmail.com">
+                </div>
+                <div class="form__item your-subscriptions-modal__form-item">После добавления или изменения адреса подписки вам будет выслан код подтверждения. Подписка будет не активной до ввода кода подтверждения.</div>
+                <div class="form__item your-subscriptions-modal__form-item_email">
+                  <div class="form__input-label">Предпочтительный формат</div>
+                  <div class="your-subscriptions-modal__checkbox-item">
+                    <input class="form__check-personal" type="checkbox" name="preferedFormatText" id="preferedFormatText">
+                    <label class="form__input-label form__input-label_small" for="preferedFormatText">Текст</label>
+                  </div>
+                  <div class="your-subscriptions-modal__checkbox-item">
+                    <input class="form__check-personal" type="checkbox" name="preferedFormatHTML" id="preferedFormatHTML">
+                    <label class="form__input-label form__input-label_small" for="preferedFormatHTML">HTML</label>
+                  </div>
+                </div>
+                <div class="form__item your-subscriptions-modal__form-item_email">
+                  <div class="form__input-label">Рубрики подписки*</div>
+                  <div class="your-subscriptions-modal__checkbox-item">
+                    <input class="form__check-personal" type="checkbox" name="rubricNews" id="rubricNews">
+                    <label class="form__input-label form__input-label_small" for="rubricNews">Новости магазина</label>
+                  </div>
+                </div>
+                <button class="button form__buy-button your-subscriptions-modal__form-item_registrationButton">подписаться</button>
+                <div class="form__item">
+                  <p class="your-subscriptions-modal__haveAnAccoutn">Сменить пользователя</p>
+                </div>
+                <div class="form__item form__item_radio your-subscriptions-modal__form-item_offerCheck">
+                  <input class="form__check-personal" type="checkbox" name="personalData" id="personalData">
+                  <label class="form__input-label form__input-label_small" for="personalData">Я согласен на обработку персональных данных</label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      const buttonYourSubscriptionsModalOpen = document.querySelector('#openYourSubscriptionsModal')
+      const YourSubscriptionsModal = document.querySelector('#yourSubscriptionsModal')
+      const YourSubscriptionsModalCloseButton = document.querySelector('#yourSubscriptionsModalCloseButton')
+      
+      buttonYourSubscriptionsModalOpen.addEventListener('click', () => {
+          YourSubscriptionsModal.classList.add('your-subscriptions-modal__overflow_active')
+      })
+      YourSubscriptionsModalCloseButton.addEventListener('click', () => {
+          YourSubscriptionsModal.classList.remove('your-subscriptions-modal__overflow_active')
+      })
+    </script>
     <script src="./js/search-logic.js"></script>
     <script src="./js/catalog-logic.js"></script>
     <script src="./js/catalog-item-menu-logic.js"></script>

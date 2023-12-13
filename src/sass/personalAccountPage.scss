@@ -6,6 +6,7 @@
 @import "./ui/title";
 @import "./ui/product-card";
 @import "./ui/product-card-label";
+@import "./ui/text-info";
 @import "./ui/forms-modal";
 
 // sections
@@ -15,25 +16,8 @@
 @import "./sections/advertising";
 @import "./sections/catalog-menu";
 @import "./sections/bottom-menu";
-@import "./sections/shopping-cart";
-@import "./sections/make-order-modal";
-@import "./sections/quick-order-modal";
+@import "./sections/personal-account";
+@import "./sections/changePassword";
+@import "./sections/your-subscriptions-modal";
 
 @import "./sections/recent";
-
-.catalog {
-  &__title-wrapper {
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-  }
-
-  &__count {
-    margin-top: 6px;
-    margin-left: 20px;
-    color: rgba(51, 57, 79, 0.62);
-    font-size: 16px;
-    font-weight: 400;
-  }
-}
-

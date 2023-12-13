@@ -1,0 +1,32 @@
+#authModal.authorization-modal__overflow
+    .authorization-modal.modal
+        button#authModalCloseButton.authorization-modal__close-btn.close-btn
+        .authorization-modal__wrapper
+            p.authorization-modal__title Вход
+            form.authorization-modal__form.form
+                .form__wrapper.authorization-modal__form-wrapper
+                    .form__popup.authorization-modal__form-popup-container
+                        .form__item.authorization-modal__form-item_email
+                            label.form__input-label(for='emailAuth') Логин *
+                            input.form__input-text.registration-modal__input-text(name='emailAuth', id='emailAuth', value='', placeholder='ivanov@gmail.com')
+                        .form__item.authorization-modal__form-item_password
+                            label.form__input-label(for='passwordAuth') Пароль *
+                            input.form__input-text.registration-modal__input-text(name='passwordAuth', id='passwordAuth', value='', placeholder='******', type='password')
+                        .form__item.form__item_radio.authorization-modal__form-item_offerCheck
+                            input.form__check-personal(type="checkbox", name='personalDataAuth', id='personalDataAuth')
+                            label.form__input-label.form__input-label_small(for='personalDataAuth') Запомнить меня
+                        button.button.form__buy-button.authorization-modal__form-item_authButton Войти
+                        .form__item
+                            p.authorization-modal__haveAnAccoutn#registrationModalOpenButton Нет аккаунта?
+
+script.
+    const buttonAuthModalOpen = document.querySelector('#haveAnAccountButton')
+    const authModal = document.querySelector('#authModal')
+    const authModalCloseButton = document.querySelector('#authModalCloseButton')
+
+    buttonAuthModalOpen.addEventListener('click', () => {
+        authModal.classList.add('authorization-modal__overflow_active')
+    })
+    authModalCloseButton.addEventListener('click', () => {
+        authModal.classList.remove('authorization-modal__overflow_active')
+    })

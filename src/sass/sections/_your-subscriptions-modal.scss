@@ -1,0 +1,187 @@
+.your-subscriptions-modal__overflow {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(44, 44, 44, 0.81);
+
+  &_active {
+    display: block;
+  }
+}
+.your-subscriptions-modal {
+  position: relative;
+  width: 798px;
+  height: 540px;
+  margin: 10vh auto 0;
+  padding: 45px 0;
+  z-index: 99999;
+  background: #ffffff;
+  border-radius: 5px;
+  font-family: sans-serif;
+  top: 0;
+
+  &__close-btn {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 21px;
+    top: 21px;
+    background: url('./../assets/img/icons/close-btn.svg') center center/cover
+    no-repeat;
+  }
+  &_active {
+    display: block;
+
+    .registration-modal__overflow {
+      display: block;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 655px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 0 10px;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      width: 14px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #33394f;
+      border-radius: 13px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #7d808e;
+      border-radius: 13px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+  }
+  &__comment {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  &__form {
+    width: 493px;
+    margin: 0 auto;
+  }
+  &__form-wrapper {
+    background: #ffffff;
+    padding: 0 0 10px;
+  }
+  &__form-popup-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 9px  ;
+  }
+  &__notion {
+    display: flex;
+    gap: 15px;
+  }
+  &__bold-underline {
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+  }
+  &__haveAnAccoutn {
+    margin-top: 21px;
+    text-decoration-line: underline;
+  }
+  &__input-text {
+    width: 100%;
+  }
+  &__form-item {
+    width: 100%;
+    &_FIO {
+      width: calc(50% - 5px);
+    }
+    &_email {
+      width: calc(50% - 5px);
+      align-self: baseline;
+    }
+    &_registrationButton {
+      margin-top: 21px;
+      width: 286px;
+    }
+  }
+  &__checkbox-item {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .your-subscriptions-modal {
+    width: 700px;
+  }
+  .your-subscriptions-modal__title {
+    font-size: 24px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .your-subscriptions-modal {
+    width: 90%;
+    height: 80vh;
+  }
+  .your-subscriptions-modal__wrapper {
+    width: 90%;
+  }
+  .your-subscriptions-modal__form {
+    width: 100%;
+  }
+  .your-subscriptions-modal__form-item_code {
+    width: calc( 100% - 236px);
+  }
+  .your-subscriptions-modal__form-item_registrationButton {
+    width: 269px;
+    margin-left: 0;
+  }
+  .your-subscriptions-modal__haveAnAccoutn {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 580px) {
+  .registration-modal {
+    width: 346px;
+  }
+  .your-subscriptions-modal__form-item_registrationButton {
+    margin: 16px auto 0;
+  }
+  .your-subscriptions-modal__haveAnAccoutn {
+    margin-top: 0;
+  }
+  .your-subscriptions-modal__form-popup-container {
+    justify-content: center;
+  }
+  .your-subscriptions-modal__form-item_FIO {
+    width: 100%;
+  }
+  .your-subscriptions-modal__form-item_email {
+    width: 100%
+  }
+  .your-subscriptions-modal__form-item_offerCheck {
+
+    .form__input-label_small {
+      font-size: 12px;
+    }
+  }
+}

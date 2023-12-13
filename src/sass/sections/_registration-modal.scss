@@ -1,0 +1,203 @@
+.registration-modal__overflow {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(44, 44, 44, 0.81);
+
+  &_active {
+    display: block;
+  }
+}
+.registration-modal {
+  position: relative;
+  width: 798px;
+  height: 696px;
+  margin: 10vh auto 0;
+  padding: 45px 0;
+  z-index: 99999;
+  background: #ffffff;
+  border-radius: 5px;
+  font-family: sans-serif;
+  top: 0;
+
+  &__close-btn {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 21px;
+    top: 21px;
+    background: url('./../assets/img/icons/close-btn.svg') center center/cover
+    no-repeat;
+  }
+  &_active {
+    display: block;
+
+    .registration-modal__overflow {
+      display: block;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 655px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 0 10px;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      width: 14px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #33394f;
+      border-radius: 13px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #7d808e;
+      border-radius: 13px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+  }
+  &__comment {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  &__form {
+    width: 493px;
+    margin: 0 auto;
+  }
+  &__form-wrapper {
+    background: #ffffff;
+    padding: 0 0 10px;
+  }
+  &__form-popup-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 9px  ;
+  }
+  &__captcha {
+    width: 211px;
+    height: 68px;
+    margin-top: 15px;
+    background: #F4F4F4;
+  }
+  &__notion {
+    display: flex;
+    gap: 15px;
+  }
+  &__bold-underline {
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+  }
+  &__haveAnAccoutn {
+    text-decoration-line: underline;
+    margin-left: 58px;
+  }
+  &__input-text {
+    width: 100%;
+  }
+  &__form-item {
+    width: 100%;
+    &_FIO {
+    }
+    &_email {
+      width: calc(50% - 5px);
+    }
+    &_phoneNumber {
+      width: calc(50% - 5px);
+    }
+    &_password {
+      width: calc(50% - 5px);
+    }
+    &_passwordCheck {
+      width: calc(50% - 5px);
+    }
+    &_code {
+      width: 262px;
+      margin-right: 11px;
+    }
+    &_registrationButton {
+      margin-top: 0;
+      width: 286px;
+    }
+    &_offerCheck {
+    }
+    &_captcha {
+    }
+  }
+
+}
+
+@media (max-width: 900px) {
+  .registration-modal {
+    width: 700px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .registration-modal {
+    width: 90%;
+    height: 80vh;
+  }
+  .registration-modal__wrapper {
+    width: 90%;
+  }
+  .registration-modal__form {
+    width: 100%;
+  }
+  .registration-modal__form-item_code {
+    width: calc( 100% - 236px);
+  }
+  .registration-modal__form-item_registrationButton {
+    width: 269px;
+    margin: 0;
+  }
+  .registration-modal__haveAnAccoutn {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 580px) {
+  .registration-modal {
+    width: 346px;
+  }
+
+  .registration-modal__form-popup-container {
+    justify-content: center;
+  }
+  .registration-modal__form-item_email {
+    width: 100%
+  }
+  .registration-modal__form-item_phoneNumber {
+    width: 100%
+  }
+  .registration-modal__form-item_password {
+    width: 100%
+  }
+  .registration-modal__form-item_passwordCheck {
+    width: 100%
+  }
+  .registration-modal__form-item_code {
+    width: 100%;
+  }
+  .registration-modal__form-item_captcha {
+    width: 100%
+  }
+}
