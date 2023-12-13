@@ -88,6 +88,7 @@
   .personal-account__wrapper {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 164px);
+    gap: 10px;
   }
 
   .personal-account__name {

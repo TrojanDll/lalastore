@@ -1792,31 +1792,32 @@ legend {
   .personal-account__wrapper {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    -ms-grid-rows: (164px)[6];
+    -ms-grid-rows: 164px 10px 164px 10px 164px 10px 164px 10px 164px 10px 164px;
     grid-template-rows: repeat(6, 164px);
+    gap: 10px;
   }
   .personal-account__wrapper > *:nth-child(1) {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
   }
   .personal-account__wrapper > *:nth-child(2) {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-  }
-  .personal-account__wrapper > *:nth-child(3) {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
   }
-  .personal-account__wrapper > *:nth-child(4) {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
-  }
-  .personal-account__wrapper > *:nth-child(5) {
+  .personal-account__wrapper > *:nth-child(3) {
     -ms-grid-row: 5;
     -ms-grid-column: 1;
   }
+  .personal-account__wrapper > *:nth-child(4) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .personal-account__wrapper > *:nth-child(5) {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
   .personal-account__wrapper > *:nth-child(6) {
-    -ms-grid-row: 6;
+    -ms-grid-row: 11;
     -ms-grid-column: 1;
   }
   .personal-account__name {
