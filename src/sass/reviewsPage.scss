@@ -1,0 +1,19 @@
+@import "./style.scss";
+// ui
+@import "./ui/button";
+@import "./ui/input";
+@import "./ui/title";
+@import "./ui/product-card";
+@import "./ui/product-card-label";
+@import "./ui/text-info";
+// sections
+@import "./sections/header";
+@import "./sections/subheader";
+@import "./sections/breadcrumbs";
+@import "./sections/advertising";
+@import "./sections/catalog-menu";
+@import "./sections/bottom-menu";
+@import "./sections/reviews";
+@import "./sections/about-company-tabs";
+
+@import "./sections/recent";
