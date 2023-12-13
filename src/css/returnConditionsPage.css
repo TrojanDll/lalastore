@@ -1571,6 +1571,10 @@ legend {
     display: block;
   }
 }
+.catalog__title {
+  text-align: center;
+}
+
 .return-conditions__wrapper {
   padding: 70px 0;
   display: -webkit-box;

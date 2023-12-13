@@ -14,7 +14,7 @@
             <div class="header__element header__element-geo">г. Москва, Электролитный проезд 3Б стр 6</div><a class="header__element header__element-phone" href="tel:+79163613000">+7 916 361-30-00</a>
           </div>
           <nav class="header__elements">
-            <button class="header__element header__element-catalog">Каталог</button><a class="header__element header__element_active" href="./index.html">Главная</a><a class="header__element" href="#">Как купить</a><a class="header__element" href="#">Доставка</a><a class="header__element" href="#">О компании</a><a class="header__element" href="#">Мы в instagram</a><a class="header__element" href="#">Акции</a>
+            <button class="header__element header__element-catalog">Каталог</button><a class="header__element header__element_active" href="./index.html">Главная</a><a class="header__element" href="./how-to-buy-page.html">Как купить</a><a class="header__element" href="./delivery-terms-page.html">Доставка</a><a class="header__element" href="./about-company-page.html">О компании</a><a class="header__element" href="#">Мы в instagram</a><a class="header__element" href="#">Акции</a>
           </nav>
         </div>
       </div>
@@ -26,9 +26,9 @@
         <div class="container">
           <ul class="header__sidebar__pages"> 
             <li class="header__sidebar__pages__item header__sidebar__pages__item_active"><a href="./index.html">Главная</a></li>
-            <li class="header__sidebar__pages__item"><a href="#">Как купить</a></li>
-            <li class="header__sidebar__pages__item"><a href="#">Доставка</a></li>
-            <li class="header__sidebar__pages__item"><a href="#">О компании</a></li>
+            <li class="header__sidebar__pages__item"><a href="./how-to-buy-page.html">Как купить</a></li>
+            <li class="header__sidebar__pages__item"><a href="./delivery-terms-page.html">Доставка</a></li>
+            <li class="header__sidebar__pages__item"><a href="./about-company-page.html">О компании</a></li>
             <li class="header__sidebar__pages__item"><a href="#">Мы в instagram</a></li>
             <li class="header__sidebar__pages__item"><a href="#">Акции</a></li>
           </ul>
@@ -96,7 +96,7 @@
               <div class="header__item-bottom__text">Избранное</div>
             </div><a class="header__item-bottom" href="./shopping-cart-page.html"><img class="header__item-bottom__img header__item-bottom__img-bag header__item-bottom__img-bag_disabled" src="./assets/img/icons/bag.svg" alt="bag"><img class="header__item-bottom__img header__item-bottom__img-bag header__item-bottom__img-bag_active" src="./assets/img/icons/bag_active.svg" alt="bag" style="display: none">
               <div class="header__item-bottom__text">Корзина</div></a>
-            <div class="header__item-bottom"><img class="header__item-bottom__img header__item-bottom__img-profile" src="./assets/img/icons/profile.svg" alt="profile">
+            <div class="header__item-bottom" id="haveAnAccountButton"><img class="header__item-bottom__img header__item-bottom__img-profile" src="./assets/img/icons/profile.svg" alt="profile">
               <div class="header__item-bottom__text">Войти</div>
             </div>
           </div>
@@ -118,41 +118,21 @@
         <nav class="about-company-tabs__nav">
           <ul class="about-company-tabs__wrapper">
             <li class="about-company-tabs__tab">
-              <div class="about-company-tabs__text about-company-tabs__text_first">
-                <div class="about-company-tabs__p">О компании<img class="about-company-tabs__triangle" src="./assets/img/icons/treangle_dark.svg"></div>
-              </div>
+              <div class="about-company-tabs__text about-company-tabs__text_first"><a class="about-company-tabs__p" href="./about-company-page.html">О компании<img class="about-company-tabs__triangle" src="./assets/img/icons/treangle_dark.svg"></a></div>
               <ul class="about-company-tabs__sub-list">
-                <li class="about-company-tabs__sub-item">
-                  <div class="about-company-tabs__sub-text">Оплата и вовзрат</div>
-                </li>
-                <li class="about-company-tabs__sub-item">
-                  <div class="about-company-tabs__sub-text">Условия доставки</div>
-                </li>
-                <li class="about-company-tabs__sub-item">
-                  <div class="about-company-tabs__sub-text">Как купить</div>
-                </li>
+                <li class="about-company-tabs__sub-item"><a class="about-company-tabs__sub-text" href="./return-conditions-page.html">Оплата и вовзрат</a></li>
+                <li class="about-company-tabs__sub-item"><a class="about-company-tabs__sub-text" href="./delivery-terms-page.html">Условия доставки</a></li>
+                <li class="about-company-tabs__sub-item"><a class="about-company-tabs__sub-text" href="./how-to-buy-page.html">Как купить</a></li>
               </ul>
             </li>
-            <li class="about-company-tabs__tab">
-              <div class="about-company-tabs__text">
-                <div class="about-company-tabs__p">Новости</div>
-              </div>
-            </li>
-            <li class="about-company-tabs__tab">
-              <div class="about-company-tabs__text">
-                <div class="about-company-tabs__p">Отзывы</div>
-              </div>
-            </li>
-            <li class="about-company-tabs__tab">
-              <div class="about-company-tabs__text">
-                <div class="about-company-tabs__p">Контакты</div>
-              </div>
-            </li>
-            <li class="about-company-tabs__tab">
-              <div class="about-company-tabs__text">
-                <div class="about-company-tabs__p">Лицензии</div>
-              </div>
-            </li>
+            <li class="about-company-tabs__tab"><a class="about-company-tabs__text" href="./news-list-page.html">
+                <div class="about-company-tabs__p">Новости</div></a></li>
+            <li class="about-company-tabs__tab"><a class="about-company-tabs__text" href="./reviews-page.html">
+                <div class="about-company-tabs__p">Отзывы</div></a></li>
+            <li class="about-company-tabs__tab"><a class="about-company-tabs__text" href="./contact-info-page.html">
+                <div class="about-company-tabs__p">Контакты</div></a></li>
+            <li class="about-company-tabs__tab"><a class="about-company-tabs__text" href="./license-info-list-page.html">
+                <div class="about-company-tabs__p">Лицензии</div></a></li>
           </ul>
         </nav>
       </div>
@@ -192,17 +172,17 @@
         <div class="footer__wrapper"> 
           <div class="footer__links-wrapper">
             <ul class="footer__links">
-              <li> <a class="footer__links__item_active" href="#">Главная</a></li>
-              <li> <a href="#">Как купить</a></li>
-              <li> <a href="#">Доставка</a></li>
-              <li> <a href="#">О компании</a></li>
+              <li> <a class="footer__links__item_active" href="./index.html">Главная</a></li>
+              <li> <a href="./how-to-buy-page.html">Как купить</a></li>
+              <li> <a href="./delivery-terms-page.html">Доставка</a></li>
+              <li> <a href="./about-company-page.html">О компании</a></li>
               <li> <a href="#">Мы в instagram</a></li>
               <li> <a href="#">Акции</a></li>
-              <li> <a href="#">Как купить</a></li>
+              <li> <a href="./how-to-buy-page.html">Как купить</a></li>
             </ul>
             <ul class="footer__links">
-              <li> <a href="#">Как купить</a></li>
-              <li> <a href="#">Новости</a></li>
+              <li> <a href="./how-to-buy-page.html">Как купить</a></li>
+              <li> <a href="./news-list-page.html">Новости</a></li>
               <li> <a href="#">Отзывы</a></li>
               <li> <a href="#">Контакты</a></li>
               <li> <a href="#">Лицензии</a></li>
