@@ -2650,3 +2650,169 @@ legend {
     width: 100%;
   }
 }
+.authorization-modal__overflow {
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(44, 44, 44, 0.81);
+}
+.authorization-modal__overflow_active {
+  display: block;
+  visibility: visible;
+}
+
+.authorization-modal {
+  position: relative;
+  width: 798px;
+  height: 300px;
+  margin: 10vh auto 0;
+  padding: 30px 0 40px;
+  z-index: 99999;
+  background: #ffffff;
+  border-radius: 5px;
+  font-family: sans-serif;
+  top: 0;
+}
+.authorization-modal__close-btn {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 21px;
+  top: 21px;
+  background: url("./../assets/img/icons/close-btn.svg") center center/cover no-repeat;
+}
+.authorization-modal_active {
+  display: block;
+}
+.authorization-modal_active .registration-modal__overflow {
+  display: block;
+}
+.authorization-modal__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  width: 655px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
+}
+.authorization-modal__wrapper::-webkit-scrollbar {
+  width: 14px;
+}
+.authorization-modal__wrapper::-webkit-scrollbar-thumb {
+  background: #33394f;
+  border-radius: 13px;
+}
+.authorization-modal__wrapper::-webkit-scrollbar-track {
+  background: #7d808e;
+  border-radius: 13px;
+}
+.authorization-modal__title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+}
+.authorization-modal__form {
+  width: 493px;
+  margin: 0 auto;
+}
+.authorization-modal__form-wrapper {
+  background: #ffffff;
+  padding: 0;
+}
+.authorization-modal__form-popup-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 9px;
+}
+.authorization-modal__bold-underline {
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+.authorization-modal__haveAnAccoutn {
+  cursor: pointer;
+  margin-top: 10px;
+  text-decoration-line: underline;
+  margin-left: 58px;
+}
+.authorization-modal__input-text {
+  width: 100%;
+}
+.authorization-modal__form-item {
+  width: 100%;
+}
+.authorization-modal__form-item_email {
+  width: calc(50% - 5px);
+}
+.authorization-modal__form-item_password {
+  width: calc(50% - 5px);
+}
+.authorization-modal__form-item_authButton {
+  margin-top: 10px;
+  width: 286px;
+}
+.authorization-modal__form-item_offerCheck {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .authorization-modal {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .authorization-modal {
+    height: 378px;
+    padding: 30px 0;
+  }
+  .authorization-modal__wrapper {
+    width: 90%;
+    gap: 10px;
+  }
+  .authorization-modal__form {
+    width: 100%;
+  }
+  .authorization-modal__form-popup-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .authorization-modal__form-item_email {
+    width: 100%;
+  }
+  .authorization-modal__form-item_password {
+    width: 100%;
+  }
+  .authorization-modal__form-item_authButton {
+    width: 90%;
+  }
+  .authorization-modal__haveAnAccoutn {
+    margin: 0;
+  }
+  .form-item {
+    width: 100%;
+  }
+}

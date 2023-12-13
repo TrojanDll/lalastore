@@ -97,7 +97,7 @@
               <div class="header__item-bottom__text">Избранное</div>
             </div><a class="header__item-bottom" href="./shopping-cart-page.html"><img class="header__item-bottom__img header__item-bottom__img-bag header__item-bottom__img-bag_disabled" src="./assets/img/icons/bag.svg" alt="bag"><img class="header__item-bottom__img header__item-bottom__img-bag header__item-bottom__img-bag_active" src="./assets/img/icons/bag_active.svg" alt="bag" style="display: none">
               <div class="header__item-bottom__text">Корзина</div></a>
-            <div class="header__item-bottom" id="registrationModalOpenButton"><img class="header__item-bottom__img header__item-bottom__img-profile" src="./assets/img/icons/profile.svg" alt="profile">
+            <div class="header__item-bottom" id="haveAnAccountButton"><img class="header__item-bottom__img header__item-bottom__img-profile" src="./assets/img/icons/profile.svg" alt="profile">
               <div class="header__item-bottom__text">Войти</div>
             </div>
           </div>
@@ -464,6 +464,48 @@
         </div>
       </div>
     </div>
+    <div class="authorization-modal__overflow" id="authModal">
+      <div class="authorization-modal modal">
+        <button class="authorization-modal__close-btn close-btn" id="authModalCloseButton"></button>
+        <div class="authorization-modal__wrapper">
+          <p class="authorization-modal__title">Вход</p>
+          <form class="authorization-modal__form form">
+            <div class="form__wrapper authorization-modal__form-wrapper">
+              <div class="form__popup authorization-modal__form-popup-container">
+                <div class="form__item authorization-modal__form-item_email">
+                  <label class="form__input-label" for="emailAuth">Логин *</label>
+                  <input class="form__input-text registration-modal__input-text" name="emailAuth" id="emailAuth" value="" placeholder="ivanov@gmail.com">
+                </div>
+                <div class="form__item authorization-modal__form-item_password">
+                  <label class="form__input-label" for="passwordAuth">Пароль *</label>
+                  <input class="form__input-text registration-modal__input-text" name="passwordAuth" id="passwordAuth" value="" placeholder="******" type="password">
+                </div>
+                <div class="form__item form__item_radio authorization-modal__form-item_offerCheck">
+                  <input class="form__check-personal" type="checkbox" name="personalDataAuth" id="personalDataAuth">
+                  <label class="form__input-label form__input-label_small" for="personalDataAuth">Запомнить меня</label>
+                </div>
+                <button class="button form__buy-button authorization-modal__form-item_authButton">Войти</button>
+                <div class="form__item">
+                  <p class="authorization-modal__haveAnAccoutn" id="registrationModalOpenButton">Нет аккаунта?</p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      const buttonAuthModalOpen = document.querySelector('#haveAnAccountButton')
+      const authModal = document.querySelector('#authModal')
+      const authModalCloseButton = document.querySelector('#authModalCloseButton')
+      
+      buttonAuthModalOpen.addEventListener('click', () => {
+          authModal.classList.add('authorization-modal__overflow_active')
+      })
+      authModalCloseButton.addEventListener('click', () => {
+          authModal.classList.remove('authorization-modal__overflow_active')
+      })
+    </script>
     <div class="registration-modal__overflow" id="registrationModal">
       <div class="registration-modal modal">
         <button class="registration-modal__close-btn close-btn" id="registrationModalCloseButton"></button>
