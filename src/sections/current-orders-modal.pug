@@ -1,0 +1,57 @@
+#currentOrdersModal.current-orders-modal__overflow
+    .current-orders-modal.modal
+        button#currentOrdersModalCloseButton.current-orders-modal__close-btn.close-btn
+        .current-orders-modal__wrapper
+            p.current-orders-modal__title Текущие заказы
+            .current-orders-modal__tabs
+                .current-orders-modal__tab.current-orders-modal__text-underline Текущие заказы
+                .current-orders-modal__tab Отмененные заказы
+            form.current-orders-modal__form.form
+                .form__wrapper
+                    .form__header Заказы в статусе “Оплачен, формируется к отправке”
+                    img.form__button-popup.form__button-popup_open(src='./assets/img/icons/arrow.svg')
+                    .form__popup
+                        p.current-orders-modal__date Заказ выполнен 31.01.2022
+                        p.current-orders-modal__order-info Заказ #: 4844 от 31.01.2022 16:44:41, 2 товара на сумму 2 728,75р
+                        .profile-orders-change-modal__buttons-container
+                            button.button.form__buy-button.current-orders-modal__button-save подробнее о заказе
+                            button.button.form__buy-button.current-orders-modal__button-accept повторить заказ
+
+                .form__wrapper
+                    .form__header Заказы в статусе “Отправлен”
+                    img.form__button-popup.form__button-popup_open(src='./assets/img/icons/arrow.svg')
+                    .form__popup
+                        p.current-orders-modal__date Заказ выполнен 31.01.2022
+                        p.current-orders-modal__order-info Заказ #: 4844 от 31.01.2022 16:44:41, 2 товара на сумму 2 728,75р
+                        .profile-orders-change-modal__buttons-container
+                            button.button.form__buy-button.current-orders-modal__button-save подробнее о заказе
+                            button.button.form__buy-button.current-orders-modal__button-accept повторить заказ
+
+
+
+script.
+    const buttonCurrentOrdersModal = document.querySelector('#currentOrdersButton')
+    const modalCurrentOrdersModal = document.querySelector('#currentOrdersModal')
+    const currentOrdersModalCloseButton = document.querySelector('#currentOrdersModalCloseButton')
+
+    buttonCurrentOrdersModal.addEventListener('click', () => {
+        modalCurrentOrdersModal.classList.add('profile-orders-change-modal__overflow_active')
+    })
+    currentOrdersModalCloseButton.addEventListener('click', () => {
+        modalCurrentOrdersModal.classList.remove('profile-orders-change-modal__overflow_active')
+    })
+
+    const modalItems = document.querySelectorAll('.form__wrapper')
+    modalItems.forEach(item => {
+        const popupHandler = item.querySelector('.form__button-popup')
+        const formPopupContainer = item.querySelector('.form__popup')
+        popupHandler.addEventListener('click', () => {
+            if (popupHandler.classList.contains('form__button-popup_open')) {
+                popupHandler.classList.remove('form__button-popup_open')
+                formPopupContainer.classList.add('form__popup_close')
+            } else {
+                popupHandler.classList.add('form__button-popup_open')
+                formPopupContainer.classList.remove('form__popup_close')
+            }
+        })
+    })

@@ -115,12 +115,14 @@
         </div>
     <div class="personal-account">
       <div class="container">
-        <div class="personal-account__wrapper"><a class="personal-account__item personal-account__item_current-orders"><img class="personal-account__img" src="./assets/img/personal-account1.webp">
+        <div class="personal-account__wrapper">
+          <div class="personal-account__item personal-account__item_current-orders" id="currentOrdersButton"><img class="personal-account__img" src="./assets/img/personal-account1.webp">
             <p class="personal-account__name">
               Текущие
               заказы
             </p>
-            <div class="personal-account__gradient"></div></a><a class="personal-account__item personal-account__item_history-orders"><img class="personal-account__img" src="./assets/img/personal-account2.webp">
+            <div class="personal-account__gradient"></div>
+          </div><a class="personal-account__item personal-account__item_history-orders"><img class="personal-account__img" src="./assets/img/personal-account2.webp">
             <p class="personal-account__name">
               История
               заказов
@@ -332,7 +334,7 @@
           YourSubscriptionsModal.classList.remove('your-subscriptions-modal__overflow_active')
       })
     </script>
-    <div class="profile-orders-change-modal__overflow profile-orders-change-modal__overflow_active" id="profileOrdersChange">
+    <div class="profile-orders-change-modal__overflow profile-orders-change-modal__overflow" id="profileOrdersChange">
       <div class="profile-orders-change-modal modal">
         <button class="profile-orders-change-modal__close-btn close-btn" id="profileOrdersChangeCloseButton"></button>
         <div class="profile-orders-change-modal__wrapper">
@@ -400,6 +402,69 @@
       })
       modalProfileOrdersChangeCloseButton.addEventListener('click', () => {
           modalProfileOrdersChange.classList.remove('profile-orders-change-modal__overflow_active')
+      })
+      
+      const modalItems = document.querySelectorAll('.form__wrapper')
+      modalItems.forEach(item => {
+          const popupHandler = item.querySelector('.form__button-popup')
+          const formPopupContainer = item.querySelector('.form__popup')
+          popupHandler.addEventListener('click', () => {
+              if (popupHandler.classList.contains('form__button-popup_open')) {
+                  popupHandler.classList.remove('form__button-popup_open')
+                  formPopupContainer.classList.add('form__popup_close')
+              } else {
+                  popupHandler.classList.add('form__button-popup_open')
+                  formPopupContainer.classList.remove('form__popup_close')
+              }
+          })
+      })
+    </script>
+    <div class="current-orders-modal__overflow" id="currentOrdersModal">
+      <div class="current-orders-modal modal">
+        <button class="current-orders-modal__close-btn close-btn" id="currentOrdersModalCloseButton"></button>
+        <div class="current-orders-modal__wrapper">
+          <p class="current-orders-modal__title">Текущие заказы</p>
+          <div class="current-orders-modal__tabs">
+            <div class="current-orders-modal__tab current-orders-modal__text-underline">Текущие заказы</div>
+            <div class="current-orders-modal__tab">Отмененные заказы</div>
+          </div>
+          <form class="current-orders-modal__form form">
+            <div class="form__wrapper">
+              <div class="form__header">Заказы в статусе “Оплачен, формируется к отправке”</div><img class="form__button-popup form__button-popup_open" src="./assets/img/icons/arrow.svg">
+              <div class="form__popup">
+                <p class="current-orders-modal__date">Заказ выполнен 31.01.2022</p>
+                <p class="current-orders-modal__order-info">Заказ #: 4844 от 31.01.2022 16:44:41, 2 товара на сумму 2 728,75р</p>
+                <div class="profile-orders-change-modal__buttons-container">
+                  <button class="button form__buy-button current-orders-modal__button-save">подробнее о заказе</button>
+                  <button class="button form__buy-button current-orders-modal__button-accept">повторить заказ</button>
+                </div>
+              </div>
+            </div>
+            <div class="form__wrapper">
+              <div class="form__header">Заказы в статусе “Отправлен”</div><img class="form__button-popup form__button-popup_open" src="./assets/img/icons/arrow.svg">
+              <div class="form__popup">
+                <p class="current-orders-modal__date">Заказ выполнен 31.01.2022</p>
+                <p class="current-orders-modal__order-info">Заказ #: 4844 от 31.01.2022 16:44:41, 2 товара на сумму 2 728,75р</p>
+                <div class="profile-orders-change-modal__buttons-container">
+                  <button class="button form__buy-button current-orders-modal__button-save">подробнее о заказе</button>
+                  <button class="button form__buy-button current-orders-modal__button-accept">повторить заказ</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      const buttonCurrentOrdersModal = document.querySelector('#currentOrdersButton')
+      const modalCurrentOrdersModal = document.querySelector('#currentOrdersModal')
+      const currentOrdersModalCloseButton = document.querySelector('#currentOrdersModalCloseButton')
+      
+      buttonCurrentOrdersModal.addEventListener('click', () => {
+          modalCurrentOrdersModal.classList.add('profile-orders-change-modal__overflow_active')
+      })
+      currentOrdersModalCloseButton.addEventListener('click', () => {
+          modalCurrentOrdersModal.classList.remove('profile-orders-change-modal__overflow_active')
       })
       
       const modalItems = document.querySelectorAll('.form__wrapper')
