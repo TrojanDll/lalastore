@@ -1,0 +1,73 @@
+#profileOrdersChange.profile-orders-change-modal__overflow.profile-orders-change-modal__overflow_active
+    .profile-orders-change-modal.modal
+        button#profileOrdersChangeCloseButton.profile-orders-change-modal__close-btn.close-btn
+        .profile-orders-change-modal__wrapper
+            p.profile-orders-change-modal__title Редактировать
+            form.profile-orders-change-modal__form.form
+                .form__wrapper
+                    .form__header Профиль: 1
+                    img.form__button-popup.form__button-popup_open(src='./assets/img/icons/arrow.svg')
+                    .form__popup
+                        .form__comment Тип плательщика: Физическое лицо
+                        .form__item
+                            label.form__input-label(for='naming') Название *
+                            input.form__input-text(name='naming', id='naming', value='')
+                        .form__item
+                            label.form__input-label(for='fullName') Ф.И.О. *
+                            input.form__input-text(name='fullName', id='fullName', value='')
+                        .form__item
+                            label.form__input-label(for='email') E-Mail *
+                            input.form__input-text(name='email', id='email', value='')
+                        .form__item
+                            label.form__input-label(for='phone') Телефон *
+                            input.form__input-text(name='phone', id='phone', value='')
+
+                .form__wrapper
+                    .form__header Данные для доставки
+                    img.form__button-popup.form__button-popup_open(src='./assets/img/icons/arrow.svg')
+                    .form__popup
+                        .form__item
+                            label.form__input-label(for='index') Индекс *
+                            input.form__input-text(name='index', id='index', value='')
+                        .form__item
+                            label.form__input-label.profile-orders-change-modal__geoposition-dec(for='location') Местоположение *
+                            input.form__input-text(name='location', id='location', value='')
+                        .form__item
+                            label.form__input-label(for='city') Город*
+                            input.form__input-text(name='city', id='city', value='')
+                        .form__item
+                            label.form__input-label(for='address') Адрес доставки *
+                            input.form__input-text(name='address', id='address', value='')
+                        .profile-orders-change-modal__buttons-container
+                            button.button.form__buy-button.profile-orders-change-modal__button-save Сохранить
+                            button.button.form__buy-button.profile-orders-change-modal__button-accept Применить
+                            .profile-orders-change-modal__underline-text.profile-orders-change-modal__text-underline Отмена
+
+
+
+script.
+    const buttonProfileOrdersChangeOrder = document.querySelector('#profileOrdersChangeButton')
+    const modalProfileOrdersChange = document.querySelector('#profileOrdersChange')
+    const modalProfileOrdersChangeCloseButton = document.querySelector('#profileOrdersChangeCloseButton')
+
+    buttonProfileOrdersChangeOrder.addEventListener('click', () => {
+        modalProfileOrdersChange.classList.add('profile-orders-change-modal__overflow_active')
+    })
+    modalProfileOrdersChangeCloseButton.addEventListener('click', () => {
+        modalProfileOrdersChange.classList.remove('profile-orders-change-modal__overflow_active')
+    })
+
+    const modalItems = document.querySelectorAll('.form__wrapper')
+    modalItems.forEach(item => {
+        const popupHandler = item.querySelector('.form__button-popup')
+        const formPopupContainer = item.querySelector('.form__popup')
+        popupHandler.addEventListener('click', () => {
+            if (popupHandler.classList.contains('form__button-popup_open')) {
+                popupHandler.classList.remove('form__button-popup_open')
+                formPopupContainer.classList.add('form__popup_close')
+            } else {
+                popupHandler.classList.add('form__button-popup_open')
+                formPopupContainer.classList.remove('form__popup_close')
+            }
+        })
+    })

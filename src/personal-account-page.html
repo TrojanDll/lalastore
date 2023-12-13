@@ -137,12 +137,14 @@
               пароль
             </div>
             <div class="personal-account__gradient"></div>
-          </div><a class="personal-account__item"><img class="personal-account__img" src="./assets/img/personal-account5.webp">
+          </div>
+          <div class="personal-account__item" id="profileOrdersChangeButton"><img class="personal-account__img" src="./assets/img/personal-account5.webp">
             <div class="personal-account__name">
               Профиль
               заказов
             </div>
-            <div class="personal-account__gradient"></div></a>
+            <div class="personal-account__gradient"></div>
+          </div>
           <div class="personal-account__item" id="openYourSubscriptionsModal"><img class="personal-account__img" src="./assets/img/personal-account6.webp">
             <div class="personal-account__name">Подписки</div>
             <div class="personal-account__gradient"></div>
@@ -328,6 +330,91 @@
       })
       YourSubscriptionsModalCloseButton.addEventListener('click', () => {
           YourSubscriptionsModal.classList.remove('your-subscriptions-modal__overflow_active')
+      })
+    </script>
+    <div class="profile-orders-change-modal__overflow profile-orders-change-modal__overflow_active" id="profileOrdersChange">
+      <div class="profile-orders-change-modal modal">
+        <button class="profile-orders-change-modal__close-btn close-btn" id="profileOrdersChangeCloseButton"></button>
+        <div class="profile-orders-change-modal__wrapper">
+          <p class="profile-orders-change-modal__title">Редактировать</p>
+          <form class="profile-orders-change-modal__form form">
+            <div class="form__wrapper">
+              <div class="form__header">Профиль: 1</div><img class="form__button-popup form__button-popup_open" src="./assets/img/icons/arrow.svg">
+              <div class="form__popup">
+                <div class="form__comment">Тип плательщика: Физическое лицо</div>
+                <div class="form__item">
+                  <label class="form__input-label" for="naming">Название *</label>
+                  <input class="form__input-text" name="naming" id="naming" value="">
+                </div>
+                <div class="form__item">
+                  <label class="form__input-label" for="fullName">Ф.И.О. *</label>
+                  <input class="form__input-text" name="fullName" id="fullName" value="">
+                </div>
+                <div class="form__item">
+                  <label class="form__input-label" for="email">E-Mail *</label>
+                  <input class="form__input-text" name="email" id="email" value="">
+                </div>
+                <div class="form__item">
+                  <label class="form__input-label" for="phone">Телефон *</label>
+                  <input class="form__input-text" name="phone" id="phone" value="">
+                </div>
+              </div>
+            </div>
+            <div class="form__wrapper">
+              <div class="form__header">Данные для доставки</div><img class="form__button-popup form__button-popup_open" src="./assets/img/icons/arrow.svg">
+              <div class="form__popup">
+                <div class="form__item">
+                  <label class="form__input-label" for="index">Индекс *</label>
+                  <input class="form__input-text" name="index" id="index" value="">
+                </div>
+                <div class="form__item">
+                  <label class="form__input-label profile-orders-change-modal__geoposition-dec" for="location">Местоположение *</label>
+                  <input class="form__input-text" name="location" id="location" value="">
+                </div>
+                <div class="form__item">
+                  <label class="form__input-label" for="city">Город*</label>
+                  <input class="form__input-text" name="city" id="city" value="">
+                </div>
+                <div class="form__item">
+                  <label class="form__input-label" for="address">Адрес доставки *</label>
+                  <input class="form__input-text" name="address" id="address" value="">
+                </div>
+                <div class="profile-orders-change-modal__buttons-container">
+                  <button class="button form__buy-button profile-orders-change-modal__button-save">Сохранить</button>
+                  <button class="button form__buy-button profile-orders-change-modal__button-accept">Применить</button>
+                  <div class="profile-orders-change-modal__underline-text profile-orders-change-modal__text-underline">Отмена</div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      const buttonProfileOrdersChangeOrder = document.querySelector('#profileOrdersChangeButton')
+      const modalProfileOrdersChange = document.querySelector('#profileOrdersChange')
+      const modalProfileOrdersChangeCloseButton = document.querySelector('#profileOrdersChangeCloseButton')
+      
+      buttonProfileOrdersChangeOrder.addEventListener('click', () => {
+          modalProfileOrdersChange.classList.add('profile-orders-change-modal__overflow_active')
+      })
+      modalProfileOrdersChangeCloseButton.addEventListener('click', () => {
+          modalProfileOrdersChange.classList.remove('profile-orders-change-modal__overflow_active')
+      })
+      
+      const modalItems = document.querySelectorAll('.form__wrapper')
+      modalItems.forEach(item => {
+          const popupHandler = item.querySelector('.form__button-popup')
+          const formPopupContainer = item.querySelector('.form__popup')
+          popupHandler.addEventListener('click', () => {
+              if (popupHandler.classList.contains('form__button-popup_open')) {
+                  popupHandler.classList.remove('form__button-popup_open')
+                  formPopupContainer.classList.add('form__popup_close')
+              } else {
+                  popupHandler.classList.add('form__button-popup_open')
+                  formPopupContainer.classList.remove('form__popup_close')
+              }
+          })
       })
     </script>
     <script src="./js/search-logic.js"></script>

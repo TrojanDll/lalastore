@@ -1,0 +1,185 @@
+
+<div class="make-order-modal__overflow make-order-modal__overflow_active" id="makeOrder">
+  <div class="make-order-modal modal">
+    <button class="make-order-modal__close-btn close-btn" id="makeOrderCloseButton"></button>
+    <div class="make-order-modal__wrapper">
+      <p class="make-order-modal__title">Заполните поля для оформления заказа</p>
+      <form class="make-order-modal__form form">
+        <div class="form__wrapper">
+          <div class="form__header">Тип покупателя и регион доставки:</div><img class="form__button-popup form__button-popup_open" src="./assets/img/icons/arrow.svg"/>
+          <div class="form__popup">
+            <div class="form__comment">Выберите свой город в списке. Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город"</div>
+            <div class="form__item">
+              <label class="form__input-label" for="location">Местоположение *</label>
+              <input class="form__input-text" name="location" id="location" value=""/>
+            </div>
+            <div class="form__item">
+              <label class="form__input-label" for="index">Индекс *</label>
+              <input class="form__input-text" name="index" id="index" value=""/>
+            </div>
+          </div>
+        </div>
+        <div class="form__wrapper">
+          <div class="form__header">Способ оплаты:</div>
+          <!-- .form__button-popup_open--><img class="form__button-popup form__button-popup_open" src="./assets/img/icons/arrow.svg"/>
+          <!-- .form__popup_close для скрытия-->
+          <div class="form__popup">
+            <div class="form__comment">Наш менеджер свяжется с Вами и и сообщит данные для перевода</div>
+            <div class="form__item form__item_radio">
+              <input class="form__input-radio" type="radio" name="payment" id="masterCard" value="1"/>
+              <label class="form__input-label" for="masterCard">Оплата картами Visa/MasterCard на сайте</label>
+            </div>
+            <div class="form__item form__item_radio">
+              <input class="form__input-radio" type="radio" name="payment" id="cash" value="1"/>
+              <label class="form__input-label" for="cash">Наличные курьеру (при курьерской доставке по Москве)</label>
+            </div>
+            <div class="form__item form__item_radio">
+              <input class="form__input-radio" type="radio" name="payment" id="transfer" value="1"/>
+              <label class="form__input-label" for="transfer">Переводом на банковскую карту</label>
+            </div>
+            <div class="form__item form__item_radio">
+              <input class="form__input-radio" type="radio" name="payment" id="cashShowRoom" value="1"/>
+              <label class="form__input-label" for="cashShowRoom">Наличный расчет при самовывозе из шоу-рума</label>
+            </div>
+          </div>
+        </div>
+        <div class="form__wrapper shipment">
+          <div class="form__header">Доставка</div><img class="form__button-popup form__button-popup_open" src="./assets/img/icons/arrow.svg"/>
+          <div class="form__popup">
+            <div class="form__comment">Наш менеджер свяжется с Вами и и сообщит данные для перевода</div>
+            <div class="form__item form__item_radio">
+              <input class="form__input-radio" type="radio" name="shipment" id="officialPochtaRus" value="1"/>
+              <label class="form__input-label" for="officialPochtaRus">Официальный модуль Почты России (Доставка в отделение)</label>
+              <div class="form__price form__price_accent">Бесплатно</div>
+              <div class="form__description">
+                <div class="form__description__text">Самовывоз из отделения Почты России</div>
+              </div>
+            </div>
+            <div class="form__item form__item_radio">
+              <input class="form__input-radio" type="radio" name="shipment" id="courier" value="1"/>
+              <label class="form__input-label" for="courier">Доставка курьером</label>
+              <div class="form__price">370р</div>
+              <div class="form__description">
+                <div class="form__description__text">Курьером до двери (по Москве в пределах МКАД) – стоимость 370 рублей.</div>
+              </div>
+            </div>
+            <div class="form__item form__item_radio">
+              <input class="form__input-radio" type="radio" name="shipment" id="cdekSkladDver" value="1"/>
+              <label class="form__input-label" for="cdekSkladDver">Служба доставки СДЭК (Посылка склад-дверь)</label>
+              <div class="form__price">451р</div>
+              <div class="form__description">
+                <div class="form__description__text">1-1 дн. Наименование тарифа: Посылка склад-склад. Услуга экономичной доставки товаров по России для компаний, осуществляющих дистанционную торговлю</div>
+              </div>
+            </div>
+            <div class="form__item form__item_radio form__item__addon">
+              <input class="form__input-radio" type="checkbox" name="shipment" id="cdekSkladDverSave" value="1" checked="checked"/><img class="form__input-plus-mobile" src="./assets/img/icons/plus.svg"/>
+              <label class="form__input-label" for="cdekSkladDverSave">Страхование груза</label>
+              <div class="form__price">81р</div>
+              <div class="form__description">
+                <div class="form__description__text">Компания СДЭК может обеспечить страховую защиту всех видов грузов на время доставки</div>
+              </div>
+            </div>
+            <div class="form__item form__item_radio">
+              <input class="form__input-radio" type="radio" name="shipment" id="cdekSkladSklad" value="1"/>
+              <label class="form__input-label" for="cdekSkladSklad">Служба доставки СДЭК (Посылка склад-склад)</label>
+              <div class="form__price">0р</div>
+              <div class="form__description">
+                <div class="form__description__text">Самовывоз из отделения Почты России</div>
+              </div>
+            </div>
+            <div class="form__item form__item_radio">
+              <input class="form__input-radio" type="radio" name="shipment" id="cdekEconSkladDver" value="1"/>
+              <label class="form__input-label" for="cdekEconSkladDver">Служба доставки СДЭК (Экономичная посылка склад-дверь)</label>
+              <div class="form__price">0р</div>
+            </div>
+            <div class="form__item form__item_radio form__item__addon">
+              <input class="form__input-radio" type="checkbox" name="shipment" id="cdekEconSkladDverAddon" value="1"/><img class="form__input-plus-mobile form__input-plus-mobile_checked" src="./assets/img/icons/plus.svg"/>
+              <label class="form__input-label" for="cdekEconSkladDverAddon">Служба доставки СДЭК (Экономичная посылка склад-дверь)</label>
+              <div class="form__price">81р</div>
+              <div class="form__description">
+                <div class="form__description__text">Компания СДЭК может обеспечить страховую защиту всех видов грузов на время доставки. Услуга экономичной наземной доставки товаров по России для компаний, осуществляющих дистанционную торговлю. Услуга действует по направлениям из Москвы в подразделения СДЭК, находящиеся за Уралом и в Крым</div>
+              </div>
+            </div>
+            <div class="form__item form__item_radio">
+              <input class="form__input-radio" type="radio" name="shipment" id="selfPickup" value="1"/>
+              <label class="form__input-label" for="selfPickup">Самовывоз</label>
+              <div class="form__price">Бесплатно</div>
+              <div class="form__description">
+                <div class="form__description__text">Вы можете самостоятельно забрать заказ из нашего шоурума</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form__wrapper">
+          <div class="form__header">Покупатель:</div><img class="form__button-popup form__button-popup_open" src="./assets/img/icons/arrow.svg"/>
+          <div class="form__popup">
+            <div class="form__comment">Выберите свой город в списке. Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город"</div>
+            <div class="form__item">
+              <label class="form__input-label" for="fullName">Ф.И.О. *</label>
+              <input class="form__input-text" name="fullName" id="fullName" value=""/>
+            </div>
+            <div class="form__item">
+              <label class="form__input-label" for="email">E-Mail *</label>
+              <input class="form__input-text" name="email" id="email" value=""/>
+            </div>
+            <div class="form__item">
+              <label class="form__input-label" for="phone">Телефон *</label>
+              <input class="form__input-text" name="phone" id="phone" value=""/>
+            </div>
+            <div class="form__item">
+              <label class="form__input-label" for="address">Адрес доставки *</label>
+              <input class="form__input-text" name="address" id="address" value=""/>
+            </div>
+            <div class="form__item">
+              <label class="form__input-label" for="comment">Комментарии к заказу:</label>
+              <input class="form__input-text" name="comment" id="comment" value=""/>
+            </div>
+            <div class="form__item form__item_radio">
+              <input class="form__check-personal" type="checkbox" name="personalData" id="personalData"/>
+              <label class="form__input-label form__input-label_small" for="personalData">Я согласен на обработку персональных данных</label>
+            </div>
+            <button class="button form__buy-button">оформить заказ</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+  const buttonMakeOrder = document.querySelector('#makeOrderButton')
+  const modalMakeOrder = document.querySelector('#makeOrder')
+  const modalMakeOrderCloseButton = document.querySelector('#makeOrderCloseButton')
+  
+  buttonMakeOrder.addEventListener('click', () => {
+      modalMakeOrder.classList.add('make-order-modal__overflow_active')
+  })
+  modalMakeOrderCloseButton.addEventListener('click', () => {
+      modalMakeOrder.classList.remove('make-order-modal__overflow_active')
+  })
+  
+  
+  const addons = document.querySelectorAll('.form__item__addon')
+  addons.forEach((item) => {
+      const plusElement = item.querySelector('.form__input-plus-mobile')
+      plusElement.addEventListener('click', () => {
+          plusElement.classList.toggle('form__input-plus-mobile_checked')
+      })
+  
+  })
+  
+  
+  const modalItems = document.querySelectorAll('.form__wrapper')
+  modalItems.forEach(item => {
+      const popupHandler = item.querySelector('.form__button-popup')
+      const formPopupContainer = item.querySelector('.form__popup')
+      popupHandler.addEventListener('click', () => {
+          if (popupHandler.classList.contains('form__button-popup_open')) {
+              popupHandler.classList.remove('form__button-popup_open')
+              formPopupContainer.classList.add('form__popup_close')
+          } else {
+              popupHandler.classList.add('form__button-popup_open')
+              formPopupContainer.classList.remove('form__popup_close')
+          }
+      })
+  })
+</script>
