@@ -130,19 +130,22 @@
               Личные
               данные
             </p>
-            <div class="personal-account__gradient"></div></a><a class="personal-account__item"><img class="personal-account__img" src="./assets/img/personal-account4.webp">
+            <div class="personal-account__gradient"></div></a>
+          <div class="personal-account__item" id="openChangePasswordModal"><img class="personal-account__img" src="./assets/img/personal-account4.webp">
             <div class="personal-account__name">
               Сменить
               пароль
             </div>
-            <div class="personal-account__gradient"></div></a><a class="personal-account__item"><img class="personal-account__img" src="./assets/img/personal-account5.webp">
+            <div class="personal-account__gradient"></div>
+          </div><a class="personal-account__item"><img class="personal-account__img" src="./assets/img/personal-account5.webp">
             <div class="personal-account__name">
               Профиль
               заказов
             </div>
             <div class="personal-account__gradient"></div></a><a class="personal-account__item"><img class="personal-account__img" src="./assets/img/personal-account6.webp">
             <div class="personal-account__name">Подписки</div>
-            <div class="personal-account__gradient"></div></a></div>
+            <div class="personal-account__gradient"></div></a>
+        </div>
       </div>
     </div>
     <footer class="footer"> 
@@ -223,6 +226,46 @@
         </div>
       </div>
     </div>
+    <div class="change-password-modal__overflow" id="changePasswordModal">
+      <div class="change-password-modal modal">
+        <button class="change-password-modal__close-btn close-btn" id="changePasswordModalCloseButton"></button>
+        <div class="change-password-modal__wrapper">
+          <p class="change-password-modal__title">Профиль пользователя</p>
+          <p class="change-password-modal__comment">Длина пароля не менее 6 символов</p>
+          <form class="change-password-modal__form form">
+            <div class="form__wrapper change-password-modal__form-wrapper">
+              <div class="form__popup change-password-modal__form-popup-container">
+                <div class="form__item change-password-modal__form-item change-password-modal__form-item_FIO">
+                  <label class="form__input-label" for="fullName">Ф.И.О. *</label>
+                  <input class="form__input-text change-password-modal__input-text" name="fullName" id="fullName" value="" placeholder="Иванов Иван Иванович">
+                </div>
+                <div class="form__item change-password-modal__form-item change-password-modal__form-item_email">
+                  <label class="form__input-label" for="email">E-Mail *</label>
+                  <input class="form__input-text change-password-modal__input-text" name="email" id="email" value="" placeholder="ivanov@gmail.com">
+                </div>
+                <div class="form__item change-password-modal__form-item change-password-modal__form-item_phoneNumber">
+                  <label class="form__input-label" for="phone">Телефон *</label>
+                  <input class="form__input-text change-password-modal__input-text" name="phone" id="phone" value="" placeholder="+7 (xxx) xxx-xx-xx">
+                </div>
+                <button class="button form__buy-button change-password-modal__form-item_registrationButton">сохранить изменения</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      const buttonChangePasswordModalOpen = document.querySelector('#openChangePasswordModal')
+      const changePasswordModal = document.querySelector('#changePasswordModal')
+      const changePasswordModalCloseButton = document.querySelector('#changePasswordModalCloseButton')
+      
+      buttonChangePasswordModalOpen.addEventListener('click', () => {
+          changePasswordModal.classList.add('change-password-modal__overflow_active')
+      })
+      changePasswordModalCloseButton.addEventListener('click', () => {
+          changePasswordModal.classList.remove('change-password-modal__overflow_active')
+      })
+    </script>
     <script src="./js/search-logic.js"></script>
     <script src="./js/catalog-logic.js"></script>
     <script src="./js/catalog-item-menu-logic.js"></script>
