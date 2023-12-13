@@ -142,9 +142,11 @@
               Профиль
               заказов
             </div>
-            <div class="personal-account__gradient"></div></a><a class="personal-account__item"><img class="personal-account__img" src="./assets/img/personal-account6.webp">
-            <div class="personal-account__name">Подписки</div>
             <div class="personal-account__gradient"></div></a>
+          <div class="personal-account__item" id="openYourSubscriptionsModal"><img class="personal-account__img" src="./assets/img/personal-account6.webp">
+            <div class="personal-account__name">Подписки</div>
+            <div class="personal-account__gradient"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -236,16 +238,16 @@
             <div class="form__wrapper change-password-modal__form-wrapper">
               <div class="form__popup change-password-modal__form-popup-container">
                 <div class="form__item change-password-modal__form-item change-password-modal__form-item_FIO">
-                  <label class="form__input-label" for="fullName">Ф.И.О. *</label>
-                  <input class="form__input-text change-password-modal__input-text" name="fullName" id="fullName" value="" placeholder="Иванов Иван Иванович">
+                  <label class="form__input-label" for="fullNameChangePassword">Ф.И.О. *</label>
+                  <input class="form__input-text change-password-modal__input-text" name="fullNameChangePassword" id="fullNameChangePassword" value="" placeholder="Иванов Иван Иванович">
                 </div>
                 <div class="form__item change-password-modal__form-item change-password-modal__form-item_email">
-                  <label class="form__input-label" for="email">E-Mail *</label>
-                  <input class="form__input-text change-password-modal__input-text" name="email" id="email" value="" placeholder="ivanov@gmail.com">
+                  <label class="form__input-label" for="emailChangePassword">E-Mail *</label>
+                  <input class="form__input-text change-password-modal__input-text" name="emailChangePassword" id="emailChangePassword" value="" placeholder="ivanov@gmail.com">
                 </div>
                 <div class="form__item change-password-modal__form-item change-password-modal__form-item_phoneNumber">
-                  <label class="form__input-label" for="phone">Телефон *</label>
-                  <input class="form__input-text change-password-modal__input-text" name="phone" id="phone" value="" placeholder="+7 (xxx) xxx-xx-xx">
+                  <label class="form__input-label" for="phoneChangePassword">Телефон *</label>
+                  <input class="form__input-text change-password-modal__input-text" name="phoneChangePassword" id="phoneChangePassword" value="" placeholder="+7 (xxx) xxx-xx-xx">
                 </div>
                 <button class="button form__buy-button change-password-modal__form-item_registrationButton">сохранить изменения</button>
               </div>
@@ -264,6 +266,68 @@
       })
       changePasswordModalCloseButton.addEventListener('click', () => {
           changePasswordModal.classList.remove('change-password-modal__overflow_active')
+      })
+    </script>
+    <div class="your-subscriptions-modal__overflow" id="yourSubscriptionsModal">
+      <div class="your-subscriptions-modal modal">
+        <button class="your-subscriptions-modal__close-btn close-btn" id="yourSubscriptionsModalCloseButton"></button>
+        <div class="your-subscriptions-modal__wrapper">
+          <p class="your-subscriptions-modal__title">Ваши подписки</p>
+          <p class="your-subscriptions-modal__comment">Адрес подписки будет принадлежать пользователю:</p>
+          <form class="your-subscriptions-modal__form form">
+            <div class="form__wrapper your-subscriptions-modal__form-wrapper">
+              <div class="form__popup your-subscriptions-modal__form-popup-container">
+                <div class="form__item your-subscriptions-modal__form-item your-subscriptions-modal__form-item_FIO">
+                  <label class="form__input-label" for="fullName">Ваше имя</label>
+                  <input class="form__input-text your-subscriptions-modal__input-text" name="fullName" id="fullName" value="" placeholder="Иванов Иван Иванович">
+                </div>
+                <div class="form__item your-subscriptions-modal__form-item_email">
+                  <label class="form__input-label" for="email">Почта</label>
+                  <input class="form__input-text your-subscriptions-modal__input-text" name="email" id="email" value="" placeholder="ivanov@gmail.com">
+                </div>
+                <div class="form__item your-subscriptions-modal__form-item">После добавления или изменения адреса подписки вам будет выслан код подтверждения. Подписка будет не активной до ввода кода подтверждения.</div>
+                <div class="form__item your-subscriptions-modal__form-item_email">
+                  <div class="form__input-label">Предпочтительный формат</div>
+                  <div class="your-subscriptions-modal__checkbox-item">
+                    <input class="form__check-personal" type="checkbox" name="preferedFormatText" id="preferedFormatText">
+                    <label class="form__input-label form__input-label_small" for="preferedFormatText">Текст</label>
+                  </div>
+                  <div class="your-subscriptions-modal__checkbox-item">
+                    <input class="form__check-personal" type="checkbox" name="preferedFormatHTML" id="preferedFormatHTML">
+                    <label class="form__input-label form__input-label_small" for="preferedFormatHTML">HTML</label>
+                  </div>
+                </div>
+                <div class="form__item your-subscriptions-modal__form-item_email">
+                  <div class="form__input-label">Рубрики подписки*</div>
+                  <div class="your-subscriptions-modal__checkbox-item">
+                    <input class="form__check-personal" type="checkbox" name="rubricNews" id="rubricNews">
+                    <label class="form__input-label form__input-label_small" for="rubricNews">Новости магазина</label>
+                  </div>
+                </div>
+                <button class="button form__buy-button your-subscriptions-modal__form-item_registrationButton">подписаться</button>
+                <div class="form__item">
+                  <p class="your-subscriptions-modal__haveAnAccoutn">Сменить пользователя</p>
+                </div>
+                <div class="form__item form__item_radio your-subscriptions-modal__form-item_offerCheck">
+                  <input class="form__check-personal" type="checkbox" name="personalData" id="personalData">
+                  <label class="form__input-label form__input-label_small" for="personalData">Я согласен на обработку персональных данных</label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      const buttonYourSubscriptionsModalOpen = document.querySelector('#openYourSubscriptionsModal')
+      const YourSubscriptionsModal = document.querySelector('#yourSubscriptionsModal')
+      const YourSubscriptionsModalCloseButton = document.querySelector('#yourSubscriptionsModalCloseButton')
+      
+      buttonYourSubscriptionsModalOpen.addEventListener('click', () => {
+          YourSubscriptionsModal.classList.add('your-subscriptions-modal__overflow_active')
+      })
+      YourSubscriptionsModalCloseButton.addEventListener('click', () => {
+          YourSubscriptionsModal.classList.remove('your-subscriptions-modal__overflow_active')
       })
     </script>
     <script src="./js/search-logic.js"></script>
