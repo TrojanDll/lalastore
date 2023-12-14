@@ -19,14 +19,3 @@
                         .form__item
                             p.authorization-modal__haveAnAccoutn#registrationModalOpenButton Нет аккаунта?
 
-script.
-    const buttonAuthModalOpen = document.querySelector('#haveAnAccountButton')
-    const authModal = document.querySelector('#authModal')
-    const authModalCloseButton = document.querySelector('#authModalCloseButton')
-
-    buttonAuthModalOpen.addEventListener('click', () => {
-        authModal.classList.add('authorization-modal__overflow_active')
-    })
-    authModalCloseButton.addEventListener('click', () => {
-        authModal.classList.remove('authorization-modal__overflow_active')
-    })

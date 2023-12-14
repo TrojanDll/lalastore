@@ -40,7 +40,7 @@
                                 .profile-orders-modal__col.profile-orders-modal__col_last.profile-orders-modal__col_btn
                                     img.profile-orders-modal__delete(src="./assets/img/icons/close-btn-grey.svg")
                                     .profile-orders-modal__button-mobile.profile-orders-modal__delete_mobile Удалить
-                                    .profile-orders-modal__property.profile-orders-modal__button-mobile Изменить
+                                    .profile-orders-modal__property.profile-orders-modal__button-mobile.profileOrdersChangeButton Изменить
 
                             .profile-orders-modal__table-row
                                 .profile-orders-modal__col.profile-orders-modal__col_mobile Профиль: 1
@@ -64,7 +64,7 @@
                                 .profile-orders-modal__col.profile-orders-modal__col_last.profile-orders-modal__col_btn
                                     img.profile-orders-modal__delete(src="./assets/img/icons/close-btn-grey.svg")
                                     .profile-orders-modal__button-mobile.profile-orders-modal__delete_mobile Удалить
-                                    .profile-orders-modal__property.profile-orders-modal__button-mobile Изменить
+                                    .profile-orders-modal__property.profile-orders-modal__button-mobile.profileOrdersChangeButton Изменить
 
                             .profile-orders-modal__table-row
                                 .profile-orders-modal__col.profile-orders-modal__col_mobile Профиль: 1
@@ -88,7 +88,7 @@
                                 .profile-orders-modal__col.profile-orders-modal__col_last.profile-orders-modal__col_btn
                                     img.profile-orders-modal__delete(src="./assets/img/icons/close-btn-grey.svg")
                                     .profile-orders-modal__button-mobile.profile-orders-modal__delete_mobile Удалить
-                                    .profile-orders-modal__property.profile-orders-modal__button-mobile Изменить
+                                    .profile-orders-modal__property.profile-orders-modal__button-mobile.profileOrdersChangeButton Изменить
 
                             .profile-orders-modal__table-row
                                 .profile-orders-modal__col.profile-orders-modal__col_mobile Профиль: 1
@@ -112,7 +112,7 @@
                                 .profile-orders-modal__col.profile-orders-modal__col_last.profile-orders-modal__col_btn
                                     img.profile-orders-modal__delete(src="./assets/img/icons/close-btn-grey.svg")
                                     .profile-orders-modal__button-mobile.profile-orders-modal__delete_mobile Удалить
-                                    .profile-orders-modal__property.profile-orders-modal__button-mobile Изменить
+                                    .profile-orders-modal__property.profile-orders-modal__button-mobile.profileOrdersChangeButton Изменить
 
                             .profile-orders-modal__table-row
                                 .profile-orders-modal__col.profile-orders-modal__col_mobile Профиль: 1
@@ -136,7 +136,7 @@
                                 .profile-orders-modal__col.profile-orders-modal__col_last.profile-orders-modal__col_btn
                                     img.profile-orders-modal__delete(src="./assets/img/icons/close-btn-grey.svg")
                                     .profile-orders-modal__button-mobile.profile-orders-modal__delete_mobile Удалить
-                                    .profile-orders-modal__property.profile-orders-modal__button-mobile Изменить
+                                    .profile-orders-modal__property.profile-orders-modal__button-mobile.profileOrdersChangeButton Изменить
 
 
 
@@ -151,20 +151,5 @@ script.
     })
     profileOrdersModalCloseButton.addEventListener('click', () => {
         modalProfileOrdersModal.classList.remove('profile-orders-modal__overflow_active')
-    })
-
-    const modalItems = document.querySelectorAll('.form__wrapper')
-    modalItems.forEach(item => {
-        const popupHandler = item.querySelector('.form__button-popup')
-        const formPopupContainer = item.querySelector('.form__popup')
-        popupHandler.addEventListener('click', () => {
-            if (popupHandler.classList.contains('form__button-popup_open')) {
-                popupHandler.classList.remove('form__button-popup_open')
-                formPopupContainer.classList.add('form__popup_close')
-            } else {
-                popupHandler.classList.add('form__button-popup_open')
-                formPopupContainer.classList.remove('form__popup_close')
-            }
-        })
     })
 

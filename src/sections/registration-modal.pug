@@ -28,22 +28,8 @@
                         .registration-modal__captcha.registration-modal__form-item_captcha
                         button.button.form__buy-button.registration-modal__form-item_registrationButton зарегистрироваться
                         .form__item
-                            p.registration-modal__haveAnAccoutn Есть аккаунт?
+                            p#haveAnAccount.registration-modal__haveAnAccoutn Есть аккаунт?
                         .form__item.form__item_radio.registration-modal__form-item_offerCheck
                             input.form__check-personal(type="checkbox", name='personalData', id='personalData')
                             label.form__input-label.form__input-label_small(for='personalData') Я согласен на обработку персональных данных
-
-
-
-script.
-    const buttonRegistrationModalOpen = document.querySelector('#registrationModalOpenButton')
-    const RegistrationModal = document.querySelector('#registrationModal')
-    const RegistrationModalCloseButton = document.querySelector('#registrationModalCloseButton')
-
-    buttonRegistrationModalOpen.addEventListener('click', () => {
-        RegistrationModal.classList.add('registration-modal__overflow_active')
-    })
-    RegistrationModalCloseButton.addEventListener('click', () => {
-        RegistrationModal.classList.remove('registration-modal__overflow_active')
-    })
 

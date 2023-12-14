@@ -494,18 +494,6 @@
         </div>
       </div>
     </div>
-    <script>
-      const buttonAuthModalOpen = document.querySelector('#haveAnAccountButton')
-      const authModal = document.querySelector('#authModal')
-      const authModalCloseButton = document.querySelector('#authModalCloseButton')
-      
-      buttonAuthModalOpen.addEventListener('click', () => {
-          authModal.classList.add('authorization-modal__overflow_active')
-      })
-      authModalCloseButton.addEventListener('click', () => {
-          authModal.classList.remove('authorization-modal__overflow_active')
-      })
-    </script>
     <div class="registration-modal__overflow" id="registrationModal">
       <div class="registration-modal modal">
         <button class="registration-modal__close-btn close-btn" id="registrationModalCloseButton"></button>
@@ -542,7 +530,7 @@
                 <div class="registration-modal__captcha registration-modal__form-item_captcha"></div>
                 <button class="button form__buy-button registration-modal__form-item_registrationButton">зарегистрироваться</button>
                 <div class="form__item">
-                  <p class="registration-modal__haveAnAccoutn">Есть аккаунт?</p>
+                  <p class="registration-modal__haveAnAccoutn" id="haveAnAccount">Есть аккаунт?</p>
                 </div>
                 <div class="form__item form__item_radio registration-modal__form-item_offerCheck">
                   <input class="form__check-personal" type="checkbox" name="personalData" id="personalData">
@@ -554,24 +542,13 @@
         </div>
       </div>
     </div>
-    <script>
-      const buttonRegistrationModalOpen = document.querySelector('#registrationModalOpenButton')
-      const RegistrationModal = document.querySelector('#registrationModal')
-      const RegistrationModalCloseButton = document.querySelector('#registrationModalCloseButton')
-      
-      buttonRegistrationModalOpen.addEventListener('click', () => {
-          RegistrationModal.classList.add('registration-modal__overflow_active')
-      })
-      RegistrationModalCloseButton.addEventListener('click', () => {
-          RegistrationModal.classList.remove('registration-modal__overflow_active')
-      })
-    </script>
     <script src="./js/search-logic.js"></script>
     <script src="./js/catalog-logic.js"></script>
     <script src="./js/catalog-item-menu-logic.js"></script>
     <script src="./js/modals-logic.js"></script>
     <script src="./js/sidebar-logic.js"></script>
     <script src="./js/button-effect.js"></script>
+    <script src="./js/authorization-modal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       var swiper = new Swiper(".mySwiper", {

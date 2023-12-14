@@ -309,7 +309,7 @@
                     </div>
                     <div class="profile-orders-modal__col profile-orders-modal__col_last profile-orders-modal__col_btn"><img class="profile-orders-modal__delete" src="./assets/img/icons/close-btn-grey.svg">
                       <div class="profile-orders-modal__button-mobile profile-orders-modal__delete_mobile">Удалить</div>
-                      <div class="profile-orders-modal__property profile-orders-modal__button-mobile">Изменить</div>
+                      <div class="profile-orders-modal__property profile-orders-modal__button-mobile profileOrdersChangeButton">Изменить</div>
                     </div>
                   </div>
                   <div class="profile-orders-modal__table-row">
@@ -332,7 +332,7 @@
                     </div>
                     <div class="profile-orders-modal__col profile-orders-modal__col_last profile-orders-modal__col_btn"><img class="profile-orders-modal__delete" src="./assets/img/icons/close-btn-grey.svg">
                       <div class="profile-orders-modal__button-mobile profile-orders-modal__delete_mobile">Удалить</div>
-                      <div class="profile-orders-modal__property profile-orders-modal__button-mobile">Изменить</div>
+                      <div class="profile-orders-modal__property profile-orders-modal__button-mobile profileOrdersChangeButton">Изменить</div>
                     </div>
                   </div>
                   <div class="profile-orders-modal__table-row">
@@ -355,7 +355,7 @@
                     </div>
                     <div class="profile-orders-modal__col profile-orders-modal__col_last profile-orders-modal__col_btn"><img class="profile-orders-modal__delete" src="./assets/img/icons/close-btn-grey.svg">
                       <div class="profile-orders-modal__button-mobile profile-orders-modal__delete_mobile">Удалить</div>
-                      <div class="profile-orders-modal__property profile-orders-modal__button-mobile">Изменить</div>
+                      <div class="profile-orders-modal__property profile-orders-modal__button-mobile profileOrdersChangeButton">Изменить</div>
                     </div>
                   </div>
                   <div class="profile-orders-modal__table-row">
@@ -378,7 +378,7 @@
                     </div>
                     <div class="profile-orders-modal__col profile-orders-modal__col_last profile-orders-modal__col_btn"><img class="profile-orders-modal__delete" src="./assets/img/icons/close-btn-grey.svg">
                       <div class="profile-orders-modal__button-mobile profile-orders-modal__delete_mobile">Удалить</div>
-                      <div class="profile-orders-modal__property profile-orders-modal__button-mobile">Изменить</div>
+                      <div class="profile-orders-modal__property profile-orders-modal__button-mobile profileOrdersChangeButton">Изменить</div>
                     </div>
                   </div>
                   <div class="profile-orders-modal__table-row">
@@ -401,7 +401,7 @@
                     </div>
                     <div class="profile-orders-modal__col profile-orders-modal__col_last profile-orders-modal__col_btn"><img class="profile-orders-modal__delete" src="./assets/img/icons/close-btn-grey.svg">
                       <div class="profile-orders-modal__button-mobile profile-orders-modal__delete_mobile">Удалить</div>
-                      <div class="profile-orders-modal__property profile-orders-modal__button-mobile">Изменить</div>
+                      <div class="profile-orders-modal__property profile-orders-modal__button-mobile profileOrdersChangeButton">Изменить</div>
                     </div>
                   </div>
                 </div>
@@ -421,21 +421,6 @@
       })
       profileOrdersModalCloseButton.addEventListener('click', () => {
           modalProfileOrdersModal.classList.remove('profile-orders-modal__overflow_active')
-      })
-      
-      const modalItems = document.querySelectorAll('.form__wrapper')
-      modalItems.forEach(item => {
-          const popupHandler = item.querySelector('.form__button-popup')
-          const formPopupContainer = item.querySelector('.form__popup')
-          popupHandler.addEventListener('click', () => {
-              if (popupHandler.classList.contains('form__button-popup_open')) {
-                  popupHandler.classList.remove('form__button-popup_open')
-                  formPopupContainer.classList.add('form__popup_close')
-              } else {
-                  popupHandler.classList.add('form__button-popup_open')
-                  formPopupContainer.classList.remove('form__popup_close')
-              }
-          })
       })
     </script>
     <div class="your-subscriptions-modal__overflow" id="yourSubscriptionsModal">
@@ -500,6 +485,132 @@
           YourSubscriptionsModal.classList.remove('your-subscriptions-modal__overflow_active')
       })
     </script>
+    <div class="current-orders-modal__overflow" id="currentOrdersModal">
+      <div class="current-orders-modal modal">
+        <button class="current-orders-modal__close-btn close-btn" id="currentOrdersModalCloseButton"></button>
+        <div class="current-orders-modal__wrapper">
+          <p class="current-orders-modal__title">Текущие заказы</p>
+          <div class="current-orders-modal__tabs">
+            <div class="current-orders-modal__tab current-orders-modal__text-underline">Текущие заказы</div>
+            <div class="current-orders-modal__tab">Отмененные заказы</div>
+          </div>
+          <form class="current-orders-modal__form form">
+            <div class="form__wrapper">
+              <div class="form__header">Заказы в статусе “Оплачен, формируется к отправке”</div><img class="form__button-popup form__button-popup_open" src="./assets/img/icons/arrow.svg">
+              <div class="form__popup">
+                <p class="current-orders-modal__date">Заказ выполнен 31.01.2022</p>
+                <p class="current-orders-modal__order-info">Заказ #: 4844 от 31.01.2022 16:44:41, 2 товара на сумму 2 728,75р</p>
+                <div class="profile-orders-change-modal__buttons-container">
+                  <button class="button form__buy-button current-orders-modal__button-save">подробнее о заказе</button>
+                  <button class="button form__buy-button current-orders-modal__button-accept">повторить заказ</button>
+                </div>
+              </div>
+            </div>
+            <div class="form__wrapper">
+              <div class="form__header">Заказы в статусе “Отправлен”</div><img class="form__button-popup form__button-popup_open" src="./assets/img/icons/arrow.svg">
+              <div class="form__popup">
+                <p class="current-orders-modal__date">Заказ выполнен 31.01.2022</p>
+                <p class="current-orders-modal__order-info">Заказ #: 4844 от 31.01.2022 16:44:41, 2 товара на сумму 2 728,75р</p>
+                <div class="profile-orders-change-modal__buttons-container">
+                  <button class="button form__buy-button current-orders-modal__button-save">подробнее о заказе</button>
+                  <button class="button form__buy-button current-orders-modal__button-accept">повторить заказ</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      const buttonCurrentOrdersModal = document.querySelector('#currentOrdersButton')
+      const modalCurrentOrdersModal = document.querySelector('#currentOrdersModal')
+      const currentOrdersModalCloseButton = document.querySelector('#currentOrdersModalCloseButton')
+      
+      buttonCurrentOrdersModal.addEventListener('click', () => {
+          modalCurrentOrdersModal.classList.add('current-orders-modal__overflow_active')
+      })
+      currentOrdersModalCloseButton.addEventListener('click', () => {
+          modalCurrentOrdersModal.classList.remove('current-orders-modal__overflow_active')
+      })
+    </script>
+    <div class="authorization-modal__overflow" id="authModal">
+      <div class="authorization-modal modal">
+        <button class="authorization-modal__close-btn close-btn" id="authModalCloseButton"></button>
+        <div class="authorization-modal__wrapper">
+          <p class="authorization-modal__title">Вход</p>
+          <form class="authorization-modal__form form">
+            <div class="form__wrapper authorization-modal__form-wrapper">
+              <div class="form__popup authorization-modal__form-popup-container">
+                <div class="form__item authorization-modal__form-item_email">
+                  <label class="form__input-label" for="emailAuth">Логин *</label>
+                  <input class="form__input-text registration-modal__input-text" name="emailAuth" id="emailAuth" value="" placeholder="ivanov@gmail.com">
+                </div>
+                <div class="form__item authorization-modal__form-item_password">
+                  <label class="form__input-label" for="passwordAuth">Пароль *</label>
+                  <input class="form__input-text registration-modal__input-text" name="passwordAuth" id="passwordAuth" value="" placeholder="******" type="password">
+                </div>
+                <div class="form__item form__item_radio authorization-modal__form-item_offerCheck">
+                  <input class="form__check-personal" type="checkbox" name="personalDataAuth" id="personalDataAuth">
+                  <label class="form__input-label form__input-label_small" for="personalDataAuth">Запомнить меня</label>
+                </div>
+                <button class="button form__buy-button authorization-modal__form-item_authButton">Войти</button>
+                <div class="form__item">
+                  <p class="authorization-modal__haveAnAccoutn" id="registrationModalOpenButton">Нет аккаунта?</p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="registration-modal__overflow" id="registrationModal">
+      <div class="registration-modal modal">
+        <button class="registration-modal__close-btn close-btn" id="registrationModalCloseButton"></button>
+        <div class="registration-modal__wrapper">
+          <p class="registration-modal__title">Регистрация</p>
+          <p class="registration-modal__comment">Зарегистрируйтесь, чтобы использовать все возможности личного кабинета: отслеживание заказов, настройку подписки, связи с социальными сетями и другие. Мы никогда и ни при каких условиях не разглашаем личные данные клиентов. Контактная информация будет использована только для оформления заказов и более удобной работы с сайтом.</p>
+          <form class="registration-modal__form form">
+            <div class="form__wrapper registration-modal__form-wrapper">
+              <div class="form__popup registration-modal__form-popup-container">
+                <div class="form__item registration-modal__form-item registration-modal__form-item_FIO">
+                  <label class="form__input-label" for="fullName">Ф.И.О. *</label>
+                  <input class="form__input-text registration-modal__input-text" name="fullName" id="fullName" value="" placeholder="Иванов Иван Иванович">
+                </div>
+                <div class="form__item registration-modal__form-item_email">
+                  <label class="form__input-label" for="email">E-Mail *</label>
+                  <input class="form__input-text registration-modal__input-text" name="email" id="email" value="" placeholder="ivanov@gmail.com">
+                </div>
+                <div class="form__item registration-modal__form-item_phoneNumber">
+                  <label class="form__input-label" for="phone">Телефон *</label>
+                  <input class="form__input-text registration-modal__input-text" name="phone" id="phone" value="" placeholder="******" type="password">
+                </div>
+                <div class="form__item registration-modal__form-item_password">
+                  <label class="form__input-label" for="password">Пароль *</label>
+                  <input class="form__input-text registration-modal__input-text" name="password" id="password" value="" placeholder="******" type="password">
+                </div>
+                <div class="form__item registration-modal__form-item_passwordCheck">
+                  <label class="form__input-label" for="passwordCheck">Подтверждение пароля *</label>
+                  <input class="form__input-text registration-modal__input-text" name="passwordCheck" id="passwordCheck" value="" placeholder="+7 (xxx) xxx-xx-xx">
+                </div>
+                <div class="form__item registration-modal__form-item_code">
+                  <label class="form__input-label" for="Введите код">Введите код *</label>
+                  <input class="form__input-text registration-modal__input-text" name="Введите код" id="Введите код" value="" placeholder="XXXXXX">
+                </div>
+                <div class="registration-modal__captcha registration-modal__form-item_captcha"></div>
+                <button class="button form__buy-button registration-modal__form-item_registrationButton">зарегистрироваться</button>
+                <div class="form__item">
+                  <p class="registration-modal__haveAnAccoutn" id="haveAnAccount">Есть аккаунт?</p>
+                </div>
+                <div class="form__item form__item_radio registration-modal__form-item_offerCheck">
+                  <input class="form__check-personal" type="checkbox" name="personalData" id="personalData">
+                  <label class="form__input-label form__input-label_small" for="personalData">Я согласен на обработку персональных данных</label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <div class="profile-orders-change-modal__overflow profile-orders-change-modal__overflow" id="profileOrdersChange">
       <div class="profile-orders-change-modal modal">
         <button class="profile-orders-change-modal__close-btn close-btn" id="profileOrdersChangeCloseButton"></button>
@@ -559,93 +670,17 @@
       </div>
     </div>
     <script>
-      const buttonProfileOrdersChangeOrder = document.querySelector('#profileOrdersChangeButton')
+      const buttonProfileOrdersChangeOrder = document.querySelectorAll('.profileOrdersChangeButton')
       const modalProfileOrdersChange = document.querySelector('#profileOrdersChange')
       const modalProfileOrdersChangeCloseButton = document.querySelector('#profileOrdersChangeCloseButton')
       
-      buttonProfileOrdersChangeOrder.addEventListener('click', () => {
-          modalProfileOrdersChange.classList.add('profile-orders-change-modal__overflow_active')
+      buttonProfileOrdersChangeOrder.forEach(item => {
+          item.addEventListener('click', () => {
+              modalProfileOrdersChange.classList.add('profile-orders-change-modal__overflow_active')
+          })
       })
       modalProfileOrdersChangeCloseButton.addEventListener('click', () => {
           modalProfileOrdersChange.classList.remove('profile-orders-change-modal__overflow_active')
-      })
-      
-      const modalItems = document.querySelectorAll('.form__wrapper')
-      modalItems.forEach(item => {
-          const popupHandler = item.querySelector('.form__button-popup')
-          const formPopupContainer = item.querySelector('.form__popup')
-          popupHandler.addEventListener('click', () => {
-              if (popupHandler.classList.contains('form__button-popup_open')) {
-                  popupHandler.classList.remove('form__button-popup_open')
-                  formPopupContainer.classList.add('form__popup_close')
-              } else {
-                  popupHandler.classList.add('form__button-popup_open')
-                  formPopupContainer.classList.remove('form__popup_close')
-              }
-          })
-      })
-    </script>
-    <div class="current-orders-modal__overflow" id="currentOrdersModal">
-      <div class="current-orders-modal modal">
-        <button class="current-orders-modal__close-btn close-btn" id="currentOrdersModalCloseButton"></button>
-        <div class="current-orders-modal__wrapper">
-          <p class="current-orders-modal__title">Текущие заказы</p>
-          <div class="current-orders-modal__tabs">
-            <div class="current-orders-modal__tab current-orders-modal__text-underline">Текущие заказы</div>
-            <div class="current-orders-modal__tab">Отмененные заказы</div>
-          </div>
-          <form class="current-orders-modal__form form">
-            <div class="form__wrapper">
-              <div class="form__header">Заказы в статусе “Оплачен, формируется к отправке”</div><img class="form__button-popup form__button-popup_open" src="./assets/img/icons/arrow.svg">
-              <div class="form__popup">
-                <p class="current-orders-modal__date">Заказ выполнен 31.01.2022</p>
-                <p class="current-orders-modal__order-info">Заказ #: 4844 от 31.01.2022 16:44:41, 2 товара на сумму 2 728,75р</p>
-                <div class="profile-orders-change-modal__buttons-container">
-                  <button class="button form__buy-button current-orders-modal__button-save">подробнее о заказе</button>
-                  <button class="button form__buy-button current-orders-modal__button-accept">повторить заказ</button>
-                </div>
-              </div>
-            </div>
-            <div class="form__wrapper">
-              <div class="form__header">Заказы в статусе “Отправлен”</div><img class="form__button-popup form__button-popup_open" src="./assets/img/icons/arrow.svg">
-              <div class="form__popup">
-                <p class="current-orders-modal__date">Заказ выполнен 31.01.2022</p>
-                <p class="current-orders-modal__order-info">Заказ #: 4844 от 31.01.2022 16:44:41, 2 товара на сумму 2 728,75р</p>
-                <div class="profile-orders-change-modal__buttons-container">
-                  <button class="button form__buy-button current-orders-modal__button-save">подробнее о заказе</button>
-                  <button class="button form__buy-button current-orders-modal__button-accept">повторить заказ</button>
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <script>
-      const buttonCurrentOrdersModal = document.querySelector('#currentOrdersButton')
-      const modalCurrentOrdersModal = document.querySelector('#currentOrdersModal')
-      const currentOrdersModalCloseButton = document.querySelector('#currentOrdersModalCloseButton')
-      
-      buttonCurrentOrdersModal.addEventListener('click', () => {
-          modalCurrentOrdersModal.classList.add('profile-orders-change-modal__overflow_active')
-      })
-      currentOrdersModalCloseButton.addEventListener('click', () => {
-          modalCurrentOrdersModal.classList.remove('profile-orders-change-modal__overflow_active')
-      })
-      
-      const modalItems = document.querySelectorAll('.form__wrapper')
-      modalItems.forEach(item => {
-          const popupHandler = item.querySelector('.form__button-popup')
-          const formPopupContainer = item.querySelector('.form__popup')
-          popupHandler.addEventListener('click', () => {
-              if (popupHandler.classList.contains('form__button-popup_open')) {
-                  popupHandler.classList.remove('form__button-popup_open')
-                  formPopupContainer.classList.add('form__popup_close')
-              } else {
-                  popupHandler.classList.add('form__button-popup_open')
-                  formPopupContainer.classList.remove('form__popup_close')
-              }
-          })
       })
     </script>
     <script src="./js/search-logic.js"></script>
@@ -653,5 +688,7 @@
     <script src="./js/catalog-item-menu-logic.js"></script>
     <script src="./js/modals-logic.js"></script>
     <script src="./js/sidebar-logic.js"></script>
+    <script src="./js/popup-modals.js"></script>
+    <script src="./js/authorization-modal.js"></script>
   </body>
 </html>

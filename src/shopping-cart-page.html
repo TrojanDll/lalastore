@@ -596,6 +596,7 @@
       })
       
       
+      
       const addons = document.querySelectorAll('.form__item__addon')
       addons.forEach((item) => {
           const plusElement = item.querySelector('.form__input-plus-mobile')
@@ -604,28 +605,13 @@
           })
       
       })
-      
-      
-      const modalItems = document.querySelectorAll('.form__wrapper')
-      modalItems.forEach(item => {
-          const popupHandler = item.querySelector('.form__button-popup')
-          const formPopupContainer = item.querySelector('.form__popup')
-          popupHandler.addEventListener('click', () => {
-              if (popupHandler.classList.contains('form__button-popup_open')) {
-                  popupHandler.classList.remove('form__button-popup_open')
-                  formPopupContainer.classList.add('form__popup_close')
-              } else {
-                  popupHandler.classList.add('form__button-popup_open')
-                  formPopupContainer.classList.remove('form__popup_close')
-              }
-          })
-      })
     </script>
     <script src="./js/search-logic.js"></script>
     <script src="./js/catalog-logic.js"></script>
     <script src="./js/catalog-item-menu-logic.js"></script>
     <script src="./js/modals-logic.js"></script>
     <script src="./js/sidebar-logic.js"></script>
+    <script src="./js/popup-modals.js"></script>
     <script>
       let shoppingCartItems = document.querySelectorAll('.shopping-cart__item')
       shoppingCartItems.forEach((item) => {
