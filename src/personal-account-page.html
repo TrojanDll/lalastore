@@ -140,7 +140,7 @@
             </div>
             <div class="personal-account__gradient"></div>
           </div>
-          <div class="personal-account__item" id="profileOrdersChangeButton"><img class="personal-account__img" src="./assets/img/personal-account5.webp">
+          <div class="personal-account__item" id="profileOrdersButton"><img class="personal-account__img" src="./assets/img/personal-account5.webp">
             <div class="personal-account__name">
               Профиль
               заказов
@@ -270,6 +270,172 @@
       })
       changePasswordModalCloseButton.addEventListener('click', () => {
           changePasswordModal.classList.remove('change-password-modal__overflow_active')
+      })
+    </script>
+    <div class="profile-orders-modal__overflow" id="profileOrdersModal">
+      <div class="profile-orders-modal modal">
+        <button class="profile-orders-modal__close-btn close-btn" id="profileOrdersModalCloseButton"></button>
+        <div class="profile-orders-modal__wrapper">
+          <p class="profile-orders-modal__title">Профили пользователей</p>
+          <form class="profile-orders-modal__form form">
+            <div class="form__wrapper">
+              <div class="form__header">Профиль: 1</div><img class="form__button-popup form__button-popup_open" src="./assets/img/icons/arrow.svg">
+              <div class="form__popup">
+                <div class="profile-orders-modal__container">
+                  <div class="profile-orders-modal__table-row profile-orders-modal__table-row_header">
+                    <div class="profile-orders-modal__header-item">Код:</div>
+                    <div class="profile-orders-modal__header-item">Дата обновления:</div>
+                    <div class="profile-orders-modal__header-item">Название:</div>
+                    <div class="profile-orders-modal__header-item">Тип плательщика:</div>
+                    <div class="profile-orders-modal__header-item profile-orders-modal__col_last">Действия:</div>
+                  </div>
+                  <div class="profile-orders-modal__table-row">
+                    <div class="profile-orders-modal__col profile-orders-modal__col_mobile">Профиль: 1</div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_code">
+                      <div class="profile-orders-modal__name">Код:</div>
+                      <div class="profile-orders-modal__property">9</div>
+                    </div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_date">
+                      <div class="profile-orders-modal__name">Дата обновления:</div>
+                      <div class="profile-orders-modal__property">18/03/2022 16:48:15</div>
+                    </div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_name">
+                      <div class="profile-orders-modal__name">Название:</div>
+                      <div class="profile-orders-modal__property">А С И</div>
+                    </div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_type">
+                      <div class="profile-orders-modal__name">Тип плательщика:</div>
+                      <div class="profile-orders-modal__property">Физическое лицо</div>
+                    </div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_last profile-orders-modal__col_btn"><img class="profile-orders-modal__delete" src="./assets/img/icons/close-btn-grey.svg">
+                      <div class="profile-orders-modal__button-mobile profile-orders-modal__delete_mobile">Удалить</div>
+                      <div class="profile-orders-modal__property profile-orders-modal__button-mobile">Изменить</div>
+                    </div>
+                  </div>
+                  <div class="profile-orders-modal__table-row">
+                    <div class="profile-orders-modal__col profile-orders-modal__col_mobile">Профиль: 1</div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_code">
+                      <div class="profile-orders-modal__name">Код:</div>
+                      <div class="profile-orders-modal__property">9</div>
+                    </div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_date">
+                      <div class="profile-orders-modal__name">Дата обновления:</div>
+                      <div class="profile-orders-modal__property">18/03/2022 16:48:15</div>
+                    </div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_name">
+                      <div class="profile-orders-modal__name">Название:</div>
+                      <div class="profile-orders-modal__property">А С И</div>
+                    </div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_type">
+                      <div class="profile-orders-modal__name">Тип плательщика:</div>
+                      <div class="profile-orders-modal__property">Физическое лицо</div>
+                    </div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_last profile-orders-modal__col_btn"><img class="profile-orders-modal__delete" src="./assets/img/icons/close-btn-grey.svg">
+                      <div class="profile-orders-modal__button-mobile profile-orders-modal__delete_mobile">Удалить</div>
+                      <div class="profile-orders-modal__property profile-orders-modal__button-mobile">Изменить</div>
+                    </div>
+                  </div>
+                  <div class="profile-orders-modal__table-row">
+                    <div class="profile-orders-modal__col profile-orders-modal__col_mobile">Профиль: 1</div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_code">
+                      <div class="profile-orders-modal__name">Код:</div>
+                      <div class="profile-orders-modal__property">9</div>
+                    </div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_date">
+                      <div class="profile-orders-modal__name">Дата обновления:</div>
+                      <div class="profile-orders-modal__property">18/03/2022 16:48:15</div>
+                    </div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_name">
+                      <div class="profile-orders-modal__name">Название:</div>
+                      <div class="profile-orders-modal__property">А С И</div>
+                    </div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_type">
+                      <div class="profile-orders-modal__name">Тип плательщика:</div>
+                      <div class="profile-orders-modal__property">Физическое лицо</div>
+                    </div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_last profile-orders-modal__col_btn"><img class="profile-orders-modal__delete" src="./assets/img/icons/close-btn-grey.svg">
+                      <div class="profile-orders-modal__button-mobile profile-orders-modal__delete_mobile">Удалить</div>
+                      <div class="profile-orders-modal__property profile-orders-modal__button-mobile">Изменить</div>
+                    </div>
+                  </div>
+                  <div class="profile-orders-modal__table-row">
+                    <div class="profile-orders-modal__col profile-orders-modal__col_mobile">Профиль: 1</div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_code">
+                      <div class="profile-orders-modal__name">Код:</div>
+                      <div class="profile-orders-modal__property">9</div>
+                    </div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_date">
+                      <div class="profile-orders-modal__name">Дата обновления:</div>
+                      <div class="profile-orders-modal__property">18/03/2022 16:48:15</div>
+                    </div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_name">
+                      <div class="profile-orders-modal__name">Название:</div>
+                      <div class="profile-orders-modal__property">А С И</div>
+                    </div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_type">
+                      <div class="profile-orders-modal__name">Тип плательщика:</div>
+                      <div class="profile-orders-modal__property">Физическое лицо</div>
+                    </div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_last profile-orders-modal__col_btn"><img class="profile-orders-modal__delete" src="./assets/img/icons/close-btn-grey.svg">
+                      <div class="profile-orders-modal__button-mobile profile-orders-modal__delete_mobile">Удалить</div>
+                      <div class="profile-orders-modal__property profile-orders-modal__button-mobile">Изменить</div>
+                    </div>
+                  </div>
+                  <div class="profile-orders-modal__table-row">
+                    <div class="profile-orders-modal__col profile-orders-modal__col_mobile">Профиль: 1</div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_code">
+                      <div class="profile-orders-modal__name">Код:</div>
+                      <div class="profile-orders-modal__property">9</div>
+                    </div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_date">
+                      <div class="profile-orders-modal__name">Дата обновления:</div>
+                      <div class="profile-orders-modal__property">18/03/2022 16:48:15</div>
+                    </div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_name">
+                      <div class="profile-orders-modal__name">Название:</div>
+                      <div class="profile-orders-modal__property">А С И</div>
+                    </div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_type">
+                      <div class="profile-orders-modal__name">Тип плательщика:</div>
+                      <div class="profile-orders-modal__property">Физическое лицо</div>
+                    </div>
+                    <div class="profile-orders-modal__col profile-orders-modal__col_last profile-orders-modal__col_btn"><img class="profile-orders-modal__delete" src="./assets/img/icons/close-btn-grey.svg">
+                      <div class="profile-orders-modal__button-mobile profile-orders-modal__delete_mobile">Удалить</div>
+                      <div class="profile-orders-modal__property profile-orders-modal__button-mobile">Изменить</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      const buttonProfileOrdersModal = document.querySelector('#profileOrdersButton')
+      const modalProfileOrdersModal = document.querySelector('#profileOrdersModal')
+      const profileOrdersModalCloseButton = document.querySelector('#profileOrdersModalCloseButton')
+      
+      buttonProfileOrdersModal.addEventListener('click', () => {
+          modalProfileOrdersModal.classList.add('profile-orders-modal__overflow_active')
+      })
+      profileOrdersModalCloseButton.addEventListener('click', () => {
+          modalProfileOrdersModal.classList.remove('profile-orders-modal__overflow_active')
+      })
+      
+      const modalItems = document.querySelectorAll('.form__wrapper')
+      modalItems.forEach(item => {
+          const popupHandler = item.querySelector('.form__button-popup')
+          const formPopupContainer = item.querySelector('.form__popup')
+          popupHandler.addEventListener('click', () => {
+              if (popupHandler.classList.contains('form__button-popup_open')) {
+                  popupHandler.classList.remove('form__button-popup_open')
+                  formPopupContainer.classList.add('form__popup_close')
+              } else {
+                  popupHandler.classList.add('form__button-popup_open')
+                  formPopupContainer.classList.remove('form__popup_close')
+              }
+          })
       })
     </script>
     <div class="your-subscriptions-modal__overflow" id="yourSubscriptionsModal">

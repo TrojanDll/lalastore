@@ -2743,6 +2743,361 @@ legend {
     width: 0;
   }
 }
+.profile-orders-modal__overflow {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(44, 44, 44, 0.81);
+}
+.profile-orders-modal__overflow_active {
+  display: block;
+}
+
+.profile-orders-modal {
+  position: relative;
+  width: 82vw;
+  height: 68vh;
+  margin: 10vh auto 0;
+  padding: 0;
+  z-index: 99999;
+  background: #ffffff;
+  border-radius: 5px;
+  font-family: sans-serif;
+  top: 0;
+}
+.profile-orders-modal__close-btn {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 21px;
+  top: 21px;
+  background: url("./../assets/img/icons/close-btn.svg") center center/cover no-repeat;
+}
+.profile-orders-modal_active {
+  display: block;
+}
+.profile-orders-modal_active .profile-orders-modal__overflow {
+  display: block;
+}
+.profile-orders-modal__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 35px;
+  width: 1184px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 40px 0 10px;
+  overflow-x: hidden;
+}
+.profile-orders-modal__wrapper::-webkit-scrollbar {
+  width: 14px;
+}
+.profile-orders-modal__wrapper::-webkit-scrollbar-thumb {
+  background: #33394f;
+  border-radius: 13px;
+}
+.profile-orders-modal__wrapper::-webkit-scrollbar-track {
+  background: #7d808e;
+  border-radius: 13px;
+}
+.profile-orders-modal__wrapper .form__popup {
+  padding-top: 30px;
+}
+.profile-orders-modal__wrapper .form__header {
+  width: auto;
+}
+.profile-orders-modal__title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+}
+.profile-orders-modal__buttons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 25px;
+  margin-top: 9px;
+}
+.profile-orders-modal__buttons-container .form__buy-button {
+  margin-top: 0;
+}
+.profile-orders-modal__button-save {
+  width: 286px;
+}
+.profile-orders-modal__button-accept {
+  width: 230px;
+  padding: 0;
+  background: #33394F;
+}
+.profile-orders-modal__text-underline {
+  text-decoration: underline;
+}
+.profile-orders-modal__date {
+  position: absolute;
+  right: 30px;
+  color: #818492;
+}
+.profile-orders-modal__order-info {
+  color: #818492;
+}
+.profile-orders-modal__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 95%;
+}
+.profile-orders-modal__table-row {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(25px, 0.5fr) minmax(123px, 2fr) minmax(70px, 2fr) minmax(125px, 2fr) minmax(68px, 1fr);
+  grid-template-columns: minmax(25px, 0.5fr) minmax(123px, 2fr) minmax(70px, 2fr) minmax(125px, 2fr) minmax(68px, 1fr);
+  padding: 10px 0;
+  border-bottom: 1px solid #DEDFE1;
+}
+.profile-orders-modal__table-row_header {
+  padding-bottom: 25px;
+}
+.profile-orders-modal__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.profile-orders-modal__header-item {
+  color: #B3B7CB;
+}
+.profile-orders-modal__col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.profile-orders-modal__col_last {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+.profile-orders-modal__name {
+  display: none;
+}
+.profile-orders-modal__property {
+  color: #818492;
+}
+.profile-orders-modal__delete {
+  position: absolute;
+  top: 14px;
+  right: -25px;
+  width: 12px;
+  height: 12px;
+}
+.profile-orders-modal__delete_mobile {
+  display: none;
+}
+.profile-orders-modal__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.profile-orders-modal__col_mobile {
+  display: none;
+}
+
+@media (max-width: 1540px) {
+  .profile-orders-modal {
+    width: 1180px;
+  }
+  .profile-orders-modal__wrapper {
+    padding: 20px 0;
+    width: 1135px;
+  }
+}
+@media (max-width: 1200px) {
+  .profile-orders-modal {
+    width: 95vw;
+    height: 90vh;
+    margin: 60px auto 0;
+    padding: 45px 0;
+  }
+  .profile-orders-modal__wrapper {
+    width: 95%;
+    height: 100%;
+    padding: 0;
+  }
+  .profile-orders-modal__title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 992px) {
+  .profile-orders-modal__date {
+    position: static;
+  }
+}
+@media (max-width: 768px) {
+  .profile-orders-modal {
+    width: 500px;
+    margin-top: 20px;
+    padding: 35px 0 30px;
+    height: 90vh;
+  }
+  .profile-orders-modal__wrapper {
+    height: 100%;
+    gap: 15px;
+  }
+  .profile-orders-modal__wrapper .form__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .profile-orders-modal__wrapper .form__popup {
+    padding-top: 0;
+  }
+  .profile-orders-modal__wrapper .form__header {
+    display: none;
+  }
+  .profile-orders-modal__container {
+    max-width: 480px;
+    min-width: 335px;
+  }
+  .profile-orders-modal__form {
+    margin-top: 10px;
+  }
+  .profile-orders-modal__close-btn {
+    top: 15px;
+    right: 15px;
+  }
+  .profile-orders-modal__table-row {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+    -ms-grid-rows: auto 5px auto 5px auto 5px auto 5px auto 5px auto;
+        grid-template-areas: "title title" "name name" "code code" "date date" "type type" "btn btn";
+    gap: 5px;
+  }
+  .profile-orders-modal__col {
+    gap: 10px;
+  }
+  .profile-orders-modal__col_name {
+    grid-area: name;
+  }
+  .profile-orders-modal__col_code {
+    grid-area: code;
+  }
+  .profile-orders-modal__col_date {
+    grid-area: date;
+  }
+  .profile-orders-modal__col_type {
+    grid-area: type;
+  }
+  .profile-orders-modal__col_btn {
+    margin-top: 10px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    grid-area: btn;
+  }
+  .profile-orders-modal__col_mobile {
+    display: block;
+    grid-area: title;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 29px;
+  }
+  .profile-orders-modal__table-row_header {
+    display: none;
+  }
+  .profile-orders-modal__name {
+    display: block;
+    color: #B3B7CB;
+    font-size: 16px;
+  }
+  .profile-orders-modal__delete {
+    display: none;
+  }
+  .profile-orders-modal__button-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 115px;
+    height: 29px;
+    border-radius: 22.5px;
+    background: #F7D05E;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+  }
+  .profile-orders-modal__col_last {
+    -ms-grid-column-align: auto;
+        justify-self: auto;
+  }
+}
+@media (max-width: 768px){
+  .profile-orders-modal__col_name {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .profile-orders-modal__col_code {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .profile-orders-modal__col_date {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .profile-orders-modal__col_type {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .profile-orders-modal__col_btn {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .profile-orders-modal__col_mobile {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+}
+@media (max-width: 576px) {
+  .profile-orders-modal {
+    width: 95vw;
+  }
+  .profile-orders-modal__date {
+    color: #B3B7CB;
+  }
+  .profile-orders-modal__wrapper::-webkit-scrollbar {
+    width: 0;
+  }
+}
 .recent {
   padding-top: 35px;
   padding-bottom: 60px;

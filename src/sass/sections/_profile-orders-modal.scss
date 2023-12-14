@@ -1,0 +1,326 @@
+.profile-orders-modal__overflow {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(44, 44, 44, 0.81);
+
+  &_active {
+    display: block;
+  }
+}
+.profile-orders-modal {
+  position: relative;
+  width: 82vw;
+  height: 68vh;
+  margin: 10vh auto 0;
+  padding: 0;
+  z-index: 99999;
+  background: #ffffff;
+  border-radius: 5px;
+  font-family: sans-serif;
+  top: 0;
+
+  &__close-btn {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 21px;
+    top: 21px;
+    background: url('./../assets/img/icons/close-btn.svg') center center/cover
+    no-repeat;
+  }
+  &_active {
+    display: block;
+
+    .profile-orders-modal__overflow {
+      display: block;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 1184px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 40px 0 10px;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      width: 14px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #33394f;
+      border-radius: 13px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #7d808e;
+      border-radius: 13px;
+    }
+
+    .form__popup {
+      padding-top: 30px;
+    }
+    .form__header {
+      width: auto;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+  }
+  &__form {
+  }
+  &__buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 9px;
+
+    .form__buy-button {
+      margin-top: 0;
+    }
+  }
+  &__button-save {
+    width: 286px;
+  }
+  &__button-accept {
+    width: 230px;
+    padding: 0;
+    background: #33394F;
+  }
+  &__text-underline {
+    text-decoration: underline;
+  }
+  &__date {
+    position: absolute;
+    right: 30px;
+    color: #818492;
+  }
+  &__order-info {
+
+    color: #818492;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+  }
+  &__table-row {
+    position: relative;
+    display: grid;
+    grid-template-columns:
+      minmax(25px, 0.5fr)
+      minmax(123px, 2fr)
+      minmax(70px, 2fr)
+      minmax(125px, 2fr)
+      minmax(68px, 1fr);
+    padding: 10px 0;
+    border-bottom: 1px solid #DEDFE1;
+    &_header {
+      padding-bottom: 25px;
+    }
+  }
+  &__header {
+    display: flex;
+  }
+  &__header-item {
+    color: #B3B7CB;
+  }
+  &__col {
+    display: flex;
+
+    &_last {
+      justify-self: end;
+    }
+  }
+  &__name {
+    display: none;
+  }
+  &__property {
+    color: #818492;
+  }
+  &__delete {
+    position: absolute;
+    top: 14px;
+    right: -25px;
+    width: 12px;
+    height: 12px;
+  }
+  &__delete_mobile {
+    display: none;
+  }
+  &__item {
+    display: flex;
+
+  }
+
+  &__col_mobile {
+    display: none;
+  }
+}
+
+
+@media (max-width: 1540px) {
+  .profile-orders-modal {
+    width: 1180px;
+  }
+  .profile-orders-modal__wrapper {
+    padding: 20px 0;
+    width: 1135px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .profile-orders-modal {
+    width: 95vw;
+    height: 90vh;
+    margin: 60px auto 0;
+    padding: 45px 0;
+  }
+  .profile-orders-modal__wrapper {
+    width: 95%;
+    height: 100%;
+    padding: 0;
+  }
+  .profile-orders-modal__title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .profile-orders-modal__date {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-orders-modal {
+    width: 500px;
+    margin-top: 20px;
+    padding: 35px 0 30px;
+    height: 90vh;
+  }
+  .profile-orders-modal__wrapper {
+    height: 100%;
+    gap: 15px;
+
+
+    .form__wrapper {
+      display: flex;
+      align-items: center;
+    }
+    .form__popup {
+      padding-top: 0;
+    }
+    .form__header {
+      display: none;
+    }
+  }
+  .profile-orders-modal__container {
+    max-width: 480px;
+    min-width: 335px;
+  }
+  .profile-orders-modal__form {
+    margin-top: 10px;
+  }
+  .profile-orders-modal__close-btn {
+    top: 15px;
+    right: 15px;
+  }
+  .profile-orders-modal__table-row {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:  'title title'
+                          'name name'
+                          'code code'
+                          'date date'
+                          'type type'
+                          'btn btn'
+  ;
+    gap: 5px;
+  }
+  .profile-orders-modal__col {
+    gap: 10px;
+    &_name {
+      grid-area: name;
+    }
+    &_code {
+      grid-area: code;
+    }
+    &_date {
+      grid-area: date;
+    }
+    &_type {
+      grid-area: type;
+    }
+    &_btn {
+      margin-top: 10px;
+      justify-content: space-between;
+      grid-area: btn;
+    }
+  }
+  .profile-orders-modal__col_mobile {
+    display: block;
+    grid-area: title;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 29px;
+  }
+  .profile-orders-modal__table-row_header {
+    display: none;
+  }
+  .profile-orders-modal__name {
+    display: block;
+    color: #B3B7CB;
+    font-size: 16px;
+  }
+  .profile-orders-modal__delete {
+    display: none;
+  }
+  .profile-orders-modal__button-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 115px;
+    height: 29px;
+    border-radius: 22.5px;
+    background: #F7D05E;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+  }
+  .profile-orders-modal__delete_mobile {
+  }
+  .profile-orders-modal__col_last {
+    justify-self: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-orders-modal {
+    width: 95vw;
+
+    &__date {
+      color: #B3B7CB;
+    }
+
+    &__wrapper {
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+}
+@media (max-width: 400px) {
+}
