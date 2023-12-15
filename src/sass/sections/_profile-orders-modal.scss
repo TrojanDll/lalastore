@@ -17,7 +17,7 @@
   width: 82vw;
   height: 68vh;
   margin: 10vh auto 0;
-  padding: 0;
+  padding: 40px 0;
   z-index: 99999;
   background: #ffffff;
   border-radius: 5px;
@@ -47,7 +47,6 @@
     width: 1184px;
     height: 100%;
     margin: 0 auto;
-    padding: 40px 0 10px;
     overflow-x: hidden;
 
     &::-webkit-scrollbar {
@@ -152,6 +151,7 @@
     right: -25px;
     width: 12px;
     height: 12px;
+    cursor: pointer;
   }
   &__delete_mobile {
     display: none;
@@ -163,6 +163,10 @@
 
   &__col_mobile {
     display: none;
+  }
+
+  .profileOrdersChangeButton {
+    cursor: pointer;
   }
 }
 

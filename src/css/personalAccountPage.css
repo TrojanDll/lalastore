@@ -2309,6 +2309,7 @@ legend {
           text-decoration-skip-ink: none;
 }
 .your-subscriptions-modal__haveAnAccoutn {
+  cursor: pointer;
   margin-top: 21px;
   text-decoration-line: underline;
 }
@@ -2483,6 +2484,7 @@ legend {
   background: #33394F;
 }
 .profile-orders-change-modal__text-underline {
+  cursor: pointer;
   text-decoration: underline;
 }
 .profile-orders-change-modal__geoposition-dec::after {
@@ -2566,7 +2568,7 @@ legend {
   width: 82vw;
   height: 68vh;
   margin: 10vh auto 0;
-  padding: 0;
+  padding: 40px 0;
   z-index: 99999;
   background: #ffffff;
   border-radius: 5px;
@@ -2656,6 +2658,9 @@ legend {
       -ms-grid-row-align: center;
       align-self: center;
   gap: 40px;
+}
+.current-orders-modal__tab {
+  cursor: pointer;
 }
 .current-orders-modal__date {
   position: absolute;
@@ -2762,7 +2767,7 @@ legend {
   width: 82vw;
   height: 68vh;
   margin: 10vh auto 0;
-  padding: 0;
+  padding: 40px 0;
   z-index: 99999;
   background: #ffffff;
   border-radius: 5px;
@@ -2795,7 +2800,6 @@ legend {
   width: 1184px;
   height: 100%;
   margin: 0 auto;
-  padding: 40px 0 10px;
   overflow-x: hidden;
 }
 .profile-orders-modal__wrapper::-webkit-scrollbar {
@@ -2903,6 +2907,7 @@ legend {
   right: -25px;
   width: 12px;
   height: 12px;
+  cursor: pointer;
 }
 .profile-orders-modal__delete_mobile {
   display: none;
@@ -2914,6 +2919,9 @@ legend {
 }
 .profile-orders-modal__col_mobile {
   display: none;
+}
+.profile-orders-modal .profileOrdersChangeButton {
+  cursor: pointer;
 }
 
 @media (max-width: 1540px) {
@@ -3214,6 +3222,9 @@ legend {
   text-decoration: underline;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
+}
+.registration-modal .registration-modal__haveAnAccoutn {
+  cursor: pointer;
 }
 .registration-modal__haveAnAccoutn {
   text-decoration-line: underline;

@@ -17,7 +17,7 @@
   width: 82vw;
   height: 68vh;
   margin: 10vh auto 0;
-  padding: 0;
+  padding: 40px 0;
   z-index: 99999;
   background: #ffffff;
   border-radius: 5px;
@@ -103,6 +103,9 @@
     display: flex;
     align-self: center;
     gap: 40px;
+  }
+  &__tab {
+    cursor: pointer;
   }
   &__date {
     position: absolute;

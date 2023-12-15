@@ -30,12 +30,14 @@
 
 
 script.
-    const buttonCurrentOrdersModal = document.querySelector('#currentOrdersButton')
+    const buttonCurrentOrdersModal = document.querySelectorAll('.currentOrdersButton')
     const modalCurrentOrdersModal = document.querySelector('#currentOrdersModal')
     const currentOrdersModalCloseButton = document.querySelector('#currentOrdersModalCloseButton')
 
-    buttonCurrentOrdersModal.addEventListener('click', () => {
+    buttonCurrentOrdersModal.forEach(item => {
+        item.addEventListener('click', () => {
         modalCurrentOrdersModal.classList.add('current-orders-modal__overflow_active')
+        })
     })
     currentOrdersModalCloseButton.addEventListener('click', () => {
         modalCurrentOrdersModal.classList.remove('current-orders-modal__overflow_active')

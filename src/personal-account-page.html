@@ -116,23 +116,27 @@
     <div class="personal-account">
       <div class="container">
         <div class="personal-account__wrapper">
-          <div class="personal-account__item personal-account__item_current-orders" id="currentOrdersButton"><img class="personal-account__img" src="./assets/img/personal-account1.webp">
+          <div class="currentOrdersButton personal-account__item personal-account__item_current-orders" id="currentOrdersButton"><img class="personal-account__img" src="./assets/img/personal-account1.webp">
             <p class="personal-account__name">
               Текущие
               заказы
             </p>
             <div class="personal-account__gradient"></div>
-          </div><a class="personal-account__item personal-account__item_history-orders"><img class="personal-account__img" src="./assets/img/personal-account2.webp">
+          </div>
+          <div class="currentOrdersButton personal-account__item personal-account__item_history-orders"><img class="personal-account__img" src="./assets/img/personal-account2.webp">
             <p class="personal-account__name">
               История
               заказов
             </p>
-            <div class="personal-account__gradient"></div></a><a class="personal-account__item"><img class="personal-account__img" src="./assets/img/personal-account3.webp">
+            <div class="personal-account__gradient"></div>
+          </div>
+          <div class="personal-account__item" id="personalData"><img class="personal-account__img" src="./assets/img/personal-account3.webp">
             <p class="personal-account__name">
               Личные
               данные
             </p>
-            <div class="personal-account__gradient"></div></a>
+            <div class="personal-account__gradient"></div>
+          </div>
           <div class="personal-account__item" id="openChangePasswordModal"><img class="personal-account__img" src="./assets/img/personal-account4.webp">
             <div class="personal-account__name">
               Сменить
@@ -522,12 +526,14 @@
       </div>
     </div>
     <script>
-      const buttonCurrentOrdersModal = document.querySelector('#currentOrdersButton')
+      const buttonCurrentOrdersModal = document.querySelectorAll('.currentOrdersButton')
       const modalCurrentOrdersModal = document.querySelector('#currentOrdersModal')
       const currentOrdersModalCloseButton = document.querySelector('#currentOrdersModalCloseButton')
       
-      buttonCurrentOrdersModal.addEventListener('click', () => {
+      buttonCurrentOrdersModal.forEach(item => {
+          item.addEventListener('click', () => {
           modalCurrentOrdersModal.classList.add('current-orders-modal__overflow_active')
+          })
       })
       currentOrdersModalCloseButton.addEventListener('click', () => {
           modalCurrentOrdersModal.classList.remove('current-orders-modal__overflow_active')
@@ -670,6 +676,7 @@
     </div>
     <script>
       const buttonProfileOrdersChangeOrder = document.querySelectorAll('.profileOrdersChangeButton')
+      const buttonPersonalData = document.querySelector('#personalData')
       const modalProfileOrdersChange = document.querySelector('#profileOrdersChange')
       const modalProfileOrdersChangeCloseButton = document.querySelector('#profileOrdersChangeCloseButton')
       
@@ -677,6 +684,9 @@
           item.addEventListener('click', () => {
               modalProfileOrdersChange.classList.add('profile-orders-change-modal__overflow_active')
           })
+      })
+      buttonPersonalData.addEventListener('click', () => {
+          modalProfileOrdersChange.classList.add('profile-orders-change-modal__overflow_active')
       })
       modalProfileOrdersChangeCloseButton.addEventListener('click', () => {
           modalProfileOrdersChange.classList.remove('profile-orders-change-modal__overflow_active')

@@ -88,6 +88,7 @@
     background: #33394F;
   }
   &__text-underline {
+    cursor: pointer;
     text-decoration: underline;
   }
   &__geoposition-dec::after {

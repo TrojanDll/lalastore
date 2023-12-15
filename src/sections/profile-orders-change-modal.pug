@@ -47,6 +47,7 @@
 
 script.
     const buttonProfileOrdersChangeOrder = document.querySelectorAll('.profileOrdersChangeButton')
+    const buttonPersonalData = document.querySelector('#personalData')
     const modalProfileOrdersChange = document.querySelector('#profileOrdersChange')
     const modalProfileOrdersChangeCloseButton = document.querySelector('#profileOrdersChangeCloseButton')
 
@@ -54,6 +55,9 @@ script.
         item.addEventListener('click', () => {
             modalProfileOrdersChange.classList.add('profile-orders-change-modal__overflow_active')
         })
+    })
+    buttonPersonalData.addEventListener('click', () => {
+        modalProfileOrdersChange.classList.add('profile-orders-change-modal__overflow_active')
     })
     modalProfileOrdersChangeCloseButton.addEventListener('click', () => {
         modalProfileOrdersChange.classList.remove('profile-orders-change-modal__overflow_active')

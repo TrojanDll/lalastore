@@ -2547,6 +2547,9 @@ legend {
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
 }
+.registration-modal .registration-modal__haveAnAccoutn {
+  cursor: pointer;
+}
 .registration-modal__haveAnAccoutn {
   text-decoration-line: underline;
   margin-left: 58px;
