@@ -26,3 +26,5 @@ haveAnAccount.addEventListener('click', () => {
     authModal.classList.add('authorization-modal__overflow_active')
     RegistrationModal.classList.remove('registration-modal__overflow_active')
 })
+
+console.log('aboba')

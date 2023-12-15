@@ -359,10 +359,89 @@
         </div>
       </div>
     </div>
+    <div class="authorization-modal__overflow" id="authModal">
+      <div class="authorization-modal modal">
+        <button class="authorization-modal__close-btn close-btn" id="authModalCloseButton"></button>
+        <div class="authorization-modal__wrapper">
+          <p class="authorization-modal__title">Вход</p>
+          <form class="authorization-modal__form form">
+            <div class="form__wrapper authorization-modal__form-wrapper">
+              <div class="form__popup authorization-modal__form-popup-container">
+                <div class="form__item authorization-modal__form-item_email">
+                  <label class="form__input-label" for="emailAuth">Логин *</label>
+                  <input class="form__input-text registration-modal__input-text" name="emailAuth" id="emailAuth" value="" placeholder="ivanov@gmail.com">
+                </div>
+                <div class="form__item authorization-modal__form-item_password">
+                  <label class="form__input-label" for="passwordAuth">Пароль *</label>
+                  <input class="form__input-text registration-modal__input-text" name="passwordAuth" id="passwordAuth" value="" placeholder="******" type="password">
+                </div>
+                <div class="form__item form__item_radio authorization-modal__form-item_offerCheck">
+                  <input class="form__check-personal" type="checkbox" name="personalDataAuth" id="personalDataAuth">
+                  <label class="form__input-label form__input-label_small" for="personalDataAuth">Запомнить меня</label>
+                </div>
+                <button class="button form__buy-button authorization-modal__form-item_authButton">Войти</button>
+                <div class="form__item">
+                  <p class="authorization-modal__haveAnAccoutn" id="registrationModalOpenButton">Нет аккаунта?</p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="registration-modal__overflow" id="registrationModal">
+      <div class="registration-modal modal">
+        <button class="registration-modal__close-btn close-btn" id="registrationModalCloseButton"></button>
+        <div class="registration-modal__wrapper">
+          <p class="registration-modal__title">Регистрация</p>
+          <p class="registration-modal__comment">Зарегистрируйтесь, чтобы использовать все возможности личного кабинета: отслеживание заказов, настройку подписки, связи с социальными сетями и другие. Мы никогда и ни при каких условиях не разглашаем личные данные клиентов. Контактная информация будет использована только для оформления заказов и более удобной работы с сайтом.</p>
+          <form class="registration-modal__form form">
+            <div class="form__wrapper registration-modal__form-wrapper">
+              <div class="form__popup registration-modal__form-popup-container">
+                <div class="form__item registration-modal__form-item registration-modal__form-item_FIO">
+                  <label class="form__input-label" for="fullName">Ф.И.О. *</label>
+                  <input class="form__input-text registration-modal__input-text" name="fullName" id="fullName" value="" placeholder="Иванов Иван Иванович">
+                </div>
+                <div class="form__item registration-modal__form-item_email">
+                  <label class="form__input-label" for="email">E-Mail *</label>
+                  <input class="form__input-text registration-modal__input-text" name="email" id="email" value="" placeholder="ivanov@gmail.com">
+                </div>
+                <div class="form__item registration-modal__form-item_phoneNumber">
+                  <label class="form__input-label" for="phone">Телефон *</label>
+                  <input class="form__input-text registration-modal__input-text" name="phone" id="phone" value="" placeholder="******" type="password">
+                </div>
+                <div class="form__item registration-modal__form-item_password">
+                  <label class="form__input-label" for="password">Пароль *</label>
+                  <input class="form__input-text registration-modal__input-text" name="password" id="password" value="" placeholder="******" type="password">
+                </div>
+                <div class="form__item registration-modal__form-item_passwordCheck">
+                  <label class="form__input-label" for="passwordCheck">Подтверждение пароля *</label>
+                  <input class="form__input-text registration-modal__input-text" name="passwordCheck" id="passwordCheck" value="" placeholder="+7 (xxx) xxx-xx-xx">
+                </div>
+                <div class="form__item registration-modal__form-item_code">
+                  <label class="form__input-label" for="Введите код">Введите код *</label>
+                  <input class="form__input-text registration-modal__input-text" name="Введите код" id="Введите код" value="" placeholder="XXXXXX">
+                </div>
+                <div class="registration-modal__captcha registration-modal__form-item_captcha"></div>
+                <button class="button form__buy-button registration-modal__form-item_registrationButton">зарегистрироваться</button>
+                <div class="form__item">
+                  <p class="registration-modal__haveAnAccoutn" id="haveAnAccount">Есть аккаунт?</p>
+                </div>
+                <div class="form__item form__item_radio registration-modal__form-item_offerCheck">
+                  <input class="form__check-personal" type="checkbox" name="personalData" id="personalData">
+                  <label class="form__input-label form__input-label_small" for="personalData">Я согласен на обработку персональных данных</label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <script src="./js/search-logic.js"></script>
     <script src="./js/catalog-logic.js"></script>
     <script src="./js/catalog-item-menu-logic.js"></script>
     <script src="./js/sidebar-logic.js"></script>
+    <script src="./js/authorization-modal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       let init = false;

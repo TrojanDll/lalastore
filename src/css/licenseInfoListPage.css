@@ -1757,6 +1757,374 @@ legend {
     display: none;
   }
 }
+.registration-modal__overflow {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(44, 44, 44, 0.81);
+}
+.registration-modal__overflow_active {
+  display: block;
+}
+
+.registration-modal {
+  position: relative;
+  width: 798px;
+  height: 80vh;
+  margin: 10vh auto 0;
+  padding: 45px 0;
+  z-index: 99999;
+  background: #ffffff;
+  border-radius: 5px;
+  font-family: sans-serif;
+  top: 0;
+}
+.registration-modal__close-btn {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 21px;
+  top: 21px;
+  background: url("./../assets/img/icons/close-btn.svg") center center/cover no-repeat;
+}
+.registration-modal_active {
+  display: block;
+}
+.registration-modal_active .registration-modal__overflow {
+  display: block;
+}
+.registration-modal__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  width: 655px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 0 10px;
+  overflow-x: hidden;
+}
+.registration-modal__wrapper::-webkit-scrollbar {
+  width: 14px;
+}
+.registration-modal__wrapper::-webkit-scrollbar-thumb {
+  background: #33394f;
+  border-radius: 13px;
+}
+.registration-modal__wrapper::-webkit-scrollbar-track {
+  background: #7d808e;
+  border-radius: 13px;
+}
+.registration-modal__title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+}
+.registration-modal__comment {
+  font-size: 16px;
+  text-align: center;
+}
+.registration-modal__form {
+  width: 493px;
+  margin: 0 auto;
+}
+.registration-modal__form-wrapper {
+  background: #ffffff;
+  padding: 0 0 10px;
+}
+.registration-modal__form-popup-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 9px;
+}
+.registration-modal__captcha {
+  width: 211px;
+  height: 68px;
+  margin-top: 15px;
+  background: #F4F4F4;
+}
+.registration-modal__notion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+.registration-modal__bold-underline {
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+.registration-modal__haveAnAccoutn {
+  text-decoration-line: underline;
+  margin-left: 58px;
+}
+.registration-modal__input-text {
+  width: 100%;
+}
+.registration-modal__form-item {
+  width: 100%;
+}
+.registration-modal__form-item_email {
+  width: calc(50% - 5px);
+}
+.registration-modal__form-item_phoneNumber {
+  width: calc(50% - 5px);
+}
+.registration-modal__form-item_password {
+  width: calc(50% - 5px);
+}
+.registration-modal__form-item_passwordCheck {
+  width: calc(50% - 5px);
+}
+.registration-modal__form-item_code {
+  width: 262px;
+  margin-right: 11px;
+}
+.registration-modal__form-item_registrationButton {
+  margin-top: 0;
+  width: 286px;
+}
+@media (max-width: 900px) {
+  .registration-modal {
+    width: 700px;
+  }
+}
+@media (max-width: 768px) {
+  .registration-modal {
+    width: 90%;
+    height: 80vh;
+  }
+  .registration-modal__wrapper {
+    width: 90%;
+  }
+  .registration-modal__form {
+    width: 100%;
+  }
+  .registration-modal__form-item_code {
+    width: calc(100% - 236px);
+  }
+  .registration-modal__form-item_registrationButton {
+    width: 269px;
+    margin: 0;
+  }
+  .registration-modal__haveAnAccoutn {
+    margin-left: 0;
+  }
+}
+@media (max-width: 580px) {
+  .registration-modal {
+    width: 346px;
+  }
+  .registration-modal__form-popup-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .registration-modal__form-item_email {
+    width: 100%;
+  }
+  .registration-modal__form-item_phoneNumber {
+    width: 100%;
+  }
+  .registration-modal__form-item_password {
+    width: 100%;
+  }
+  .registration-modal__form-item_passwordCheck {
+    width: 100%;
+  }
+  .registration-modal__form-item_code {
+    width: 100%;
+  }
+  .registration-modal__form-item_captcha {
+    width: 100%;
+  }
+}
+.authorization-modal__overflow {
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(44, 44, 44, 0.81);
+}
+.authorization-modal__overflow_active {
+  display: block;
+  visibility: visible;
+}
+
+.authorization-modal {
+  position: relative;
+  width: 798px;
+  height: 300px;
+  margin: 10vh auto 0;
+  padding: 30px 0 40px;
+  z-index: 99999;
+  background: #ffffff;
+  border-radius: 5px;
+  font-family: sans-serif;
+  top: 0;
+}
+.authorization-modal__close-btn {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 21px;
+  top: 21px;
+  background: url("./../assets/img/icons/close-btn.svg") center center/cover no-repeat;
+}
+.authorization-modal_active {
+  display: block;
+}
+.authorization-modal_active .registration-modal__overflow {
+  display: block;
+}
+.authorization-modal__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  width: 655px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
+}
+.authorization-modal__wrapper::-webkit-scrollbar {
+  width: 14px;
+}
+.authorization-modal__wrapper::-webkit-scrollbar-thumb {
+  background: #33394f;
+  border-radius: 13px;
+}
+.authorization-modal__wrapper::-webkit-scrollbar-track {
+  background: #7d808e;
+  border-radius: 13px;
+}
+.authorization-modal__title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+}
+.authorization-modal__form {
+  width: 493px;
+  margin: 0 auto;
+}
+.authorization-modal__form-wrapper {
+  background: #ffffff;
+  padding: 0;
+}
+.authorization-modal__form-popup-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 9px;
+}
+.authorization-modal__bold-underline {
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+.authorization-modal__haveAnAccoutn {
+  cursor: pointer;
+  margin-top: 10px;
+  text-decoration-line: underline;
+  margin-left: 58px;
+}
+.authorization-modal__input-text {
+  width: 100%;
+}
+.authorization-modal__form-item {
+  width: 100%;
+}
+.authorization-modal__form-item_email {
+  width: calc(50% - 5px);
+}
+.authorization-modal__form-item_password {
+  width: calc(50% - 5px);
+}
+.authorization-modal__form-item_authButton {
+  margin-top: 10px;
+  width: 286px;
+}
+.authorization-modal__form-item_offerCheck {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .authorization-modal {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .authorization-modal {
+    height: 378px;
+    padding: 30px 0;
+  }
+  .authorization-modal__wrapper {
+    width: 90%;
+    gap: 10px;
+  }
+  .authorization-modal__form {
+    width: 100%;
+  }
+  .authorization-modal__form-popup-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .authorization-modal__form-item_email {
+    width: 100%;
+  }
+  .authorization-modal__form-item_password {
+    width: 100%;
+  }
+  .authorization-modal__form-item_authButton {
+    width: 90%;
+  }
+  .authorization-modal__haveAnAccoutn {
+    margin: 0;
+  }
+  .form-item {
+    width: 100%;
+  }
+}
 .recent {
   padding-top: 35px;
   padding-bottom: 60px;
